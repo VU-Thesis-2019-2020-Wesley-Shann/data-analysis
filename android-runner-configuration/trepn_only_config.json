@@ -1,0 +1,46 @@
+{
+  "type": "native",
+  "adb_path": "/home/sshann/Android/Sdk/platform-tools/adb",
+  "devices": {
+    "nexus6p": {
+    }
+  },
+  "clear_cache": true,
+  "repetitions": 3,
+  "duration": 30000,
+  "monkeyrunner_path": "/home/sshann/Android/Sdk/tools/bin/monkeyrunner",
+  "systrace_path": "/home/sshann/Android/Sdk/platform-tools/systrace/systrace.py",
+  "powerprofile_path": "battery_stats_trepn/power_profile.xml",
+    "apps": [
+    "io.github.project_travel_mate"
+  ],
+  "paths": [
+    "/home/sshann/Documents/thesis/subjects/build/apks/baseline/baseline-Travel-Mate.apk"
+  ],
+  "profilers": {
+    "trepn": {
+      "sample_interval": 200,
+      "data_points": [
+        "battery_power"
+      ]
+    }
+  },
+  "scripts": {
+    "before_experiment": "trepn/before_experiment.py",
+    "before_run": "trepn/before_run.py",
+    "after_launch": "trepn/after_launch.py",
+    "interaction": [
+      {
+        "type": "python3",
+        "path": "trepn/interaction.py",
+        "timeout": 500,
+        "logcat_regex": "some keyword"
+      }
+    ],
+    "before_close": "trepn/before_close.py",
+    "after_run": "trepn/after_run.py",
+    "after_experiment": "trepn/after_experiment.py"
+  },
+  "time_between_run": 10000,
+  "randomization": true
+}
