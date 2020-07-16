@@ -2,15 +2,15 @@
   "type": "native",
   "adb_path": "/home/sshann/Android/Sdk/platform-tools/adb",
   "devices": {
-    "nexus5x": {
-      "power_device": "/home/sshann/Documents/thesis/android-runner/AndroidRunner/Plugins/monsoon/script/power_device.py",
-      "device_settings_reqs": {
-      }
+    "nexus6p": {
     }
   },
   "clear_cache": true,
   "repetitions": 3,
-  "duration": 120000,
+  "duration": 60000,
+  "monkeyrunner_path": "/home/user/Android/Sdk/tools/bin/monkeyrunner",
+  "systrace_path": "/home/user/Android/Sdk/platform-tools/systrace/systrace.py",
+  "powerprofile_path": "android-runner/examples/batterystats/Scripts/power_profile.xml",
   "paths": [
     "/home/sshann/Documents/thesis/subjects/build/apks/baseline/baseline-uob-timetable-android.apk",
     "/home/sshann/Documents/thesis/subjects/build/apks/baseline/baseline-Travel-Mate.apk",
@@ -21,9 +21,8 @@
     "/home/sshann/Documents/thesis/subjects/build/apks/baseline/baseline-RedReader.apk"
   ],
   "profilers": {
-    "monsoon": {
-    },
-    "android": {
+    "batterystats": {
+      "cleanup": true
     }
   },
   "scripts": {
