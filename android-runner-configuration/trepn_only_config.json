@@ -33,20 +33,12 @@
     "after_launch": "trepn/after_launch.py",
     "interaction": [
       {
-        "type": "python3",
-        "path": "trepn/interaction.py"
-      },
-      {
         "type": "monkeyreplay",
         "path": "trepn/interaction/org.quantumbadger.redreader"
       },
       {
         "type": "monkeyreplay",
         "path": "trepn/interaction/io.github.project_travel_mate"
-      },
-      {
-        "type": "monkeyreplay",
-        "path": "trepn/interaction/monkey_replay_all"
       }
     ],
     "before_close": "trepn/before_close.py",
