@@ -7,7 +7,7 @@
   },
   "clear_cache": false,
   "repetitions": 1,
-  "duration": 20000,
+  "duration": 0,
   "monkeyrunner_path": "/home/sshann/Android/Sdk/tools/bin/monkeyrunner",
   "systrace_path": "/home/sshann/Android/Sdk/platform-tools/systrace/systrace.py",
   "powerprofile_path": "battery_stats_trepn/power_profile.xml",
@@ -33,8 +33,12 @@
     "after_launch": "trepn/after_launch.py",
     "interaction": [
       {
+        "type": "python3",
+        "path": "trepn/interaction.py"
+      },
+      {
         "type": "monkeyreplay",
-        "path": "trepn/monkey.txt"
+        "path": "/home/sshann/Documents/thesis/experiments/android-runner-configuration/trepn/monkey.txt"
       }
     ],
     "before_close": "trepn/before_close.py",
