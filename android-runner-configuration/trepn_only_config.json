@@ -6,11 +6,14 @@
     }
   },
   "clear_cache": false,
-  "repetitions": 3,
-  "duration": 10000,
+  "repetitions": 1,
+  "duration": 20000,
   "monkeyrunner_path": "/home/sshann/Android/Sdk/tools/bin/monkeyrunner",
   "systrace_path": "/home/sshann/Android/Sdk/platform-tools/systrace/systrace.py",
   "powerprofile_path": "battery_stats_trepn/power_profile.xml",
+  "apps": [
+    "org.quantumbadger.redreader"
+  ],
   "paths": [
     "/home/sshann/Documents/thesis/subjects/build/apks/baseline/io.github.project_travel_mate.apk"
   ],
@@ -30,16 +33,14 @@
     "after_launch": "trepn/after_launch.py",
     "interaction": [
       {
-        "type": "python3",
-        "path": "trepn/interaction.py",
-        "timeout": 500,
-        "logcat_regex": "some keyword"
+        "type": "monkeyreplay",
+        "path": "trepn/monkey.txt"
       }
     ],
     "before_close": "trepn/before_close.py",
     "after_run": "trepn/after_run.py",
     "after_experiment": "trepn/after_experiment.py"
   },
-  "time_between_run": 10000,
+  "time_between_run": 500,
   "randomization": true
 }
