@@ -28,22 +28,22 @@
     }
   },
   "scripts": {
-    "before_experiment": "trepn/before_experiment.py",
-    "before_run": "trepn/before_run.py",
-    "after_launch": "trepn/after_launch.py",
+    "before_experiment": "scripts/before_experiment.py",
+    "before_run": "scripts/before_run.py",
+    "after_launch": "scripts/after_launch.py",
     "interaction": [
       {
         "type": "monkeyreplay",
-        "path": "trepn/interaction/org.quantumbadger.redreader"
+        "path": "scripts/interaction/org.quantumbadger.redreader"
       },
       {
         "type": "monkeyreplay",
-        "path": "trepn/interaction/io.github.project_travel_mate"
+        "path": "scripts/interaction/io.github.project_travel_mate"
       }
     ],
-    "before_close": "trepn/before_close.py",
-    "after_run": "trepn/after_run.py",
-    "after_experiment": "trepn/after_experiment.py"
+    "before_close": "scripts/before_close.py",
+    "after_run": "scripts/after_run.py",
+    "after_experiment": "scripts/after_experiment.py"
   },
   "time_between_run": 500,
   "randomization": true
