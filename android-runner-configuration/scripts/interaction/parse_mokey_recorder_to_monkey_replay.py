@@ -2,6 +2,7 @@ file_dir = '/home/sshann/Documents/thesis/experiments/android-runner-configurati
 file_name_list = [
     'org.quantumbadger.redreader',
     'com.ak.uobtimetable',
+    'appteam.nith.hillffair',
 ]
 
 template_line_touch = '{"type": "touch", "x": %s, "y": %s, "down": %s, "up": %s, "sleep": %s }\n'
