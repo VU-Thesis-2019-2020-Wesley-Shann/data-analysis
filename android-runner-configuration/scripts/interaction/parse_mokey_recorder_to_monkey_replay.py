@@ -5,8 +5,8 @@ file_name_list = [
     'appteam.nith.hillffair',
 ]
 
-template_line_touch = '{"type": "touch", "x": %s, "y": %s, "down": %s, "up": %s, "sleep": %s }\n'
-template_line_drag = '{"type": "drag", "points": [{"x": %s, "y": %s }, {"x": %s, "y": %s } ], "down": %s, "up": %s , "sleep": %s }\n'
+template_line_touch = '{"type": "touch", "down": %s, "up": %s, "sleep": %s, "x": %s, "y": %s }\n'
+template_line_drag = '{"type": "drag", "down": %s, "up": %s , "sleep": %s, "points": [{"x": %s, "y": %s }, {"x": %s, "y": %s }]}\n'
 
 for file in file_name_list:
     message = 'parsing file %s' % file
@@ -40,12 +40,12 @@ for file in file_name_list:
                 x2 = line.split('\'x2\':')[1].split(',')[0]
                 y2 = line.split('\'y2\':')[1].split(',')[0]
                 print('x1 = %s, y1 = %s, x2 = %s, y2 = %s, sleep = %s' % (x1, y1, x2, y2, sleep))
-                parsed_line = template_line_drag % (x1, y1, x2, y2, down_count, up_count, sleep)
+                parsed_line = template_line_drag % (down_count, up_count, sleep, x1, y1, x2, y2)
             else:
                 x = line.split('\'x\':')[1].split(',')[0]
                 y = line.split('\'y\':')[1].split(',')[0]
                 print('x = %s, y = %s, sleep = %s' % (x, y, sleep))
-                parsed_line = template_line_touch % (x, y, down_count, up_count, sleep)
+                parsed_line = template_line_touch % (down_count, up_count, sleep, x, y)
             down_count += 2
             up_count += 2
             dst_file.write(parsed_line)
