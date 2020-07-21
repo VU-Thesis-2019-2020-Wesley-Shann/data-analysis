@@ -2,6 +2,7 @@ file_dir = '/home/sshann/Documents/thesis/experiments/android-runner-configurati
 file_name_list = [
     'org.quantumbadger.redreader',
     'com.ak.uobtimetable',
+    'appteam.nith.hillffair',
 ]
 file_to_aggregate_list = {
     'com.ak.uobtimetable': [
@@ -16,7 +17,14 @@ file_to_aggregate_list = {
         'org.quantumbadger.redreader_ask_science',
         'org.quantumbadger.redreader_aww',
         'org.quantumbadger.redreader_front_page',
-    ]
+    ],
+    'appteam.nith.hillffair': [
+        'appteam.nith.hillffair_battle_day',
+        'appteam.nith.hillffair_clubs',
+        'appteam.nith.hillffair_pages_without_children',
+        'appteam.nith.hillffair_profile',
+        'appteam.nith.hillffair_quiz',
+    ],
 }
 
 for file in file_name_list:
