@@ -18,6 +18,10 @@ for file in file_name_list:
         cnt = 1
         while line:
             print("Line {}: {}".format(cnt, line.strip()))
+            if line[0] == '#':
+                print('ignoring comment line')
+                line = fp.readline()
+                continue
             if '\'sleep\'' in line:
                 sleep = line.split('\'sleep\':')[1].split(',')[0]
             else:
@@ -27,17 +31,18 @@ for file in file_name_list:
                 y1 = line.split('\'y1\':')[1].split(',')[0]
                 x2 = line.split('\'x2\':')[1].split(',')[0]
                 y2 = line.split('\'y2\':')[1].split(',')[0]
-                print(x1, y1, x2, y2, sleep)
+                print('x1 = %s, y1 = %s, x2 = %s, y2 = %s, sleep = %s' % (x1, y1, x2, y2, sleep))
                 parsed_line = template_line_drag % (x1, y1, x2, y2, down_count, up_count, sleep)
             else:
                 x = line.split('\'x\':')[1].split(',')[0]
                 y = line.split('\'y\':')[1].split(',')[0]
-                print(x, y, sleep)
+                print('x = %s, y = %s, sleep = %s' % (x, y, sleep))
                 parsed_line = template_line_touch % (x, y, down_count, up_count, sleep)
             down_count += 2
             up_count += 2
             dst_file.write(parsed_line)
             line = fp.readline()
             cnt += 1
+            print('')
 
     dst_file.close()
