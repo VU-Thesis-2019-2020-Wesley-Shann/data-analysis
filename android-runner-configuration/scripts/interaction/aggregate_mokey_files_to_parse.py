@@ -21,7 +21,7 @@ file_to_aggregate_list = {
     'appteam.nith.hillffair': [
         'appteam.nith.hillffair_battle_day',
         'appteam.nith.hillffair_clubs',
-        'appteam.nith.hillffair_pages_without_children',
+        # 'appteam.nith.hillffair_pages_without_children',
         'appteam.nith.hillffair_profile',
         'appteam.nith.hillffair_quiz',
     ],
