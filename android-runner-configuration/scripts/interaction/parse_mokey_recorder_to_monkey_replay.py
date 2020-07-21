@@ -1,7 +1,7 @@
 file_dir = '/home/sshann/Documents/thesis/experiments/android-runner-configuration/scripts/interaction/'
 file_name_list = [
     'org.quantumbadger.redreader',
-    'com.ak.uobtimetable'
+    'com.ak.uobtimetable',
 ]
 
 template_line_touch = '{"type": "touch", "x": %s, "y": %s, "down": %s, "up": %s, "sleep": %s }\n'
