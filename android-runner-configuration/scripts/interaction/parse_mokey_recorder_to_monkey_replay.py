@@ -14,7 +14,7 @@ for file in file_name_list:
     print(message)
     print(border)
     print('')
-    src_file_path = file_dir + 'monkey_recorder/' + file
+    src_file_path = file_dir + 'monkey_recorder/nexus_5x' + file
     dst_file_path = file_dir + file
     dst_file = open(dst_file_path, 'w+')
     with open(src_file_path) as fp:
