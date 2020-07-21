@@ -21,10 +21,10 @@ file_to_aggregate_list = {
 
 for file in file_name_list:
     files_to_aggregate = file_to_aggregate_list[file]
-    dst_file_path = file_dir + 'monkey_recorder/nexus_5x' + file
+    dst_file_path = file_dir + 'monkey_recorder/nexus_5x/' + file
     with open(dst_file_path, 'w') as outfile:
         for src_file in files_to_aggregate:
-            src_file_path = file_dir + 'monkey_recorder/nexus_5x' + src_file
+            src_file_path = file_dir + 'monkey_recorder/nexus_5x/' + src_file
             with open(src_file_path) as infile:
                 outfile.write(infile.read())
                 outfile.write('\n')
