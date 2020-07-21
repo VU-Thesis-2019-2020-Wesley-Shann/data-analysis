@@ -8,6 +8,12 @@ template_line_touch = '{"type": "touch", "x": %s, "y": %s, "down": %s, "up": %s,
 template_line_drag = '{"type": "drag", "points": [{"x": %s, "y": %s }, {"x": %s, "y": %s } ], "down": %s, "up": %s , "sleep": %s }\n'
 
 for file in file_name_list:
+    message = 'parsing file %s' % file
+    border = ''.join([char * len(message) for char in '='])
+    print(border)
+    print(message)
+    print(border)
+    print('')
     src_file_path = file_dir + 'monkey_recorder/' + file
     dst_file_path = file_dir + file
     dst_file = open(dst_file_path, 'w+')
@@ -15,11 +21,12 @@ for file in file_name_list:
         line = fp.readline()
         down_count = 0
         up_count = 1
-        cnt = 1
+        cnt = 0
         while line:
+            cnt += 1
             print("Line {}: {}".format(cnt, line.strip()))
-            if line[0] == '#':
-                print('ignoring comment line')
+            if line[0] == '#' or line == '\n':
+                print('Ignore line')
                 line = fp.readline()
                 continue
             if '\'sleep\'' in line:
@@ -42,7 +49,6 @@ for file in file_name_list:
             up_count += 2
             dst_file.write(parsed_line)
             line = fp.readline()
-            cnt += 1
             print('')
 
     dst_file.close()
