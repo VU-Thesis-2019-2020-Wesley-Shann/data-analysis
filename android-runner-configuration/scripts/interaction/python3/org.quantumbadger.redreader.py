@@ -1,14 +1,9 @@
-import time
+import sys
 
+sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
-def tap(device, x, y, sleep=4):
-    device.shell('input tap %s %s' % (x, y))
-    time.sleep(sleep)
-
-
-def tap_phone_back(device, sleep=1):
-    device.shell('input tap 324 2464')
-    time.sleep(sleep)
+from scripts.interaction.python3.common import tap
+from scripts.interaction.python3.common import tap_phone_back
 
 
 def visit_subreddit_annoucements(device):
