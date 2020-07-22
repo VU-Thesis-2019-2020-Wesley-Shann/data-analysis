@@ -1,6 +1,9 @@
 import time
 
 
+#######################
+# COMMON INTERACTION #
+#######################
 def tap(device, x, y, sleep=4):
     device.shell('input tap %s %s' % (x, y))
     time.sleep(sleep)
@@ -34,6 +37,9 @@ def swipe(device, x1, y1, x2, y2, sleep=4, duration=1000):
     time.sleep(sleep)
 
 
+########################
+# THIS APP INTERACTION #
+########################
 def visit_battle_day(device):
     print('\tvisit_battle_day')
 
