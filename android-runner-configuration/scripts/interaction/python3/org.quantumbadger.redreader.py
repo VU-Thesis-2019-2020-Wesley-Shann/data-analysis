@@ -106,6 +106,6 @@ def visit_subreddit_aww(device):
 def main(device, *args, **kwargs):
     if device.current_activity().find('org.quantumbadger.redreader') != -1:
         print('Running interaction for RedReader')
-        # visit_subreddit_ask_science(device)
-        # visit_subreddit_annoucements(device)
+        visit_subreddit_ask_science(device)
+        visit_subreddit_annoucements(device)
         visit_subreddit_aww(device)
