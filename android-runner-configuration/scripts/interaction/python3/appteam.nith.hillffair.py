@@ -25,11 +25,11 @@ def write_text(device, text, sleep=1):
 
 
 def write_email(device):
-    write_text(device, 'nappatest@outlook.com')
+    write_text(device, 'nappatest@outlook.com', 0)
 
 
 def write_password(device):
-    write_text(device, 'NappaTest1!')
+    write_text(device, 'NappaTest1!', 0)
 
 
 def swipe(device, x1, y1, x2, y2, sleep=4, duration=1000):
