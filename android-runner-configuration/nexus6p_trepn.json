@@ -6,7 +6,7 @@
     }
   },
   "clear_cache": false,
-  "repetitions": 3,
+  "repetitions": 20,
   "duration": 0,
   "monkeyrunner_path": "/home/sshann/Android/Sdk/tools/bin/monkeyrunner",
   "systrace_path": "/home/sshann/Android/Sdk/platform-tools/systrace/systrace.py",
@@ -24,11 +24,25 @@
   ],
   "profilers": {
     "trepn": {
-      "sample_interval": 200,
+      "subject_aggregation": "default",
+      "experiment_aggregation": "default",
+      "preferences": {
+        "sample_interval": 100,
+        "battery_power_source_selection": "Direct Power"
+      },
       "data_points": [
         "battery_power",
         "mem_usage",
         "cpu_load"
+      ]
+    },
+    "android": {
+      "subject_aggregation": "default",
+      "experiment_aggregation": "default",
+      "sample_interval": 100,
+      "data_points": [
+        "cpu",
+        "mem"
       ]
     }
   },
@@ -39,7 +53,7 @@
     "interaction": [
       {
         "type": "monkeyreplay",
-        "path": "scripts/interaction/monkey_replay_all"
+        "path": "scripts/interaction/monkey_recorder/monkey_replay_all"
       }
     ],
     "before_close": "scripts/before_close.py",
