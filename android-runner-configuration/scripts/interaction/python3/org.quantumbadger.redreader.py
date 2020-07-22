@@ -6,7 +6,7 @@ def tap(device, x, y, sleep=4):
     time.sleep(sleep)
 
 
-def tap_phone_back(device, sleep=2):
+def tap_phone_back(device, sleep=1):
     device.shell('input tap 324 2464')
     time.sleep(sleep)
 
