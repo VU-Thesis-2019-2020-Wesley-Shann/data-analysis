@@ -7,10 +7,10 @@ file_name_list = [
 file_to_aggregate_list = {
     'com.ak.uobtimetable': [
         'com.ak.uobtimetable_cs_apprenticeship_digital_tec_year_1_september',
-        'com.ak.uobtimetable_about',
+        # 'com.ak.uobtimetable_about',
         'com.ak.uobtimetable_check_CS_course_options',
         'com.ak.uobtimetable_cs_foundation_AI_year_0_february',
-        'com.ak.uobtimetable_term_date',
+        # 'com.ak.uobtimetable_term_date',
     ],
     'org.quantumbadger.redreader': [
         'org.quantumbadger.redreader_announcement',
