@@ -107,3 +107,5 @@ def main(device, *args, **kwargs):
         select_course_bedfordshire_first_time(device)
         select_course_ai(device)
         visit_term_date(device)
+    else:
+        print('Skip file')

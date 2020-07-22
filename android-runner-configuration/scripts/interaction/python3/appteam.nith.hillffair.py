@@ -164,3 +164,5 @@ def main(device, *args, **kwargs):
         visit_battle_day(device)
         visit_quiz(device)
         visit_clubs(device)
+    else:
+        print('Skip file')

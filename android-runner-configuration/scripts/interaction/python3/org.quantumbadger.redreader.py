@@ -109,3 +109,5 @@ def main(device, *args, **kwargs):
         visit_subreddit_ask_science(device)
         visit_subreddit_annoucements(device)
         visit_subreddit_aww(device)
+    else:
+        print('Skip file')
