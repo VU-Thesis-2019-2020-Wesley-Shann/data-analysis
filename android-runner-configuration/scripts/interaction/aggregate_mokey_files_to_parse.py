@@ -16,7 +16,7 @@ file_to_aggregate_list = {
         'org.quantumbadger.redreader_announcement',
         'org.quantumbadger.redreader_ask_science',
         'org.quantumbadger.redreader_aww',
-        'org.quantumbadger.redreader_front_page',
+        # 'org.quantumbadger.redreader_front_page',
     ],
     # 'appteam.nith.hillffair': [
     #     'appteam.nith.hillffair_battle_day',

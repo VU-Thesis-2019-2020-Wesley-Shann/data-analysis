@@ -6,16 +6,21 @@
     }
   },
   "clear_cache": false,
-  "repetitions": 1,
+  "repetitions": 3,
   "duration": 0,
   "monkeyrunner_path": "/home/sshann/Android/Sdk/tools/bin/monkeyrunner",
   "systrace_path": "/home/sshann/Android/Sdk/platform-tools/systrace/systrace.py",
   "powerprofile_path": "battery_stats_trepn/power_profile.xml",
   "apps": [
-    "org.quantumbadger.redreader"
+    "org.quantumbadger.redreader",
+    "appteam.nith.hillffair",
+    "com.ak.uobtimetable",
+    "io.github.project_travel_mate",
+    "com.newsblur",
+    "de.danoeh.antennapod.debug",
+    "io.github.hidroh.materialistic"
   ],
-    "paths": [
-    "/home/sshann/Documents/thesis/subjects/build/apks/baseline/io.github.project_travel_mate.apk"
+  "paths": [
   ],
   "profilers": {
     "trepn": {
@@ -34,17 +39,13 @@
     "interaction": [
       {
         "type": "monkeyreplay",
-        "path": "scripts/interaction/org.quantumbadger.redreader"
-      },
-      {
-        "type": "monkeyreplay",
-        "path": "scripts/interaction/io.github.project_travel_mate"
+        "path": "scripts/interaction/monkey_replay_all"
       }
     ],
     "before_close": "scripts/before_close.py",
     "after_run": "scripts/after_run.py",
     "after_experiment": "scripts/after_experiment.py"
   },
-  "time_between_run": 500,
+  "time_between_run": 60000,
   "randomization": true
 }
