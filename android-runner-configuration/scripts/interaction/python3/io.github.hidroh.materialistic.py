@@ -9,6 +9,6 @@ from scripts.interaction.python3.common import tap_phone_back
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('io.github.hidroh.materialistic') != -1:
-        print('Running interaction for Materialistic')
+        print('\tRunning interaction for Materialistic')
     else:
-        print('Skip file')
+        print('\tSkip file')

@@ -60,7 +60,7 @@ def select_courses_foundation(device):
 
 
 def select_course_bedfordshire_first_time(device):
-    print('select_course_bedfordshire_first_time')
+    print('\tselect_course_bedfordshire_first_time')
     # select course
     tap(device, 526, 704, 1)
     tap_accept_course(device)
@@ -72,7 +72,7 @@ def select_course_bedfordshire_first_time(device):
 
 
 def select_course_ai(device):
-    print('select_course_AI')
+    print('\tselect_course_AI')
     visit_courses_page(device)
     select_school_cs(device)
     select_courses_foundation(device)
@@ -84,7 +84,7 @@ def select_course_ai(device):
 
 
 def visit_term_date(device):
-    print('visit_term_date')
+    print('\tvisit_term_date')
     tap_menu(device)
     tap(device, 360, 1098)
 
@@ -92,10 +92,10 @@ def visit_term_date(device):
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('com.ak.uobtimetable') != -1:
-        print('Running interaction for UOB')
+        print('\tRunning interaction for UOB')
         tap_continue_button(device)
         select_course_bedfordshire_first_time(device)
         select_course_ai(device)
         visit_term_date(device)
     else:
-        print('Skip file')
+        print('\tSkip file')

@@ -8,7 +8,7 @@ from scripts.interaction.python3.common import tap_phone_back
 
 def visit_subreddit_annoucements(device):
     # 10 steps
-    print('Visit subReddit Announcements')
+    print('\tVisit subReddit Announcements')
 
     # click in Announcements subreddit
     tap(device, 600, 1000)
@@ -37,7 +37,7 @@ def visit_subreddit_annoucements(device):
 
 def visit_subreddit_ask_science(device):
     # 12 steps
-    print('Visit subReddit Ask Science')
+    print('\tVisit subReddit Ask Science')
 
     # click in ask science subreddit
     tap(device, 600, 1536)
@@ -70,7 +70,7 @@ def visit_subreddit_ask_science(device):
 
 def visit_subreddit_aww(device):
     # 10 steps
-    print('Visit subReddit Aww')
+    print('\tVisit subReddit Aww')
 
     # click in aww subreddit
     tap(device, 600, 1733)
@@ -100,9 +100,9 @@ def visit_subreddit_aww(device):
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('org.quantumbadger.redreader') != -1:
-        print('Running interaction for RedReader')
+        print('\tRunning interaction for RedReader')
         visit_subreddit_ask_science(device)
         visit_subreddit_annoucements(device)
         visit_subreddit_aww(device)
     else:
-        print('Skip file')
+        print('\tSkip file')

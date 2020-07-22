@@ -9,6 +9,6 @@ from scripts.interaction.python3.common import tap_phone_back
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('com.newsblur') != -1:
-        print('Running interaction for NewsBlur')
+        print('\tRunning interaction for NewsBlur')
     else:
-        print('Skip file')
+        print('\tSkip file')

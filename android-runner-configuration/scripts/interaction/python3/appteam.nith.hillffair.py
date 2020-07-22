@@ -128,10 +128,10 @@ def accept_and_login(device):
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('appteam.nith.hillffair') != -1:
-        print('Running interaction for Hillffair')
+        print('\tRunning interaction for Hillffair')
         accept_and_login(device)
         visit_battle_day(device)
         visit_quiz(device)
         visit_clubs(device)
     else:
-        print('Skip file')
+        print('\tSkip file')
