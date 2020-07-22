@@ -6,7 +6,7 @@ def tap(device, x, y, sleep=4):
     time.sleep(sleep)
 
 
-def swipe(device, x1, y1, x2, y2, sleep=4, duration=100):
+def swipe(device, x1, y1, x2, y2, sleep=4, duration=1000):
     device.shell('input swipe %s %s %s %s %s' % (x1, y1, x2, y2, duration))
     time.sleep(sleep)
 
