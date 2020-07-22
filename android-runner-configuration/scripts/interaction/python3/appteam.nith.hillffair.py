@@ -11,6 +11,24 @@ def tap_phone_back(device, sleep=1):
     time.sleep(sleep)
 
 
+def tap_close_keyboard(device, sleep=1):
+    device.shell('input tap 324 2464')
+    time.sleep(sleep)
+
+
+def write_text(device, text, sleep=1):
+    device.shell('input text \'%s\'' % text)
+    time.sleep(sleep)
+
+
+def write_email(device):
+    write_text(device, 'nappatest@outlook.com')
+
+
+def write_password(device):
+    write_text(device, 'NappaTest1!')
+
+
 def swipe(device, x1, y1, x2, y2, sleep=4, duration=1000):
     device.shell('input swipe %s %s %s %s %s' % (x1, y1, x2, y2, duration))
     time.sleep(sleep)
@@ -108,10 +126,35 @@ def visit_clubs(device):
     tap_phone_back(device)
 
 
+def accept_and_login(device):
+    print('\taccept_and_login')
+
+    # skip
+    tap(device, 1291, 2314, 2)
+
+    # select theme
+    tap(device, 355, 752, 2)
+
+    # Write email
+    tap(device, 193, 928, 1)
+    write_email(device)
+
+    # Write password
+    tap(device, 247, 1162, 1)
+    write_password(device)
+
+    # close keyboard
+    tap_close_keyboard(device)
+
+    # login
+    tap(device, 373, 1498)
+
+
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('appteam.nith.hillffair') != -1:
         print('Running interaction for Hillffair')
+        accept_and_login(device)
         # visit_battle_day(device)
         # visit_quiz(device)
-        visit_clubs(device)
+        # visit_clubs(device)
