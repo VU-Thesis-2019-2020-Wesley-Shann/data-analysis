@@ -122,14 +122,14 @@ def accept_and_login(device):
     tap_close_keyboard(device)
 
     # login
-    tap(device, 373, 1498)
+    tap(device, 373, 1498, 8)
 
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('appteam.nith.hillffair') != -1:
         print('\tRunning interaction for Hillffair')
-        accept_and_login(device)
+        # accept_and_login(device)
         visit_battle_day(device)
         visit_quiz(device)
         visit_clubs(device)
