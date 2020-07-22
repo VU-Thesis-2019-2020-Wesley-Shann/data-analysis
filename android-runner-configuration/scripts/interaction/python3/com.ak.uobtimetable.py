@@ -20,10 +20,6 @@ def tap_continue_button(device):
     tap(device, 711, 1664, 6)
 
 
-def tap_ok_dialog(device):
-    tap(device, 1215, 1477, 1)
-
-
 def tap_accept_course(device):
     tap(device, 1197, 1456)
 
@@ -75,8 +71,12 @@ def select_courses_foundation(device):
 
 def select_course_bedfordshire_first_time(device):
     print('select_course_bedfordshire_first_time')
+    # select course
     tap(device, 526, 704, 1)
     tap_accept_course(device)
+    # close dialogs
+    tap(device, 1215, 1450, 1)
+    tap(device, 1215, 1482, 1)
     tap_tuesday(device)
     tap_second_option_in_schedule(device)
 
@@ -86,6 +86,7 @@ def select_course_ai(device):
     visit_courses_page(device)
     select_school_cs(device)
     select_courses_foundation(device)
+    # select course
     tap(device, 648, 709, 1)
     tap_accept_course(device)
     tap_tuesday(device)
