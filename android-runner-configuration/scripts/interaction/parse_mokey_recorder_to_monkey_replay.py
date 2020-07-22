@@ -1,12 +1,14 @@
-file_dir = '/home/sshann/Documents/thesis/experiments/android-runner-configuration/scripts/interaction/'
+file_dir = '/home/sshann/Documents/thesis/experiments/android-runner-configuration/scripts/interaction/monkey_recorder/'
 file_name_list = [
     'org.quantumbadger.redreader',
-    'com.ak.uobtimetable',
-    'appteam.nith.hillffair',
+    # 'com.ak.uobtimetable',
+    # 'appteam.nith.hillffair',
 ]
 
 template_line_touch = '{"type": "touch", "down": %s, "up": %s, "sleep": %s, "x": %s, "y": %s }\n'
 template_line_drag = '{"type": "drag", "down": %s, "up": %s , "sleep": %s, "points": [{"x": %s, "y": %s }, {"x": %s, "y": %s }]}\n'
+
+mobile_device = 'nexus_6p'
 
 for file in file_name_list:
     message = 'parsing file %s' % file
@@ -15,8 +17,8 @@ for file in file_name_list:
     print(message)
     print(border)
     print('')
-    src_file_path = file_dir + 'monkey_recorder/nexus_5x/' + file
-    dst_file_path = file_dir + file
+    src_file_path = file_dir + mobile_device + '/raw' + file
+    dst_file_path = file_dir + mobile_device + '/parsed' + file
     dst_file = open(dst_file_path, 'w+')
     with open(src_file_path) as fp:
         line = fp.readline()
