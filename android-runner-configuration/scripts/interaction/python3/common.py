@@ -1,9 +1,6 @@
 import time
 
 
-#######################
-# COMMON INTERACTION #
-#######################
 def tap(device, x, y, sleep=4):
     device.shell('input tap %s %s' % (x, y))
     time.sleep(sleep)
