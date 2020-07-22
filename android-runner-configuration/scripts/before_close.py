@@ -31,5 +31,5 @@ def clear_cache(device):
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
-    # clear_cache(device)
+    clear_cache(device)
     pass
