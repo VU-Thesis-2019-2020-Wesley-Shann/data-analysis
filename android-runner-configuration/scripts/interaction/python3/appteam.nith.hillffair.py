@@ -76,9 +76,42 @@ def visit_quiz(device):
     tap_phone_back(device)
 
 
+def visit_clubs(device):
+    print('\tvisit_clubs')
+
+    # club card
+    tap(device, 1084, 2213)
+
+    # PR club card
+    tap(device, 369, 554)
+    tap_phone_back(device)
+
+    # Design and decoration card
+    tap(device, 1012, 1152, 12)
+    tap_phone_back(device)
+
+    # Technical comite card
+    tap(device, 255, 1845)
+    tap_phone_back(device)
+
+    # main menu
+    tap_phone_back(device)
+
+    # club card
+    tap(device, 1084, 2213)
+
+    # Design and decoration card
+    tap(device, 1012, 1152)
+    tap_phone_back(device)
+
+    # main menu
+    tap_phone_back(device)
+
+
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('appteam.nith.hillffair') != -1:
         print('Running interaction for Hillffair')
         # visit_battle_day(device)
-        visit_quiz(device)
+        # visit_quiz(device)
+        visit_clubs(device)
