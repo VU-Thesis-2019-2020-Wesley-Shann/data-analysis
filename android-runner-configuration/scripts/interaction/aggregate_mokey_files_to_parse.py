@@ -18,13 +18,13 @@ file_to_aggregate_list = {
         'org.quantumbadger.redreader_aww',
         'org.quantumbadger.redreader_front_page',
     ],
-    'appteam.nith.hillffair': [
-        # 'appteam.nith.hillffair_battle_day',
-        # 'appteam.nith.hillffair_clubs',
-        # 'appteam.nith.hillffair_pages_without_children',
-        'appteam.nith.hillffair_profile',
-        'appteam.nith.hillffair_quiz',
-    ],
+    # 'appteam.nith.hillffair': [
+    #     'appteam.nith.hillffair_battle_day',
+    #     'appteam.nith.hillffair_clubs',
+    #     'appteam.nith.hillffair_pages_without_children',
+    #     'appteam.nith.hillffair_profile',
+    #     'appteam.nith.hillffair_quiz',
+    # ],
 }
 
 for file in file_name_list:
