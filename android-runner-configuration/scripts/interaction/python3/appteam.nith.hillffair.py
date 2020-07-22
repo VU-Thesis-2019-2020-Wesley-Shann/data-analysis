@@ -16,7 +16,40 @@ def swipe(device, x1, y1, x2, y2, sleep=4, duration=1000):
     time.sleep(sleep)
 
 
+def visit_battle_day(device):
+    print('\tvisit_battle_day')
+
+    # battle day card
+    tap(device, 337, 1104)
+
+    # music card
+    tap(device, 733, 645, 12)
+    tap_phone_back(device)
+
+    # dance card
+    tap(device, 733, 1370)
+    tap_phone_back(device)
+
+    # nukkad card
+    tap(device, 733, 1957, 2)
+    tap_phone_back(device)
+
+    # main menu
+    tap_phone_back(device)
+
+    # battle day card
+    tap(device, 337, 1104)
+
+    # music card
+    tap(device, 733, 645)
+    tap_phone_back(device)
+
+    # main menu
+    tap_phone_back(device)
+
+
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('appteam.nith.hillffair') != -1:
         print('Running interaction for Hillffair')
+        visit_battle_day(device);
