@@ -1,4 +1,4 @@
-file_dir = '/home/sshann/Documents/thesis/experiments/android-runner-configuration/scripts/interaction/monkey_recorder/'
+file_dir = '/scripts/interaction/monkeyreplay/'
 file_name_list = [
     'org.quantumbadger.redreader',
     # 'com.ak.uobtimetable',
