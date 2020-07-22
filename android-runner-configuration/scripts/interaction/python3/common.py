@@ -1,6 +1,10 @@
 import time
 
 
+def should_run_login_and_permission_only():
+    return False
+
+
 def tap(device, x, y, sleep=4):
     device.shell('input tap %s %s' % (x, y))
     time.sleep(sleep)

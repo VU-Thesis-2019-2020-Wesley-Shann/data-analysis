@@ -7,6 +7,7 @@ from scripts.interaction.python3.common import tap_phone_back
 from scripts.interaction.python3.common import tap_close_keyboard
 from scripts.interaction.python3.common import write_email
 from scripts.interaction.python3.common import write_password
+from scripts.interaction.python3.common import should_run_login_and_permission_only
 
 
 def visit_battle_day(device):
@@ -129,9 +130,11 @@ def accept_and_login(device):
 def main(device, *args, **kwargs):
     if device.current_activity().find('appteam.nith.hillffair') != -1:
         print('\tRunning interaction for Hillffair')
-        # accept_and_login(device)
-        visit_battle_day(device)
-        visit_quiz(device)
-        visit_clubs(device)
+        if should_run_login_and_permission_only():
+            accept_and_login(device)
+        else:
+            visit_battle_day(device)
+            visit_quiz(device)
+            visit_clubs(device)
     else:
         print('\tSkip file')
