@@ -29,6 +29,15 @@ apps_db_files_to_clear = {
         'Materialistic.db-shm',
         'Materialistic.db-wal',
     ],
+    'com.newsblur': [
+
+    ],
+    'de.danoeh.antennapod.debug': [
+
+    ],
+    'io.github.project_travel_mate': [
+
+    ],
 }
 
 
@@ -38,6 +47,9 @@ def get_idx_apps_db_files_to_clear(device):
         'com.ak.uobtimetable',
         'org.quantumbadger.redreader',
         'appteam.nith.hillffair',
+        'com.newsblur',
+        'de.danoeh.antennapod.debug',
+        'io.github.project_travel_mate',
     ]
 
     for app in apps:
