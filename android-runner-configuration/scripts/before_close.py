@@ -36,7 +36,8 @@ apps_db_files_to_clear = {
         'blur.db-journal',
     ],
     'de.danoeh.antennapod.debug': [
-
+        'Antennapod.db',
+        'Antennapod.db-journal',
     ],
     'io.github.project_travel_mate': [
 

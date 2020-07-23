@@ -8,7 +8,10 @@ from scripts.interaction.python3.common import tap_phone_back
 
 def visit_subscriptions_and_podcasts(device):
     print('\tvisit_subscriptions')
-    # side menu is already open on the first access
+
+    # open side menu
+    tap(device, 1233, 1274, 1)
+    tap(device, 103, 192, 1)
 
     # click in subscriptions
     tap(device, 427, 522, 1)
