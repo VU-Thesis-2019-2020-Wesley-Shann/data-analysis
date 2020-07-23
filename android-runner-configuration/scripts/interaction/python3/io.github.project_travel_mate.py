@@ -22,6 +22,7 @@ def login(device):
     # click on login
     tap(device, 612, 1226, 6)
 
+    # The actions below are required because one code was commented due to exceptions
     # click back in top menu
     tap(device, 90, 192, 1)
 
