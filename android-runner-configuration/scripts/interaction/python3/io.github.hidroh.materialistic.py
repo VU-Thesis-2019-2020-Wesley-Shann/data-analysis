@@ -16,8 +16,8 @@ def visit_catching_up(device):
     # go to catching up
     tap(device, 432, 858)
 
-    # click on first card
-    tap(device, 724, 400, 8)
+    # click on second card
+    tap(device, 648, 789)
 
     # click on comments
     tap(device, 355, 693)
@@ -25,8 +25,8 @@ def visit_catching_up(device):
     # return to feed list
     tap_phone_back(device)
 
-    # click on second card
-    tap(device, 648, 789)
+    # click on first card
+    tap(device, 724, 400, 8)
 
     # click on comments
     tap(device, 355, 693)
@@ -65,8 +65,8 @@ def visit_best_stories(device):
     # go to best stories
     tap(device, 567, 1562)
 
-    # click on first card
-    tap(device, 724, 400, 8)
+    # click on second card
+    tap(device, 648, 789)
 
     # click on comments
     tap(device, 355, 693)
@@ -74,8 +74,8 @@ def visit_best_stories(device):
     # return to feed list
     tap_phone_back(device)
 
-    # click on second card
-    tap(device, 648, 789)
+    # click on first card
+    tap(device, 724, 400, 8)
 
     # click on comments
     tap(device, 355, 693)
