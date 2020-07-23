@@ -1,6 +1,7 @@
 import time
 
 
+# This assumes that there are 2 apps in background only and we will close the most recent
 def close_app(device):
     print('\tclose app')
     time.sleep(1)
