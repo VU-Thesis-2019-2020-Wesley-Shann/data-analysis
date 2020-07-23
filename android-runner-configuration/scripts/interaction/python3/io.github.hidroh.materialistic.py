@@ -152,9 +152,9 @@ def visit_new_stories_from_saved(device):
 def main(device, *args, **kwargs):
     if device.current_activity().find('io.github.hidroh.materialistic') != -1:
         print('\tRunning interaction for Materialistic')
-        # visit_catching_up(device)
+        visit_catching_up(device)
         visit_new_stories_from_saved(device)
         visit_new_stories_from_saved(device)
-        # visit_best_stories(device)
+        visit_best_stories(device)
     else:
         print('\tSkip file')
