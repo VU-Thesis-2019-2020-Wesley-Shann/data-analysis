@@ -1,4 +1,5 @@
 import sys
+import time
 
 sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
@@ -29,14 +30,82 @@ def login(device):
     # click continue
     tap(device, 904, 2208, 1)
 
-    # click done
-    tap(device, 1071, 1952, 1)
+
+def visit_delhi(device):
+    print('\tvisit_delhi')
+
+    # This closes the stoplight, removed direct from the app
+    # time.sleep(2)
+    # # click done
+    # tap(device, 1066, 1962, 2)
+
+    # click delhi
+    tap(device, 346, 709)
+
+    # click in fun facts
+    tap(device, 504, 1706)
+    tap_phone_back(device)
+
+    # click in know more
+    tap(device, 693, 1450, 8)
+    tap_phone_back(device)
+
+    # return to main page
+    tap_phone_back(device)
+
+    # click delhi
+    tap(device, 346, 709)
+
+    # click in know more
+    tap(device, 693, 1450)
+    tap_phone_back(device)
+
+    # return to main page
+    tap_phone_back(device)
+
+
+def visit_mumbai_weather_via_utility(device):
+    print('\tvisit_mumbai_weather_via_utility')
+
+    # click side menu
+    tap(device, 117, 170, 0)
+
+    # click util
+    tap(device, 355, 1674, 2)
+
+    # click weather
+    tap(device, 733, 1354, 2)
+
+    # click select city
+    tap(device, 724, 421, 1)
+
+    # click city 2 - mumbai
+    tap(device, 634, 1024)
+    tap_phone_back(device)
+
+    # back to util
+    tap_phone_back(device)
+
+    # click weather
+    tap(device, 733, 1354, 2)
+
+    # click select city
+    tap(device, 724, 421, 1)
+
+    # click city 2 - mumbai
+    tap(device, 634, 1024)
+    tap_phone_back(device)
+
+    # back to util
+    tap_phone_back(device)
 
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('io.github.project_travel_mate') != -1:
         print('\tRunning interaction for TravelMate')
-        login(device)
+        # login(device)
+        visit_delhi(device)
+        visit_mumbai_weather_via_utility(device)
     else:
         print('\tSkip file')
