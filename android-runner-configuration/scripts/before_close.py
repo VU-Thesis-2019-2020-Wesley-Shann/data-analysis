@@ -40,7 +40,12 @@ apps_db_files_to_clear = {
         'Antennapod.db-journal',
     ],
     'io.github.project_travel_mate': [
-
+        'city-travel-mate-db',
+        'city-travel-mate-db-shm',
+        'city-travel-mate-db-wal',
+        'TravelMate.db',
+        'TravelMate.db-shm',
+        'TravelMate.db-wal',
     ],
 }
 
