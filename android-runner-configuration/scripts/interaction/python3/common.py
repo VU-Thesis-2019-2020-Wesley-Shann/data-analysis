@@ -11,7 +11,7 @@ def tap(device, x, y, sleep=4):
 
 
 def tap_phone_back(device, sleep=1):
-    device.shell('input tap 324 2464')
+    device.shell('input keyevent KEYCODE_BACK')
     time.sleep(sleep)
 
 
