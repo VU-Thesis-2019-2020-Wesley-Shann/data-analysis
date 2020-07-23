@@ -3,6 +3,8 @@ apps_dir_to_clear = [
     'code_cache',
     'files',
     'shared_prefs',
+    'app_textures',
+    'app_webview',
 ]
 
 apps_db_files_to_clear = {
