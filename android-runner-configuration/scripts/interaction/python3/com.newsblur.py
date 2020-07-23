@@ -23,10 +23,39 @@ def login(device):
     tap(device, 1210, 1056)
 
 
+def visit_global_stories(device):
+    print('\tvisit_global_stories')
+
+    # click on global stories
+    tap(device, 594, 330)
+
+    # click on card 1
+    tap(device, 436, 453, 8)
+    tap_phone_back(device)
+
+    # click on card 2
+    tap(device, 435, 858)
+    tap_phone_back(device)
+
+    # return to front page
+    tap_phone_back(device)
+
+    # click on global stories
+    tap(device, 594, 330)
+
+    # click on card 1
+    tap(device, 436, 453)
+    tap_phone_back(device)
+
+    # return to front page
+    tap_phone_back(device)
+
+
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('com.newsblur') != -1:
         print('\tRunning interaction for NewsBlur')
-        login(device)
+        # login(device)
+        visit_global_stories(device)
     else:
         print('\tSkip file')
