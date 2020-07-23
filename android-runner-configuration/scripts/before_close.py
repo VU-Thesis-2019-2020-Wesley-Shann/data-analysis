@@ -30,7 +30,8 @@ apps_db_files_to_clear = {
         'Materialistic.db-wal',
     ],
     'com.newsblur': [
-
+        'blur.db',
+        'blur.db-journal',
     ],
     'de.danoeh.antennapod.debug': [
 

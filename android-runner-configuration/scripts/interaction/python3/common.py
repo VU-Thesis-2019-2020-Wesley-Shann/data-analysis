@@ -29,6 +29,10 @@ def write_email(device):
     write_text(device, 'nappatest@outlook.com', 0)
 
 
+def write_username(device):
+    write_text(device, 'NappaTestAccount', 0)
+
+
 def write_password(device):
     write_text(device, 'NappaTest1!', 0)
 
