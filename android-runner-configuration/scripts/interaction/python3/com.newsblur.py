@@ -20,7 +20,7 @@ def login(device):
     write_password(device)
 
     # click on login
-    tap(device, 1210, 1056)
+    tap(device, 1210, 1056, 6)
 
 
 def visit_global_stories(device):
@@ -83,8 +83,8 @@ def visit_all_shared_stories(device):
 def main(device, *args, **kwargs):
     if device.current_activity().find('com.newsblur') != -1:
         print('\tRunning interaction for NewsBlur')
-        # login(device)
-        # visit_global_stories(device)
+        login(device)
+        visit_global_stories(device)
         visit_all_shared_stories(device)
     else:
         print('\tSkip file')
