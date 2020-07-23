@@ -7,6 +7,11 @@ apps_dir_to_clear = [
     'app_webview',
 ]
 
+apps_dir_to_clear_min = [
+    'cache',
+    'code_cache',
+]
+
 apps_db_files_to_clear = {
     'com.ak.uobtimetable': [
     ],
@@ -32,8 +37,8 @@ apps_db_files_to_clear = {
         'Materialistic.db-wal',
     ],
     'com.newsblur': [
-        'blur.db',
-        'blur.db-journal',
+        # 'blur.db',
+        # 'blur.db-journal',
     ],
     'de.danoeh.antennapod.debug': [
         'Antennapod.db',
@@ -68,7 +73,11 @@ def get_idx_apps_db_files_to_clear(device):
 
 
 def clear_dir(device):
-    for directory in apps_dir_to_clear:
+    if device.current_activity().find('com.newsblur') != -1:
+        directories = apps_dir_to_clear_min
+    else:
+        directories = apps_dir_to_clear
+    for directory in directories:
         path = '/data/data/%s/%s/' % (device.current_activity(), directory)
         print('\tat "%s"' % path)
         device.shell('run-as %s rm -rf %s' % (device.current_activity(), path))
