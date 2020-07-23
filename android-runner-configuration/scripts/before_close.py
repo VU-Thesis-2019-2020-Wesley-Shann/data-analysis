@@ -77,6 +77,6 @@ def clear_db(device):
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     print('clearing app data')
-    # clear_dir(device)
-    # clear_db(device)
+    clear_dir(device)
+    clear_db(device)
     pass
