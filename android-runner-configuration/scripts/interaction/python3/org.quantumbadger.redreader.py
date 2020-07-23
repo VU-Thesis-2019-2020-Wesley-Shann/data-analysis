@@ -97,12 +97,40 @@ def visit_subreddit_aww(device):
     tap_phone_back(device)
 
 
+def first_run(device):
+    print('\tfirst action')
+    # continue as anonymous
+    tap(device, 720, 1440, 1)
+
+    # click in menu
+    tap(device, 1345, 165, 1)
+
+    # click in settings
+    tap(device, 940, 501, 1)
+
+    # click in cache
+    tap(device, 216, 853, 1)
+
+    # click in checkbox to disable
+    tap(device, 1318, 1194, 0)
+    tap(device, 1309, 1701, 0)
+
+    # set cache age
+    tap(device, 477, 805, 1)
+    tap(device, 463, 464, 1)
+
+    # Go back to home page
+    tap_phone_back(device)
+    tap_phone_back(device)
+
+
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('org.quantumbadger.redreader') != -1:
         print('\tRunning interaction for RedReader')
-        visit_subreddit_ask_science(device)
-        visit_subreddit_annoucements(device)
-        visit_subreddit_aww(device)
+        first_run(device)
+        # visit_subreddit_ask_science(device)
+        # visit_subreddit_annoucements(device)
+        # visit_subreddit_aww(device)
     else:
         print('\tSkip file')

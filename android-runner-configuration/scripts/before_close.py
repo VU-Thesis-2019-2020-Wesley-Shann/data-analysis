@@ -7,6 +7,10 @@ def clear_cache_redeader(device):
         device.current_activity(), device.current_activity()))
     print('\tat "/data/data/%s/databases/cache.db-journal"' % device.current_activity())
 
+    device.shell('run-as %s rm /data/data/%s/shared_prefs/org.quantumbadger.redreader_preferences.xml' % (
+        device.current_activity(), device.current_activity()))
+    print('\tat "/data/data/%s/shared_prefs/org.quantumbadger.redreader_preferences.xml"' % device.current_activity())
+
 
 def clear_cache_uob(device):
     device.shell(
