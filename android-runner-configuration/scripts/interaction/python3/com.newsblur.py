@@ -51,11 +51,40 @@ def visit_global_stories(device):
     tap_phone_back(device)
 
 
+def visit_all_shared_stories(device):
+    print('\tvisit_all_shared_stories')
+
+    # click on all shared stories
+    tap(device, 553, 442)
+
+    # click on card 1
+    tap(device, 436, 453, 8)
+    tap_phone_back(device)
+
+    # click on card 2
+    tap(device, 435, 858)
+    tap_phone_back(device)
+
+    # return to front page
+    tap_phone_back(device)
+
+    # click on all shared stories
+    tap(device, 553, 442)
+
+    # click on card 1
+    tap(device, 436, 453)
+    tap_phone_back(device)
+
+    # return to front page
+    tap_phone_back(device)
+
+
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('com.newsblur') != -1:
         print('\tRunning interaction for NewsBlur')
         # login(device)
-        visit_global_stories(device)
+        # visit_global_stories(device)
+        visit_all_shared_stories(device)
     else:
         print('\tSkip file')
