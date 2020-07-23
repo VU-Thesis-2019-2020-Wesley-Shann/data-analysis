@@ -153,8 +153,9 @@ def main(device, *args, **kwargs):
     if device.current_activity().find('io.github.hidroh.materialistic') != -1:
         print('\tRunning interaction for Materialistic')
         visit_catching_up(device)
-        visit_new_stories_from_saved(device)
-        visit_new_stories_from_saved(device)
+        # This interaction works, but it duplicated the runtime for this app =/
+        # visit_new_stories_from_saved(device)
+        # visit_new_stories_from_saved(device)
         visit_best_stories(device)
     else:
         print('\tSkip file')
