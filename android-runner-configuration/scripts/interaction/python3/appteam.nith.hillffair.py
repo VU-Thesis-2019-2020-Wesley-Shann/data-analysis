@@ -123,7 +123,7 @@ def accept_and_login(device):
     tap_close_keyboard(device)
 
     # login
-    tap(device, 373, 1498, 8)
+    tap(device, 373, 1498, 12)
 
 
 # noinspection PyUnusedLocal
