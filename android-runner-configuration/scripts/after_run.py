@@ -2,7 +2,7 @@ import time
 
 
 def close_app(device):
-    print('close app')
+    print('\tclose app')
     time.sleep(1)
     device.shell('input tap 1134 2469')
     time.sleep(2)

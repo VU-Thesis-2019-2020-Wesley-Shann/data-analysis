@@ -14,7 +14,7 @@ def visit_battle_day(device):
     print('\tvisit_battle_day')
 
     # battle day card
-    tap(device, 337, 1104)
+    tap(device, 337, 1104, 8)
 
     # music card
     tap(device, 733, 645, 12)
@@ -74,7 +74,7 @@ def visit_clubs(device):
     print('\tvisit_clubs')
 
     # club card
-    tap(device, 1084, 2213)
+    tap(device, 1084, 2213, 8)
 
     # PR club card
     tap(device, 369, 554)
