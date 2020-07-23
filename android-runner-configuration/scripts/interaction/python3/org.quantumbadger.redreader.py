@@ -13,12 +13,12 @@ def visit_subreddit_annoucements(device):
     # click in Announcements subreddit
     tap(device, 600, 1000)
 
-    # click in post 1
-    tap(device, 600, 580, 8)
-    tap_phone_back(device)
-
     # click in post 2
     tap(device, 600, 820)
+    tap_phone_back(device)
+
+    # click in post 1
+    tap(device, 600, 580, 8)
     tap_phone_back(device)
 
     # Go back to home page
@@ -42,16 +42,16 @@ def visit_subreddit_ask_science(device):
     # click in ask science subreddit
     tap(device, 600, 1536)
 
-    # click in post 1
-    tap(device, 600, 700, 8)
-    tap_phone_back(device)
-
     # click in post 2
     tap(device, 600, 950)
     tap_phone_back(device)
 
     # click in post 3
     tap(device, 600, 1200, 2)
+    tap_phone_back(device)
+
+    # click in post 1
+    tap(device, 600, 700, 8)
     tap_phone_back(device)
 
     # Go back to home page
