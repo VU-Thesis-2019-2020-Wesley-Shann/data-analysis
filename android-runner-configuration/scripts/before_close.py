@@ -1,39 +1,69 @@
-def clear_cache_redeader(device):
-    device.shell(
-        'run-as %s rm /data/data/%s/databases/cache.db' % (device.current_activity(), device.current_activity()))
-    print('\tat "/data/data/%s/databases/cache.db"' % device.current_activity())
+apps_dir_to_clear = [
+    'cache',
+    'code_cache',
+    'files',
+    'shared_prefs',
+]
 
-    device.shell('run-as %s rm /data/data/%s/databases/cache.db-journal' % (
-        device.current_activity(), device.current_activity()))
-    print('\tat "/data/data/%s/databases/cache.db-journal"' % device.current_activity())
+apps_db_files_to_clear = {
+    'com.ak.uobtimetable': [
+    ],
+    'org.quantumbadger.redreader': [
+        'cache.db',
+        'cache.db-journal',
+        'accounts_oauth2.db',
+        'accounts_oauth2.db-journal',
+        'DA39A3EE5E6B4B0D3255BFEF95601890AFD80709_subreddits_subreddits.db',
+        'DA39A3EE5E6B4B0D3255BFEF95601890AFD80709_subreddits_subreddits.db-journal',
+        'rr_multireddit_subscriptions.db',
+        'rr_multireddit_subscriptions.db-journal',
+        'rr_subscriptions.db',
+        'rr_subscriptions.db-journal',
+    ],
+    'appteam.nith.hillffair': [
+        'OneSignal.db',
+        'OneSignal.db-journal',
+    ],
+    'io.github.hidroh.materialistic': [
+        'Materialistic.db',
+        'Materialistic.db-shm',
+        'Materialistic.db-wal',
+    ],
+}
 
-    device.shell('run-as %s rm /data/data/%s/shared_prefs/org.quantumbadger.redreader_preferences.xml' % (
-        device.current_activity(), device.current_activity()))
-    print('\tat "/data/data/%s/shared_prefs/org.quantumbadger.redreader_preferences.xml"' % device.current_activity())
+
+def get_idx_apps_db_files_to_clear(device):
+    apps = [
+        'io.github.hidroh.materialistic',
+        'com.ak.uobtimetable',
+        'org.quantumbadger.redreader',
+        'appteam.nith.hillffair',
+    ]
+
+    for app in apps:
+        if device.current_activity().find(app) != -1:
+            print('\tMatched current app "%s" with config "%s"' % (device.current_activity(), app))
+            return app
 
 
-def clear_cache_uob(device):
-    device.shell(
-        'run-as %s rm /data/data/%s/shared_prefs/prefs.xml' % (device.current_activity(), device.current_activity()))
-    print('\tat "/data/data/%s/shared_prefs/prefs.xml"' % device.current_activity())
+def clear_dir(device):
+    for directory in apps_dir_to_clear:
+        path = '/data/data/%s/%s/' % (device.current_activity(), directory)
+        print('\tat "%s"' % path)
+        device.shell('run-as %s rm -rf %s' % (device.current_activity(), path))
 
 
-def clear_cache_dir(device):
-    print('\tat "/data/data/%s/cache/"' % device.current_activity())
-    result = device.shell(
-        'run-as %s rm -rf /data/data/%s/cache/' % (device.current_activity(), device.current_activity()))
-
-
-def clear_cache(device):
-    print('clearing app cache')
-    clear_cache_dir(device)
-    if device.current_activity().find('org.quantumbadger.redreader') != -1:
-        clear_cache_redeader(device)
-    elif device.current_activity().find('com.ak.uobtimetable') != -1:
-        clear_cache_uob(device)
+def clear_db(device):
+    files = apps_db_files_to_clear[get_idx_apps_db_files_to_clear(device)]
+    for file in files:
+        path = '/data/data/%s/databases/%s' % (device.current_activity(), file)
+        print('\tat "%s"' % path)
+        device.shell('run-as %s rm %s' % (device.current_activity(), path))
 
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
-    clear_cache(device)
+    print('clearing app data')
+    clear_dir(device)
+    clear_db(device)
     pass
