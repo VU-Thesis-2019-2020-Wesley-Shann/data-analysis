@@ -38,7 +38,7 @@ def install_apks():
 
 def launch_app(device, app):
     print('\tlaunch_app')
-    print('\t- %s' % app)
+    # print('\t- %s' % app)
     result = device.shell('monkey -p {} 1'.format(app))
     if 'monkey aborted' in result:
         raise Exception('Could not launch "{}"'.format(app))
@@ -89,8 +89,8 @@ def travel_mate_configuration(device):
         close_app(device)
 
 
-def delete_nappa_db(device):
-    print('\tdelete_nappa_db')
+def clear_db_nappa(device):
+    print('\tclear_db_nappa')
     dbs = [
         'nappa.db',
         'nappa.db-shm',
@@ -170,11 +170,22 @@ def hillffair_configuration(device):
         close_app(device)
 
 
-# noinspection PyUnusedLocal
-def main(device, *args, **kwargs):
-    install_apks()
+def app_configuration(device):
+    print('\tapp_configuration')
     travel_mate_configuration(device)
     news_blur_configuration(device)
     hillffair_configuration(device)
-    delete_nappa_db(device)
+
+
+def clear_db(device):
+    print('\tclear_db')
+    # The login counted as 1 session
+    clear_db_nappa(device)
+
+
+# noinspection PyUnusedLocal
+def main(device, *args, **kwargs):
+    install_apks()
+    app_configuration(device)
+    clear_db(device)
     pass
