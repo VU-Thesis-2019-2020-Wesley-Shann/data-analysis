@@ -50,3 +50,18 @@ def close_app(device):
     device.shell('input tap 1246 1360')
     time.sleep(1)
     device.shell('input keyevent KEYCODE_BACK')
+
+
+def copy_nappa_db_to_sd_card(device):
+    print('\tcopy_nappa_db_to_sd_card app')
+    app = device.current_activity()
+    source = 'databases/nappa.db' % app
+    destination = '/mnt/sdcard/thesis_wesley/%s/' % app
+    command_cp = 'run-as %s cp %s %s' % (app, source, destination)
+    command_mkdir = 'mkdir -p %s' % destination
+    device.shell(command_mkdir)
+    device.shell(command_cp)
+    # Copy to SD card
+    # adb shell run-as baseline.de.danoeh.antennapod.debug cp databases/Antennapod.db /mnt/sdcard/
+    # Copy from SD card
+    # adb shell run-as baseline.de.danoeh.antennapod.debug cp /mnt/sdcard/myTest.db databases/
