@@ -38,8 +38,8 @@ apps_db_files_to_clear = {
         'rr_subscriptions.db-journal',
     ],
     'appteam.nith.hillffair': [
-        # 'OneSignal.db',
-        # 'OneSignal.db-journal',
+        'OneSignal.db',
+        'OneSignal.db-journal',
     ],
     'io.github.hidroh.materialistic': [
         'Materialistic.db',
@@ -47,20 +47,20 @@ apps_db_files_to_clear = {
         'Materialistic.db-wal',
     ],
     'com.newsblur': [
-        # 'blur.db',
-        # 'blur.db-journal',
+        'blur.db',
+        'blur.db-journal',
     ],
     'de.danoeh.antennapod.debug': [
         'Antennapod.db',
         'Antennapod.db-journal',
     ],
     'io.github.project_travel_mate': [
-        # 'city-travel-mate-db',
-        # 'city-travel-mate-db-shm',
-        # 'city-travel-mate-db-wal',
-        # 'TravelMate.db',
-        # 'TravelMate.db-shm',
-        # 'TravelMate.db-wal',
+        'city-travel-mate-db',
+        'city-travel-mate-db-shm',
+        'city-travel-mate-db-wal',
+        'TravelMate.db',
+        'TravelMate.db-shm',
+        'TravelMate.db-wal',
     ],
 }
 
