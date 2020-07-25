@@ -12,10 +12,12 @@ packages = [
 
 
 def uninstall_apps():
+    print('\tuninstall_apps')
     for treatment in treatments:
         for package in packages:
             app = '%s.%s' % (treatment, package)
             command = 'adb uninstall %s' % app
+            print('\t- %s' % app)
             subprocess.call(command, shell=True)
 
 
