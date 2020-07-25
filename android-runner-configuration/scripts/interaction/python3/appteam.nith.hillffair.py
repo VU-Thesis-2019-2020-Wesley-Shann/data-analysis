@@ -131,7 +131,7 @@ def main(device, *args, **kwargs):
     if device.current_activity().find('appteam.nith.hillffair') != -1:
         print('\tRunning interaction for Hillffair')
         # if should_run_login_and_permission_only():
-        accept_and_login(device)
+        # accept_and_login(device)
         # else:
         visit_battle_day(device)
         visit_quiz(device)

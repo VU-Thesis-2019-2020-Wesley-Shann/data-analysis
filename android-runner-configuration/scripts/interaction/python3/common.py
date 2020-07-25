@@ -40,3 +40,14 @@ def write_password(device):
 def swipe(device, x1, y1, x2, y2, sleep=4, duration=1000):
     device.shell('input swipe %s %s %s %s %s' % (x1, y1, x2, y2, duration))
     time.sleep(sleep)
+
+
+# This assumes that there are 2 apps in background only and we will close the most recent
+def close_app(device):
+    print('\tclose app')
+    time.sleep(1)
+    device.shell('input tap 1134 2469')
+    time.sleep(2)
+    device.shell('input tap 1246 1360')
+    time.sleep(1)
+    device.shell('input keyevent KEYCODE_BACK')

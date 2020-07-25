@@ -1,13 +1,17 @@
 import subprocess
 
+treatments = [
+    'baseline',
+]
+
+packages = [
+    'io.github.project_travel_mate',
+    'com.newsblur',
+    'appteam.nith.hillffair'
+]
+
 
 def uninstall_apps():
-    treatments = [
-        'baseline'
-    ]
-    packages = [
-        'io.github.project_travel_mate'
-    ]
     for treatment in treatments:
         for package in packages:
             app = '%s.%s' % (treatment, package)

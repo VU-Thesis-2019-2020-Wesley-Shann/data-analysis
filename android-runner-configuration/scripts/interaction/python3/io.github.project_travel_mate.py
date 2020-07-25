@@ -1,5 +1,4 @@
 import sys
-import time
 
 sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
@@ -104,7 +103,7 @@ def visit_mumbai_weather_via_utility(device):
 def main(device, *args, **kwargs):
     if device.current_activity().find('io.github.project_travel_mate') != -1:
         print('\tRunning interaction for TravelMate')
-        login(device)
+        # login(device)
         visit_delhi(device)
         visit_mumbai_weather_via_utility(device)
     else:

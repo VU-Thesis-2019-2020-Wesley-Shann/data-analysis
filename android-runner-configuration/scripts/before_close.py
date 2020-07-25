@@ -15,11 +15,11 @@ apps_dir_to_clear_min = [
 apps_dir_to_clear = {
     'com.ak.uobtimetable': apps_dir_to_clear_complete,
     'org.quantumbadger.redreader': apps_dir_to_clear_complete,
-    'appteam.nith.hillffair': apps_dir_to_clear_complete,
+    'appteam.nith.hillffair': apps_dir_to_clear_min,
     'io.github.hidroh.materialistic': apps_dir_to_clear_complete,
-    'com.newsblur': apps_dir_to_clear_complete,
+    'com.newsblur': apps_dir_to_clear_min,
     'de.danoeh.antennapod.debug': apps_dir_to_clear_complete,
-    'io.github.project_travel_mate': apps_dir_to_clear_complete,
+    'io.github.project_travel_mate': apps_dir_to_clear_min,
 }
 
 apps_db_files_to_clear = {
@@ -38,8 +38,8 @@ apps_db_files_to_clear = {
         'rr_subscriptions.db-journal',
     ],
     'appteam.nith.hillffair': [
-        'OneSignal.db',
-        'OneSignal.db-journal',
+        # 'OneSignal.db',
+        # 'OneSignal.db-journal',
     ],
     'io.github.hidroh.materialistic': [
         'Materialistic.db',
@@ -47,8 +47,8 @@ apps_db_files_to_clear = {
         'Materialistic.db-wal',
     ],
     'com.newsblur': [
-        'blur.db',
-        'blur.db-journal',
+        # 'blur.db',
+        # 'blur.db-journal',
     ],
     'de.danoeh.antennapod.debug': [
         'Antennapod.db',

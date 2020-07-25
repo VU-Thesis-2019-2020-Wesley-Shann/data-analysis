@@ -1,15 +1,8 @@
-import time
+import sys
 
+sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
-# This assumes that there are 2 apps in background only and we will close the most recent
-def close_app(device):
-    print('\tclose app')
-    time.sleep(1)
-    device.shell('input tap 1134 2469')
-    time.sleep(2)
-    device.shell('input tap 1246 1360')
-    time.sleep(1)
-    device.shell('input keyevent KEYCODE_BACK')
+from scripts.interaction.python3.common import close_app
 
 
 # noinspection PyUnusedLocal
