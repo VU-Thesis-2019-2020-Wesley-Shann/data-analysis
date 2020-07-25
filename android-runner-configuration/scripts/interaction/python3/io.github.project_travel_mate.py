@@ -1,4 +1,5 @@
 import sys
+import time
 
 sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
@@ -37,7 +38,7 @@ def visit_delhi(device):
     # time.sleep(2)
     # # click done
     # tap(device, 1066, 1962, 2)
-
+    time.sleep(2)
     # click delhi
     tap(device, 346, 709)
 
