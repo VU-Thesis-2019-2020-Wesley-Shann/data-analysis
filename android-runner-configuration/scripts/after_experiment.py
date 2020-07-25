@@ -1,24 +1,8 @@
-import subprocess
+import sys
 
-treatments = [
-    'baseline',
-]
+sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
-packages = [
-    'io.github.project_travel_mate',
-    'com.newsblur',
-    'appteam.nith.hillffair'
-]
-
-
-def uninstall_apps():
-    print('\tuninstall_apps')
-    for treatment in treatments:
-        for package in packages:
-            app = '%s.%s' % (treatment, package)
-            command = 'adb uninstall %s' % app
-            print('\t- %s' % app)
-            subprocess.call(command, shell=True)
+from scripts.util_adb import uninstall_apps
 
 
 # noinspection PyUnusedLocal
