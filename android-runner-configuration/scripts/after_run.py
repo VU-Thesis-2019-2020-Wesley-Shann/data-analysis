@@ -2,7 +2,7 @@ import sys
 
 sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
-from scripts.interaction.python3.common import close_app
+from scripts.util.adb import close_app
 
 
 # noinspection PyUnusedLocal

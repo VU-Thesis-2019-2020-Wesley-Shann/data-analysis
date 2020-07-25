@@ -8,10 +8,10 @@ from scripts.interaction.python3.common import write_password
 from scripts.interaction.python3.common import write_username
 from scripts.interaction.python3.common import tap_close_keyboard
 from scripts.interaction.python3.common import close_app
-from scripts.util_subject import treatments
-from scripts.util_adb import launch_app
-from scripts.util_file import clear_db
-from scripts.util_file import clear_dir
+from scripts.util.subject import treatments
+from scripts.util.adb import launch_app
+from scripts.util.file import clear_db
+from scripts.util.file import clear_dir
 
 # most of the times it takes 2~4 seconds, but occasionally it takes 10 seconds to login
 login_waiting_time = 15

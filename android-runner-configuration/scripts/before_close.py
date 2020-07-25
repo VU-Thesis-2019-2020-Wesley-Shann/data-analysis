@@ -2,8 +2,8 @@ import sys
 
 sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
-from scripts.util_file import clear_dir
-from scripts.util_file import clear_db
+from scripts.util.file import clear_dir
+from scripts.util.file import clear_db
 
 
 # noinspection PyUnusedLocal

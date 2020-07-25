@@ -5,8 +5,8 @@ import time
 
 sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
-from scripts.util_subject import packages_with_login
-from scripts.util_subject import treatments
+from scripts.util.subject import packages_with_login
+from scripts.util.subject import treatments
 
 
 def install_apks():
@@ -39,3 +39,14 @@ def launch_app(device, app):
         raise Exception('Could not launch "{}"'.format(app))
     # Makes sure the app has launched
     time.sleep(5)
+
+
+# This assumes that there are 2 apps in background only and we will close the most recent
+def close_app(device):
+    print('\tclose app')
+    time.sleep(1)
+    device.shell('input tap 1134 2469')
+    time.sleep(2)
+    device.shell('input tap 1246 1360')
+    time.sleep(1)
+    device.shell('input keyevent KEYCODE_BACK')

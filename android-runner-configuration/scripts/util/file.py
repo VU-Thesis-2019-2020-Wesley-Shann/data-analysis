@@ -2,8 +2,8 @@ import sys
 
 sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
-from scripts.util_subject import packages_with_login
-from scripts.util_subject import treatments
+from scripts.util.subject import packages_with_login
+from scripts.util.subject import treatments
 
 apps_dir_to_clear_complete = [
     'cache',
