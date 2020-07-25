@@ -10,6 +10,8 @@ from scripts.interaction.python3.common import tap_close_keyboard
 from scripts.interaction.python3.common import close_app
 from scripts.util_subject import treatments
 from scripts.util_adb import launch_app
+from scripts.util_file import clear_db
+from scripts.util_file import clear_dir
 
 # most of the times it takes 2~4 seconds, but occasionally it takes 10 seconds to login
 login_waiting_time = 15
@@ -55,6 +57,8 @@ def travel_mate_configuration(device):
         launch_app(device, app)
         travel_mate_accept_permission(device)
         travel_mate_login(device)
+        clear_db(device)
+        clear_dir(device)
         close_app(device)
 
 
@@ -80,6 +84,8 @@ def news_blur_configuration(device):
         app = '%s.%s' % (treatment, package)
         launch_app(device, app)
         news_blur_login(device)
+        clear_db(device)
+        clear_dir(device)
         close_app(device)
 
 
@@ -119,6 +125,8 @@ def hillffair_configuration(device):
         launch_app(device, app)
         hillffair_accept(device)
         hillffair_login(device)
+        clear_db(device)
+        clear_dir(device)
         close_app(device)
 
 
