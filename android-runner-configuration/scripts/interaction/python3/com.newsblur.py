@@ -85,7 +85,7 @@ def main(device, *args, **kwargs):
         print('\tRunning interaction for NewsBlur')
         # Login works, but there seems to be something wrong with Newblur deleting accounts,
         # so it is best to be logged in the entire experiment
-        # login(device)
+        login(device)
         visit_global_stories(device)
         visit_all_shared_stories(device)
     else:
