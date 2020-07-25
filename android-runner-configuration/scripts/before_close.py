@@ -1,4 +1,4 @@
-apps_dir_to_clear = [
+apps_dir_to_clear_complete = [
     'cache',
     'code_cache',
     'files',
@@ -11,6 +11,16 @@ apps_dir_to_clear_min = [
     'cache',
     'code_cache',
 ]
+
+apps_dir_to_clear = {
+    'com.ak.uobtimetable': apps_dir_to_clear_complete,
+    'org.quantumbadger.redreader': apps_dir_to_clear_complete,
+    'appteam.nith.hillffair': apps_dir_to_clear_complete,
+    'io.github.hidroh.materialistic': apps_dir_to_clear_complete,
+    'com.newsblur': apps_dir_to_clear_complete,
+    'de.danoeh.antennapod.debug': apps_dir_to_clear_complete,
+    'io.github.project_travel_mate': apps_dir_to_clear_complete,
+}
 
 apps_db_files_to_clear = {
     'com.ak.uobtimetable': [
@@ -37,8 +47,8 @@ apps_db_files_to_clear = {
         'Materialistic.db-wal',
     ],
     'com.newsblur': [
-        # 'blur.db',
-        # 'blur.db-journal',
+        'blur.db',
+        'blur.db-journal',
     ],
     'de.danoeh.antennapod.debug': [
         'Antennapod.db',
@@ -73,10 +83,7 @@ def get_idx_apps_db_files_to_clear(device):
 
 
 def clear_dir(device):
-    if device.current_activity().find('com.newsblur') != -1:
-        directories = apps_dir_to_clear_min
-    else:
-        directories = apps_dir_to_clear
+    directories = apps_dir_to_clear[get_idx_apps_db_files_to_clear(device)]
     for directory in directories:
         path = '/data/data/%s/%s/' % (device.current_activity(), directory)
         print('\tat "%s"' % path)
