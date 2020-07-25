@@ -90,23 +90,6 @@ def travel_mate_configuration(device):
         close_app(device)
 
 
-def clear_db_nappa(device):
-    print('\tclear_db_nappa')
-    dbs = [
-        'nappa.db',
-        'nappa.db-shm',
-        'nappa.db-wal',
-    ]
-    for treatment in treatments:
-        for package in packages:
-            app = '%s.%s' % (treatment, package)
-            for db in dbs:
-                path = '/data/data/%s/databases/%s' % (app, db)
-                print('\tat "%s"' % path)
-                command = 'run-as %s rm %s' % (app, path)
-                device.shell(command)
-
-
 def news_blur_login(device):
     print('\tnews_blur_login')
 
@@ -180,8 +163,23 @@ def app_configuration(device):
 
 def clear_db(device):
     print('\tclear_db')
-    # The login counted as 1 session
-    clear_db_nappa(device)
+    db_nappa = [
+        'nappa.db',
+        'nappa.db-shm',
+        'nappa.db-wal',
+    ]
+    db_paloma = [
+
+    ]
+    dbs = db_nappa + db_paloma
+    for treatment in treatments:
+        for package in packages:
+            app = '%s.%s' % (treatment, package)
+            for db in dbs:
+                path = '/data/data/%s/databases/%s' % (app, db)
+                print('\tat "%s"' % path)
+                command = 'run-as %s rm %s' % (app, path)
+                device.shell(command)
 
 
 # noinspection PyUnusedLocal
