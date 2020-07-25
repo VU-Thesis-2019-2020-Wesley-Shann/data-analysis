@@ -21,6 +21,7 @@ packages = [
     'appteam.nith.hillffair'
 ]
 
+# most of the times it takes 2~4 seconds, but occasionally it takes 10 seconds to login
 login_waiting_time = 15
 
 
