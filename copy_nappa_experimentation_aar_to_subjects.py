@@ -37,3 +37,8 @@ for treatment in treatments:
         print('- %s' % destination_path)
         subprocess.call(mkdir_command, shell=True)
         subprocess.call(cp_command, shell=True)
+
+nappa_path = '/home/sshann/Documents/thesis/NAPPA/Prefetching-Library/android_prefetching_lib/libs/aars/'
+print('- %s' % nappa_path)
+mkdir_command = 'mkdir -p %s' % nappa_path
+cp_command = 'yes | cp -rf %s %s' % (source_path, nappa_path )
