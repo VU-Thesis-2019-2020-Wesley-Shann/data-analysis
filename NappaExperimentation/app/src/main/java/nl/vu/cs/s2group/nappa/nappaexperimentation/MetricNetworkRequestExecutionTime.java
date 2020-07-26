@@ -35,15 +35,14 @@ public final class MetricNetworkRequestExecutionTime {
             if (header.size() == 1) responseLengthHeader = header.get(0);
         }
 
-        String logMessage = "DEPENDENT_VARIABLE_D_4: " +
-                "REQUEST_DURATION_SYSTEM='" + requestDurationSystem + "'," +
+        String logMessage = "REQUEST_DURATION_SYSTEM='" + requestDurationSystem + "'," +
                 "REQUEST_DURATION_OKHTTP='" + requestDurationOkHttp + "'," +
                 "RESPONSE_CODE='" + responseCode + "'," +
                 "RESPONSE_METHOD='" + requestMethod + "'," +
                 "RESPONSE_LENGTH_OKHTTP='" + responseLengthOkhttp + "'," +
                 "RESPONSE_LENGTH_HEADER='" + responseLengthHeader + "'," +
                 "REQUEST_URL='" + requestUrl + "',";
-        Logger.i("NAPPA_EXPERIMENTATION", logMessage);
+        Logger.i(TAG, logMessage);
 
     }
 }
