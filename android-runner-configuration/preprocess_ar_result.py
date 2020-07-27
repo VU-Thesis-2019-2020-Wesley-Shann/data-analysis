@@ -28,11 +28,8 @@ def get_logcat_property(line, property_to_get):
 
 
 def parse_logcat_to_csv(exp, tag, properties):
-    print('parse_logcat_to_csv')
     subject_paths = get_subject_base_path(exp)
     for subject_path in subject_paths:
-        subject = subject_path.split('/')
-        print('\tParsing subject', subject[len(subject) - 1])
         base_path = subject_path + '/logcat/'
         for filename in os.listdir(base_path):
             if '.txt' not in filename:
@@ -71,6 +68,8 @@ def main():
         '2020.07.27_204222'
     ]
     for exp in exps:
+        print('\tParse subject %s' % exp)
+        print('\tParsenetwork_duration')
         network_duration = {
             "REQUEST_DURATION_SYSTEM": TYPE_NUMBER,
             "REQUEST_DURATION_OKHTTP": TYPE_NUMBER,
@@ -85,6 +84,7 @@ def main():
         parse_logcat_to_csv(exp, 'MetricNetworkRequestExecutionTime', network_duration)
 
         if 'nappa' in exp:
+            print('\tstrategy_duration')
             strategy_duration = {
                 "STRATEGY_CLASS": TYPE_STRING,
                 "DURATION": TYPE_NUMBER,
