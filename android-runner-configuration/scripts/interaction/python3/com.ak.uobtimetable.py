@@ -24,7 +24,7 @@ def visit_courses_page(device):
 
 
 def swipe_weekday_to_left(device):
-    swipe(device, 364, 368, 1012, 378, 1)
+    swipe(device, 364, 368, 1012, 378, 0)
 
 
 def tap_tuesday(device):
