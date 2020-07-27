@@ -14,7 +14,7 @@ public final class MetricNetworkRequestExecutionTime {
         throw new IllegalStateException("MetricNetworkRequestExecutionTime is a metric class and should not be instantiated!");
     }
 
-    public static void log(@NotNull Response response, long sentRequestAtMillis, long receivedResponseAtMillis) {
+    public static void log(@NotNull Response response, long sentRequestAtMillis, long receivedResponseAtMillis, boolean isRequestSynchronous) {
         String requestMethod = response.request().method();
         boolean isResponseGetMethod = requestMethod.equals("GET");
 
@@ -25,6 +25,8 @@ public final class MetricNetworkRequestExecutionTime {
 
         int responseCode = response.code();
         String requestUrl = response.request().url().url().toString();
+        String isRequestSynchronousStr = isRequestSynchronous ? "TRUE" : "FALSE";
+        String requestHttpProtocol = response.protocol().toString();
 
         // okhttp3.ResponseBody.contentLength
         long responseLengthOkhttp = response.body() != null ? response.body().contentLength() : -2;
@@ -37,10 +39,12 @@ public final class MetricNetworkRequestExecutionTime {
 
         String logMessage = "REQUEST_DURATION_SYSTEM='" + requestDurationSystem + "'," +
                 "REQUEST_DURATION_OKHTTP='" + requestDurationOkHttp + "'," +
+                "REQUEST_SYNCHRONOUS='" + isRequestSynchronousStr + "'," +
                 "RESPONSE_CODE='" + responseCode + "'," +
                 "RESPONSE_METHOD='" + requestMethod + "'," +
                 "RESPONSE_LENGTH_OKHTTP='" + responseLengthOkhttp + "'," +
                 "RESPONSE_LENGTH_HEADER='" + responseLengthHeader + "'," +
+                "REQUEST_PROTOCOL='" + requestHttpProtocol + "'," +
                 "REQUEST_URL='" + requestUrl + "',";
         Logger.i(TAG, logMessage);
 
