@@ -96,7 +96,7 @@ def main(device, *args, **kwargs):
         print('\tRunning interaction for UOB')
         tap_continue_button(device)
         select_course_bedfordshire_first_time(device)
-        # select_course_ai(device)
-        # visit_term_date(device)
+        select_course_ai(device)
+        visit_term_date(device)
     else:
         print('\tSkip file')
