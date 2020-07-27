@@ -35,13 +35,14 @@ def parse_logcat_to_csv(exp, tag, properties):
         print('\tParsing subject', subject[len(subject) - 1])
         base_path = subject_path + '/logcat/'
         for filename in os.listdir(base_path):
-            if '.csv' in filename:
+            if '.txt' not in filename:
                 continue
             print('\t\tParsing file', filename)
             line_count = 0
             parsed_line_count = 0
             with open(os.path.join(base_path, filename), 'r') as src_file:
-                dst_file_name = '%s/%s' % (base_path, filename.replace('.txt', '.csv'))
+                dst_file_name = '%s%s/%s' % (base_path, tag, filename.replace('.txt', '.csv'))
+                os.makedirs(os.path.dirname(dst_file_name), exist_ok=True)
                 with open(dst_file_name, 'w') as dst_file:
                     line = src_file.readline()
                     csv_header = ','.join(properties.keys()) + '\n'
@@ -49,7 +50,7 @@ def parse_logcat_to_csv(exp, tag, properties):
                     while line:
                         line_count = line_count + 1
                         # print('\t\t\t raw line %s' % line)
-                        if 'MetricNetworkRequestExecutionTime:' in line:
+                        if tag in line:
                             parsed_line_count = parsed_line_count + 1
                             properties_values = []
                             for property_label, property_type in properties.items():
