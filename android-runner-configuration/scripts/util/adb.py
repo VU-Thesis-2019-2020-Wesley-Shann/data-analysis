@@ -55,7 +55,7 @@ def close_app(device):
 def copy_nappa_db_to_sd_card(device):
     print('\tcopy_nappa_db_to_sd_card app')
     app = device.current_activity()
-    source = 'databases/nappa.db' % app
+    source = 'databases/nappa.db'
     destination = '/mnt/sdcard/thesis_wesley/%s/' % app
     command_cp = 'run-as %s cp %s %s' % (app, source, destination)
     command_mkdir = 'mkdir -p %s' % destination
