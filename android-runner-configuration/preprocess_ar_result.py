@@ -84,6 +84,14 @@ def main():
         }
         parse_logcat_to_csv(exp, 'MetricNetworkRequestExecutionTime', network_duration)
 
+        if 'nappa' in exp:
+            strategy_duration = {
+                "STRATEGY_CLASS": TYPE_STRING,
+                "DURATION": TYPE_NUMBER,
+                "NUMBER_OF_URLS": TYPE_NUMBER,
+            }
+            parse_logcat_to_csv(exp, 'MetricNappaPrefetchingStrategyExecutionTime', strategy_duration)
+
 
 if __name__ == "__main__":
     main()
