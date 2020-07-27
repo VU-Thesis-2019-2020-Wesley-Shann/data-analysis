@@ -7,7 +7,7 @@ from scripts.interaction.python3.common import write_email
 from scripts.interaction.python3.common import write_password
 from scripts.interaction.python3.common import write_username
 from scripts.interaction.python3.common import tap_close_keyboard
-from scripts.interaction.python3.common import close_app
+from scripts.util.adb import close_app
 from scripts.util.subject import treatments
 from scripts.util.adb import launch_app
 from scripts.util.file import clear_db
