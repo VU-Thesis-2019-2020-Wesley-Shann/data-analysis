@@ -7,6 +7,7 @@ from scripts.interaction.python3.common import swipe
 
 
 def tap_continue_button(device):
+    print('\ttap_continue_button')
     tap(device, 711, 1664, 6)
 
 
@@ -95,7 +96,7 @@ def main(device, *args, **kwargs):
         print('\tRunning interaction for UOB')
         tap_continue_button(device)
         select_course_bedfordshire_first_time(device)
-        select_course_ai(device)
-        visit_term_date(device)
+        # select_course_ai(device)
+        # visit_term_date(device)
     else:
         print('\tSkip file')
