@@ -33,3 +33,41 @@ def save_raw_log_cat_to_file(device):
 def retrieve_logcat_info(device):
     print('\tretrieve_logcat_info')
     save_raw_log_cat_to_file(device)
+
+
+def parse_to_csv_logcat_network_request_execution_time(device):
+    print('\tparse_to_csv_logcat_network_request_execution_time')
+    print('\ttodo')
+
+
+def parse_to_csv_nappa_prefetching_strategy_execution_time(device):
+    print('\tparse_to_csv_nappa_prefetching_strategy_execution_time')
+    print('\ttodo')
+
+
+# def aggregate_logcat_network_request_execution_time(device):
+#     print('\taggregate_logcat_network_request_execution_time')
+#     print('\ttodo')
+#
+#
+# def aggregate_nappa_prefetching_strategy_execution_time(device):
+#     print('\taggregate_nappa_prefetching_strategy_execution_time')
+#     print('\ttodo')
+
+
+def parse_logcat(device):
+    print('\tparse_logcat')
+    parse_to_csv_logcat_network_request_execution_time(device)
+    parse_to_csv_nappa_prefetching_strategy_execution_time(device)
+
+
+# def aggregate_logcat(device):
+#     print('\taggregate_logcat')
+#     aggregate_logcat_network_request_execution_time(device)
+#     aggregate_nappa_prefetching_strategy_execution_time(device)
+
+
+def preprocess_logcat(device):
+    print('\tpreprocess_logcat')
+    parse_logcat(device)
+    # aggregate_logcat(device)
