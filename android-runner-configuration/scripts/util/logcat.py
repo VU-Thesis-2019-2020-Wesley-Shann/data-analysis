@@ -27,8 +27,7 @@ def save_raw_log_cat_to_file(device):
     command_mkdir = 'mkdir -p %s' % base_path
     command_logcat = 'adb logcat -d -s NAPPA_EXPERIMENTATION > %s' % path
     subprocess.call(command_mkdir, shell=True)
-    result = subprocess.call(command_logcat, shell=True)
-    print('\t result is: %s' % result)
+    subprocess.call(command_logcat, shell=True)
 
 
 def retrieve_logcat_info(device):

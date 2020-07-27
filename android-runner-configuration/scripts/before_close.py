@@ -8,11 +8,15 @@ from scripts.util.adb import copy_nappa_db_to_sd_card
 from scripts.util.logcat import retrieve_logcat_info
 
 
-# noinspection PyUnusedLocal
-def main(device, *args, **kwargs):
+def clear_app_data(device):
     print('\tclearing app data')
-    retrieve_logcat_info(device)
     clear_dir(device)
     clear_db(device)
     copy_nappa_db_to_sd_card(device)
+
+
+# noinspection PyUnusedLocal
+def main(device, *args, **kwargs):
+    retrieve_logcat_info(device)
+    clear_app_data()
     pass
