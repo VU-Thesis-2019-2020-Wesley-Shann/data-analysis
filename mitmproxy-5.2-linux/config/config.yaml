@@ -8,11 +8,19 @@ server_replay: [
 
 # Don't remove flows from server replay state after use. This makes it
 # possible to replay same response multiple times. Type bool.
+# Ensures the request is replayed for all runs
 server_replay_nopop: true
 
 # Request's parameters to be ignored while searching for a saved flow to
 # replay. Type sequence of str.
+# Ensures that requests are matched
 server_replay_ignore_params: [
-    # Materialistic sent some queries based on a few paramaters. This in particular takes the current timestamp
+    # Materialistic sent some queries based on a few paramaters. 
+    # This in particular takes the current timestamp
     "numericFilters",
   ]
+
+# Kill extra requests during replay. Type bool.
+# Ensures that only requests that matches the replay are executed.
+# Non-matched requests default to timeout
+server_replay_kill_extra: true
