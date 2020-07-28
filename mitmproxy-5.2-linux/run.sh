@@ -1,0 +1,1 @@
+./mitmproxy --set confdir="./config"
