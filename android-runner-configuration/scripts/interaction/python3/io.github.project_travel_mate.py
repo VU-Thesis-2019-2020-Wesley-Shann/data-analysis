@@ -111,8 +111,8 @@ def visit_holidays(device):
     tap(device, 355, 1674, 2)
 
     # swipe to the bottom of the page
-    swipe(device, 500, 2000, 500, 100, 1)
-    swipe(device, 500, 2000, 500, 100, 1)
+    swipe(device, 500, 2000, 500, 100, 0)
+    swipe(device, 500, 2000, 500, 100, 0)
 
     # click upcoming long weekend
     tap(device, 657, 2080)
@@ -132,7 +132,7 @@ def main(device, *args, **kwargs):
     if device.current_activity().find('io.github.project_travel_mate') != -1:
         print('\tRunning interaction for TravelMate')
         # login(device)
-        # visit_delhi(device)
+        visit_delhi(device)
         # Travel mate stated to crash when visiting this activity
         # visit_mumbai_weather_via_utility(device)
         visit_holidays(device)
