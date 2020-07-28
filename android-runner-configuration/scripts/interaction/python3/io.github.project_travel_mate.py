@@ -105,7 +105,7 @@ def visit_holidays(device):
     print('\tvisit_holidays')
 
     # click side menu
-    tap(device, 117, 170, 1)
+    tap(device, 117, 170, 0)
 
     # click util
     tap(device, 355, 1674, 2)
@@ -120,8 +120,11 @@ def visit_holidays(device):
     # back to util
     tap_phone_back(device)
 
-    # back to front page
-    tap_phone_back(device)
+    # click side menu
+    tap(device, 117, 170, 0)
+
+    # go to home page
+    tap(device, 405, 661, 2)
 
 
 # noinspection PyUnusedLocal
@@ -129,7 +132,7 @@ def main(device, *args, **kwargs):
     if device.current_activity().find('io.github.project_travel_mate') != -1:
         print('\tRunning interaction for TravelMate')
         # login(device)
-        visit_delhi(device)
+        # visit_delhi(device)
         # Travel mate stated to crash when visiting this activity
         # visit_mumbai_weather_via_utility(device)
         visit_holidays(device)
