@@ -7,6 +7,7 @@ from scripts.interaction.python3.common import tap
 from scripts.interaction.python3.common import tap_phone_back
 from scripts.interaction.python3.common import write_email
 from scripts.interaction.python3.common import write_password
+from scripts.interaction.python3.common import swipe
 
 
 def login(device):
@@ -100,12 +101,38 @@ def visit_mumbai_weather_via_utility(device):
     tap_phone_back(device)
 
 
+def visit_holidays(device):
+    print('\tvisit_holidays')
+
+    # click side menu
+    tap(device, 117, 170, 1)
+
+    # click util
+    tap(device, 355, 1674, 2)
+
+    # swipe to the bottom of the page
+    swipe(device, 500, 2000, 500, 100, 1)
+    swipe(device, 500, 2000, 500, 100, 1)
+
+    # click upcoming long weekend
+    tap(device, 657, 2080)
+
+    # back to util
+    tap_phone_back(device)
+
+    # back to front page
+    tap_phone_back(device)
+
+
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
     if device.current_activity().find('io.github.project_travel_mate') != -1:
         print('\tRunning interaction for TravelMate')
         # login(device)
         visit_delhi(device)
-        visit_mumbai_weather_via_utility(device)
+        # Travel mate stated to crash when visiting this activity
+        # visit_mumbai_weather_via_utility(device)
+        visit_holidays(device)
+        visit_holidays(device)
     else:
         print('\tSkip file')
