@@ -9,6 +9,7 @@ from scripts.interaction.python3.common import write_username
 from scripts.interaction.python3.common import tap_close_keyboard
 from scripts.util.adb import close_app
 from scripts.util.subject import treatments
+from scripts.util.subject import packages_with_login
 from scripts.util.adb import launch_app
 from scripts.util.file import clear_db
 from scripts.util.file import clear_dir
@@ -132,6 +133,11 @@ def hillffair_configuration(device):
 
 def app_configuration(device):
     print('\tapp_configuration')
-    travel_mate_configuration(device)
-    news_blur_configuration(device)
-    hillffair_configuration(device)
+    if 'io.github.project_travel_mate' in packages_with_login:
+        travel_mate_configuration(device)
+
+    if 'com.newsblur' in packages_with_login:
+        news_blur_configuration(device)
+
+    if 'appteam.nith.hillffair' in packages_with_login:
+        hillffair_configuration(device)
