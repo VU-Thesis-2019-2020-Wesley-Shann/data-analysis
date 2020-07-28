@@ -1,10 +1,18 @@
 # Replay server responses from a saved file. Type sequence of str.
 server_replay: [
-  "./flows/test_uob",
-  "./flows/test_redreader",
-  "./flows/test_materialistic",
-]
+    #
+    "./flows/test_uob",
+    "./flows/test_redreader",
+    "./flows/test_materialistic",
+  ]
 
 # Don't remove flows from server replay state after use. This makes it
 # possible to replay same response multiple times. Type bool.
 server_replay_nopop: true
+
+# Request's parameters to be ignored while searching for a saved flow to
+# replay. Type sequence of str.
+server_replay_ignore_params: [
+    # Materialistic sent some queries based on a few paramaters. This in particular takes the current timestamp
+    "numericFilters",
+  ]
