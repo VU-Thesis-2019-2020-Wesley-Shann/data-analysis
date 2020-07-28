@@ -15,9 +15,13 @@ server_replay_nopop: true
 # replay. Type sequence of str.
 # Ensures that requests are matched
 server_replay_ignore_params: [
-    # Materialistic sent some queries based on a few paramaters. 
-    # This in particular takes the current timestamp
+    # App: Materialistic.
+    # Timestamp based field.
     "numericFilters",
+    
+    # App: Materialistic.
+    # Timestamp based field. 
+    "ts",
   ]
 
 # Kill extra requests during replay. Type bool.
