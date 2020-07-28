@@ -11,7 +11,7 @@ def visit_subreddit_annoucements(device):
     print('\tVisit subReddit Announcements')
 
     # click in Announcements subreddit
-    tap(device, 600, 1000)
+    tap(device, 600, 1000, 5)
 
     # click in post 2
     tap(device, 600, 820)
@@ -25,7 +25,7 @@ def visit_subreddit_annoucements(device):
     tap_phone_back(device)
 
     # click in Announcements subreddit
-    tap(device, 600, 1000)
+    tap(device, 600, 1000, 5)
 
     # click in post 1
     tap(device, 600, 580)
@@ -40,7 +40,7 @@ def visit_subreddit_ask_science(device):
     print('\tVisit subReddit Ask Science')
 
     # click in ask science subreddit
-    tap(device, 600, 1536)
+    tap(device, 600, 1536, 5)
 
     # click in post 2
     tap(device, 600, 950)
@@ -58,7 +58,7 @@ def visit_subreddit_ask_science(device):
     tap_phone_back(device)
 
     # click in ask science subreddit
-    tap(device, 600, 1536)
+    tap(device, 600, 1536, 5)
 
     # click in post 1
     tap(device, 600, 700)
@@ -73,7 +73,7 @@ def visit_subreddit_aww(device):
     print('\tVisit subReddit Aww')
 
     # click in aww subreddit
-    tap(device, 600, 1733)
+    tap(device, 600, 1733, 5)
 
     # click in post 2
     tap(device, 600, 938)
@@ -87,7 +87,7 @@ def visit_subreddit_aww(device):
     tap_phone_back(device)
 
     # click in aww subreddit
-    tap(device, 600, 1733)
+    tap(device, 600, 1733, 5)
 
     # click in post 3 comments
     tap(device, 1340, 1100)
