@@ -29,5 +29,6 @@ server_replay_ignore_params: [
 # Non-matched requests default to timeout
 server_replay_kill_extra: true
 
-
-save_stream_file: ""
+# Stream flows to file as they arrive. Prefix path with + to append.
+# Default: None 
+save_stream_file: "+./output/flows"
