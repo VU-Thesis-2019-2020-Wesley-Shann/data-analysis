@@ -76,7 +76,7 @@ def visit_subreddit_aww(device):
     tap(device, 600, 1733)
 
     # click in post 2
-    tap(device, 600, 900)
+    tap(device, 600, 938)
     tap_phone_back(device)
 
     # click in post 3 comments
