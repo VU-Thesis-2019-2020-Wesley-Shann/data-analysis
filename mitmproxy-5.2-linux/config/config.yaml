@@ -38,3 +38,10 @@ server_replay_kill_extra: true
 # Stream flows to file as they arrive. Prefix path with + to append.
 # Default: None 
 save_stream_file: "+./output/flows"
+
+# Ignore request's content while searching for a saved flow to replay.
+# Type bool.
+# This flag is required to login to Travel Mate.
+# Start the server with the flag on while logging in to Travel Mate and disable it after logged in for all treatments.
+# Since we have a long waiting time after the login there should be enough time for reseting the server.
+#server_replay_ignore_content: true
