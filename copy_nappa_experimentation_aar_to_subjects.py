@@ -44,16 +44,19 @@ for treatment in treatments:
         destination_path = destination_path + 'libs/aars/'
         mkdir_command = 'mkdir -p %s' % destination_path
         cp_command = 'yes | cp -rf %s %s' % (source_path, destination_path)
-        print('- %s' % destination_path)
         subprocess.call(mkdir_command, shell=True)
         subprocess.call(cp_command, shell=True)
+        print('- %s' % destination_path)
     print('')
 
-print('Library Nappa')
+# Copy to Nappa library
 nappa_path = '/home/sshann/Documents/thesis/NAPPA/Prefetching-Library/android_prefetching_lib/libs/aars/'
-print('- %s' % nappa_path)
 mkdir_command = 'mkdir -p %s' % nappa_path
 cp_command = 'yes | cp -rf %s %s' % (source_path, nappa_path)
+subprocess.call(mkdir_command, shell=True)
+subprocess.call(cp_command, shell=True)
+print('Library Nappa')
+print('- %s' % nappa_path)
 
 print('\nCould not find the directories:')
 for directory in dir_not_found:
