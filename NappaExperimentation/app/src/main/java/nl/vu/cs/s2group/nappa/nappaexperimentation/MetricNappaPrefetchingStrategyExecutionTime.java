@@ -13,13 +13,15 @@ public class MetricNappaPrefetchingStrategyExecutionTime {
                            long completedStrategyAtMillis,
                            int numberOfUrls,
                            int numberOfChildrenNodes,
-                           int numberOfSelectedChildrenNodes) {
+                           int numberOfSelectedChildrenNodes,
+                           boolean wasSuccessful) {
         long duration = completedStrategyAtMillis - startedStrategyAtMillis;
         String logMessage = "STRATEGY_CLASS='" + strategyClassSimpleName + "'," +
                 "DURATION='" + duration + "'," +
                 "NUMBER_OF_URLS='" + numberOfUrls + "'," +
                 "NUMBER_OF_SELECTED_CHILDREN_NODES='" + numberOfSelectedChildrenNodes + "'," +
-                "NUMBER_OF_CHILDREN_NODES='" + numberOfChildrenNodes + "',";
+                "NUMBER_OF_CHILDREN_NODES='" + numberOfChildrenNodes + "'," +
+                "STRATEGY_RUN_SUCCESSFULLY='" + (wasSuccessful ? "True" : "False") + "',";
         Logger.i(TAG, logMessage);
     }
 }
