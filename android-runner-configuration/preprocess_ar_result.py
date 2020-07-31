@@ -45,11 +45,20 @@ def get_empty_line(properties):
     return ','.join(['"NA"' for x in range(len(properties))]) + '\n'
 
 
+def is_nappa_metric(tag):
+    return tag == 'MetricPrefetchingAccuracy' or \
+           tag == 'MetricNappaPrefetchingStrategyExecutionTime' or \
+           tag == 'MetricStrategyAccuracy'
+
+
 def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
     subject_paths = get_subject_base_path(exp)
     for subject_path in subject_paths:
         base_path = subject_path + '/logcat/'
-        print('\t\t- Parsing subject %s' % get_subject_name_from_path(subject_path))
+        subject_name = get_subject_name_from_path(subject_path)
+        if 'nappa' not in subject_name and is_nappa_metric(tag):
+            continue
+        print('\t\t- Parsing subject %s' % subject_name)
         for filename in os.listdir(base_path):
             if '.txt' not in filename:
                 continue
