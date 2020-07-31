@@ -116,7 +116,7 @@ def main():
     subprocess.call(command, shell=True)
 
     for exp in exps:
-        print('\tParse exp %s' % exp)
+        print('Parse exp %s' % exp)
         print('\tnetwork_duration')
         network_duration = {
             "REQUEST_DURATION_SYSTEM": TYPE_NUMBER,
