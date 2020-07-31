@@ -45,6 +45,7 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
                     line = src_file.readline()
                     csv_header = ','.join(properties.keys()) + '\n'
                     dst_file.write(csv_header)
+                    csv_line = ''
                     while line:
                         line_count = line_count + 1
                         # print('\t\t\t raw line %s' % line)
@@ -61,7 +62,7 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
                             if use_all_lines:
                                 dst_file.write(csv_line)
                         line = src_file.readline()
-                    if not use_all_lines:
+                    if not use_all_lines and csv_line != '':
                         dst_file.write(csv_line)
 
             print('\t\tParsed %s lines from %s. All lines = %s' % (parsed_line_count, line_count, use_all_lines))
