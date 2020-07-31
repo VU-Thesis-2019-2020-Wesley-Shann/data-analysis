@@ -17,7 +17,7 @@ def get_treatment_dir(treatment):
         return 'baseline'
     elif treatment == 'nappagreedy':
         return 'instrumented-nappa-greedy'
-    elif treatment == 'nappagtfpr':
+    elif treatment == 'nappatfpr':
         return 'instrumented-nappa-tfpr'
     elif treatment == 'paloma':
         return 'instrumented-paloma'
