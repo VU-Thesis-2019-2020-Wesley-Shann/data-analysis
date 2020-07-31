@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 TYPE_NUMBER = 1
 TYPE_STRING = 2
@@ -72,6 +73,12 @@ def main():
         '2020.07.31_133803',
         '2020.07.31_141753',
     ]
+
+    print('Give writing permission')
+    path_to_output = '/home/sshann/Documents/thesis/experiments/android-runner-configuration/output/'
+    command = 'sudo chown -R $USER: %s' % path_to_output
+    subprocess.call(command, shell=True)
+
     for exp in exps:
         print('\tParse exp %s' % exp)
         print('\tnetwork_duration')
