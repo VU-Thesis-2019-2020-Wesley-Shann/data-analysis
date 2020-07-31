@@ -17,7 +17,7 @@ treatments = [
     'instrumented-nappa-greedy',
     'instrumented-nappa-tfpr',
     'instrumented-paloma',
-    'perfect',
+    # 'perfect',
 ]
 
 dirs_to_copy = [
