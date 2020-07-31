@@ -27,7 +27,7 @@ def get_logcat_property(line, property_to_get):
     return property_value
 
 
-def parse_logcat_to_csv(exp, tag, properties):
+def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
     subject_paths = get_subject_base_path(exp)
     for subject_path in subject_paths:
         base_path = subject_path + '/logcat/'
@@ -57,8 +57,12 @@ def parse_logcat_to_csv(exp, tag, properties):
                                 properties_values.append(property_value)
                             csv_line = ','.join(properties_values) + '\n'
                             # print('\t\t\tparsed line %s' % csv_line)
-                            dst_file.write(csv_line)
+                            if use_all_lines:
+                                dst_file.write(csv_line)
                         line = src_file.readline()
+                    if not use_all_lines:
+                        dst_file.write(csv_line)
+
             print('\t\tParsed %s lines from %s' % (parsed_line_count, line_count))
 
 
@@ -69,7 +73,7 @@ def main():
     ]
     for exp in exps:
         print('\tParse subject %s' % exp)
-        print('\tParsenetwork_duration')
+        print('\tnetwork_duration')
         network_duration = {
             "REQUEST_DURATION_SYSTEM": TYPE_NUMBER,
             "REQUEST_DURATION_OKHTTP": TYPE_NUMBER,
@@ -89,8 +93,28 @@ def main():
                 "STRATEGY_CLASS": TYPE_STRING,
                 "DURATION": TYPE_NUMBER,
                 "NUMBER_OF_URLS": TYPE_NUMBER,
+                "NUMBER_OF_SELECTED_CHILDREN_NODES": TYPE_NUMBER,
+                "NUMBER_OF_CHILDREN_NODES": TYPE_NUMBER,
             }
             parse_logcat_to_csv(exp, 'MetricNappaPrefetchingStrategyExecutionTime', strategy_duration)
+
+            print('\tprefetching_accuracy')
+            prefetching_accuracy = {
+                "F1_SCORE_1": TYPE_NUMBER,
+                "F1_SCORE_2": TYPE_NUMBER,
+                "TRUE_POSITIVE": TYPE_NUMBER,
+                "FALSE_POSITIVE": TYPE_NUMBER,
+                "FALSE_NEGATIVE": TYPE_NUMBER,
+            }
+            parse_logcat_to_csv(exp, 'MetricPrefetchingAccuracy', prefetching_accuracy, False)
+
+            print('\tstrategy_accuracy')
+            strategy_accuracy = {
+                "HIT_PERCENTAGE": TYPE_NUMBER,
+                "HIT_COUNT": TYPE_NUMBER,
+                "MISS_COUNT": TYPE_NUMBER
+            }
+            parse_logcat_to_csv(exp, 'MetricStrategyAccuracy', strategy_accuracy, False)
 
 
 if __name__ == "__main__":
