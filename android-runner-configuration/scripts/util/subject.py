@@ -1,6 +1,8 @@
 treatments = [
     'baseline',
     'nappagreedy',
+    'nappatfpr',
+    'paloma',
 ]
 
 packages_with_login = [
