@@ -12,11 +12,9 @@ def format_number_to_two_digit(number):
     return number if number >= 10 else '0%s' % number
 
 
-def save_raw_log_cat_to_file(device):
-    print('\tsave_raw_log_cat_to_file')
+def get_formatted_timestamp():
     now = datetime.datetime.now()
-    file_name = '%s_logcat_%s.%s.%s_%s%s%s.txt' % (
-        device.id,
+    return '%s.%s.%s_%s%s%s' % (
         now.year,
         format_number_to_two_digit(now.month),
         format_number_to_two_digit(now.day),
@@ -24,13 +22,39 @@ def save_raw_log_cat_to_file(device):
         format_number_to_two_digit(now.minute),
         format_number_to_two_digit(now.second)
     )
-    base_path = '%s/logcat/' % paths_dict()['OUTPUT_DIR']
-    path = base_path + file_name
-    print('\tat "%s"' % path)
+
+
+def write_data(base_path, file_name, tag):
+    full_path = base_path + file_name
     command_mkdir = 'mkdir -p %s' % base_path
-    command_logcat = 'adb logcat -d -s NAPPA_EXPERIMENTATION > %s' % path
+    command_logcat = 'adb logcat -d -s %s > %s' % (tag, full_path)
     subprocess.call(command_mkdir, shell=True)
     subprocess.call(command_logcat, shell=True)
+
+
+def save_raw_log_cat_to_file(device):
+    print('\tsave_raw_log_cat_to_file')
+    base_path = '%s/logcat/' % paths_dict()['OUTPUT_DIR']
+    logcat_data = [
+        {
+            'tag': 'NAPPA_EXPERIMENTATION',
+            'base_path': base_path,
+            'file_name': '%s_logcat_%s.txt' % (device.id, get_formatted_timestamp()),
+        },
+        {
+            'tag': 'TfprPrefetchingStrategy',
+            'base_path': base_path + 'nappatfpr/',
+            'file_name': '%s_logcat_%s.txt' % (device.id, get_formatted_timestamp()),
+        },
+        {
+            'tag': 'GreedyPrefetchingStrategyOnVisitFrequencyAndTime',
+            'base_path': base_path + 'nappagreedy/',
+            'file_name': '%s_logcat_%s.txt' % (device.id, get_formatted_timestamp()),
+        },
+    ]
+    for data in logcat_data:
+        print('\tat %s', data['base_path'] + data['file_name'])
+        write_data(data['base_path'], data['file_name'], data['tag'])
 
 
 def retrieve_logcat_info(device):
