@@ -17,7 +17,7 @@ public class MetricPrefetchingAccuracy {
         f1Score1 = Double.valueOf(f1Score1).isNaN() ? 0 : f1Score1;
         double f1Score2 = (double) truePositive / (truePositive + (falseNegative + falsePositive) / 2.0);
         f1Score2 = Double.valueOf(f1Score2).isNaN() ? 0 : f1Score2;
-        String logMessage = "LOG_ID='" + id + "'" +
+        String logMessage = "LOG_ID='" + id + "'," +
                 "F1_SCORE_1='" + f1Score1 + "'," +
                 "F1_SCORE_2='" + f1Score2 + "'," +
                 "TRUE_POSITIVE='" + truePositive + "'," +

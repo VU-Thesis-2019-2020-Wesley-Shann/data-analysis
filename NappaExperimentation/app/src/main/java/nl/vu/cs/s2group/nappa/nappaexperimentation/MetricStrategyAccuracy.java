@@ -10,7 +10,7 @@ public class MetricStrategyAccuracy {
 
     public static void log(int id, int hitCount, int missCount) {
         double hitPercentage = (double) hitCount / ((double) hitCount + missCount);
-        String logMessage = "LOG_ID='" + id + "'" +
+        String logMessage = "LOG_ID='" + id + "'," +
                 "HIT_PERCENTAGE='" + hitPercentage + "'," +
                 "HIT_COUNT='" + hitCount + "'," +
                 "MISS_COUNT='" + missCount + "',";

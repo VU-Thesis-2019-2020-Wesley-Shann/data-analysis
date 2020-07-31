@@ -15,7 +15,7 @@ public class MetricNappaPrefetchingStrategyExecutionTime {
                            int numberOfChildrenNodes,
                            int numberOfSelectedChildrenNodes) {
         long duration = completedStrategyAtMillis - startedStrategyAtMillis;
-        String logMessage = "STRATEGY_CLASS='" + strategyClassSimpleName + "'" +
+        String logMessage = "STRATEGY_CLASS='" + strategyClassSimpleName + "'," +
                 "DURATION='" + duration + "'," +
                 "NUMBER_OF_URLS='" + numberOfUrls + "'," +
                 "NUMBER_OF_SELECTED_CHILDREN_NODES='" + numberOfSelectedChildrenNodes + "'," +
