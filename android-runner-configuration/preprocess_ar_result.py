@@ -49,7 +49,7 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
         for filename in os.listdir(base_path):
             if '.txt' not in filename:
                 continue
-            print('\t\tParsing file', filename)
+            print('\t\t\tParsing file', filename)
             line_count = 0
             parsed_line_count = 0
             with open(os.path.join(base_path, filename), 'r') as src_file:
@@ -79,7 +79,7 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
                     if not use_all_lines and csv_line != '':
                         dst_file.write(csv_line)
 
-            print('\t\tParsed %s lines from %s. All lines = %s' % (parsed_line_count, line_count, use_all_lines))
+            print('\t\t\tParsed %s lines from %s. All lines = %s' % (parsed_line_count, line_count, use_all_lines))
 
 
 def main():
