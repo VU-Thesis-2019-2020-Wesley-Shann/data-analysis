@@ -28,10 +28,24 @@ def get_logcat_property(line, property_to_get):
     return property_value
 
 
+def get_subject_name_from_path(subject_path):
+    subject_dirs = subject_path.split('/')
+    subject_name = subject_dirs[len(subject_dirs) - 1]
+    subject_name = subject_name.replace('home-sshann-documents-thesis-subjects-build-apks-', '')
+    subject_name = subject_name.replace('-baseline', '')
+    subject_name = subject_name.replace('instrumented-nappa-greedy-', '')
+    subject_name = subject_name.replace('instrumented-nappa-tfpr-', '')
+    subject_name = subject_name.replace('instrumented-paloma-', '')
+    subject_name = subject_name.replace('-', '.')
+
+    return subject_name
+
+
 def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
     subject_paths = get_subject_base_path(exp)
     for subject_path in subject_paths:
         base_path = subject_path + '/logcat/'
+        print('\t\t- Parsing subject %s' % get_subject_name_from_path(subject_path))
         for filename in os.listdir(base_path):
             if '.txt' not in filename:
                 continue
