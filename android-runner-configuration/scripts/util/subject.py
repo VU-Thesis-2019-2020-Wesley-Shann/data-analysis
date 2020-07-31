@@ -1,5 +1,6 @@
 treatments = [
     'baseline',
+    'nappagreedy',
 ]
 
 packages_with_login = [
@@ -7,3 +8,16 @@ packages_with_login = [
     'appteam.nith.hillffair'
     'com.newsblur',
 ]
+
+
+def get_treatment_dir(treatment):
+    if treatment == 'baseline':
+        return 'baseline'
+    elif treatment == 'nappagreedy':
+        return 'instrumented-nappa-greedy'
+    elif treatment == 'nappagtfpr':
+        return 'instrumented-nappa-tfpr'
+    elif treatment == 'paloma':
+        return 'instrumented-paloma'
+    else:
+        raise Exception('unkown treatment')

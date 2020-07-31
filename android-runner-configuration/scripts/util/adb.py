@@ -7,6 +7,7 @@ sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-con
 
 from scripts.util.subject import packages_with_login
 from scripts.util.subject import treatments
+from scripts.util.subject import get_treatment_dir
 
 
 def install_apks():
@@ -16,7 +17,7 @@ def install_apks():
         for package in packages_with_login:
             app = '%s.%s' % (treatment, package)
             print('\t- %s' % app)
-            command = 'adb install %s/%s/%s.apk' % (path_to_apk, treatment, app)
+            command = 'adb install %s/%s/%s.apk' % (path_to_apk, get_treatment_dir(treatment), app)
             print('\t%s' % command)
             subprocess.call(command, shell=True)
 
