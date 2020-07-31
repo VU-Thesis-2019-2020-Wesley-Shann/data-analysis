@@ -55,6 +55,12 @@ def save_raw_log_cat_to_file(device):
             'file_name': file_name,
             'should_save': device.current_activity().find('nappagreedy') != -1,
         },
+        {
+            'tag': 'Nappa',
+            'base_path': base_path + 'nappa/',
+            'file_name': file_name,
+            'should_save': device.current_activity().find('nappa') != -1,
+        },
     ]
     for data in logcat_data:
         if data['should_save']:
