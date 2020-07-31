@@ -12,7 +12,7 @@ from scripts.util.subject import get_treatment_dir
 
 def install_apks():
     print('\tinstall_apks')
-    path_to_apk = '/home/sshann/Documents/thesis/subjects/build/apks/'
+    path_to_apk = '/home/sshann/Documents/thesis/subjects/build/apks'
     for treatment in treatments:
         for package in packages_with_login:
             app = '%s.%s' % (treatment, package)
