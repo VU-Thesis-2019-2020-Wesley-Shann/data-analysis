@@ -92,8 +92,9 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
 def main():
     print('preprocess_logcat')
     exps = [
-        '2020.07.31_133803',
-        '2020.07.31_141753',
+        # '2020.07.31_133803',
+        # '2020.07.31_141753',
+        '2020.07.31_161750',
     ]
 
     print('Give writing permission')
