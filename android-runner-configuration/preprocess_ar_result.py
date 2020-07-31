@@ -70,9 +70,10 @@ def main():
     print('preprocess_logcat')
     exps = [
         '2020.07.31_133803'
+        '2020.07.31_141753'
     ]
     for exp in exps:
-        print('\tParse subject %s' % exp)
+        print('\tParse exp %s' % exp)
         print('\tnetwork_duration')
         network_duration = {
             "REQUEST_DURATION_SYSTEM": TYPE_NUMBER,
