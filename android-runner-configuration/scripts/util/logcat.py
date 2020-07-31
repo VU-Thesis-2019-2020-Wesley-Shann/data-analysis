@@ -35,21 +35,22 @@ def write_data(base_path, file_name, tag):
 def save_raw_log_cat_to_file(device):
     print('\tsave_raw_log_cat_to_file')
     base_path = '%s/logcat/' % paths_dict()['OUTPUT_DIR']
+    file_name = '%s_logcat_%s.txt' % (device.id, get_formatted_timestamp())
     logcat_data = [
         {
             'tag': 'NAPPA_EXPERIMENTATION',
             'base_path': base_path,
-            'file_name': '%s_logcat_%s.txt' % (device.id, get_formatted_timestamp()),
+            'file_name': file_name,
         },
         {
             'tag': 'TfprPrefetchingStrategy',
             'base_path': base_path + 'nappatfpr/',
-            'file_name': '%s_logcat_%s.txt' % (device.id, get_formatted_timestamp()),
+            'file_name': file_name,
         },
         {
             'tag': 'GreedyPrefetchingStrategyOnVisitFrequencyAndTime',
             'base_path': base_path + 'nappagreedy/',
-            'file_name': '%s_logcat_%s.txt' % (device.id, get_formatted_timestamp()),
+            'file_name': file_name,
         },
     ]
     for data in logcat_data:
