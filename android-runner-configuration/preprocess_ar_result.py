@@ -128,6 +128,7 @@ def main():
             "NUMBER_OF_URLS": TYPE_NUMBER,
             "NUMBER_OF_SELECTED_CHILDREN_NODES": TYPE_NUMBER,
             "NUMBER_OF_CHILDREN_NODES": TYPE_NUMBER,
+            "STRATEGY_RUN_SUCCESSFULLY": TYPE_NUMBER,
         }
         parse_logcat_to_csv(exp, 'MetricNappaPrefetchingStrategyExecutionTime', strategy_duration)
 
