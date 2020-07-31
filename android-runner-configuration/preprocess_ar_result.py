@@ -80,7 +80,9 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
                             if use_all_lines:
                                 dst_file.write(csv_line)
                         line = src_file.readline()
-                    if not use_all_lines:
+                    if parsed_line_count == 0:
+                        dst_file.write(get_empty_line(properties))
+                    elif not use_all_lines:
                         if csv_line != '':
                             dst_file.write(csv_line)
                         else:
