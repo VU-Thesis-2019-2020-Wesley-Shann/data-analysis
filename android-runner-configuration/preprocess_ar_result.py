@@ -69,8 +69,8 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
 def main():
     print('preprocess_logcat')
     exps = [
-        '2020.07.31_133803'
-        '2020.07.31_141753'
+        '2020.07.31_133803',
+        '2020.07.31_141753',
     ]
     for exp in exps:
         print('\tParse exp %s' % exp)
