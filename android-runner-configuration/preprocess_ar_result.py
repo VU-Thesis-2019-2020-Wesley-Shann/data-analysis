@@ -41,6 +41,10 @@ def get_subject_name_from_path(subject_path):
     return subject_name
 
 
+def get_empty_line(properties):
+    return ','.join(['"NA"' for x in range(len(properties))]) + '\n'
+
+
 def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
     subject_paths = get_subject_base_path(exp)
     for subject_path in subject_paths:
@@ -76,8 +80,11 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
                             if use_all_lines:
                                 dst_file.write(csv_line)
                         line = src_file.readline()
-                    if not use_all_lines and csv_line != '':
-                        dst_file.write(csv_line)
+                    if not use_all_lines:
+                        if csv_line != '':
+                            dst_file.write(csv_line)
+                        else:
+                            dst_file.write(get_empty_line(properties))
 
             print('\t\t\tParsed %s lines from %s. All lines = %s' % (parsed_line_count, line_count, use_all_lines))
 
