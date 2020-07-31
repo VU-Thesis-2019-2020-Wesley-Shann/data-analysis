@@ -41,21 +41,25 @@ def save_raw_log_cat_to_file(device):
             'tag': 'NAPPA_EXPERIMENTATION',
             'base_path': base_path,
             'file_name': file_name,
+            'should_save': True,
         },
         {
             'tag': 'TfprPrefetchingStrategy',
             'base_path': base_path + 'nappatfpr/',
             'file_name': file_name,
+            'should_save': device.current_activity().find('nappatfpr') != -1,
         },
         {
             'tag': 'GreedyPrefetchingStrategyOnVisitFrequencyAndTime',
             'base_path': base_path + 'nappagreedy/',
             'file_name': file_name,
+            'should_save': device.current_activity().find('nappagreedy') != -1,
         },
     ]
     for data in logcat_data:
-        print('\tat %s', data['base_path'] + data['file_name'])
-        write_data(data['base_path'], data['file_name'], data['tag'])
+        if data['should_save']:
+            print('\tat %s', data['base_path'] + data['file_name'])
+            write_data(data['base_path'], data['file_name'], data['tag'])
 
 
 def retrieve_logcat_info(device):
