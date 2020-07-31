@@ -64,7 +64,7 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
                     if not use_all_lines:
                         dst_file.write(csv_line)
 
-            print('\t\tParsed %s lines from %s' % (parsed_line_count, line_count))
+            print('\t\tParsed %s lines from %s. All lines = %s' % (parsed_line_count, line_count, use_all_lines))
 
 
 def main():
