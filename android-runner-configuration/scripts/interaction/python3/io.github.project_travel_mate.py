@@ -126,6 +126,12 @@ def visit_holidays(device):
     # go to home page
     tap(device, 405, 661, 2)
 
+    # click side menu
+    tap(device, 117, 170, 0)
+
+    # go to destinations
+    tap(device, 418, 842, 2)
+
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
