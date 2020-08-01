@@ -12,7 +12,7 @@ def get_output_base_path(exp):
 
 def get_subject_base_path(exp):
     base_dir = '%s/data/nexus6p/' % get_output_base_path(exp)
-    return [base_dir + s for s in os.listdir(base_dir)]
+    return [base_dir + s for s in sorted(os.listdir(base_dir))]
 
 
 def get_logcat_property(line, property_to_get):
