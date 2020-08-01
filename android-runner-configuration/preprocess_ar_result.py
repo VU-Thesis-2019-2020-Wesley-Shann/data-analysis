@@ -244,17 +244,18 @@ def aggregate_experiment_logcat(exp, tag, tabs_count):
 
 def copy_all_screenshots_to_base_output_dir(exp):
     print('\tcopy_all_screenshots_to_base_output_dir')
-    base_path = os.path.join(get_output_base_path(exp), 'data')
+    base_path = get_output_base_path(exp)
+    source_path = os.path.join(base_path, 'data')
     destination_dir = os.path.join(base_path, 'screenshots')
 
-    print('\tbase_path', base_path)
+    print('\tsource_path', source_path)
     print('\tdestination_dir', destination_dir)
 
     command_mkdir = 'mkdir -p %s' % destination_dir
     subprocess.call(command_mkdir, shell=True)
 
-    for file_path in glob.glob(os.path.join(base_path, '**', '*.png'), recursive=True):
-        print('\t- at %s' % file_path.replace(base_path, ''))
+    for file_path in glob.glob(os.path.join(source_path, '**', '*.png'), recursive=True):
+        print('\t- at %s' % file_path.replace(source_path, ''))
         new_path = os.path.join(destination_dir, os.path.basename(file_path))
         if not os.path.exists(new_path):
             shutil.copy(file_path, new_path)
