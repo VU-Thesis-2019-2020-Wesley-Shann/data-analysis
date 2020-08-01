@@ -24,10 +24,14 @@ def get_formatted_timestamp():
     )
 
 
-def write_data(base_path, file_name, tag):
+def write_data(base_path, file_name, tag='', filter_per_tag=False):
     full_path = base_path + file_name
     command_mkdir = 'mkdir -p %s' % base_path
-    command_logcat = 'adb logcat -d -s %s > %s' % (tag, full_path)
+    if filter_per_tag:
+        parameter = '-s %s' % tag
+    else:
+        parameter = ''
+    command_logcat = 'adb logcat -d %s > %s' % (parameter, full_path)
     subprocess.call(command_mkdir, shell=True)
     subprocess.call(command_logcat, shell=True)
 
@@ -42,30 +46,41 @@ def save_raw_log_cat_to_file(device):
             'base_path': base_path,
             'file_name': file_name,
             'should_save': True,
+            'filter_per_tag': True,
         },
         {
             'tag': 'TfprPrefetchingStrategy',
             'base_path': base_path + 'nappatfpr/',
             'file_name': file_name,
             'should_save': device.current_activity().find('nappatfpr') != -1,
+            'filter_per_tag': True,
         },
         {
             'tag': 'GreedyPrefetchingStrategyOnVisitFrequencyAndTime',
             'base_path': base_path + 'nappagreedy/',
             'file_name': file_name,
             'should_save': device.current_activity().find('nappagreedy') != -1,
+            'filter_per_tag': True,
         },
         {
             'tag': 'Nappa',
             'base_path': base_path + 'nappa/',
             'file_name': file_name,
             'should_save': device.current_activity().find('nappa') != -1,
+            'filter_per_tag': True,
+        },
+        {
+            'tag': '',
+            'base_path': base_path + 'full-logcat/',
+            'file_name': file_name,
+            'should_save': True,
+            'filter_per_tag': False,
         },
     ]
     for data in logcat_data:
         if data['should_save']:
             print('\tat %s', data['base_path'] + data['file_name'])
-            write_data(data['base_path'], data['file_name'], data['tag'])
+            write_data(data['base_path'], data['file_name'], data['tag'], data['filter_per_tag'])
 
 
 def retrieve_logcat_info(device):
