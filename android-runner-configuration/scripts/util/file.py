@@ -143,10 +143,8 @@ def clear_up_db_files_in_sdcard(device):
 def pull_nappa_db_files_from_sdcard_to_output_dir(device):
     print('\tcopy_nappa_db_files_from_sdcard_to_output_dir')
     src_directory = '/mnt/sdcard/thesis_wesley/.'
-    dst_directory = os.path.join(paths_dict()['OUTPUT_DIR'], 'data', 'nappa-db')
+    dst_directory = os.path.join(paths_dict()['OUTPUT_DIR'], '..', '..', 'db', 'nappa')
 
-    command_chown = 'sudo chown -R $USER: /home/sshann/Documents/thesis/experiments/android-runner-configuration/output/'
-    subprocess.call(command_chown, shell=True)
     command_mkdir = 'mkdir -p %s' % dst_directory
     print('\t- to %s' % dst_directory)
     subprocess.call(command_mkdir, shell=True)
