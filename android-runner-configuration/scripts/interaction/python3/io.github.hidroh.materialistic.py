@@ -151,8 +151,8 @@ def visit_new_stories_from_saved(device):
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
-    time.sleep(4)
     if device.current_activity().find('io.github.hidroh.materialistic') != -1:
+        time.sleep(4)
         print('\tRunning interaction for Materialistic')
         visit_catching_up(device)
         # This interaction works, but it duplicated the runtime for this app =/

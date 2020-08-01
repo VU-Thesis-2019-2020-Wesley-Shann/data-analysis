@@ -95,8 +95,8 @@ def visit_term_date(device):
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
-    time.sleep(4)
     if device.current_activity().find('com.ak.uobtimetable') != -1:
+        time.sleep(4)
         print('\tRunning interaction for UOB')
         tap_continue_button(device)
         select_course_bedfordshire_first_time(device)

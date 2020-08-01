@@ -82,8 +82,8 @@ def visit_all_shared_stories(device):
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
-    time.sleep(4)
     if device.current_activity().find('com.newsblur') != -1:
+        time.sleep(4)
         print('\tRunning interaction for NewsBlur')
         # Login works, but there seems to be something wrong with Newblur deleting accounts,
         # so it is best to be logged in the entire experiment

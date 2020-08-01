@@ -127,8 +127,8 @@ def first_run(device):
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
-    time.sleep(4)
     if device.current_activity().find('org.quantumbadger.redreader') != -1:
+        time.sleep(4)
         print('\tRunning interaction for RedReader')
         first_run(device)
         visit_subreddit_ask_science(device)

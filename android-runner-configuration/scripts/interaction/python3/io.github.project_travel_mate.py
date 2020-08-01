@@ -129,8 +129,8 @@ def visit_holidays(device):
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
-    time.sleep(4)
     if device.current_activity().find('io.github.project_travel_mate') != -1:
+        time.sleep(4)
         print('\tRunning interaction for TravelMate')
         # login(device)
         visit_delhi(device)

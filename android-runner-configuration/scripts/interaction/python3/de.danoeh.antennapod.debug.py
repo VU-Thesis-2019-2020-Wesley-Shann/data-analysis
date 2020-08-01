@@ -96,8 +96,8 @@ def visit_subscriptions_and_podcasts(device):
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
-    time.sleep(4)
     if device.current_activity().find('de.danoeh.antennapod.debug') != -1:
+        time.sleep(4)
         print('\tRunning interaction for AntennaPod')
         configure_settings(device)
         visit_subscriptions_and_podcasts(device)
