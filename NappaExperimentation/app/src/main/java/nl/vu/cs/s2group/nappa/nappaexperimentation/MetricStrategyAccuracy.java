@@ -8,8 +8,8 @@ public class MetricStrategyAccuracy {
         throw new IllegalStateException("MetricStrategyAccuracy is a metric class and should not be instantiated!");
     }
 
-    public static void log(int id, int executionCount, int hitCount, int missCount, int noSuccessorCount, int insufficientScoreCount) {
-        double hitPercentageTotal = 100 * (double) hitCount / ((double) hitCount + missCount + noSuccessorCount + insufficientScoreCount);
+    public static void log(int id, int executionCount, int hitCount, int missCount, int noSuccessorCount, int insufficientScoreCount, int exceptionCount) {
+        double hitPercentageTotal = 100 * (double) hitCount / ((double) hitCount + missCount + noSuccessorCount + insufficientScoreCount + exceptionCount);
         double hitPercentageWhenPredicted = 100 * (double) hitCount / ((double) hitCount + missCount);
         String logMessage = "LOG_ID='" + id + "'," +
                 "EXECUTION_COUNT='" + executionCount + "'," +
@@ -18,6 +18,7 @@ public class MetricStrategyAccuracy {
                 "HIT_COUNT='" + hitCount + "'," +
                 "MISS_COUNT='" + missCount + "'," +
                 "INSUFFICIENT_COUNT='" + insufficientScoreCount + "'," +
+                "EXCEPTION_COUNT='" + exceptionCount + "'," +
                 "NO_SUCCESSOR_COUNT='" + noSuccessorCount + "',";
         Logger.i(TAG, logMessage);
     }
