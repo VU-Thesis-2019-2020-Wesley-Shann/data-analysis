@@ -42,6 +42,7 @@ def get_subject_name_from_path(subject_path):
 
 
 def get_empty_line(properties):
+    # noinspection PyUnusedLocal
     return ','.join(['"NA"' for x in range(len(properties))]) + '\n'
 
 
@@ -154,6 +155,7 @@ def set_write_permissions():
 
 
 def aggregate_logcat(subject_base_path, tag, tabs_count):
+    # noinspection PyUnusedLocal
     base_tabs = ''.join(['\t' for x in range(tabs_count)])
     aggregation_base_path = subject_base_path + tag
     aggregation_file_name = 'Aggregation-%s' % tag
