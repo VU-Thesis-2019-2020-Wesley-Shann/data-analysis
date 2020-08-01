@@ -8,6 +8,7 @@ sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-con
 from scripts.util.subject import packages_with_login
 from scripts.util.subject import treatments
 from scripts.util.subject import get_treatment_dir
+from scripts.util.logcat import get_formatted_timestamp
 
 
 def install_apks():
@@ -61,7 +62,8 @@ def copy_nappa_db_to_sd_card(device):
     app = device.current_activity()
     source = 'databases/nappa.db'
     destination = '/mnt/sdcard/thesis_wesley/%s/' % app
-    command_cp = 'run-as %s cp %s %s' % (app, source, destination)
+    new_file_name = 'nappa-%s.db' % get_formatted_timestamp()
+    command_cp = 'run-as %s cp %s %s/%s' % (app, source, destination, new_file_name)
     command_mkdir = 'mkdir -p %s' % destination
     device.shell(command_mkdir)
     device.shell(command_cp)
