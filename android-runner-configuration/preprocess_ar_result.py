@@ -98,6 +98,7 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
                             dst_file.write(get_empty_line(properties))
 
             print('\t\t\tParsed %s lines from %s. All lines = %s' % (parsed_line_count, line_count, use_all_lines))
+        aggregate_logcat(base_path, tag, 3)
 
 
 def parse_exp_logcat_to_csv(exp):
@@ -150,6 +151,31 @@ def set_write_permissions():
     path_to_output = '/home/sshann/Documents/thesis/experiments/android-runner-configuration/output/'
     command = 'sudo chown -R $USER: %s' % path_to_output
     subprocess.call(command, shell=True)
+
+
+def aggregate_logcat(subject_base_path, tag, tabs_count):
+    base_tabs = ''.join(['\t' for x in range(tabs_count)])
+    aggregation_base_path = subject_base_path + tag
+    aggregation_file_name = 'Aggregation-%s' % tag
+    print('%saggregate_logcat' % base_tabs)
+    should_write_header = True
+    run_number = 0
+    with open(os.path.join(aggregation_base_path, aggregation_file_name), 'w') as dst_file:
+        for filename in os.listdir(aggregation_base_path):
+            if filename == aggregation_file_name:
+                continue
+            print('%s\ttParsing file %s' % (base_tabs, filename))
+            run_number = run_number + 1
+            with open(os.path.join(aggregation_base_path, filename), 'r') as src_file:
+                line = src_file.readline()
+                if should_write_header:
+                    header_csv = 'RUN_NUMBER,' + line
+                    dst_file.write(header_csv)
+                    should_write_header = False
+                while line:
+                    line = src_file.readline()
+                    row = '%s,%s' % (run_number, line)
+                    dst_file.write(row)
 
 
 def main():
