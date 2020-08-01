@@ -1,4 +1,9 @@
+import os
+import subprocess
 import sys
+
+# noinspection PyUnresolvedReferences
+from paths import paths_dict
 
 sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
@@ -124,3 +129,23 @@ def clear_prefetch_db(device):
                 print('\tat "%s"' % path)
                 command = 'run-as %s rm %s' % (app, path)
                 device.shell(command)
+
+
+def clear_up_db_files_in_sdcard(device):
+    print('\tclear_up_db_files_in_sdcard')
+    path = '/mnt/sdcard/thesis_wesley/'
+    command_rm = 'adb shell rm -r %s' % path
+    subprocess.call(command_rm, shell=True)
+    command_mkdir = 'adb shell mkdir %s' % path
+    subprocess.call(command_mkdir, shell=True)
+
+
+def pull_nappa_db_files_from_sdcard_to_output_dir(device):
+    print('\tcopy_nappa_db_files_from_sdcard_to_output_dir')
+    src_directory = '/mnt/sdcard/thesis_wesley/.'
+    dst_directory = os.path.join(paths_dict()['OUTPUT_DIR'], 'data', 'nappa-db')
+
+    command_mkdir = 'mkdir -p %s' % dst_directory
+    subprocess.call(command_mkdir, shell=True)
+    command_pull = 'adb pull %s %s' % (src_directory, dst_directory)
+    subprocess.call(command_pull, shell=True)
