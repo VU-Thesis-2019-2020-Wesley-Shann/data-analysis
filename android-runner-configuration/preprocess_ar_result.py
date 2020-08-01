@@ -165,9 +165,15 @@ def parse_exp_logcat_to_csv(exp):
 
     print('\tstrategy_accuracy')
     strategy_accuracy = {
-        "HIT_PERCENTAGE": TYPE_NUMBER,
+        "EXECUTION_COUNT": TYPE_NUMBER,
+        "CASES_COUNT": TYPE_NUMBER,
+        "HIT_PERCENTAGE_TOTAL": TYPE_NUMBER,
+        "HIT_PERCENTAGE_WHEN_PREDICTED": TYPE_NUMBER,
         "HIT_COUNT": TYPE_NUMBER,
-        "MISS_COUNT": TYPE_NUMBER
+        "MISS_COUNT": TYPE_NUMBER,
+        "INSUFFICIENT_SCORE_COUNT": TYPE_NUMBER,
+        "EXCEPTION_COUNT": TYPE_NUMBER,
+        "NO_SUCCESSOR_COUNT": TYPE_NUMBER,
     }
     parse_logcat_to_csv(exp, 'MetricStrategyAccuracy', strategy_accuracy, False)
 
