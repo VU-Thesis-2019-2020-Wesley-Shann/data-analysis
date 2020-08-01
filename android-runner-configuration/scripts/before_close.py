@@ -22,6 +22,7 @@ def clear_app_data(device):
 
 
 def take_screenshot():
+    print('\ttake_screenshot')
     file_name = '%s.png' % get_formatted_timestamp()
     base_pah = os.path.join(paths_dict()['OUTPUT_DIR'], 'screenshot')
     path = os.path.join(base_pah, file_name)
