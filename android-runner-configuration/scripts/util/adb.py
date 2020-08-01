@@ -55,8 +55,8 @@ def close_app(device):
 
 def copy_nappa_db_to_sd_card(device):
     print('\tcopy_nappa_db_to_sd_card app')
-    if device.current_activity().find('nappatfpr') != -1:
-        print('Not a nappa enabled subject')
+    if device.current_activity().find('nappatfpr') == -1:
+        print('\tNot a nappa enabled subject')
         return
     app = device.current_activity()
     source = 'databases/nappa.db'
