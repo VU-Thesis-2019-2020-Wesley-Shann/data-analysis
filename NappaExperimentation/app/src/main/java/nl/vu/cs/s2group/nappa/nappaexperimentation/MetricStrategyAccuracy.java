@@ -11,6 +11,7 @@ public class MetricStrategyAccuracy {
     public static void log(int id, int executionCount, int hitCount, int missCount, int noSuccessorCount, int insufficientScoreCount, int exceptionCount) {
         double hitPercentageTotal = 100 * (double) hitCount / ((double) hitCount + missCount + noSuccessorCount + insufficientScoreCount + exceptionCount);
         double hitPercentageWhenPredicted = 100 * (double) hitCount / ((double) hitCount + missCount);
+        hitPercentageWhenPredicted = Double.isNaN(hitPercentageWhenPredicted) ? 0 : hitPercentageWhenPredicted;
         int countedCases = hitCount + missCount + noSuccessorCount + insufficientScoreCount + exceptionCount;
         String logMessage = "LOG_ID='" + id + "'," +
                 "EXECUTION_COUNT='" + executionCount + "'," +
