@@ -189,7 +189,7 @@ def aggregate_subject_logcat(subject_base_path, tag, tabs_count):
     # noinspection PyUnusedLocal
     base_tabs = ''.join(['\t' for x in range(tabs_count)])
     aggregation_base_path = subject_base_path + tag
-    aggregation_file_name = 'Aggregation-%s' % tag
+    aggregation_file_name = 'Aggregation-%s.csv' % tag
     print('%saggregate_subject_logcat' % base_tabs)
     should_write_header = True
     run_number = 0
@@ -216,7 +216,7 @@ def aggregate_experiment_logcat(exp, tag, tabs_count):
     base_tabs = ''.join(['\t' for x in range(tabs_count)])
     print('%saggregate_experiment_logcat' % base_tabs)
     output_base_path = get_output_base_path(exp)
-    aggregation_file_name = 'Aggregation-%s' % tag
+    aggregation_file_name = 'Aggregation-%s.csv' % tag
     all_subjects_path = get_subject_base_path(exp)
     should_write_header = True
     print('%s\ttag %s' % (base_tabs, tag))
