@@ -68,8 +68,9 @@ def select_course_bedfordshire_first_time(device):
     # close dialogs
     tap(device, 1215, 1450, 1)
     tap(device, 1215, 1482, 1)
-    tap_tuesday(device)
-    tap_second_option_in_schedule(device)
+    # Not a request / activity navigation
+    # tap_tuesday(device)
+    # tap_second_option_in_schedule(device)
 
 
 def select_course_ai(device):
@@ -80,8 +81,9 @@ def select_course_ai(device):
     # select course
     tap(device, 648, 709, 1)
     tap_accept_course(device)
-    tap_tuesday(device)
-    tap_second_option_in_schedule(device)
+    # Not a request / activity navigation
+    # tap_tuesday(device)
+    # tap_second_option_in_schedule(device)
 
 
 def visit_term_date(device):
