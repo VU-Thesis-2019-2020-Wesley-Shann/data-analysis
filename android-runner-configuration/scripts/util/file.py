@@ -145,6 +145,8 @@ def pull_nappa_db_files_from_sdcard_to_output_dir(device):
     src_directory = '/mnt/sdcard/thesis_wesley/.'
     dst_directory = os.path.join(paths_dict()['OUTPUT_DIR'], 'data', 'nappa-db')
 
+    command_chown = 'sudo chown -R $USER: %s' % paths_dict()['OUTPUT_DIR']
+    subprocess.call(command_chown, shell=True)
     command_mkdir = 'mkdir -p %s' % dst_directory
     print('\t- to %s' % dst_directory)
     subprocess.call(command_mkdir, shell=True)
