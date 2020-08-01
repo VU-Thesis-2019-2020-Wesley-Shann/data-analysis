@@ -17,7 +17,7 @@ public class MetricStrategyAccuracy {
                 "HIT_PERCENTAGE_WHEN_PREDICTED='" + hitPercentageWhenPredicted + "'," +
                 "HIT_COUNT='" + hitCount + "'," +
                 "MISS_COUNT='" + missCount + "'," +
-                "INSUFFICIENT_COUNT='" + insufficientScoreCount + "'," +
+                "INSUFFICIENT_SCORE_COUNT='" + insufficientScoreCount + "'," +
                 "EXCEPTION_COUNT='" + exceptionCount + "'," +
                 "NO_SUCCESSOR_COUNT='" + noSuccessorCount + "',";
         Logger.i(TAG, logMessage);
