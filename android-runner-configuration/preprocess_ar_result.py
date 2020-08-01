@@ -99,7 +99,7 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
                             dst_file.write(get_empty_line(properties))
 
             print('\t\t\tParsed %s lines from %s. All lines = %s' % (parsed_line_count, line_count, use_all_lines))
-        aggregate_logcat(base_path, tag, 3)
+        aggregate_subject_logcat(base_path, tag, 3)
 
 
 def parse_exp_logcat_to_csv(exp):
@@ -154,7 +154,7 @@ def set_write_permissions():
     subprocess.call(command, shell=True)
 
 
-def aggregate_logcat(subject_base_path, tag, tabs_count):
+def aggregate_subject_logcat(subject_base_path, tag, tabs_count):
     # noinspection PyUnusedLocal
     base_tabs = ''.join(['\t' for x in range(tabs_count)])
     aggregation_base_path = subject_base_path + tag
@@ -177,7 +177,8 @@ def aggregate_logcat(subject_base_path, tag, tabs_count):
                 while line:
                     line = src_file.readline()
                     row = '%s,%s' % (run_number, line)
-                    dst_file.write(row)
+                    if line != '':
+                        dst_file.write(row)
 
 
 def main():
