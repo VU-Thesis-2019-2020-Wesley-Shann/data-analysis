@@ -188,7 +188,7 @@ def aggregate_subject_logcat(subject_base_path, tag, tabs_count):
     should_write_header = True
     run_number = 0
     with open(os.path.join(aggregation_base_path, aggregation_file_name), 'w') as dst_file:
-        for filename in os.listdir(aggregation_base_path):
+        for filename in sorted(os.listdir(aggregation_base_path)):
             if filename == aggregation_file_name:
                 continue
             print('%s\tParsing file %s' % (base_tabs, filename))
@@ -207,17 +207,20 @@ def aggregate_subject_logcat(subject_base_path, tag, tabs_count):
 
 
 def aggregate_experiment_logcat(exp, tag, tabs_count):
-    print('%saggregate_experiment_logcat' % tabs_count)
+    base_tabs = ''.join(['\t' for x in range(tabs_count)])
+    print('%saggregate_experiment_logcat' % base_tabs)
     output_base_path = get_output_base_path(exp)
     aggregation_file_name = 'Aggregation-%s' % tag
     all_subjects_path = get_subject_base_path(exp)
     should_write_header = True
+    print('%s\ttag %s' % (base_tabs, tag))
     with open(os.path.join(output_base_path, aggregation_file_name), 'w') as dst_file:
         for subject_path in all_subjects_path:
             subject_name = get_subject_package_from_path(subject_path)
             subject_treatment_and_name = subject_name.split('.', 1)
             app_name = get_subject_name_from_package(subject_treatment_and_name[1])
             subject_aggregation_base_path = subject_path + '/logcat/' + tag + '/'
+            print('%s\tAggregating subject %s' % (base_tabs, subject_name))
             with open(os.path.join(subject_aggregation_base_path, aggregation_file_name), 'r') as src_file:
                 line = src_file.readline()
                 if should_write_header:
