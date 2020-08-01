@@ -43,12 +43,16 @@ def visit_delhi(device):
     # click delhi
     tap(device, 346, 709)
 
+    # click in know more
+    tap(device, 693, 1450)
+    tap_phone_back(device)
+
     # click in fun facts
     tap(device, 504, 1706)
     tap_phone_back(device)
 
     # click in know more
-    tap(device, 693, 1450, 8)
+    tap(device, 693, 1450)
     tap_phone_back(device)
 
     # return to main page
