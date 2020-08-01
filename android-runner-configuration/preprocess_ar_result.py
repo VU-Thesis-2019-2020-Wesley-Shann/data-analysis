@@ -1,5 +1,6 @@
 import os
 import subprocess
+import glob, shutil
 
 TYPE_NUMBER = 1
 TYPE_STRING = 2
@@ -240,6 +241,17 @@ def aggregate_experiment_logcat(exp, tag, tabs_count):
                         dst_file.write(row)
 
 
+def copy_all_screenshots_to_base_output_dir(exp):
+    print('\tcopy_all_screenshots_to_base_output_dir')
+    base_path = get_output_base_path(exp)
+    destination_dir = os.path.join(base_path, 'screenshots')
+
+    files = glob.iglob(os.path.join(base_path, "*.png"))
+    for file in files:
+        if os.path.isfile(file):
+            shutil.copy2(file, destination_dir)
+
+
 def main():
     print('preprocess_logcat')
     exps = [
@@ -258,6 +270,7 @@ def main():
     for exp in exps:
         print('Parse exp %s' % exp)
         parse_exp_logcat_to_csv(exp)
+        copy_all_screenshots_to_base_output_dir(exp)
 
 
 if __name__ == "__main__":
