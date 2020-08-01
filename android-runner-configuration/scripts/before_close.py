@@ -17,6 +17,6 @@ def clear_app_data(device):
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
-    retrieve_logcat_info(device)
     clear_app_data(device)
+    retrieve_logcat_info(device)
     pass
