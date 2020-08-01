@@ -146,6 +146,7 @@ def pull_nappa_db_files_from_sdcard_to_output_dir(device):
     dst_directory = os.path.join(paths_dict()['OUTPUT_DIR'], 'data', 'nappa-db')
 
     command_mkdir = 'mkdir -p %s' % dst_directory
+    print('\t- to %s' % dst_directory)
     subprocess.call(command_mkdir, shell=True)
     command_pull = 'adb pull %s %s' % (src_directory, dst_directory)
     subprocess.call(command_pull, shell=True)
