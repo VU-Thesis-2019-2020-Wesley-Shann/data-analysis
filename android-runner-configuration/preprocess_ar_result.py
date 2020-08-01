@@ -165,8 +165,8 @@ def aggregate_logcat(subject_base_path, tag, tabs_count):
             if filename == aggregation_file_name:
                 continue
             print('%s\ttParsing file %s' % (base_tabs, filename))
-            run_number = run_number + 1
             with open(os.path.join(aggregation_base_path, filename), 'r') as src_file:
+                run_number = run_number + 1
                 line = src_file.readline()
                 if should_write_header:
                     header_csv = 'RUN_NUMBER,' + line
