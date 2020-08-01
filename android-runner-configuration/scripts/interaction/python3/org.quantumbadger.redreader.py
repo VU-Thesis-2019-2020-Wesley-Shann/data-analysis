@@ -1,4 +1,5 @@
 import sys
+import time
 
 sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
@@ -126,6 +127,7 @@ def first_run(device):
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
+    time.sleep(4)
     if device.current_activity().find('org.quantumbadger.redreader') != -1:
         print('\tRunning interaction for RedReader')
         first_run(device)

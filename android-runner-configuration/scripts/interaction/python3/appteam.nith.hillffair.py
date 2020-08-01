@@ -1,4 +1,5 @@
 import sys
+import time
 
 sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
@@ -128,6 +129,7 @@ def accept_and_login(device):
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
+    time.sleep(4)
     if device.current_activity().find('appteam.nith.hillffair') != -1:
         print('\tRunning interaction for Hillffair')
         # if should_run_login_and_permission_only():

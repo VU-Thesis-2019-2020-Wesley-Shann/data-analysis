@@ -1,4 +1,5 @@
 import sys
+import time
 
 sys.path.insert(0, '/home/sshann/Documents/thesis/experiments/android-runner-configuration/')
 
@@ -81,6 +82,7 @@ def visit_all_shared_stories(device):
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
+    time.sleep(4)
     if device.current_activity().find('com.newsblur') != -1:
         print('\tRunning interaction for NewsBlur')
         # Login works, but there seems to be something wrong with Newblur deleting accounts,
