@@ -24,10 +24,13 @@ def clear_app_data(device):
 def take_screenshot():
     print('\ttake_screenshot')
     file_name = '%s.png' % get_formatted_timestamp()
-    base_pah = os.path.join(paths_dict()['OUTPUT_DIR'], 'screenshot')
-    path = os.path.join(base_pah, file_name)
-    command = 'adb exec-out screencap -p > %s' % path
-    subprocess.call(command, shell=True)
+    base_path = os.path.join(paths_dict()['OUTPUT_DIR'], 'screenshot')
+    path = os.path.join(base_path, file_name)
+    print('\t- at %s' % path)
+    command_mkdir = 'mkdir -p %s' % base_path
+    command_adb = 'adb exec-out screencap -p > %s' % path
+    subprocess.call(command_mkdir, shell=True)
+    subprocess.call(command_adb, shell=True)
 
 
 # noinspection PyUnusedLocal
