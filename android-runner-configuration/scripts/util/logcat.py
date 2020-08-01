@@ -77,6 +77,13 @@ def save_raw_log_cat_to_file(device):
             'filter_per_tag': True,
         },
         {
+            'tag': 'NappaLifecycleObserver',
+            'base_path': base_path + 'nappalifecycle/',
+            'file_name': file_name,
+            'should_save': device.current_activity().find('nappa') != -1,
+            'filter_per_tag': True,
+        },
+        {
             'tag': '',
             'base_path': base_path + 'full-logcat/',
             'file_name': file_name,
