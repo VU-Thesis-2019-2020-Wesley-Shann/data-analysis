@@ -100,6 +100,58 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
             print('\t\t\tParsed %s lines from %s. All lines = %s' % (parsed_line_count, line_count, use_all_lines))
 
 
+def parse_exp_logcat_to_csv(exp):
+    print('\tnetwork_duration')
+    network_duration = {
+        "REQUEST_DURATION_SYSTEM": TYPE_NUMBER,
+        "REQUEST_DURATION_OKHTTP": TYPE_NUMBER,
+        "REQUEST_SYNCHRONOUS": TYPE_BOOLEAN,
+        "RESPONSE_CODE": TYPE_NUMBER,
+        "RESPONSE_METHOD": TYPE_STRING,
+        "RESPONSE_LENGTH_OKHTTP": TYPE_NUMBER,
+        "RESPONSE_LENGTH_HEADER": TYPE_NUMBER,
+        "REQUEST_PROTOCOL": TYPE_STRING,
+        "REQUEST_URL": TYPE_STRING,
+    }
+    parse_logcat_to_csv(exp, 'MetricNetworkRequestExecutionTime', network_duration)
+
+    print('\tstrategy_duration')
+    strategy_duration = {
+        "STRATEGY_CLASS": TYPE_STRING,
+        "DURATION": TYPE_NUMBER,
+        "NUMBER_OF_URLS": TYPE_NUMBER,
+        "NUMBER_OF_SELECTED_CHILDREN_NODES": TYPE_NUMBER,
+        "NUMBER_OF_CHILDREN_NODES": TYPE_NUMBER,
+        "STRATEGY_RUN_SUCCESSFULLY": TYPE_NUMBER,
+    }
+    parse_logcat_to_csv(exp, 'MetricNappaPrefetchingStrategyExecutionTime', strategy_duration)
+
+    print('\tprefetching_accuracy')
+    prefetching_accuracy = {
+        "F1_SCORE_1": TYPE_NUMBER,
+        "F1_SCORE_2": TYPE_NUMBER,
+        "TRUE_POSITIVE": TYPE_NUMBER,
+        "FALSE_POSITIVE": TYPE_NUMBER,
+        "FALSE_NEGATIVE": TYPE_NUMBER,
+    }
+    parse_logcat_to_csv(exp, 'MetricPrefetchingAccuracy', prefetching_accuracy, False)
+
+    print('\tstrategy_accuracy')
+    strategy_accuracy = {
+        "HIT_PERCENTAGE": TYPE_NUMBER,
+        "HIT_COUNT": TYPE_NUMBER,
+        "MISS_COUNT": TYPE_NUMBER
+    }
+    parse_logcat_to_csv(exp, 'MetricStrategyAccuracy', strategy_accuracy, False)
+
+
+def set_write_permissions():
+    print('Give writing permission')
+    path_to_output = '/home/sshann/Documents/thesis/experiments/android-runner-configuration/output/'
+    command = 'sudo chown -R $USER: %s' % path_to_output
+    subprocess.call(command, shell=True)
+
+
 def main():
     print('preprocess_logcat')
     exps = [
@@ -110,55 +162,10 @@ def main():
         '2020.07.31_212509',
     ]
 
-    print('Give writing permission')
-    path_to_output = '/home/sshann/Documents/thesis/experiments/android-runner-configuration/output/'
-    command = 'sudo chown -R $USER: %s' % path_to_output
-    subprocess.call(command, shell=True)
-
+    set_write_permissions()
     for exp in exps:
         print('Parse exp %s' % exp)
-        print('\tnetwork_duration')
-        network_duration = {
-            "REQUEST_DURATION_SYSTEM": TYPE_NUMBER,
-            "REQUEST_DURATION_OKHTTP": TYPE_NUMBER,
-            "REQUEST_SYNCHRONOUS": TYPE_BOOLEAN,
-            "RESPONSE_CODE": TYPE_NUMBER,
-            "RESPONSE_METHOD": TYPE_STRING,
-            "RESPONSE_LENGTH_OKHTTP": TYPE_NUMBER,
-            "RESPONSE_LENGTH_HEADER": TYPE_NUMBER,
-            "REQUEST_PROTOCOL": TYPE_STRING,
-            "REQUEST_URL": TYPE_STRING,
-        }
-        parse_logcat_to_csv(exp, 'MetricNetworkRequestExecutionTime', network_duration)
-
-        print('\tstrategy_duration')
-        strategy_duration = {
-            "STRATEGY_CLASS": TYPE_STRING,
-            "DURATION": TYPE_NUMBER,
-            "NUMBER_OF_URLS": TYPE_NUMBER,
-            "NUMBER_OF_SELECTED_CHILDREN_NODES": TYPE_NUMBER,
-            "NUMBER_OF_CHILDREN_NODES": TYPE_NUMBER,
-            "STRATEGY_RUN_SUCCESSFULLY": TYPE_NUMBER,
-        }
-        parse_logcat_to_csv(exp, 'MetricNappaPrefetchingStrategyExecutionTime', strategy_duration)
-
-        print('\tprefetching_accuracy')
-        prefetching_accuracy = {
-            "F1_SCORE_1": TYPE_NUMBER,
-            "F1_SCORE_2": TYPE_NUMBER,
-            "TRUE_POSITIVE": TYPE_NUMBER,
-            "FALSE_POSITIVE": TYPE_NUMBER,
-            "FALSE_NEGATIVE": TYPE_NUMBER,
-        }
-        parse_logcat_to_csv(exp, 'MetricPrefetchingAccuracy', prefetching_accuracy, False)
-
-        print('\tstrategy_accuracy')
-        strategy_accuracy = {
-            "HIT_PERCENTAGE": TYPE_NUMBER,
-            "HIT_COUNT": TYPE_NUMBER,
-            "MISS_COUNT": TYPE_NUMBER
-        }
-        parse_logcat_to_csv(exp, 'MetricStrategyAccuracy', strategy_accuracy, False)
+        parse_exp_logcat_to_csv(exp)
 
 
 if __name__ == "__main__":
