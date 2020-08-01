@@ -1,6 +1,7 @@
+import glob
 import os
+import shutil
 import subprocess
-import glob, shutil
 
 TYPE_NUMBER = 1
 TYPE_STRING = 2
@@ -243,13 +244,20 @@ def aggregate_experiment_logcat(exp, tag, tabs_count):
 
 def copy_all_screenshots_to_base_output_dir(exp):
     print('\tcopy_all_screenshots_to_base_output_dir')
-    base_path = get_output_base_path(exp)
+    base_path = os.path.join(get_output_base_path(exp), 'data')
     destination_dir = os.path.join(base_path, 'screenshots')
 
-    files = glob.iglob(os.path.join(base_path, "*.png"))
-    for file in files:
-        if os.path.isfile(file):
-            shutil.copy2(file, destination_dir)
+    print('\tbase_path', base_path)
+    print('\tdestination_dir', destination_dir)
+
+    command_mkdir = 'mkdir -p %s' % destination_dir
+    subprocess.call(command_mkdir, shell=True)
+
+    for file_path in glob.glob(os.path.join(base_path, '**', '*.png'), recursive=True):
+        print('\t- at %s' % file_path.replace(base_path, ''))
+        new_path = os.path.join(destination_dir, os.path.basename(file_path))
+        if not os.path.exists(new_path):
+            shutil.copy(file_path, new_path)
 
 
 def main():
