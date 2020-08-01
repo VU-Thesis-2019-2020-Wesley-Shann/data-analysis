@@ -32,7 +32,7 @@ def get_logcat_property(line, property_to_get):
     return property_value
 
 
-def get_subject_name_from_path(subject_path):
+def get_subject_package_from_path(subject_path):
     subject_dirs = subject_path.split('/')
     subject_name = subject_dirs[len(subject_dirs) - 1]
     subject_name = subject_name.replace('home-sshann-documents-thesis-subjects-build-apks-', '')
@@ -44,6 +44,25 @@ def get_subject_name_from_path(subject_path):
     subject_name = subject_name.replace('-', '.')
 
     return subject_name
+
+
+def get_subject_name_from_package(package):
+    if 'materialistic' in package:
+        return 'Materialistic'
+    elif 'hillffair' in package:
+        return 'Hillffair'
+    elif 'antennapod' in package:
+        return 'AntennaPod'
+    elif 'project_travel_mate' in package:
+        return 'Travel Mate'
+    elif 'uobtimetable' in package:
+        return 'UOB TimeTable'
+    elif 'newsblur' in package:
+        return 'NewsBlur'
+    elif 'redreader' in package:
+        return 'RedReader'
+    else:
+        return package
 
 
 def get_empty_line(properties):
@@ -61,7 +80,7 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
     all_subjects_path = get_subject_base_path(exp)
     for subject_path in all_subjects_path:
         base_path = subject_path + '/logcat/'
-        subject_name = get_subject_name_from_path(subject_path)
+        subject_name = get_subject_package_from_path(subject_path)
         if 'nappa' not in subject_name and is_nappa_metric(tag):
             continue
         print('\t\t- Parsing subject %s' % subject_name)
@@ -105,7 +124,7 @@ def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
 
             print('\t\t\tParsed %s lines from %s. All lines = %s' % (parsed_line_count, line_count, use_all_lines))
         aggregate_subject_logcat(base_path, tag, 3)
-    aggregate_experiment_logcat(all_subjects_path, tag, 2)
+    aggregate_experiment_logcat(exp, tag, 2)
 
 
 def parse_exp_logcat_to_csv(exp):
@@ -195,17 +214,19 @@ def aggregate_experiment_logcat(exp, tag, tabs_count):
     should_write_header = True
     with open(os.path.join(output_base_path, aggregation_file_name), 'w') as dst_file:
         for subject_path in all_subjects_path:
-            subject_name = get_subject_name_from_path(subject_path)
+            subject_name = get_subject_package_from_path(subject_path)
+            subject_treatment_and_name = subject_name.split('.', 1)
+            app_name = get_subject_name_from_package(subject_treatment_and_name[1])
             subject_aggregation_base_path = subject_path + '/logcat/' + tag + '/'
             with open(os.path.join(subject_aggregation_base_path, aggregation_file_name), 'r') as src_file:
                 line = src_file.readline()
                 if should_write_header:
-                    header_csv = 'SUBJECT,' + line
+                    header_csv = 'TREATMENT,SUBJECT_NAME,APP_PACKAGE,' + line
                     dst_file.write(header_csv)
                     should_write_header = False
                 while line:
                     line = src_file.readline()
-                    row = '%s,%s' % (subject_name, line)
+                    row = '%s,%s,%s,%s' % (subject_treatment_and_name[0], app_name, subject_treatment_and_name[1], line)
                     if line != '':
                         dst_file.write(row)
 
