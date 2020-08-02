@@ -323,9 +323,8 @@ def aggregate_subject_trepn(exp):
                         line = src_file.readline()
                     avg_values = [value / number_of_rows for value in sum_values]
                     # Remove time data
-                    del avg_values[5]
-                    del avg_values[2]
-                    del avg_values[0]
+                    for index in time_index_columns:
+                        del avg_values[index]
                     print('\t\t\tavg_values', avg_values)
                     row_values = [run_number, duration] + avg_values
                     row_values_as_str = [str(value) for value in row_values]
