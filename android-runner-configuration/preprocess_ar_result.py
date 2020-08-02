@@ -277,6 +277,8 @@ def aggregate_subject_trepn(exp):
         'CPU Load [%]',
     ]
 
+    time_index_columns = [5, 2, 0]
+
     aggregate_subject_file_header = ','.join(columns) + '\n'
 
     for subject_dir in sorted(os.listdir(subjects_base_path)):
@@ -300,9 +302,11 @@ def aggregate_subject_trepn(exp):
                     while line:
                         values = line.replace('\n', '').split(',')
                         number_of_rows = number_of_rows + 1
-                        print('\t\t\tvalues', values)
-                        if values[2].isnumeric():
-                            duration = int(values[2])
+                        # print('\t\t\tvalues', values)
+                        for index in time_index_columns:
+                            if values[index].isnumeric():
+                                duration = int(values[index])
+                                break
                         # print('\t\t\tduration', duration)
                         # print('\t\t\tsum_values (before)', sum_values)
 
@@ -313,7 +317,7 @@ def aggregate_subject_trepn(exp):
                                 if not value.isnumeric():
                                     print('\t\t\tnot a number: "%s"' % value)
                                     values[idx] = sum_values[idx] / number_of_rows
-                            print('\t\t\tvalues', values)
+                            # print('\t\t\tvalues', values)
                             sum_values = [x + int(y) for x, y in zip(sum_values, values)]
                         # print('\t\t\tsum_values (after)', sum_values)
                         line = src_file.readline()
