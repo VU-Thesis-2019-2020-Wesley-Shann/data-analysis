@@ -27,13 +27,13 @@ APPS=(
     "nappatfpr.org.quantumbadger.redreader"
 
     # PALOMA
-    "paloma.io.github.project_travel_mate"
-    "paloma.appteam.nith.hillffair"
-    "paloma.com.newsblur"
-    "paloma.io.github.hidroh.materialistic"
-    "paloma.de.danoeh.antennapod.debug"
-    "paloma.com.ak.uobtimetable"
-    "paloma.org.quantumbadger.redreader"
+    # "paloma.io.github.project_travel_mate"
+    # "paloma.appteam.nith.hillffair"
+    # "paloma.com.newsblur"
+    # "paloma.io.github.hidroh.materialistic"
+    # "paloma.de.danoeh.antennapod.debug"
+    # "paloma.com.ak.uobtimetable"
+    # "paloma.org.quantumbadger.redreader"
 )
 
 echo "Uninstalling any apk left in the device" 
