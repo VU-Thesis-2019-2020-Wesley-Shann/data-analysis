@@ -29,8 +29,12 @@ def visit_battle_day(device):
     tap(device, 733, 1957, 2)
     tap_phone_back(device)
 
+    # nukkad card
+    tap(device, 733, 1957, 2)
+    tap_phone_back(device)
+
     # music card
-    tap(device, 733, 645, 12)
+    tap(device, 733, 645)
     tap_phone_back(device)
 
     # main menu
@@ -95,6 +99,14 @@ def visit_clubs(device):
 
     # Technical comite card
     tap(device, 255, 1845)
+    tap_phone_back(device)
+
+    # Technical comite card
+    tap(device, 255, 1845)
+    tap_phone_back(device)
+
+    # PR club card
+    tap(device, 369, 554)
     tap_phone_back(device)
 
     # main menu
