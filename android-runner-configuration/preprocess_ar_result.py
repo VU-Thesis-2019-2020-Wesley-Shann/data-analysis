@@ -275,6 +275,8 @@ def aggregate_subject_trepn(exp):
         'Battery Power [uW] (Raw)',
         'Battery Power [uW] (Delta)',
         'CPU Load [%]',
+        'Battery Power [uW] (Raw) (Non zero)',
+        'Battery Power [uW] (Delta) (Non zero)',
     ]
 
     time_index_columns = [5, 2, 0]
@@ -294,7 +296,9 @@ def aggregate_subject_trepn(exp):
                     print('\t\tFile %s' % trepn_file)
                     run_number = run_number + 1
                     sum_values = []
+                    non_zero_sum_values = []
                     number_of_rows = 0
+                    number_of_rows_non_zero = 0
                     duration = 0
                     # Skip header line
                     line = src_file.readline()
@@ -319,14 +323,21 @@ def aggregate_subject_trepn(exp):
                                     values[idx] = sum_values[idx] / number_of_rows
                             # print('\t\t\tvalues', values)
                             sum_values = [x + int(y) for x, y in zip(sum_values, values)]
+                        if values[3] != '0':
+                            number_of_rows_non_zero = number_of_rows_non_zero + 1
+                            if len(non_zero_sum_values) == 0:
+                                non_zero_sum_values = [int(value) for value in values[3:5]]
+                            else:
+                                non_zero_sum_values = [x + int(y) for x, y in zip(sum_values, values[3:5])]
                         # print('\t\t\tsum_values (after)', sum_values)
                         line = src_file.readline()
                     avg_values = [value / number_of_rows for value in sum_values]
+                    non_zero_avg_values = [value / number_of_rows_non_zero for value in non_zero_sum_values]
                     # Remove time data
                     for index in time_index_columns:
                         del avg_values[index]
                     print('\t\t\tavg_values', avg_values)
-                    row_values = [run_number, duration] + avg_values
+                    row_values = [run_number, duration] + avg_values + non_zero_avg_values
                     row_values_as_str = [str(value) for value in row_values]
                     print('\t\t\trow_values', row_values_as_str)
                     row_str = ','.join(row_values_as_str) + '\n'
