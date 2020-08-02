@@ -29,6 +29,10 @@ def visit_battle_day(device):
     tap(device, 733, 1957, 2)
     tap_phone_back(device)
 
+    # music card
+    tap(device, 733, 645, 12)
+    tap_phone_back(device)
+
     # main menu
     tap_phone_back(device)
 
@@ -49,12 +53,16 @@ def visit_quiz(device):
     # quiz card
     tap(device, 1053, 1173, 2)
 
+    # leaderboard
+    tap(device, 756, 1530)
+    tap_phone_back(device)
+
     # instruction
     tap(device, 648, 1050)
     tap_phone_back(device)
 
     # leaderboard
-    tap(device, 756, 1530, 8)
+    tap(device, 756, 1530)
     tap_phone_back(device)
 
     # main menu
@@ -82,7 +90,7 @@ def visit_clubs(device):
     tap_phone_back(device)
 
     # Design and decoration card
-    tap(device, 1012, 1152, 12)
+    tap(device, 1012, 1152)
     tap_phone_back(device)
 
     # Technical comite card
@@ -95,8 +103,12 @@ def visit_clubs(device):
     # club card
     tap(device, 1084, 2213)
 
-    # Design and decoration card
-    tap(device, 1012, 1152)
+    # # Design and decoration card
+    # tap(device, 1012, 1152)
+    # tap_phone_back(device)
+
+    # Technical comite card
+    tap(device, 255, 1845)
     tap_phone_back(device)
 
     # main menu
