@@ -28,10 +28,10 @@ def visit_global_stories(device):
     print('\tvisit_global_stories')
 
     # click on global stories
-    tap(device, 594, 330, 8)
+    tap(device, 594, 330, 10)
 
     # click on card 1
-    tap(device, 436, 453, 8)
+    tap(device, 436, 453, 12)
     tap_phone_back(device)
 
     # click on card 2
@@ -42,7 +42,7 @@ def visit_global_stories(device):
     tap_phone_back(device)
 
     # click on global stories
-    tap(device, 594, 330, 8)
+    tap(device, 594, 330, 10)
 
     # click on card 1
     tap(device, 436, 453)
@@ -56,10 +56,10 @@ def visit_all_shared_stories(device):
     print('\tvisit_all_shared_stories')
 
     # click on all shared stories
-    tap(device, 553, 442, 8)
+    tap(device, 553, 442, 10)
 
     # click on card 1
-    tap(device, 436, 453, 8)
+    tap(device, 436, 453, 12)
     tap_phone_back(device)
 
     # click on card 2
@@ -70,7 +70,7 @@ def visit_all_shared_stories(device):
     tap_phone_back(device)
 
     # click on all shared stories
-    tap(device, 553, 442, 8)
+    tap(device, 553, 442, 10)
 
     # click on card 1
     tap(device, 436, 453)
