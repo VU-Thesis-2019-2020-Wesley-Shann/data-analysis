@@ -2,6 +2,7 @@ import glob
 import os
 import shutil
 import subprocess
+import time
 
 TYPE_NUMBER = 1
 TYPE_STRING = 2
@@ -266,6 +267,43 @@ def copy_all_screenshots_to_base_output_dir(exp):
             shutil.copy(file_path, new_path)
 
 
+def aggregate_experiment_android(exp):
+    print('aggregate_experiment_android')
+    experiment_base_path = get_output_base_path(exp)
+    subjects_base_path = os.path.join(experiment_base_path, 'data', 'nexus6p')
+    aggregate_subject_file_name = 'Aggregate-Android.csv'
+    aggregate_experiment_file_name = 'Aggregate-Android.csv'
+    path_to_search = os.path.join(subjects_base_path, '**', aggregate_subject_file_name)
+    columns = [
+        'Treatment',
+        'Subject',
+        'App package',
+        'Run number',
+        # 'Duration [ms]',
+        'cpu',
+        'mem',
+    ]
+
+    with open(os.path.join(experiment_base_path, aggregate_experiment_file_name), 'w') as dst_file:
+        dst_file.write(','.join(columns) + '\n')
+        for file_path in glob.glob(path_to_search, recursive=True):
+            subject_name = file_path.replace(get_output_base_path(exp), '')
+            subject_name = clear_subject_name(subject_name)
+            subject_name = subject_name.replace('data/nexus6p/', '')
+            subject_name = subject_name.replace('/android/Aggregate.Android.csv', '')
+            subject_name_split = subject_name.split('.', 1)
+            subject_treatment = subject_name_split[0]
+            app_package = subject_name_split[1]
+            print('\tAggregating %s %s' % (subject_treatment, subject_name))
+            values = ','.join([subject_treatment, subject_name, app_package])
+            with open(file_path, 'r') as src_file:
+                src_file.readline()
+                line = src_file.readline()
+                while line:
+                    dst_file.write(values + ',' + line)
+                    line = src_file.readline()
+
+
 def aggregate_experiment_trepn(exp):
     print('aggregate_experiment_trepn')
     experiment_base_path = get_output_base_path(exp)
@@ -311,10 +349,17 @@ def parse_list_str_to_list_number(values_str: list):
     # print('\tparse_row_to_number')
     values_number = []
     for value in values_str:
-        if value.isnumeric():
+        try:
             values_number.append(int(value))
-        else:
-            values_number.append(-1)
+            continue
+        except ValueError:
+            pass
+        try:
+            values_number.append(float(value))
+            continue
+        except ValueError:
+            pass
+        values_number.append(-1)
     return values_number
 
 
@@ -343,6 +388,83 @@ def drop_columns_by_index(values: list, columns_to_drop: list):
     # print('\tdrop_columns_by_index')
     for index in columns_to_drop:
         del values[index]
+
+
+def aggregate_subject_android(exp):
+    print('aggregate_subject_android')
+    experiment_base_path = get_output_base_path(exp)
+    subjects_base_path = os.path.join(experiment_base_path, 'data', 'nexus6p')
+    aggregate_subject_file_name = 'Aggregate-Android.csv'
+    columns = [
+        'Run number',
+        # 'Duration [ms]',
+        'cpu',
+        'mem',
+    ]
+
+    aggregate_subject_file_header = ','.join(columns) + '\n'
+
+    for subject_dir in sorted(os.listdir(subjects_base_path)):
+        print('\tParse subject %s' % subject_dir)
+        trepn_base_path = os.path.join(subjects_base_path, subject_dir, 'android')
+        with open(os.path.join(trepn_base_path, aggregate_subject_file_name), 'w') as dst_file:
+            dst_file.write(aggregate_subject_file_header)
+            run_number = 0
+            for android_file in sorted(os.listdir(trepn_base_path)):
+                if android_file == aggregate_subject_file_name or 'csv' not in android_file or '~lock' in android_file:
+                    continue
+                with open(os.path.join(trepn_base_path, android_file), 'r') as src_file:
+                    print('\t\tFile %s' % android_file)
+                    run_number = run_number + 1
+                    values_sum = []
+                    number_of_rows = 0
+                    # Skip header line
+                    src_file.readline()
+                    line = src_file.readline()
+                    while line:
+                        print('\t----------')
+
+                        number_of_rows = number_of_rows + 1
+                        print('\tRow # %s' % number_of_rows)
+
+                        values_str = line.replace('\n', '').split(',')
+                        print('\tvalues_str', values_str)
+
+                        values_number = parse_list_str_to_list_number(values_str)
+                        print('\tvalues_number', values_number)
+
+                        drop_columns_by_index(values_number, [0])
+                        print('\tvalues_number_after_drop', values_number)
+
+                        values_number_without_missing_values = replace_missing_values_with_avg(values_number,
+                                                                                               values_sum,
+                                                                                               number_of_rows)
+                        print('\tvalues_number_without_missing_values', values_number_without_missing_values)
+
+                        if len(values_sum) == 0:
+                            values_sum = values_number_without_missing_values
+                        else:
+                            values_sum = [x + y for x, y in zip(values_sum, values_number_without_missing_values)]
+                        print('\tvalues_sum', values_sum)
+
+                        line = src_file.readline()
+                    print('\t----------')
+
+                    print('\tnumber_of_rows', number_of_rows)
+
+                    values_avg = [x / number_of_rows for x in values_sum]
+                    print('\tvalues_avg', values_avg)
+
+                    aggregated_row_values = [run_number] + values_avg
+                    print('\taggregated_row_values', aggregated_row_values)
+
+                    aggregated_row_values_str = [str(x) for x in aggregated_row_values]
+                    print('\taggregated_row_values_str', aggregated_row_values_str)
+
+                    aggregated_row_str = ','.join(aggregated_row_values_str) + '\n'
+                    print('\taggregated_row_str', aggregated_row_str)
+
+                    dst_file.write(aggregated_row_str)
 
 
 def aggregate_subject_trepn(exp):
@@ -466,10 +588,12 @@ def main():
     set_write_permissions()
     for exp in exps:
         print('Parse exp %s' % exp)
-        parse_exp_logcat_to_csv(exp)
-        aggregate_subject_trepn(exp)
-        copy_all_screenshots_to_base_output_dir(exp)
-        aggregate_experiment_trepn(exp)
+        # parse_exp_logcat_to_csv(exp)
+        # aggregate_subject_trepn(exp)
+        # copy_all_screenshots_to_base_output_dir(exp)
+        # aggregate_experiment_trepn(exp)
+        aggregate_subject_android(exp)
+        aggregate_experiment_android(exp)
 
 
 if __name__ == "__main__":
