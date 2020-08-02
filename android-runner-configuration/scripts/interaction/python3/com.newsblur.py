@@ -38,14 +38,6 @@ def visit_global_stories(device):
     tap(device, 435, 858)
     tap_phone_back(device)
 
-    # click on card 2
-    tap(device, 435, 858)
-    tap_phone_back(device)
-
-    # click on card 1
-    tap(device, 436, 453, 4)
-    tap_phone_back(device)
-
     # return to front page
     tap_phone_back(device)
 
@@ -67,15 +59,11 @@ def visit_all_shared_stories(device):
     tap(device, 553, 442, 8)
 
     # click on card 1
-    tap(device, 436, 453, 4)
+    tap(device, 436, 453, 8)
     tap_phone_back(device)
 
     # click on card 2
     tap(device, 435, 858)
-    tap_phone_back(device)
-
-    # click on card 1
-    tap(device, 436, 453, 4)
     tap_phone_back(device)
 
     # return to front page
