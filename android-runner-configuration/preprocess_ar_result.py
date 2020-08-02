@@ -225,6 +225,8 @@ def aggregate_experiment_logcat(exp, tag, tabs_count):
     with open(os.path.join(output_base_path, aggregation_file_name), 'w') as dst_file:
         for subject_path in all_subjects_path:
             subject_name = get_subject_package_from_path(subject_path)
+            if 'nappa' not in subject_name:
+                continue
             subject_treatment_and_name = subject_name.split('.', 1)
             app_name = get_subject_name_from_package(subject_treatment_and_name[1])
             subject_aggregation_base_path = subject_path + '/logcat/' + tag + '/'
