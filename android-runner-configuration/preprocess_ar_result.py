@@ -588,10 +588,10 @@ def main():
     set_write_permissions()
     for exp in exps:
         print('Parse exp %s' % exp)
-        # parse_exp_logcat_to_csv(exp)
-        # aggregate_subject_trepn(exp)
-        # copy_all_screenshots_to_base_output_dir(exp)
-        # aggregate_experiment_trepn(exp)
+        parse_exp_logcat_to_csv(exp)
+        aggregate_subject_trepn(exp)
+        copy_all_screenshots_to_base_output_dir(exp)
+        aggregate_experiment_trepn(exp)
         aggregate_subject_android(exp)
         aggregate_experiment_android(exp)
 
