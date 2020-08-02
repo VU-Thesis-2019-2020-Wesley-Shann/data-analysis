@@ -87,6 +87,19 @@ def select_course_ai(device):
     # tap_second_option_in_schedule(device)
 
 
+def select_course_ai_second_time(device):
+    print('\tselect_course_AI')
+    visit_courses_page(device)
+    # select_school_cs(device)
+    # select_courses_foundation(device)
+    # select course
+    tap(device, 648, 709, 1)
+    tap_accept_course(device)
+    # Not a request / activity navigation
+    # tap_tuesday(device)
+    # tap_second_option_in_schedule(device)
+
+
 def visit_term_date(device):
     print('\tvisit_term_date')
     tap_menu(device)
@@ -101,6 +114,7 @@ def main(device, *args, **kwargs):
         tap_continue_button(device)
         select_course_bedfordshire_first_time(device)
         select_course_ai(device)
+        select_course_ai_second_time(device)
         visit_term_date(device)
     else:
         print('\tSkip file')
