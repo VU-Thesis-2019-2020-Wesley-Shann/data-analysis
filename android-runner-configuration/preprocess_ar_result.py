@@ -263,6 +263,65 @@ def copy_all_screenshots_to_base_output_dir(exp):
             shutil.copy(file_path, new_path)
 
 
+def aggregate_subject_trepn(exp):
+    print('aggregate_subject_trepn')
+    experiment_base_path = get_output_base_path(exp)
+    subjects_base_path = os.path.join(experiment_base_path, 'data', 'nexus6p')
+    aggregate_subject_file_name = 'Aggregate-Trepn.csv'
+    columns = [
+        'Run number',
+        'Duration [ms]',
+        'Memory Usage [KB]',
+        'Battery Power [uW] (Raw)',
+        'Battery Power [uW] (Delta)',
+        'CPU Load [%]',
+    ]
+
+    aggregate_subject_file_header = ','.join(columns) + '\n'
+
+    for subject_dir in sorted(os.listdir(subjects_base_path)):
+        print('\tParse subject %s' % subject_dir)
+        trepn_base_path = os.path.join(subjects_base_path, subject_dir, 'trepn')
+        with open(os.path.join(trepn_base_path, aggregate_subject_file_name), 'w') as dst_file:
+            dst_file.write(aggregate_subject_file_header)
+            run_number = 0
+            for trepn_file in sorted(os.listdir(trepn_base_path)):
+                if trepn_file == aggregate_subject_file_name or 'csv' not in trepn_file:
+                    continue
+                with open(os.path.join(trepn_base_path, trepn_file), 'r') as src_file:
+                    run_number = run_number + 1
+                    sum_values = []
+                    number_of_rows = 0
+                    duration = 0
+                    # Skip header line
+                    line = src_file.readline()
+                    line = src_file.readline()
+                    while line:
+                        number_of_rows = number_of_rows + 1
+                        values = line.split(',')
+                        duration = int(values[2])
+                        # print('\tduration', duration)
+                        # print('\tvalues', values)
+                        # print('\tsum_values (before)', sum_values)
+                        if len(sum_values) == 0:
+                            sum_values = [int(value) for value in values]
+                        else:
+                            sum_values = [x + int(y) for x, y in zip(sum_values, values)]
+                        # print('\tsum_values (after)', sum_values)
+                        line = src_file.readline()
+                    avg_values = [value / number_of_rows for value in sum_values]
+                    # Remove time data
+                    del avg_values[5]
+                    del avg_values[2]
+                    del avg_values[0]
+                    print('\tavg_values', avg_values)
+                    row_values = [run_number, duration] + avg_values
+                    row_values_as_str = [str(value) for value in row_values]
+                    print('row_values', row_values_as_str)
+                    row_str = ','.join(row_values_as_str)
+                    dst_file.write(row_str)
+
+
 def main():
     print('preprocess_logcat')
     exps = [
@@ -285,6 +344,7 @@ def main():
     for exp in exps:
         print('Parse exp %s' % exp)
         parse_exp_logcat_to_csv(exp)
+        aggregate_subject_trepn(exp)
         copy_all_screenshots_to_base_output_dir(exp)
 
 
