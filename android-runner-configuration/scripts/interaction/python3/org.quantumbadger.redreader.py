@@ -59,6 +59,10 @@ def visit_subreddit_ask_science(device):
     tap(device, 600, 1200, 2)
     tap_phone_back(device)
 
+    # click in post 2
+    tap(device, 600, 950)
+    tap_phone_back(device)
+
     # click in post 1
     tap(device, 600, 700)
     tap_phone_back(device)
