@@ -34,9 +34,7 @@ def get_logcat_property(line, property_to_get):
     return property_value
 
 
-def get_subject_package_from_path(subject_path):
-    subject_dirs = subject_path.split('/')
-    subject_name = subject_dirs[len(subject_dirs) - 1]
+def clear_subject_name(subject_name):
     subject_name = subject_name.replace('home-sshann-documents-thesis-subjects-build-apks-', '')
     subject_name = subject_name.replace('-baseline', '')
     subject_name = subject_name.replace('instrumented-nappa-greedy-', '')
@@ -44,8 +42,13 @@ def get_subject_package_from_path(subject_path):
     subject_name = subject_name.replace('instrumented-paloma-', '')
     subject_name = subject_name.replace('-apk', '')
     subject_name = subject_name.replace('-', '.')
-
     return subject_name
+
+
+def get_subject_package_from_path(subject_path):
+    subject_dirs = subject_path.split('/')
+    subject_name = subject_dirs[len(subject_dirs) - 1]
+    return clear_subject_name(subject_name)
 
 
 def get_subject_name_from_package(package):
@@ -263,6 +266,47 @@ def copy_all_screenshots_to_base_output_dir(exp):
             shutil.copy(file_path, new_path)
 
 
+def aggregate_experiment_trepn(exp):
+    print('aggregate_experiment_trepn')
+    experiment_base_path = get_output_base_path(exp)
+    subjects_base_path = os.path.join(experiment_base_path, 'data', 'nexus6p')
+    aggregate_subject_file_name = 'Aggregate-Trepn.csv'
+    aggregate_experiment_file_name = 'Aggregate-Trepn.csv'
+    path_to_search = os.path.join(subjects_base_path, '**', aggregate_subject_file_name)
+    columns = [
+        'Treatment',
+        'Subject',
+        'App package',
+        'Run number',
+        'Duration [ms]',
+        'Memory Usage [KB]',
+        'Battery Power [uW] (Raw)',
+        'Battery Power [uW] (Delta)',
+        'CPU Load [%]',
+        'Battery Power [uW] (Raw) (Non zero)',
+        'Battery Power [uW] (Delta) (Non zero)',
+    ]
+
+    with open(os.path.join(experiment_base_path, aggregate_experiment_file_name), 'w') as dst_file:
+        dst_file.write(','.join(columns) + '\n')
+        for file_path in glob.glob(path_to_search, recursive=True):
+            subject_name = file_path.replace(get_output_base_path(exp), '')
+            subject_name = clear_subject_name(subject_name)
+            subject_name = subject_name.replace('data/nexus6p/', '')
+            subject_name = subject_name.replace('/trepn/Aggregate.Trepn.csv', '')
+            subject_name_split = subject_name.split('.', 1)
+            subject_treatment = subject_name_split[0]
+            app_package = subject_name_split[1]
+            print('\tAggregating %s %s' % (subject_treatment, subject_name))
+            values = ','.join([subject_treatment, subject_name, app_package])
+            with open(file_path, 'r') as src_file:
+                line = src_file.readline()
+                line = src_file.readline()
+                while line:
+                    dst_file.write(values + ',' + line)
+                    line = src_file.readline()
+
+
 def aggregate_subject_trepn(exp):
     print('aggregate_subject_trepn')
     experiment_base_path = get_output_base_path(exp)
@@ -368,6 +412,7 @@ def main():
         parse_exp_logcat_to_csv(exp)
         aggregate_subject_trepn(exp)
         copy_all_screenshots_to_base_output_dir(exp)
+        aggregate_experiment_trepn(exp)
 
 
 if __name__ == "__main__":
