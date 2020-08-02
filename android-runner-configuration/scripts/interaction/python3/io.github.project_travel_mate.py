@@ -48,7 +48,11 @@ def visit_delhi(device):
     tap_phone_back(device)
 
     # click in fun facts
-    tap(device, 504, 1706)
+    tap(device, 504, 1706, 2)
+    tap_phone_back(device)
+
+    # click in fun facts
+    tap(device, 504, 1706, 2)
     tap_phone_back(device)
 
     # click in know more
@@ -117,6 +121,12 @@ def visit_holidays(device):
     # swipe to the bottom of the page
     swipe(device, 500, 2000, 500, 100, 0)
     swipe(device, 500, 2000, 500, 100, 0)
+
+    # click upcoming long weekend
+    tap(device, 657, 2080)
+
+    # back to util
+    tap_phone_back(device)
 
     # click upcoming long weekend
     tap(device, 657, 2080)
