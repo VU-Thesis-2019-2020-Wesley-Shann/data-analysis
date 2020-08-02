@@ -307,6 +307,44 @@ def aggregate_experiment_trepn(exp):
                     line = src_file.readline()
 
 
+def parse_list_str_to_list_number(values_str: list):
+    # print('\tparse_row_to_number')
+    values_number = []
+    for value in values_str:
+        if value.isnumeric():
+            values_number.append(int(value))
+        else:
+            values_number.append(-1)
+    return values_number
+
+
+def replace_missing_values_with_avg(values: list, values_sum: list, number_of_rows: int):
+    # print('\treplace_missing_values_with_avg')
+    new_values = []
+    for index, value in enumerate(values):
+        if value != -1:
+            new_values.append(value)
+        else:
+            new_values.append(values_sum[index] / number_of_rows)
+    return new_values
+
+
+def get_latest_time(values: list, time_indexes: list):
+    # print('\tget_latest_time')
+    latest_time = -1
+    for index in time_indexes:
+        if values[index] != -1 and values[index] > latest_time:
+            latest_time = values[index]
+
+    return latest_time
+
+
+def drop_columns_by_index(values: list, columns_to_drop: list):
+    # print('\tdrop_columns_by_index')
+    for index in columns_to_drop:
+        del values[index]
+
+
 def aggregate_subject_trepn(exp):
     print('aggregate_subject_trepn')
     experiment_base_path = get_output_base_path(exp)
@@ -339,53 +377,71 @@ def aggregate_subject_trepn(exp):
                 with open(os.path.join(trepn_base_path, trepn_file), 'r') as src_file:
                     print('\t\tFile %s' % trepn_file)
                     run_number = run_number + 1
-                    sum_values = []
-                    non_zero_sum_values = []
+                    values_sum = []
                     number_of_rows = 0
-                    number_of_rows_non_zero = 0
+                    number_of_rows_with_battery_power_raw_above_zero = 0
                     duration = 0
                     # Skip header line
-                    line = src_file.readline()
+                    src_file.readline()
                     line = src_file.readline()
                     while line:
-                        values = line.replace('\n', '').split(',')
-                        number_of_rows = number_of_rows + 1
-                        # print('\t\t\tvalues', values)
-                        for index in time_index_columns:
-                            if values[index].isnumeric():
-                                duration = int(values[index])
-                                break
-                        # print('\t\t\tduration', duration)
-                        # print('\t\t\tsum_values (before)', sum_values)
+                        print('\t----------')
 
-                        if len(sum_values) == 0:
-                            sum_values = [int(value) for value in values]
+                        number_of_rows = number_of_rows + 1
+                        print('\tRow # %s' % number_of_rows)
+
+                        values_str = line.replace('\n', '').split(',')
+                        print('\tvalues_str', values_str)
+
+                        values_number = parse_list_str_to_list_number(values_str)
+                        print('\tvalues_number', values_number)
+
+                        line_duration = get_latest_time(values_number, time_index_columns)
+                        if line_duration != -1 and line_duration > duration:
+                            duration = line_duration
+                            print('\tduration (new)', duration)
+
+                        drop_columns_by_index(values_number, time_index_columns)
+                        print('\tvalues_number_after_drop', values_number)
+
+                        values_number_without_missing_values = replace_missing_values_with_avg(values_number,
+                                                                                               values_sum,
+                                                                                               number_of_rows)
+                        print('\tvalues_number_without_missing_values', values_number_without_missing_values)
+
+                        if len(values_sum) == 0:
+                            values_sum = values_number_without_missing_values
                         else:
-                            for idx, value in enumerate(values):
-                                if not value.isnumeric():
-                                    print('\t\t\tnot a number: "%s"' % value)
-                                    values[idx] = sum_values[idx] / number_of_rows
-                            # print('\t\t\tvalues', values)
-                            sum_values = [x + int(y) for x, y in zip(sum_values, values)]
-                        if values[3] != '0':
-                            number_of_rows_non_zero = number_of_rows_non_zero + 1
-                            if len(non_zero_sum_values) == 0:
-                                non_zero_sum_values = [int(value) for value in values[3:5]]
-                            else:
-                                non_zero_sum_values = [x + int(y) for x, y in zip(sum_values, values[3:5])]
-                        # print('\t\t\tsum_values (after)', sum_values)
+                            values_sum = [x + y for x, y in zip(values_sum, values_number_without_missing_values)]
+                        print('\tvalues_sum', values_sum)
+
+                        if values_number_without_missing_values[1] != 0:
+                            number_of_rows_with_battery_power_raw_above_zero = number_of_rows_with_battery_power_raw_above_zero + 1
+
                         line = src_file.readline()
-                    avg_values = [value / number_of_rows for value in sum_values]
-                    non_zero_avg_values = [value / number_of_rows_non_zero for value in non_zero_sum_values]
-                    # Remove time data
-                    for index in time_index_columns:
-                        del avg_values[index]
-                    print('\t\t\tavg_values', avg_values)
-                    row_values = [run_number, duration] + avg_values + non_zero_avg_values
-                    row_values_as_str = [str(value) for value in row_values]
-                    print('\t\t\trow_values', row_values_as_str)
-                    row_str = ','.join(row_values_as_str) + '\n'
-                    dst_file.write(row_str)
+                    print('\t----------')
+
+                    print('\tnumber_of_rows', number_of_rows)
+                    print('\tnumber_of_rows_with_battery_power_raw_above_zero',
+                          number_of_rows_with_battery_power_raw_above_zero)
+
+                    values_avg = [x / number_of_rows for x in values_sum]
+                    print('\tvalues_avg', values_avg)
+
+                    values_avg_battery_above_zero = [x / number_of_rows_with_battery_power_raw_above_zero for x in
+                                                     values_sum[1:3]]
+                    print('\tvalues_avg_battery_above_zero', values_avg_battery_above_zero)
+
+                    aggregated_row_values = [run_number, duration] + values_avg + values_avg_battery_above_zero
+                    print('\taggregated_row_values', aggregated_row_values)
+
+                    aggregated_row_values_str = [str(x) for x in aggregated_row_values]
+                    print('\taggregated_row_values_str', aggregated_row_values_str)
+
+                    aggregated_row_str = ','.join(aggregated_row_values_str) + '\n'
+                    print('\taggregated_row_str', aggregated_row_str)
+
+                    dst_file.write(aggregated_row_str)
 
 
 def main():
