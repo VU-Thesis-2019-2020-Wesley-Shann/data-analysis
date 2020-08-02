@@ -49,6 +49,14 @@ def visit_subscriptions_and_podcasts(device):
     # click search itunes
     tap(device, 567, 714, 6)
 
+    # click card 1
+    tap(device, 616, 469, 8)
+    tap_phone_back(device)
+
+    # click card 2
+    tap(device, 639, 762)
+    tap_phone_back(device)
+
     # click card 2
     tap(device, 639, 762)
     tap_phone_back(device)
@@ -72,6 +80,10 @@ def visit_subscriptions_and_podcasts(device):
 
     # click on browse gpodder
     tap(device, 603, 1061, 6)
+
+    # click card 1
+    tap(device, 526, 597)
+    tap_phone_back(device)
 
     # click card 1
     tap(device, 526, 597)
