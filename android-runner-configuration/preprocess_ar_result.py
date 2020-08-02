@@ -422,47 +422,47 @@ def aggregate_subject_android(exp):
                     src_file.readline()
                     line = src_file.readline()
                     while line:
-                        print('\t----------')
+                        # print('\t----------')
 
                         number_of_rows = number_of_rows + 1
-                        print('\tRow # %s' % number_of_rows)
+                        # print('\tRow # %s' % number_of_rows)
 
                         values_str = line.replace('\n', '').split(',')
-                        print('\tvalues_str', values_str)
+                        # print('\tvalues_str', values_str)
 
                         values_number = parse_list_str_to_list_number(values_str)
-                        print('\tvalues_number', values_number)
+                        # print('\tvalues_number', values_number)
 
                         drop_columns_by_index(values_number, [0])
-                        print('\tvalues_number_after_drop', values_number)
+                        # print('\tvalues_number_after_drop', values_number)
 
                         values_number_without_missing_values = replace_missing_values_with_avg(values_number,
                                                                                                values_sum,
                                                                                                number_of_rows)
-                        print('\tvalues_number_without_missing_values', values_number_without_missing_values)
+                        # print('\tvalues_number_without_missing_values', values_number_without_missing_values)
 
                         if len(values_sum) == 0:
                             values_sum = values_number_without_missing_values
                         else:
                             values_sum = [x + y for x, y in zip(values_sum, values_number_without_missing_values)]
-                        print('\tvalues_sum', values_sum)
+                        # print('\tvalues_sum', values_sum)
 
                         line = src_file.readline()
-                    print('\t----------')
+                    # print('\t----------')
 
-                    print('\tnumber_of_rows', number_of_rows)
+                    # print('\tnumber_of_rows', number_of_rows)
 
                     values_avg = [x / number_of_rows for x in values_sum]
-                    print('\tvalues_avg', values_avg)
+                    # print('\tvalues_avg', values_avg)
 
                     aggregated_row_values = [run_number] + values_avg
-                    print('\taggregated_row_values', aggregated_row_values)
+                    # print('\taggregated_row_values', aggregated_row_values)
 
                     aggregated_row_values_str = [str(x) for x in aggregated_row_values]
-                    print('\taggregated_row_values_str', aggregated_row_values_str)
+                    # print('\taggregated_row_values_str', aggregated_row_values_str)
 
                     aggregated_row_str = ','.join(aggregated_row_values_str) + '\n'
-                    print('\taggregated_row_str', aggregated_row_str)
+                    # print('\taggregated_row_str', aggregated_row_str)
 
                     dst_file.write(aggregated_row_str)
 
