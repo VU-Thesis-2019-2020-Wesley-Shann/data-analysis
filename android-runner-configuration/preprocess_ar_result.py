@@ -385,61 +385,61 @@ def aggregate_subject_trepn(exp):
                     src_file.readline()
                     line = src_file.readline()
                     while line:
-                        print('\t----------')
+                        # print('\t----------')
 
                         number_of_rows = number_of_rows + 1
-                        print('\tRow # %s' % number_of_rows)
+                        # print('\tRow # %s' % number_of_rows)
 
                         values_str = line.replace('\n', '').split(',')
-                        print('\tvalues_str', values_str)
+                        # print('\tvalues_str', values_str)
 
                         values_number = parse_list_str_to_list_number(values_str)
-                        print('\tvalues_number', values_number)
+                        # print('\tvalues_number', values_number)
 
                         line_duration = get_latest_time(values_number, time_index_columns)
                         if line_duration != -1 and line_duration > duration:
                             duration = line_duration
-                            print('\tduration (new)', duration)
+                            # print('\tduration (new)', duration)
 
                         drop_columns_by_index(values_number, time_index_columns)
-                        print('\tvalues_number_after_drop', values_number)
+                        # print('\tvalues_number_after_drop', values_number)
 
                         values_number_without_missing_values = replace_missing_values_with_avg(values_number,
                                                                                                values_sum,
                                                                                                number_of_rows)
-                        print('\tvalues_number_without_missing_values', values_number_without_missing_values)
+                        # print('\tvalues_number_without_missing_values', values_number_without_missing_values)
 
                         if len(values_sum) == 0:
                             values_sum = values_number_without_missing_values
                         else:
                             values_sum = [x + y for x, y in zip(values_sum, values_number_without_missing_values)]
-                        print('\tvalues_sum', values_sum)
+                        # print('\tvalues_sum', values_sum)
 
                         if values_number_without_missing_values[1] != 0:
                             number_of_rows_with_battery_power_raw_above_zero = number_of_rows_with_battery_power_raw_above_zero + 1
 
                         line = src_file.readline()
-                    print('\t----------')
+                    # print('\t----------')
 
-                    print('\tnumber_of_rows', number_of_rows)
-                    print('\tnumber_of_rows_with_battery_power_raw_above_zero',
-                          number_of_rows_with_battery_power_raw_above_zero)
+                    # print('\tnumber_of_rows', number_of_rows)
+                    # print('\tnumber_of_rows_with_battery_power_raw_above_zero',
+                    #       number_of_rows_with_battery_power_raw_above_zero)
 
                     values_avg = [x / number_of_rows for x in values_sum]
-                    print('\tvalues_avg', values_avg)
+                    # print('\tvalues_avg', values_avg)
 
                     values_avg_battery_above_zero = [x / number_of_rows_with_battery_power_raw_above_zero for x in
                                                      values_sum[1:3]]
-                    print('\tvalues_avg_battery_above_zero', values_avg_battery_above_zero)
+                    # print('\tvalues_avg_battery_above_zero', values_avg_battery_above_zero)
 
                     aggregated_row_values = [run_number, duration] + values_avg + values_avg_battery_above_zero
-                    print('\taggregated_row_values', aggregated_row_values)
+                    # print('\taggregated_row_values', aggregated_row_values)
 
                     aggregated_row_values_str = [str(x) for x in aggregated_row_values]
-                    print('\taggregated_row_values_str', aggregated_row_values_str)
+                    # print('\taggregated_row_values_str', aggregated_row_values_str)
 
                     aggregated_row_str = ','.join(aggregated_row_values_str) + '\n'
-                    print('\taggregated_row_str', aggregated_row_str)
+                    # print('\taggregated_row_str', aggregated_row_str)
 
                     dst_file.write(aggregated_row_str)
 
