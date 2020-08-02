@@ -14,12 +14,16 @@ def visit_subreddit_annoucements(device):
     # click in Announcements subreddit
     tap(device, 600, 1000, 5)
 
+    # click in post 1
+    tap(device, 600, 580, 8)
+    tap_phone_back(device)
+
     # click in post 2
     tap(device, 600, 820)
     tap_phone_back(device)
 
     # click in post 1
-    tap(device, 600, 580, 8)
+    tap(device, 600, 580)
     tap_phone_back(device)
 
     # Go back to home page
@@ -43,6 +47,10 @@ def visit_subreddit_ask_science(device):
     # click in ask science subreddit
     tap(device, 600, 1536, 5)
 
+    # click in post 1
+    tap(device, 600, 700)
+    tap_phone_back(device)
+
     # click in post 2
     tap(device, 600, 950)
     tap_phone_back(device)
@@ -52,7 +60,7 @@ def visit_subreddit_ask_science(device):
     tap_phone_back(device)
 
     # click in post 1
-    tap(device, 600, 700, 8)
+    tap(device, 600, 700)
     tap_phone_back(device)
 
     # Go back to home page
@@ -76,12 +84,16 @@ def visit_subreddit_aww(device):
     # click in aww subreddit
     tap(device, 600, 1733, 5)
 
+    # click in post 3 comments
+    tap(device, 1340, 1100)
+    tap_phone_back(device)
+
     # click in post 2
     tap(device, 600, 938)
     tap_phone_back(device)
 
     # click in post 3 comments
-    tap(device, 1340, 1100, 8)
+    tap(device, 1340, 1100)
     tap_phone_back(device)
 
     # Go back to home page
