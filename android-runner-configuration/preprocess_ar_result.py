@@ -289,6 +289,7 @@ def aggregate_subject_trepn(exp):
                 if trepn_file == aggregate_subject_file_name or 'csv' not in trepn_file:
                     continue
                 with open(os.path.join(trepn_base_path, trepn_file), 'r') as src_file:
+                    print('\t\tFile %s' % trepn_file)
                     run_number = run_number + 1
                     sum_values = []
                     number_of_rows = 0
@@ -297,28 +298,35 @@ def aggregate_subject_trepn(exp):
                     line = src_file.readline()
                     line = src_file.readline()
                     while line:
+                        values = line.replace('\n', '').split(',')
                         number_of_rows = number_of_rows + 1
-                        values = line.split(',')
-                        duration = int(values[2])
-                        # print('\tduration', duration)
-                        # print('\tvalues', values)
-                        # print('\tsum_values (before)', sum_values)
+                        print('\t\t\tvalues', values)
+                        if values[2].isnumeric():
+                            duration = int(values[2])
+                        # print('\t\t\tduration', duration)
+                        # print('\t\t\tsum_values (before)', sum_values)
+
                         if len(sum_values) == 0:
                             sum_values = [int(value) for value in values]
                         else:
+                            for idx, value in enumerate(values):
+                                if not value.isnumeric():
+                                    print('\t\t\tnot a number: "%s"' % value)
+                                    values[idx] = sum_values[idx] / number_of_rows
+                            print('\t\t\tvalues', values)
                             sum_values = [x + int(y) for x, y in zip(sum_values, values)]
-                        # print('\tsum_values (after)', sum_values)
+                        # print('\t\t\tsum_values (after)', sum_values)
                         line = src_file.readline()
                     avg_values = [value / number_of_rows for value in sum_values]
                     # Remove time data
                     del avg_values[5]
                     del avg_values[2]
                     del avg_values[0]
-                    print('\tavg_values', avg_values)
+                    print('\t\t\tavg_values', avg_values)
                     row_values = [run_number, duration] + avg_values
                     row_values_as_str = [str(value) for value in row_values]
-                    print('row_values', row_values_as_str)
-                    row_str = ','.join(row_values_as_str)
+                    print('\t\t\trow_values', row_values_as_str)
+                    row_str = ','.join(row_values_as_str) + '\n'
                     dst_file.write(row_str)
 
 
