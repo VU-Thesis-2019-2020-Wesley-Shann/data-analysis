@@ -286,7 +286,7 @@ def aggregate_subject_trepn(exp):
             dst_file.write(aggregate_subject_file_header)
             run_number = 0
             for trepn_file in sorted(os.listdir(trepn_base_path)):
-                if trepn_file == aggregate_subject_file_name or 'csv' not in trepn_file:
+                if trepn_file == aggregate_subject_file_name or 'csv' not in trepn_file or '~lock' in trepn_file:
                     continue
                 with open(os.path.join(trepn_base_path, trepn_file), 'r') as src_file:
                     print('\t\tFile %s' % trepn_file)
