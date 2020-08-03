@@ -153,9 +153,9 @@ def visit_utilities(device):
     tap(device, 405, 661, 2)
 
     # This causes an exception
-    # # click in notifications
-    # tap(device, 1341, 197)
-    # tap_phone_back(device)
+    # click in notifications
+    tap(device, 1341, 197)
+    tap_phone_back(device)
 
     # click side menu
     tap(device, 117, 170, 0)

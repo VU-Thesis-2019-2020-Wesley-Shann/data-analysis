@@ -1,0 +1,80 @@
+{
+  "type": "native",
+  "adb_path": "/home/sshann/Android/Sdk/platform-tools/adb",
+  "devices_spec": "/home/sshann/Documents/thesis/experiments/android-runner-configuration/devices.json",
+  "devices": {
+    "nexus6p": {
+    }
+  },
+  "clear_cache": false,
+  "repetitions": 3,
+  "duration": 0,
+  "monkeyrunner_path": "/home/sshann/Android/Sdk/tools/bin/monkeyrunner",
+  "systrace_path": "/home/sshann/Android/Sdk/platform-tools/systrace/systrace.py",
+  "powerprofile_path": "battery_stats_trepn/power_profile.xml",
+  "apps": [
+    "baseline.io.github.project_travel_mate",
+    "baseline.appteam.nith.hillffair",
+    "baseline.com.newsblur",
+    "nappagreedy.io.github.project_travel_mate",
+    "nappagreedy.appteam.nith.hillffair",
+    "nappagreedy.com.newsblur",
+    "nappatfpr.io.github.project_travel_mate",
+    "nappatfpr.appteam.nith.hillffair",
+    "nappatfpr.com.newsblur"
+  ],
+  "paths": [
+    "/home/sshann/Documents/thesis/subjects/build/apks/baseline/baseline.io.github.hidroh.materialistic.apk",
+    "/home/sshann/Documents/thesis/subjects/build/apks/baseline/baseline.de.danoeh.antennapod.debug.apk",
+    "/home/sshann/Documents/thesis/subjects/build/apks/baseline/baseline.com.ak.uobtimetable.apk",
+    "/home/sshann/Documents/thesis/subjects/build/apks/baseline/baseline.org.quantumbadger.redreader.apk",
+    "/home/sshann/Documents/thesis/subjects/build/apks/instrumented-nappa-greedy/nappagreedy.io.github.hidroh.materialistic.apk",
+    "/home/sshann/Documents/thesis/subjects/build/apks/instrumented-nappa-greedy/nappagreedy.de.danoeh.antennapod.debug.apk",
+    "/home/sshann/Documents/thesis/subjects/build/apks/instrumented-nappa-greedy/nappagreedy.com.ak.uobtimetable.apk",
+    "/home/sshann/Documents/thesis/subjects/build/apks/instrumented-nappa-greedy/nappagreedy.org.quantumbadger.redreader.apk",
+    "/home/sshann/Documents/thesis/subjects/build/apks/instrumented-nappa-tfpr/nappatfpr.io.github.hidroh.materialistic.apk",
+    "/home/sshann/Documents/thesis/subjects/build/apks/instrumented-nappa-tfpr/nappatfpr.de.danoeh.antennapod.debug.apk",
+    "/home/sshann/Documents/thesis/subjects/build/apks/instrumented-nappa-tfpr/nappatfpr.com.ak.uobtimetable.apk",
+    "/home/sshann/Documents/thesis/subjects/build/apks/instrumented-nappa-tfpr/nappatfpr.org.quantumbadger.redreader.apk"
+  ],
+  "profilers": {
+    "trepn": {
+      "subject_aggregation": "none",
+      "experiment_aggregation": "none",
+      "preferences": {
+        "sample_interval": 100,
+        "battery_power_source_selection": "Direct Power"
+      },
+      "data_points": [
+        "battery_power",
+        "mem_usage",
+        "cpu_load"
+      ]
+    },
+    "android": {
+      "subject_aggregation": "none",
+      "experiment_aggregation": "none",
+      "sample_interval": 100,
+      "data_points": [
+        "cpu",
+        "mem"
+      ]
+    }
+  },
+  "scripts": {
+    "before_experiment": "scripts/before_experiment.py",
+    "before_run": "scripts/before_run.py",
+    "after_launch": "scripts/after_launch.py",
+    "interaction": [
+      {
+        "type": "python3",
+        "path": "scripts/interaction/python3/interaction.py"
+      }
+    ],
+    "before_close": "scripts/before_close.py",
+    "after_run": "scripts/after_run.py",
+    "after_experiment": "scripts/after_experiment.py"
+  },
+  "time_between_run": 60000,
+  "randomization": true
+}
