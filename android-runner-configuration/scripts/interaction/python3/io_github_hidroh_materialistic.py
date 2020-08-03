@@ -142,11 +142,23 @@ def visit_new_stories_from_saved(device):
 
     # filter search
     tap(device, 1219, 165, 0)
-    write_text(device, 'neptunia')
+    write_text(device, 'google')
     tap(device, 1314, 2245)
 
-    # click on the last visible card
-    tap(device, 589, 2138)
+    # # click on the last visible card
+    # tap(device, 589, 2138)
+
+    # click on second card
+    tap(device, 648, 789)
+
+    # click on comments
+    tap(device, 355, 693)
+
+    # return to filter feed list
+    tap_phone_back(device)
+
+    # click on second card
+    tap(device, 648, 789)
 
     # click on comments
     tap(device, 355, 693)
@@ -181,5 +193,5 @@ def run_materialistic_interaction(device):
     visit_catching_up(device)
     # This interaction works, but it duplicated the runtime for this app =/
     # visit_new_stories_from_saved(device)
-    # visit_new_stories_from_saved(device)
+    visit_new_stories_from_saved(device)
     visit_best_stories(device)
