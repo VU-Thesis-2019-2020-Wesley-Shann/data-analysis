@@ -84,11 +84,15 @@ def visit_all_shared_stories(device):
 def main(device, *args, **kwargs):
     if device.current_activity().find('com.newsblur') != -1:
         time.sleep(4)
-        print('\tRunning interaction for NewsBlur')
-        # Login works, but there seems to be something wrong with Newblur deleting accounts,
-        # so it is best to be logged in the entire experiment
-        # login(device)
-        visit_global_stories(device)
-        visit_all_shared_stories(device)
+        run_news_blur_interaction(device)
     else:
         print('\tSkip file')
+
+
+def run_news_blur_interaction(device):
+    print('\tRunning interaction for NewsBlur')
+    # Login works, but there seems to be something wrong with Newblur deleting accounts,
+    # so it is best to be logged in the entire experiment
+    # login(device)
+    visit_global_stories(device)
+    visit_all_shared_stories(device)

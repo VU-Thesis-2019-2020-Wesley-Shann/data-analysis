@@ -145,10 +145,14 @@ def first_run(device):
 def main(device, *args, **kwargs):
     if device.current_activity().find('org.quantumbadger.redreader') != -1:
         time.sleep(4)
-        print('\tRunning interaction for RedReader')
-        first_run(device)
-        visit_subreddit_ask_science(device)
-        visit_subreddit_annoucements(device)
-        visit_subreddit_aww(device)
+        run_red_reader_interaction(device)
     else:
         print('\tSkip file')
+
+
+def run_red_reader_interaction(device):
+    print('\tRunning interaction for RedReader')
+    first_run(device)
+    visit_subreddit_ask_science(device)
+    visit_subreddit_annoucements(device)
+    visit_subreddit_aww(device)

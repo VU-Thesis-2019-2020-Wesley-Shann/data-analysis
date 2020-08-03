@@ -155,12 +155,16 @@ def accept_and_login(device):
 def main(device, *args, **kwargs):
     if device.current_activity().find('appteam.nith.hillffair') != -1:
         time.sleep(4)
-        print('\tRunning interaction for Hillffair')
-        # if should_run_login_and_permission_only():
-        # accept_and_login(device)
-        # else:
-        visit_battle_day(device)
-        visit_quiz(device)
-        visit_clubs(device)
+        run_hillffair_interaction(device)
     else:
         print('\tSkip file')
+
+
+def run_hillffair_interaction(device):
+    print('\tRunning interaction for Hillffair')
+    # if should_run_login_and_permission_only():
+    # accept_and_login(device)
+    # else:
+    visit_battle_day(device)
+    visit_quiz(device)
+    visit_clubs(device)

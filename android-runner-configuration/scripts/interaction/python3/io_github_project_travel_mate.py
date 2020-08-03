@@ -151,12 +151,16 @@ def visit_holidays(device):
 def main(device, *args, **kwargs):
     if device.current_activity().find('io.github.project_travel_mate') != -1:
         time.sleep(4)
-        print('\tRunning interaction for TravelMate')
-        # login(device)
-        visit_delhi(device)
-        # Travel mate stated to crash when visiting this activity
-        # visit_mumbai_weather_via_utility(device)
-        visit_holidays(device)
-        visit_holidays(device)
+        run_travel_mate_interaction(device)
     else:
         print('\tSkip file')
+
+
+def run_travel_mate_interaction(device):
+    print('\tRunning interaction for TravelMate')
+    # login(device)
+    visit_delhi(device)
+    # Travel mate stated to crash when visiting this activity
+    # visit_mumbai_weather_via_utility(device)
+    visit_holidays(device)
+    visit_holidays(device)
