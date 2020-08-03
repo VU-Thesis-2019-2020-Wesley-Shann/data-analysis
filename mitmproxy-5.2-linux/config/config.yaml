@@ -43,6 +43,18 @@ server_replay_ignore_params: [
   # Uses the app full package name, including the treatment name, which differs
   # The replay files were recorded using a single treatment 
   "android_package",
+
+  # App: Materialistic
+  # Timestamp based field
+  "page_session_id",
+
+  # App: Materialistic
+  # Timestamp based field
+  "page_view_id",
+
+  # App: Materialistic
+  # Timestamp based field
+  "visit_id",
 ]
 
 # Kill extra requests during replay. Type bool.
