@@ -42,9 +42,10 @@ def main(device, *args, **kwargs):
         retrieve_logcat_info(device)
         take_screenshot()
     except Exception as e:
-        print((traceback.format_exc()))
+        # It is already printed later in the stack
+        # print((traceback.format_exc()))
         print('\tcaught exception')
-        base_path = '/home/sshann/Documents/thesis/experiments/android-runner-configuration'
+        base_path = '/home/sshann/Documents/thesis/experiments/android-runner-configuration/'
         file_name = 'exception_logcat.txt'
         print('\tWriting logcat at %s' % os.path.join(base_path, file_name))
         write_logcat(base_path, file_name)
