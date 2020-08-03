@@ -89,11 +89,11 @@ def visit_subreddit_aww(device):
     tap(device, 600, 1733, 5)
 
     # click in post 3 comments
-    tap(device, 1340, 1100)
+    tap(device, 1340, 1100, 6)
     tap_phone_back(device)
 
     # click in post 2
-    tap(device, 600, 938)
+    tap(device, 600, 938, 6)
     tap_phone_back(device)
 
     # click in post 3 comments
