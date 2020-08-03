@@ -125,7 +125,7 @@ def visit_utilities(device):
     tap_phone_back(device)
 
     # click compass
-    tap(device, 657, 2037)
+    tap(device, 657, 2037, 2)
 
     # back to util
     tap_phone_back(device)
