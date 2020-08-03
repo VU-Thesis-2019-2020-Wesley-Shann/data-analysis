@@ -1,6 +1,7 @@
 import sys
 import os
 import subprocess
+import traceback
 
 # noinspection PyUnresolvedReferences
 from paths import paths_dict
@@ -12,6 +13,7 @@ from scripts.util.file import clear_db
 from scripts.util.adb import copy_nappa_db_to_sd_card
 from scripts.util.logcat import retrieve_logcat_info
 from scripts.util.logcat import get_formatted_timestamp
+from scripts.util.logcat import write_logcat
 
 
 def clear_app_data(device):
@@ -35,7 +37,17 @@ def take_screenshot():
 
 # noinspection PyUnusedLocal
 def main(device, *args, **kwargs):
-    clear_app_data(device)
-    retrieve_logcat_info(device)
-    take_screenshot()
+    try:
+        clear_app_data(device)
+        retrieve_logcat_info(device)
+        take_screenshot()
+    except Exception as e:
+        print((traceback.format_exc()))
+        print('\tcaught exception')
+        base_path = '/home/sshann/Documents/thesis/experiments/android-runner-configuration'
+        file_name = 'exception_logcat.txt'
+        print('\tWriting logcat at %s' % os.path.join(base_path, file_name))
+        write_logcat(base_path, file_name)
+        print('\tFinished writing')
+        raise e
     pass

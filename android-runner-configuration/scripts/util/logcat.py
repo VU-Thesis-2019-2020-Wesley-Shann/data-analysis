@@ -24,7 +24,7 @@ def get_formatted_timestamp():
     )
 
 
-def write_data(base_path, file_name, tag='', filter_per_tag=False):
+def write_logcat(base_path, file_name, tag='', filter_per_tag=False):
     full_path = base_path + file_name
     command_mkdir = 'mkdir -p %s' % base_path
     if filter_per_tag:
@@ -108,7 +108,7 @@ def save_raw_log_cat_to_file(device):
     for data in logcat_data:
         if data['should_save']:
             print('\tat %s', data['base_path'] + data['file_name'])
-            write_data(data['base_path'], data['file_name'], data['tag'], data['filter_per_tag'])
+            write_logcat(data['base_path'], data['file_name'], data['tag'], data['filter_per_tag'])
 
 
 def retrieve_logcat_info(device):
