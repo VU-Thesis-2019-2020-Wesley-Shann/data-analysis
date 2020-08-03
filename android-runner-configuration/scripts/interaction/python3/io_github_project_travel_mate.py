@@ -109,7 +109,7 @@ def visit_mumbai_weather_via_utility(device):
     tap_phone_back(device)
 
 
-def visit_holidays(device):
+def visit_utilities(device):
     print('\tvisit_holidays')
 
     # click side menu
@@ -117,6 +117,18 @@ def visit_holidays(device):
 
     # click util
     tap(device, 355, 1674, 2)
+
+    # click checklist
+    tap(device, 747, 608)
+
+    # back to util
+    tap_phone_back(device)
+
+    # click compass
+    tap(device, 657, 2037)
+
+    # back to util
+    tap_phone_back(device)
 
     # swipe to the bottom of the page
     swipe(device, 500, 2000, 500, 100, 0)
@@ -140,6 +152,10 @@ def visit_holidays(device):
     # go to home page
     tap(device, 405, 661, 2)
 
+    # click in notifications
+    tap(device, 1341, 197)
+    tap_phone_back(device)
+
     # click side menu
     tap(device, 117, 170, 0)
 
@@ -162,5 +178,5 @@ def run_travel_mate_interaction(device):
     visit_delhi(device)
     # Travel mate stated to crash when visiting this activity
     # visit_mumbai_weather_via_utility(device)
-    visit_holidays(device)
-    visit_holidays(device)
+    visit_utilities(device)
+    visit_utilities(device)
