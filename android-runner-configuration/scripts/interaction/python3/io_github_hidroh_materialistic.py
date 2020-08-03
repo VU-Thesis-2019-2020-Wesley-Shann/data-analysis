@@ -17,6 +17,24 @@ def visit_catching_up(device):
     # go to catching up
     tap(device, 432, 858)
 
+    # click on first card
+    tap(device, 724, 400, 6)
+
+    # click on comments
+    tap(device, 355, 693)
+
+    # return to feed list
+    tap_phone_back(device)
+
+    # click on second card
+    tap(device, 648, 789)
+
+    # click on comments
+    tap(device, 355, 693)
+
+    # return to feed list
+    tap_phone_back(device)
+
     # click on second card
     tap(device, 648, 789)
 
@@ -27,7 +45,7 @@ def visit_catching_up(device):
     tap_phone_back(device)
 
     # click on first card
-    tap(device, 724, 400, 8)
+    tap(device, 724, 400)
 
     # click on comments
     tap(device, 355, 693)
