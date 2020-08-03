@@ -152,9 +152,10 @@ def visit_utilities(device):
     # go to home page
     tap(device, 405, 661, 2)
 
-    # click in notifications
-    tap(device, 1341, 197)
-    tap_phone_back(device)
+    # This causes an exception
+    # # click in notifications
+    # tap(device, 1341, 197)
+    # tap_phone_back(device)
 
     # click side menu
     tap(device, 117, 170, 0)
