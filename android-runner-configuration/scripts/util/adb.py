@@ -59,14 +59,22 @@ def copy_nappa_db_to_sd_card(device):
     if device.current_activity().find('nappa') == -1:
         print('\tNot a nappa enabled subject')
         return
+
+    db_nappa = [
+        'nappa.db',
+        'nappa.db-shm',
+        'nappa.db-wal',
+    ]
+
     app = device.current_activity()
-    source = 'databases/nappa.db'
-    destination = '/mnt/sdcard/thesis_wesley/%s/' % app
-    new_file_name = 'nappa-%s.db' % get_formatted_timestamp()
-    command_cp = 'run-as %s cp %s %s/%s' % (app, source, destination, new_file_name)
-    command_mkdir = 'mkdir -p %s' % destination
-    device.shell(command_mkdir)
-    device.shell(command_cp)
+    for db in db_nappa:
+        source = 'databases/%s' % db
+        destination = '/mnt/sdcard/thesis_wesley/%s/' % app
+        new_file_name = '%s_%s' % (get_formatted_timestamp(), db)
+        command_cp = 'run-as %s cp %s %s/%s' % (app, source, destination, new_file_name)
+        command_mkdir = 'mkdir -p %s' % destination
+        device.shell(command_mkdir)
+        device.shell(command_cp)
     # Copy to SD card
     # adb shell run-as baseline.de.danoeh.antennapod.debug cp databases/Antennapod.db /mnt/sdcard/
     # Copy from SD card

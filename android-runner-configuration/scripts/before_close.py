@@ -20,7 +20,6 @@ def clear_app_data(device):
     print('\tclearing app data')
     clear_dir(device)
     clear_db(device)
-    copy_nappa_db_to_sd_card(device)
 
 
 def take_screenshot(device):
@@ -39,6 +38,7 @@ def take_screenshot(device):
 def main(device, *args, **kwargs):
     try:
         clear_app_data(device)
+        copy_nappa_db_to_sd_card(device)
         retrieve_logcat_info(device)
         take_screenshot(device)
     except Exception as e:
