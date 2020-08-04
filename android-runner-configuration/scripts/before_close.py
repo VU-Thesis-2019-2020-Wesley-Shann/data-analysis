@@ -23,9 +23,9 @@ def clear_app_data(device):
     copy_nappa_db_to_sd_card(device)
 
 
-def take_screenshot():
+def take_screenshot(device):
     print('\ttake_screenshot')
-    file_name = '%s.png' % get_formatted_timestamp()
+    file_name = '%s_%s.png' % (device.current_activity(), get_formatted_timestamp())
     base_path = os.path.join(paths_dict()['OUTPUT_DIR'], 'screenshot')
     path = os.path.join(base_path, file_name)
     print('\t- at %s' % path)
@@ -40,7 +40,7 @@ def main(device, *args, **kwargs):
     try:
         clear_app_data(device)
         retrieve_logcat_info(device)
-        take_screenshot()
+        take_screenshot(device)
     except Exception as e:
         # It is already printed later in the stack
         # print((traceback.format_exc()))
