@@ -1,0 +1,733 @@
+--------- beginning of main
+--------- beginning of system
+08-04 13:04:37.333  7914 12254 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/feeds/?update_counts=true
+08-04 13:04:37.333  7914 12254 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:37.333  7914 12254 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:37.334  7914 12254 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:04:37.334  7914 12254 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:04:37.334  7914 12254 D CustomInterceptor: CACHED STATS: size = '0', maxSize = '100', hitCount = '0', createCount = '0', putCount = '0', evictionCount = '0', missCount = '0', toString = 'LruCache[maxSize=100,hits=0,misses=0,hitRate=0%]', 
+08-04 13:04:37.334  7914 12254 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:37.971  7914 12254 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 13:04:38.000  7914 12254 D CustomInterceptor: HEADER RESPONSE
+08-04 13:04:38.000  7914 12254 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 13:04:38.000  7914 12254 D CustomInterceptor: Connection close
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: Content-Type application/json
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: Date Tue, 04 Aug 2020 11:04:32 GMT
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: Expires Tue, 04 Aug 2020 11:09:37 GMT+00:00
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: Last-Modified Tue, 04 Aug 2020 11:04:32 GMT
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: Server gunicorn/19.7.0
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: Transfer-Encoding chunked
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: Vary Cookie
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: X-gunicorn-server app14
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: X-Homer You don't win friends with salad.
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: CACHEABLE true
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: REQ https://www.newsblur.com/reader/feeds/?update_counts=true
+08-04 13:04:38.001  7914 12254 D CustomInterceptor: REQ_SERV_BY net
+08-04 13:04:38.002  7914 12254 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/reader/feeds/?update_counts=true
+08-04 13:04:38.004  7914 12254 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 13:04:38.029  7914 12287 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1
+08-04 13:04:38.029  7914 12287 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:38.029  7914 12287 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:38.029  7914 12287 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:04:38.029  7914 12287 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:04:38.029  7914 12287 D CustomInterceptor: CACHED STATS: size = '1', maxSize = '100', hitCount = '1', createCount = '0', putCount = '1', evictionCount = '0', missCount = '1', toString = 'LruCache[maxSize=100,hits=1,misses=1,hitRate=50%]', 
+08-04 13:04:38.029  7914 12287 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:38.446  7914 12287 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 13:04:38.447  7914 12287 D CustomInterceptor: HEADER RESPONSE
+08-04 13:04:38.448  7914 12287 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 13:04:38.448  7914 12287 D CustomInterceptor: Connection close
+08-04 13:04:38.448  7914 12287 D CustomInterceptor: Content-Type application/json
+08-04 13:04:38.448  7914 12287 D CustomInterceptor: Date Tue, 04 Aug 2020 11:04:33 GMT
+08-04 13:04:38.448  7914 12287 D CustomInterceptor: Expires Tue, 04 Aug 2020 11:09:38 GMT+00:00
+08-04 13:04:38.448  7914 12287 D CustomInterceptor: Server gunicorn/19.7.0
+08-04 13:04:38.448  7914 12287 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-04 13:04:38.448  7914 12287 D CustomInterceptor: Transfer-Encoding chunked
+08-04 13:04:38.448  7914 12287 D CustomInterceptor: Vary Cookie
+08-04 13:04:38.448  7914 12287 D CustomInterceptor: X-Chief-Wiggum I hope this has taught you kids a lesson: kids never learn.
+08-04 13:04:38.448  7914 12287 D CustomInterceptor: X-gunicorn-server app17
+08-04 13:04:38.449  7914 12287 D CustomInterceptor: CACHEABLE true
+08-04 13:04:38.449  7914 12287 D CustomInterceptor: REQ https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1
+08-04 13:04:38.449  7914 12287 D CustomInterceptor: REQ_SERV_BY net
+08-04 13:04:38.449  7914 12287 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1
+08-04 13:04:38.451  7914 12287 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 13:04:43.087  7914 12468 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true
+08-04 13:04:43.087  7914 12468 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:43.088  7914 12468 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:43.088  7914 12468 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:04:43.088  7914 12468 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:04:43.088  7914 12468 D CustomInterceptor: CACHED STATS: size = '2', maxSize = '100', hitCount = '2', createCount = '0', putCount = '2', evictionCount = '0', missCount = '2', toString = 'LruCache[maxSize=100,hits=2,misses=2,hitRate=50%]', 
+08-04 13:04:43.088  7914 12468 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:43.683  7914 12468 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 13:04:43.685  7914 12468 D CustomInterceptor: HEADER RESPONSE
+08-04 13:04:43.685  7914 12468 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 13:04:43.685  7914 12468 D CustomInterceptor: Connection close
+08-04 13:04:43.685  7914 12468 D CustomInterceptor: Content-Type application/json
+08-04 13:04:43.685  7914 12468 D CustomInterceptor: Date Tue, 04 Aug 2020 11:04:38 GMT
+08-04 13:04:43.685  7914 12468 D CustomInterceptor: Expires Tue, 04 Aug 2020 11:09:43 GMT+00:00
+08-04 13:04:43.685  7914 12468 D CustomInterceptor: Server gunicorn/19.7.0
+08-04 13:04:43.685  7914 12468 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-04 13:04:43.685  7914 12468 D CustomInterceptor: Vary Cookie, Accept-Encoding
+08-04 13:04:43.686  7914 12468 D CustomInterceptor: X-gunicorn-server app12
+08-04 13:04:43.686  7914 12468 D CustomInterceptor: X-Homer Save me, Jeebus.
+08-04 13:04:43.686  7914 12468 D CustomInterceptor: CACHEABLE true
+08-04 13:04:43.686  7914 12468 D CustomInterceptor: REQ https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true
+08-04 13:04:43.686  7914 12468 D CustomInterceptor: REQ_SERV_BY net
+08-04 13:04:43.686  7914 12468 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true
+08-04 13:04:43.692  7914 12468 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 13:04:43.818  7914 12495 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/rss_feeds/icon/0
+08-04 13:04:43.819  7914 12495 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:43.819  7914 12495 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:43.819  7914 12495 D CustomInterceptor: CACHED STATS: size = '3', maxSize = '100', hitCount = '3', createCount = '0', putCount = '3', evictionCount = '0', missCount = '3', toString = 'LruCache[maxSize=100,hits=3,misses=3,hitRate=50%]', 
+08-04 13:04:43.819  7914 12495 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:43.838  7914 12496 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/rss_feeds/icon/0
+08-04 13:04:43.839  7914 12496 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:43.839  7914 12496 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:43.839  7914 12496 D CustomInterceptor: CACHED STATS: size = '3', maxSize = '100', hitCount = '3', createCount = '0', putCount = '3', evictionCount = '0', missCount = '4', toString = 'LruCache[maxSize=100,hits=3,misses=4,hitRate=42%]', 
+08-04 13:04:43.839  7914 12496 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:43.848  7914 12497 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/rss_feeds/icon/0
+08-04 13:04:43.849  7914 12497 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:43.849  7914 12497 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:43.849  7914 12497 D CustomInterceptor: CACHED STATS: size = '3', maxSize = '100', hitCount = '3', createCount = '0', putCount = '3', evictionCount = '0', missCount = '5', toString = 'LruCache[maxSize=100,hits=3,misses=5,hitRate=37%]', 
+08-04 13:04:43.849  7914 12497 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:43.855  7914 12498 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/icons.newsblur.com/6882243.png
+08-04 13:04:43.855  7914 12498 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:43.855  7914 12498 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:43.856  7914 12498 D CustomInterceptor: CACHED STATS: size = '3', maxSize = '100', hitCount = '3', createCount = '0', putCount = '3', evictionCount = '0', missCount = '6', toString = 'LruCache[maxSize=100,hits=3,misses=6,hitRate=33%]', 
+08-04 13:04:43.856  7914 12498 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:43.862  7914 12500 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/icons.newsblur.com/18178.png
+08-04 13:04:43.863  7914 12500 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:43.863  7914 12500 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:43.863  7914 12500 D CustomInterceptor: CACHED STATS: size = '3', maxSize = '100', hitCount = '3', createCount = '0', putCount = '3', evictionCount = '0', missCount = '7', toString = 'LruCache[maxSize=100,hits=3,misses=7,hitRate=30%]', 
+08-04 13:04:43.863  7914 12500 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:43.871  7914 12502 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/icons.newsblur.com/5762506.png
+08-04 13:04:43.872  7914 12502 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:43.872  7914 12502 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:43.872  7914 12502 D CustomInterceptor: CACHED STATS: size = '3', maxSize = '100', hitCount = '3', createCount = '0', putCount = '3', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=3,misses=8,hitRate=27%]', 
+08-04 13:04:43.872  7914 12502 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:43.882  7914 12499 D CustomInterceptor: NETWORK-PROVIDER http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 13:04:43.883  7914 12499 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:43.883  7914 12499 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:43.883  7914 12499 D CustomInterceptor: CACHED STATS: size = '3', maxSize = '100', hitCount = '3', createCount = '0', putCount = '3', evictionCount = '0', missCount = '9', toString = 'LruCache[maxSize=100,hits=3,misses=9,hitRate=25%]', 
+08-04 13:04:43.883  7914 12499 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:43.891  7914 12501 D CustomInterceptor: NETWORK-PROVIDER https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png
+08-04 13:04:43.892  7914 12501 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:43.892  7914 12501 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:43.892  7914 12501 D CustomInterceptor: CACHED STATS: size = '3', maxSize = '100', hitCount = '3', createCount = '0', putCount = '3', evictionCount = '0', missCount = '10', toString = 'LruCache[maxSize=100,hits=3,misses=10,hitRate=23%]', 
+08-04 13:04:43.892  7914 12501 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:43.921  7914 12499 D CustomInterceptor: HEADER RESPONSE
+08-04 13:04:43.921  7914 12499 D CustomInterceptor: Cache-Control max-age=3600
+08-04 13:04:43.921  7914 12499 D CustomInterceptor: Content-Length 43
+08-04 13:04:43.921  7914 12499 D CustomInterceptor: Content-Type image/gif
+08-04 13:04:43.921  7914 12499 D CustomInterceptor: Date Tue, 04 Aug 2020 11:04:39 GMT
+08-04 13:04:43.921  7914 12499 D CustomInterceptor: Expires Tue, 04 Aug 2020 12:04:39 GMT
+08-04 13:04:43.921  7914 12499 D CustomInterceptor: Server GSE
+08-04 13:04:43.921  7914 12499 D CustomInterceptor: X-Content-Type-Options nosniff
+08-04 13:04:43.921  7914 12499 D CustomInterceptor: X-XSS-Protection 1; mode=block
+08-04 13:04:43.922  7914 12499 D CustomInterceptor: CACHEABLE true
+08-04 13:04:43.922  7914 12499 D CustomInterceptor: REQ http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 13:04:43.922  7914 12499 D CustomInterceptor: REQ_SERV_BY net
+08-04 13:04:43.922  7914 12499 D CustomInterceptor: PREFLIB Adding response to lrucache - http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 13:04:43.924  7914 12499 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 13:04:44.168  7914 12495 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:04:44.172  7914 12495 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:04:44.210  7914 12496 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:04:44.213  7914 12496 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:04:44.221  7914 12501 D CustomInterceptor: HEADER RESPONSE
+08-04 13:04:44.221  7914 12501 D CustomInterceptor: accept-ranges bytes
+08-04 13:04:44.221  7914 12501 D CustomInterceptor: access-control-allow-headers X-Requested-With
+08-04 13:04:44.221  7914 12501 D CustomInterceptor: access-control-allow-origin *
+08-04 13:04:44.221  7914 12501 D CustomInterceptor: cache-control public, max-age=31557600
+08-04 13:04:44.221  7914 12501 D CustomInterceptor: content-length 79351
+08-04 13:04:44.221  7914 12501 D CustomInterceptor: content-type image/png
+08-04 13:04:44.221  7914 12501 D CustomInterceptor: date Tue, 04 Aug 2020 11:04:39 GMT
+08-04 13:04:44.221  7914 12501 D CustomInterceptor: etag "b17a734fb67cc334f872374df18d4823"
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: last-modified Tue, 04 Aug 2020 04:27:51 GMT
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: server nginx
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: server-timing akam;dur=60;start=2020-07-28T11:13:12.502Z;total=1330;desc=miss,rtt;dur=0
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: status 200 OK
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: timing-allow-origin *
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: vary User-Agent
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: via 1.1 varnish
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: x-cache HIT, HIT
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: x-cache-hits 1, 1
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: x-cld-vary User-Agent
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: x-request-id 118e90281c8e5540ce13bb2507dc55c0
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: x-served-by cache-bwi5145-BWI, cache-ams21045-AMS
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: x-timer S1595958603.567940,VS0,VE1
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: CACHEABLE true
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: REQ https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: REQ_SERV_BY net
+08-04 13:04:44.222  7914 12501 D CustomInterceptor: PREFLIB Adding response to lrucache - https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png
+08-04 13:04:44.243  7914 12501 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 13:04:44.244  7914 12497 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:04:44.246  7914 12497 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:04:44.327  7914 12502 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 13:04:44.328  7914 12502 D CustomInterceptor: HEADER RESPONSE
+08-04 13:04:44.328  7914 12502 D CustomInterceptor: Accept-Ranges bytes
+08-04 13:04:44.328  7914 12502 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 13:04:44.328  7914 12502 D CustomInterceptor: Content-Length 477
+08-04 13:04:44.328  7914 12502 D CustomInterceptor: Content-Type image/png
+08-04 13:04:44.328  7914 12502 D CustomInterceptor: Date Tue, 04 Aug 2020 11:04:40 GMT
+08-04 13:04:44.328  7914 12502 D CustomInterceptor: ETag "c9bf1f07378831e51f45ddc262f16afc"
+08-04 13:04:44.328  7914 12502 D CustomInterceptor: Expires Tue, 04 Aug 2020 11:09:44 GMT+00:00
+08-04 13:04:44.329  7914 12502 D CustomInterceptor: Last-Modified Tue, 04 Aug 2020 10:41:38 GMT
+08-04 13:04:44.329  7914 12502 D CustomInterceptor: Server AmazonS3
+08-04 13:04:44.329  7914 12502 D CustomInterceptor: x-amz-id-2 94Rwk5ojWxCqHXBHdbTnIfMwWvr8BoPO9FIAVluZq4vB828m+Cmx0ha8bhtO/NPhl223fsMKZj0=
+08-04 13:04:44.329  7914 12502 D CustomInterceptor: x-amz-request-id 0EA63B351126C2AD
+08-04 13:04:44.329  7914 12502 D CustomInterceptor: CACHEABLE true
+08-04 13:04:44.329  7914 12502 D CustomInterceptor: REQ https://s3.amazonaws.com/icons.newsblur.com/5762506.png
+08-04 13:04:44.329  7914 12502 D CustomInterceptor: REQ_SERV_BY net
+08-04 13:04:44.329  7914 12502 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/icons.newsblur.com/5762506.png
+08-04 13:04:44.329  7914 12500 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 13:04:44.330  7914 12500 D CustomInterceptor: HEADER RESPONSE
+08-04 13:04:44.330  7914 12500 D CustomInterceptor: Accept-Ranges bytes
+08-04 13:04:44.330  7914 12500 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 13:04:44.330  7914 12500 D CustomInterceptor: Content-Length 243
+08-04 13:04:44.330  7914 12500 D CustomInterceptor: Content-Type image/png
+08-04 13:04:44.330  7914 12500 D CustomInterceptor: Date Tue, 04 Aug 2020 11:04:40 GMT
+08-04 13:04:44.331  7914 12500 D CustomInterceptor: ETag "ff3726165bbd11816de674a75693fba7"
+08-04 13:04:44.331  7914 12500 D CustomInterceptor: Expires Tue, 04 Aug 2020 11:09:44 GMT+00:00
+08-04 13:04:44.331  7914 12500 D CustomInterceptor: Last-Modified Mon, 03 Aug 2020 11:18:36 GMT
+08-04 13:04:44.331  7914 12500 D CustomInterceptor: Server AmazonS3
+08-04 13:04:44.331  7914 12500 D CustomInterceptor: x-amz-id-2 wne6NNWwn08ntKiKKy9kUukC8PyYkR/ZQjdI2daB9u3xPvfEXggbnrzXM/bpIcjfZt7xqxMiHNE=
+08-04 13:04:44.331  7914 12500 D CustomInterceptor: x-amz-request-id 8C96FD80B0A0B0DD
+08-04 13:04:44.331  7914 12500 D CustomInterceptor: CACHEABLE true
+08-04 13:04:44.331  7914 12500 D CustomInterceptor: REQ https://s3.amazonaws.com/icons.newsblur.com/18178.png
+08-04 13:04:44.331  7914 12500 D CustomInterceptor: REQ_SERV_BY net
+08-04 13:04:44.331  7914 12500 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/icons.newsblur.com/18178.png
+08-04 13:04:44.361  7914 12502 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 13:04:44.362  7914 12500 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 13:04:44.481  7914 12498 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 13:04:44.482  7914 12498 D CustomInterceptor: HEADER RESPONSE
+08-04 13:04:44.482  7914 12498 D CustomInterceptor: Accept-Ranges bytes
+08-04 13:04:44.482  7914 12498 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 13:04:44.482  7914 12498 D CustomInterceptor: Content-Length 145
+08-04 13:04:44.482  7914 12498 D CustomInterceptor: Content-Type image/png
+08-04 13:04:44.482  7914 12498 D CustomInterceptor: Date Tue, 04 Aug 2020 11:04:40 GMT
+08-04 13:04:44.482  7914 12498 D CustomInterceptor: ETag "b48046b4e0d289b5a850262f03eb2d2d"
+08-04 13:04:44.482  7914 12498 D CustomInterceptor: Expires Tue, 04 Aug 2020 11:09:44 GMT+00:00
+08-04 13:04:44.482  7914 12498 D CustomInterceptor: Last-Modified Mon, 03 Aug 2020 07:11:26 GMT
+08-04 13:04:44.482  7914 12498 D CustomInterceptor: Server AmazonS3
+08-04 13:04:44.482  7914 12498 D CustomInterceptor: x-amz-id-2 nDiDQANtDNVqEPucOfLtnn1Sx7gr+QY+8aAbQ7XZXU86Z7PKjjK674CpOsLT5+9Veg1xKpYxLtE=
+08-04 13:04:44.482  7914 12498 D CustomInterceptor: x-amz-request-id 6Z1W4S4Z6X7N1J4P
+08-04 13:04:44.483  7914 12498 D CustomInterceptor: CACHEABLE true
+08-04 13:04:44.483  7914 12498 D CustomInterceptor: REQ https://s3.amazonaws.com/icons.newsblur.com/6882243.png
+08-04 13:04:44.483  7914 12498 D CustomInterceptor: REQ_SERV_BY net
+08-04 13:04:44.483  7914 12498 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/icons.newsblur.com/6882243.png
+08-04 13:04:44.511  7914 12498 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 13:04:53.932  7914 12502 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/rss_feeds/icon/0
+08-04 13:04:53.933  7914 12502 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:53.933  7914 12502 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:53.933  7914 12502 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '11', toString = 'LruCache[maxSize=100,hits=8,misses=11,hitRate=42%]', 
+08-04 13:04:53.933  7914 12502 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:53.954  7914 12500 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/rss_feeds/icon/0
+08-04 13:04:53.955  7914 12500 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:53.955  7914 12500 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:53.955  7914 12500 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=8,misses=12,hitRate=40%]', 
+08-04 13:04:53.955  7914 12500 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:53.957  7914 12498 D CustomInterceptor: NETWORK-PROVIDER https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 13:04:53.959  7914 12498 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:53.959  7914 12498 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:53.959  7914 12498 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '13', toString = 'LruCache[maxSize=100,hits=8,misses=13,hitRate=38%]', 
+08-04 13:04:53.959  7914 12495 D CustomInterceptor: NETWORK-PROVIDER https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 13:04:53.959  7914 12498 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:53.959  7914 12495 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:53.960  7914 12495 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:53.960  7914 12495 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '14', toString = 'LruCache[maxSize=100,hits=8,misses=14,hitRate=36%]', 
+08-04 13:04:53.960  7914 12495 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:53.973  7914 12497 D CustomInterceptor: NETWORK-PROVIDER https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 13:04:53.973  7914 12496 D CustomInterceptor: NETWORK-PROVIDER https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 13:04:53.974  7914 12496 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:53.974  7914 12496 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:53.974  7914 12497 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:53.974  7914 12497 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:53.974  7914 12496 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '15', toString = 'LruCache[maxSize=100,hits=8,misses=15,hitRate=34%]', 
+08-04 13:04:53.974  7914 12497 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '15', toString = 'LruCache[maxSize=100,hits=8,misses=15,hitRate=34%]', 
+08-04 13:04:53.975  7914 12496 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:53.975  7914 12497 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:54.112  7914 12818 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:04:54.112  7914 12818 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:54.112  7914 12818 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:54.112  7914 12818 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:04:54.112  7914 12818 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '17', toString = 'LruCache[maxSize=100,hits=8,misses=17,hitRate=32%]', 
+08-04 13:04:54.112  7914 12818 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:04:54.436  7914 12502 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:04:54.449  7914 12502 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:04:54.508  7914 12500 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:04:54.510  7914 12500 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:04:54.527  7914 12818 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:04:54.530  7914 12818 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:04:54.945  7914 12502 D CustomInterceptor: NETWORK-PROVIDER https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 13:04:54.949  7914 12502 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:54.949  7914 12502 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:54.949  7914 12502 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '18', toString = 'LruCache[maxSize=100,hits=8,misses=18,hitRate=30%]', 
+08-04 13:04:54.949  7914 12502 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:54.955  7914 12500 D CustomInterceptor: NETWORK-PROVIDER https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 13:04:54.956  7914 12500 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:54.956  7914 12500 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:54.956  7914 12500 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '19', toString = 'LruCache[maxSize=100,hits=8,misses=19,hitRate=29%]', 
+08-04 13:04:54.956  7914 12500 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:04:56.458  7914 12818 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:04:56.459  7914 12818 D CustomInterceptor: HEADER REQUEST
+08-04 13:04:56.459  7914 12818 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:04:56.459  7914 12818 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:04:56.459  7914 12818 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '20', toString = 'LruCache[maxSize=100,hits=8,misses=20,hitRate=28%]', 
+08-04 13:04:56.459  7914 12818 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:04:56.970  7914 12818 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:04:56.973  7914 12818 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:00.375  7914 12818 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:00.375  7914 12818 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:00.375  7914 12818 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:00.375  7914 12818 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:00.375  7914 12818 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '21', toString = 'LruCache[maxSize=100,hits=8,misses=21,hitRate=27%]', 
+08-04 13:05:00.376  7914 12818 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:00.956  7914 12818 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:00.959  7914 12818 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:06.461  7914 13079 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true
+08-04 13:05:06.462  7914 13079 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:06.462  7914 13079 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:06.462  7914 13079 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:06.462  7914 13079 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:05:06.462  7914 13079 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '22', toString = 'LruCache[maxSize=100,hits=8,misses=22,hitRate=26%]', 
+08-04 13:05:06.462  7914 13079 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:07.020  7914 13079 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 13:05:07.021  7914 13079 D CustomInterceptor: HEADER RESPONSE
+08-04 13:05:07.021  7914 13079 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 13:05:07.021  7914 13079 D CustomInterceptor: Connection close
+08-04 13:05:07.021  7914 13079 D CustomInterceptor: Content-Type application/json
+08-04 13:05:07.022  7914 13079 D CustomInterceptor: Date Tue, 04 Aug 2020 11:05:02 GMT
+08-04 13:05:07.022  7914 13079 D CustomInterceptor: Expires Tue, 04 Aug 2020 11:10:07 GMT+00:00
+08-04 13:05:07.022  7914 13079 D CustomInterceptor: Server gunicorn/19.7.0
+08-04 13:05:07.022  7914 13079 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-04 13:05:07.022  7914 13079 D CustomInterceptor: Vary Cookie, Accept-Encoding
+08-04 13:05:07.022  7914 13079 D CustomInterceptor: X-gunicorn-server app09
+08-04 13:05:07.022  7914 13079 D CustomInterceptor: X-Marge Get ready, skanks! It's time for the truth train!
+08-04 13:05:07.022  7914 13079 D CustomInterceptor: CACHEABLE true
+08-04 13:05:07.022  7914 13079 D CustomInterceptor: REQ https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true
+08-04 13:05:07.022  7914 13079 D CustomInterceptor: REQ_SERV_BY net
+08-04 13:05:07.022  7914 13079 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true
+08-04 13:05:07.032  7914 13079 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 13:05:08.617  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:08.617  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:08.617  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:08.617  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:08.617  7914 13153 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '9', createCount = '0', putCount = '9', evictionCount = '0', missCount = '23', toString = 'LruCache[maxSize=100,hits=9,misses=23,hitRate=28%]', 
+08-04 13:05:08.618  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:09.153  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:09.155  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:11.062  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:11.063  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:11.063  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:11.063  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:11.063  7914 13153 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '9', createCount = '0', putCount = '9', evictionCount = '0', missCount = '24', toString = 'LruCache[maxSize=100,hits=9,misses=24,hitRate=27%]', 
+08-04 13:05:11.063  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:11.615  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:11.620  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:15.012  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:15.012  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:15.012  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:15.012  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:15.013  7914 13153 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '9', createCount = '0', putCount = '9', evictionCount = '0', missCount = '25', toString = 'LruCache[maxSize=100,hits=9,misses=25,hitRate=26%]', 
+08-04 13:05:15.013  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:15.495  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:15.498  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:15.925  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:15.925  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:15.926  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:15.926  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:15.926  7914 13153 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '9', createCount = '0', putCount = '9', evictionCount = '0', missCount = '26', toString = 'LruCache[maxSize=100,hits=9,misses=26,hitRate=25%]', 
+08-04 13:05:15.926  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:16.314  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:16.324  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:17.162  7914 13357 D CustomInterceptor: NETWORK-PROVIDER http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 13:05:17.164  7914 13357 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:17.164  7914 13357 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:17.164  7914 13357 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '9', createCount = '0', putCount = '9', evictionCount = '0', missCount = '27', toString = 'LruCache[maxSize=100,hits=9,misses=27,hitRate=25%]', 
+08-04 13:05:17.164  7914 13357 D CustomInterceptor: PREFLIB GET REQUEST http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 13:05:17.164  7914 13357 D CustomInterceptor: PREFLIB found http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, sending it back
+08-04 13:05:17.164  7914 13357 D CustomInterceptor: CONTENT GIF89aÀ€À€ï¿½À€À€ï¿½ï¿½ï¿½À€À€À€!ï¿½À€À€À€À€,À€À€À€À€À€À€À€DÀ€;
+08-04 13:05:17.164  7914 13357 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 13:05:18.219  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:18.219  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:18.219  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:18.219  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:18.219  7914 13153 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '10', createCount = '0', putCount = '9', evictionCount = '0', missCount = '27', toString = 'LruCache[maxSize=100,hits=10,misses=27,hitRate=27%]', 
+08-04 13:05:18.219  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:18.774  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:18.779  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:22.178  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:22.179  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:22.179  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:22.179  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:22.179  7914 13153 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '10', createCount = '0', putCount = '9', evictionCount = '0', missCount = '28', toString = 'LruCache[maxSize=100,hits=10,misses=28,hitRate=26%]', 
+08-04 13:05:22.179  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:22.705  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:22.709  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:23.129  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 13:05:23.130  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:23.131  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:23.131  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:23.131  7914 13153 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:05:23.131  7914 13153 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '10', createCount = '0', putCount = '9', evictionCount = '0', missCount = '29', toString = 'LruCache[maxSize=100,hits=10,misses=29,hitRate=25%]', 
+08-04 13:05:23.131  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:23.591  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:23.600  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:24.180  7914 12498 D CustomInterceptor: Interceptor exiting with exception java.net.SocketTimeoutException: timeout
+08-04 13:05:24.187  7914 12497 D CustomInterceptor: Interceptor exiting with exception java.net.SocketTimeoutException: timeout
+08-04 13:05:24.190  7914 12495 D CustomInterceptor: Interceptor exiting with exception java.net.SocketTimeoutException: timeout
+08-04 13:05:24.192  7914 12496 D CustomInterceptor: Interceptor exiting with exception java.net.SocketTimeoutException: timeout
+08-04 13:05:24.192  7914 12497 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:24.196  7914 12495 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:24.199  7914 12498 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:24.202  7914 12496 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:24.958  7914 12502 D CustomInterceptor: Interceptor exiting with exception java.net.SocketTimeoutException: timeout
+08-04 13:05:24.959  7914 12500 D CustomInterceptor: Interceptor exiting with exception java.net.SocketTimeoutException: timeout
+08-04 13:05:24.965  7914 12502 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:24.972  7914 12500 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:25.491  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 13:05:25.493  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:25.493  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:25.493  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:25.494  7914 13153 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:05:25.494  7914 13153 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '10', createCount = '0', putCount = '9', evictionCount = '0', missCount = '30', toString = 'LruCache[maxSize=100,hits=10,misses=30,hitRate=25%]', 
+08-04 13:05:25.494  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:26.056  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:26.064  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:29.474  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 13:05:29.476  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:29.477  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:29.477  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:29.477  7914 13153 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:05:29.477  7914 13153 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '10', createCount = '0', putCount = '9', evictionCount = '0', missCount = '31', toString = 'LruCache[maxSize=100,hits=10,misses=31,hitRate=24%]', 
+08-04 13:05:29.477  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:30.046  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:30.054  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:30.467  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:30.468  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:30.468  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:30.468  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:30.468  7914 13153 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '10', createCount = '0', putCount = '9', evictionCount = '0', missCount = '32', toString = 'LruCache[maxSize=100,hits=10,misses=32,hitRate=23%]', 
+08-04 13:05:30.468  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:30.863  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:30.866  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:32.786  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:32.786  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:32.787  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:32.787  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:32.787  7914 13153 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '10', createCount = '0', putCount = '9', evictionCount = '0', missCount = '33', toString = 'LruCache[maxSize=100,hits=10,misses=33,hitRate=23%]', 
+08-04 13:05:32.787  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:33.307  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:33.311  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:36.199  7914 13734 D CustomInterceptor: NETWORK-PROVIDER http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 13:05:36.200  7914 13734 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:36.200  7914 13734 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:36.200  7914 13734 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '10', createCount = '0', putCount = '9', evictionCount = '0', missCount = '34', toString = 'LruCache[maxSize=100,hits=10,misses=34,hitRate=22%]', 
+08-04 13:05:36.200  7914 13734 D CustomInterceptor: PREFLIB GET REQUEST http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 13:05:36.200  7914 13734 D CustomInterceptor: PREFLIB found http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, sending it back
+08-04 13:05:36.200  7914 13734 D CustomInterceptor: CONTENT GIF89aÀ€À€ï¿½À€À€ï¿½ï¿½ï¿½À€À€À€!ï¿½À€À€À€À€,À€À€À€À€À€À€À€DÀ€;
+08-04 13:05:36.200  7914 13734 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 13:05:36.215  7914 12499 D CustomInterceptor: NETWORK-PROVIDER https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg
+08-04 13:05:36.216  7914 12499 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:36.216  7914 12499 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:36.216  7914 12499 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '11', createCount = '0', putCount = '9', evictionCount = '0', missCount = '34', toString = 'LruCache[maxSize=100,hits=11,misses=34,hitRate=24%]', 
+08-04 13:05:36.216  7914 12499 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:36.475  7914 12499 D CustomInterceptor: HEADER RESPONSE
+08-04 13:05:36.475  7914 12499 D CustomInterceptor: accept-ranges bytes
+08-04 13:05:36.475  7914 12499 D CustomInterceptor: access-control-allow-headers X-Requested-With
+08-04 13:05:36.475  7914 12499 D CustomInterceptor: access-control-allow-origin *
+08-04 13:05:36.475  7914 12499 D CustomInterceptor: cache-control public, max-age=31557600
+08-04 13:05:36.475  7914 12499 D CustomInterceptor: content-length 56376
+08-04 13:05:36.475  7914 12499 D CustomInterceptor: content-type image/jpeg
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: date Tue, 04 Aug 2020 11:05:31 GMT
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: etag "437a696a349f51922bbe425cbbf1673b"
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: last-modified Tue, 04 Aug 2020 02:27:38 GMT
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: server nginx
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: server-timing akam;dur=33;start=2020-07-28T09:12:08.228Z;total=491;desc=miss,rtt;dur=0
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: status 200 OK
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: timing-allow-origin *
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: vary User-Agent
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: via 1.1 varnish
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: x-cache HIT, HIT
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: x-cache-hits 1, 1
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: x-cld-vary User-Agent
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: x-request-id 6b3617c9242430f089caa1d322b343a6
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: x-served-by cache-bwi5143-BWI, cache-ams21045-AMS
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: x-timer S1595958603.517924,VS0,VE1
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: CACHEABLE true
+08-04 13:05:36.476  7914 12499 D CustomInterceptor: REQ https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg
+08-04 13:05:36.477  7914 12499 D CustomInterceptor: REQ_SERV_BY net
+08-04 13:05:36.477  7914 12499 D CustomInterceptor: PREFLIB Adding response to lrucache - https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg
+08-04 13:05:36.489  7914 12499 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 13:05:36.724  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:36.724  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:36.724  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:36.724  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:36.724  7914 13153 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '12', createCount = '0', putCount = '10', evictionCount = '0', missCount = '35', toString = 'LruCache[maxSize=100,hits=12,misses=35,hitRate=25%]', 
+08-04 13:05:36.724  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:37.193  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:37.196  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:37.649  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 13:05:37.650  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:37.650  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:37.650  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:37.650  7914 13153 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:05:37.651  7914 13153 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '12', createCount = '0', putCount = '10', evictionCount = '0', missCount = '36', toString = 'LruCache[maxSize=100,hits=12,misses=36,hitRate=25%]', 
+08-04 13:05:37.651  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:38.040  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:38.045  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:39.940  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 13:05:39.941  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:39.941  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:39.941  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:39.941  7914 13153 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:05:39.941  7914 13153 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '12', createCount = '0', putCount = '10', evictionCount = '0', missCount = '37', toString = 'LruCache[maxSize=100,hits=12,misses=37,hitRate=24%]', 
+08-04 13:05:39.941  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:40.508  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:40.514  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:44.013  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 13:05:44.015  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:44.016  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:44.016  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:44.016  7914 13153 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:05:44.017  7914 13153 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '12', createCount = '0', putCount = '10', evictionCount = '0', missCount = '38', toString = 'LruCache[maxSize=100,hits=12,misses=38,hitRate=24%]', 
+08-04 13:05:44.017  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:44.586  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:44.591  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:44.994  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all
+08-04 13:05:44.995  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:44.995  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:44.995  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:44.995  7914 13153 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:05:44.995  7914 13153 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '12', createCount = '0', putCount = '10', evictionCount = '0', missCount = '39', toString = 'LruCache[maxSize=100,hits=12,misses=39,hitRate=23%]', 
+08-04 13:05:44.995  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:45.418  7914 13153 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 13:05:45.420  7914 13153 D CustomInterceptor: HEADER RESPONSE
+08-04 13:05:45.420  7914 13153 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 13:05:45.420  7914 13153 D CustomInterceptor: Connection close
+08-04 13:05:45.420  7914 13153 D CustomInterceptor: Content-Type application/json
+08-04 13:05:45.420  7914 13153 D CustomInterceptor: Date Tue, 04 Aug 2020 11:05:41 GMT
+08-04 13:05:45.420  7914 13153 D CustomInterceptor: Expires Tue, 04 Aug 2020 11:10:45 GMT+00:00
+08-04 13:05:45.420  7914 13153 D CustomInterceptor: Server gunicorn/19.7.0
+08-04 13:05:45.420  7914 13153 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-04 13:05:45.421  7914 13153 D CustomInterceptor: Transfer-Encoding chunked
+08-04 13:05:45.421  7914 13153 D CustomInterceptor: Vary Cookie
+08-04 13:05:45.421  7914 13153 D CustomInterceptor: X-gunicorn-server app04
+08-04 13:05:45.421  7914 13153 D CustomInterceptor: X-Homer Kids, kids. I'm not going to die. That only happens to bad people.
+08-04 13:05:45.421  7914 13153 D CustomInterceptor: CACHEABLE true
+08-04 13:05:45.421  7914 13153 D CustomInterceptor: REQ https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all
+08-04 13:05:45.421  7914 13153 D CustomInterceptor: REQ_SERV_BY net
+08-04 13:05:45.421  7914 13153 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all
+08-04 13:05:45.425  7914 13153 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 13:05:45.449  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:45.449  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:45.449  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:45.449  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:45.449  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '40', toString = 'LruCache[maxSize=100,hits=13,misses=40,hitRate=24%]', 
+08-04 13:05:45.449  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:45.918  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:45.923  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:47.833  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:47.833  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:47.833  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:47.834  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:47.834  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '41', toString = 'LruCache[maxSize=100,hits=13,misses=41,hitRate=24%]', 
+08-04 13:05:47.834  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:48.366  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:48.370  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:51.791  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:51.792  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:51.792  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:51.792  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:51.792  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '42', toString = 'LruCache[maxSize=100,hits=13,misses=42,hitRate=23%]', 
+08-04 13:05:51.792  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:52.377  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:52.383  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:52.785  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:52.785  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:52.785  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:52.785  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:52.785  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '43', toString = 'LruCache[maxSize=100,hits=13,misses=43,hitRate=23%]', 
+08-04 13:05:52.785  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:53.193  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:53.200  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:54.195  7914 12497 D CustomInterceptor: NETWORK-PROVIDER https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 13:05:54.196  7914 12497 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:54.196  7914 12497 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:54.196  7914 12497 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '44', toString = 'LruCache[maxSize=100,hits=13,misses=44,hitRate=22%]', 
+08-04 13:05:54.196  7914 12497 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:54.198  7914 12495 D CustomInterceptor: NETWORK-PROVIDER https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 13:05:54.199  7914 12495 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:54.199  7914 12495 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:54.199  7914 12495 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '45', toString = 'LruCache[maxSize=100,hits=13,misses=45,hitRate=22%]', 
+08-04 13:05:54.199  7914 12495 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:54.207  7914 12498 D CustomInterceptor: NETWORK-PROVIDER https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 13:05:54.207  7914 12496 D CustomInterceptor: NETWORK-PROVIDER https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 13:05:54.209  7914 12496 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:54.210  7914 12496 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:54.210  7914 12496 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '46', toString = 'LruCache[maxSize=100,hits=13,misses=46,hitRate=22%]', 
+08-04 13:05:54.210  7914 12496 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:54.210  7914 12498 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:54.210  7914 12498 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:54.211  7914 12498 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '47', toString = 'LruCache[maxSize=100,hits=13,misses=47,hitRate=21%]', 
+08-04 13:05:54.211  7914 12498 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:54.968  7914 12502 D CustomInterceptor: NETWORK-PROVIDER https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 13:05:54.969  7914 12502 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:54.969  7914 12502 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:54.969  7914 12502 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '48', toString = 'LruCache[maxSize=100,hits=13,misses=48,hitRate=21%]', 
+08-04 13:05:54.969  7914 12502 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:54.982  7914 12500 D CustomInterceptor: NETWORK-PROVIDER https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 13:05:54.984  7914 12500 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:54.985  7914 12500 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:54.985  7914 12500 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '49', toString = 'LruCache[maxSize=100,hits=13,misses=49,hitRate=20%]', 
+08-04 13:05:54.985  7914 12500 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:05:55.104  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:55.104  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:55.104  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:55.104  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:55.105  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '50', toString = 'LruCache[maxSize=100,hits=13,misses=50,hitRate=20%]', 
+08-04 13:05:55.105  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:55.530  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:55.533  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:58.969  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:58.969  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:58.970  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:58.970  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:58.970  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '51', toString = 'LruCache[maxSize=100,hits=13,misses=51,hitRate=20%]', 
+08-04 13:05:58.970  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:05:59.518  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:05:59.521  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:05:59.939  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:05:59.939  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:05:59.939  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:05:59.939  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:05:59.939  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '52', toString = 'LruCache[maxSize=100,hits=13,misses=52,hitRate=20%]', 
+08-04 13:05:59.939  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:06:00.343  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:00.347  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:02.262  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:06:02.264  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:02.264  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:02.264  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:02.265  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '53', toString = 'LruCache[maxSize=100,hits=13,misses=53,hitRate=19%]', 
+08-04 13:06:02.265  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:06:02.753  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:02.758  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:06.227  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:06:06.228  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:06.228  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:06.228  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:06.228  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '54', toString = 'LruCache[maxSize=100,hits=13,misses=54,hitRate=19%]', 
+08-04 13:06:06.228  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:06:06.795  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:06.800  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:07.217  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:06:07.217  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:07.217  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:07.217  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:07.218  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '55', toString = 'LruCache[maxSize=100,hits=13,misses=55,hitRate=19%]', 
+08-04 13:06:07.218  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:06:07.622  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:07.625  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:09.520  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:06:09.520  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:09.520  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:09.521  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:09.521  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '56', toString = 'LruCache[maxSize=100,hits=13,misses=56,hitRate=18%]', 
+08-04 13:06:09.521  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:06:10.070  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:10.073  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:10.138  7914 12501 D CustomInterceptor: NETWORK-PROVIDER http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 13:06:10.138  7914 12501 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:10.138  7914 12501 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:10.138  7914 12501 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '13', createCount = '0', putCount = '11', evictionCount = '0', missCount = '57', toString = 'LruCache[maxSize=100,hits=13,misses=57,hitRate=18%]', 
+08-04 13:06:10.138  7914 12501 D CustomInterceptor: PREFLIB GET REQUEST http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 13:06:10.139  7914 12501 D CustomInterceptor: PREFLIB found http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, sending it back
+08-04 13:06:10.139  7914 12501 D CustomInterceptor: CONTENT GIF89aÀ€À€ï¿½À€À€ï¿½ï¿½ï¿½À€À€À€!ï¿½À€À€À€À€,À€À€À€À€À€À€À€DÀ€;
+08-04 13:06:10.139  7914 12501 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 13:06:13.480  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:06:13.481  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:13.481  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:13.481  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:13.482  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '14', createCount = '0', putCount = '11', evictionCount = '0', missCount = '57', toString = 'LruCache[maxSize=100,hits=14,misses=57,hitRate=19%]', 
+08-04 13:06:13.482  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:06:13.973  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:13.980  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:14.391  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:06:14.391  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:14.391  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:14.391  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:14.391  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '14', createCount = '0', putCount = '11', evictionCount = '0', missCount = '58', toString = 'LruCache[maxSize=100,hits=14,misses=58,hitRate=19%]', 
+08-04 13:06:14.392  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:06:14.789  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:14.793  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:16.700  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:06:16.700  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:16.700  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:16.700  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:16.700  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '14', createCount = '0', putCount = '11', evictionCount = '0', missCount = '59', toString = 'LruCache[maxSize=100,hits=14,misses=59,hitRate=19%]', 
+08-04 13:06:16.701  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:06:17.238  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:17.242  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:20.673  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:06:20.673  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:20.674  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:20.674  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:20.674  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '14', createCount = '0', putCount = '11', evictionCount = '0', missCount = '60', toString = 'LruCache[maxSize=100,hits=14,misses=60,hitRate=18%]', 
+08-04 13:06:20.674  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:06:21.225  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:21.228  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:21.657  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:06:21.657  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:21.657  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:21.657  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:21.658  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '14', createCount = '0', putCount = '11', evictionCount = '0', missCount = '61', toString = 'LruCache[maxSize=100,hits=14,misses=61,hitRate=18%]', 
+08-04 13:06:21.658  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:06:22.053  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:22.058  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:23.978  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:06:23.978  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:23.978  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:23.978  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:23.978  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '14', createCount = '0', putCount = '11', evictionCount = '0', missCount = '62', toString = 'LruCache[maxSize=100,hits=14,misses=62,hitRate=18%]', 
+08-04 13:06:23.978  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:06:24.198  7914 12497 D CustomInterceptor: Interceptor exiting with exception java.net.SocketTimeoutException: timeout
+08-04 13:06:24.201  7914 12497 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:24.201  7914 12495 D CustomInterceptor: Interceptor exiting with exception java.net.SocketTimeoutException: timeout
+08-04 13:06:24.209  7914 12495 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:24.215  7914 12496 D CustomInterceptor: Interceptor exiting with exception java.net.SocketTimeoutException: timeout
+08-04 13:06:24.219  7914 12498 D CustomInterceptor: Interceptor exiting with exception java.net.SocketTimeoutException: timeout
+08-04 13:06:24.229  7914 12496 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:24.232  7914 12498 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:24.464  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:24.469  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:24.971  7914 12502 D CustomInterceptor: Interceptor exiting with exception java.net.SocketTimeoutException: timeout
+08-04 13:06:24.973  7914 12502 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:24.992  7914 12500 D CustomInterceptor: Interceptor exiting with exception java.net.SocketTimeoutException: timeout
+08-04 13:06:25.002  7914 12500 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:27.932  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-04 13:06:27.932  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:27.932  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:27.932  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:27.932  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '14', createCount = '0', putCount = '11', evictionCount = '0', missCount = '63', toString = 'LruCache[maxSize=100,hits=14,misses=63,hitRate=18%]', 
+08-04 13:06:27.932  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-04 13:06:28.499  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:28.502  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:28.958  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 13:06:28.959  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:28.959  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:28.959  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:28.959  7914 13153 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:06:28.960  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '14', createCount = '0', putCount = '11', evictionCount = '0', missCount = '64', toString = 'LruCache[maxSize=100,hits=14,misses=64,hitRate=17%]', 
+08-04 13:06:28.960  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:06:29.441  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:29.445  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request
+08-04 13:06:31.338  7914 13153 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 13:06:31.340  7914 13153 D CustomInterceptor: HEADER REQUEST
+08-04 13:06:31.340  7914 13153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 13:06:31.340  7914 13153 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Wed, 03 Aug 2022 21:07:45 GMT; Max-Age=63072000; Path=/
+08-04 13:06:31.340  7914 13153 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-04 13:06:31.340  7914 13153 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '14', createCount = '0', putCount = '11', evictionCount = '0', missCount = '65', toString = 'LruCache[maxSize=100,hits=14,misses=65,hitRate=17%]', 
+08-04 13:06:31.340  7914 13153 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 13:06:31.877  7914 13153 D CustomInterceptor: Interceptor exiting with exception java.io.IOException: unexpected end of stream on https://www.newsblur.com/...
+08-04 13:06:31.880  7914 13153 D CustomInterceptor: interceptor_finished : return_type #4 : interceptor failed, resuming the request chain with the original request

@@ -1,0 +1,1044 @@
+--------- beginning of main
+--------- beginning of system
+08-04 01:11:08.748 26843 26843 D Nappa   : Selected prefetching strategy STRATEGY_GREEDY_VISIT_FREQUENCY_AND_TIME
+08-04 01:11:08.835 26843 26857 D Nappa   : Extended Startup-time: 86 ms
+08-04 01:11:08.835 26843 26843 D Nappa   : Startup-time: 87 ms
+08-04 01:11:09.316 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:09.316 26843 26843 D Nappa   : madePredictionFromActivity = false, 
+08-04 01:11:09.316 26843 26843 D Nappa   : fromActivity = null, 
+08-04 01:11:09.316 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:11:09.316 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:11:09.316 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:09.316 26843 26843 D Nappa   : madePredictionFromExtra = false, 
+08-04 01:11:09.316 26843 26843 D Nappa   : fromActivity = null, 
+08-04 01:11:09.316 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:11:09.316 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:11:09.316 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction isfalse
+08-04 01:11:09.418 26843 26843 D Nappa   : registerActivity: (new) nappagreedy.com.newsblur.activity.Main
+08-04 01:11:09.437 26843 26859 D Nappa   : Updating activity map nappagreedy.com.newsblur.activity.Main: 1
+08-04 01:11:09.438 26843 26843 D Nappa   : SHOULD_PREFETCH false
+08-04 01:11:09.438 26843 26843 D Nappa   : STATS Number of requests not prefetched: 0
+08-04 01:11:09.438 26843 26843 D Nappa   : STATS Number of requests prefetched: 0
+08-04 01:11:09.438 26843 26843 D Nappa   : STATS Time saved until now: 0.0
+08-04 01:11:09.520 26843 26877 D Nappa   : TAG okHttpClient initialized
+08-04 01:11:09.536 26843 26877 D Nappa   : TAG okHttpClient initialized
+08-04 01:11:09.538 26843 26874 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.Main
+08-04 01:11:09.553 26843 26877 D Nappa   : F1_SCORE add_intercept_url - (new) - https://www.newsblur.com/reader/feeds/?update_counts=true
+08-04 01:11:09.553 26843 26877 D Nappa   : F1_SCORE add_fn_url - (new) - https://www.newsblur.com/reader/feeds/?update_counts=true
+08-04 01:11:09.553 26843 26877 D Nappa   : -------------F1_SCORE #0 -----------
+08-04 01:11:09.553 26843 26877 D Nappa   : F1_SCORE - Intercept list (1)= [https://www.newsblur.com/reader/feeds/?update_counts=true]
+08-04 01:11:09.553 26843 26877 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:09.553 26843 26877 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:09.553 26843 26877 D Nappa   : F1_SCORE - FN list (1)= [https://www.newsblur.com/reader/feeds/?update_counts=true]
+08-04 01:11:09.653 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.Main
+08-04 01:11:09.653 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:09.653 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.Main -> 
+08-04 01:11:09.718 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction isfalse
+08-04 01:11:10.237 26843 26905 D Nappa   : F1_SCORE add_intercept_url - (new) - https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1
+08-04 01:11:10.237 26843 26905 D Nappa   : F1_SCORE add_fn_url - (new) - https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1
+08-04 01:11:10.237 26843 26905 D Nappa   : -------------F1_SCORE #1 -----------
+08-04 01:11:10.237 26843 26905 D Nappa   : F1_SCORE - Intercept list (2)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1]
+08-04 01:11:10.237 26843 26905 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:10.237 26843 26905 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:10.237 26843 26905 D Nappa   : F1_SCORE - FN list (2)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1]
+08-04 01:11:10.338 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.Main
+08-04 01:11:10.338 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:10.338 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.Main -> 
+08-04 01:11:15.596 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- start
+08-04 01:11:15.597 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- end
+08-04 01:11:15.597 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:11:15.606 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.Main for 6167 ms
+08-04 01:11:15.686 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:15.686 26843 26843 D Nappa   : madePredictionFromActivity = false, 
+08-04 01:11:15.686 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:11:15.686 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:11:15.686 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:15.686 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:15.686 26843 26843 D Nappa   : madePredictionFromExtra = true, 
+08-04 01:11:15.686 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:11:15.686 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:11:15.686 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:15.686 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction isfalse
+08-04 01:11:15.786 26843 26843 D Nappa   : registerActivity: (new) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:15.794 26843 26857 D Nappa   : Updating activity map nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList: 2
+08-04 01:11:15.795 26843 26872 D Nappa   : {nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList=2, nappagreedy.com.newsblur.activity.Main=1}
+08-04 01:11:15.795 26843 26843 D Nappa   : SHOULD_PREFETCH true
+08-04 01:11:15.896 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:15.896 26843 27084 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:15.896 26843 26843 D Nappa   : STATS Number of requests not prefetched: 2
+08-04 01:11:15.896 26843 26843 D Nappa   : STATS Number of requests prefetched: 0
+08-04 01:11:15.896 26843 26843 D Nappa   : STATS Time saved until now: 0.0
+08-04 01:11:15.944 26843 27087 D Nappa   : TAG okHttpClient initialized
+08-04 01:11:15.953 26843 27087 D Nappa   : F1_SCORE add_intercept_url - (new) - https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true
+08-04 01:11:15.953 26843 27087 D Nappa   : F1_SCORE add_fn_url - (new) - https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true
+08-04 01:11:15.953 26843 27087 D Nappa   : -------------F1_SCORE #2 -----------
+08-04 01:11:15.953 26843 27087 D Nappa   : F1_SCORE - Intercept list (3)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true]
+08-04 01:11:15.953 26843 27087 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:15.953 26843 27087 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:15.953 26843 27087 D Nappa   : F1_SCORE - FN list (3)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true]
+08-04 01:11:16.053 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:16.053 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:16.053 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:16.053 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:16.053 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:16.086 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction istrue
+08-04 01:11:16.086 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - start
+08-04 01:11:16.087 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra- finished
+08-04 01:11:16.396 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - starting new prediction
+08-04 01:11:16.396 26843 26872 D Nappa   : Current node - currentActivityName - nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:16.396 26843 26872 D Nappa   : Current node - activityGraph.getCurrent() - nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:16.397 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - finished new prediction
+08-04 01:11:16.632 26843 27116 D Nappa   : F1_SCORE add_intercept_url - (new) - https://www.newsblur.com/rss_feeds/icon/0
+08-04 01:11:16.632 26843 27116 D Nappa   : F1_SCORE add_fn_url - (new) - https://www.newsblur.com/rss_feeds/icon/0
+08-04 01:11:16.632 26843 27116 D Nappa   : -------------F1_SCORE #3 -----------
+08-04 01:11:16.632 26843 27116 D Nappa   : F1_SCORE - Intercept list (4)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0]
+08-04 01:11:16.632 26843 27116 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:16.632 26843 27116 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:16.632 26843 27116 D Nappa   : F1_SCORE - FN list (4)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0]
+08-04 01:11:16.648 26843 27117 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.newsblur.com/rss_feeds/icon/0
+08-04 01:11:16.648 26843 27117 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.newsblur.com/rss_feeds/icon/0
+08-04 01:11:16.648 26843 27117 D Nappa   : -------------F1_SCORE #4 -----------
+08-04 01:11:16.648 26843 27117 D Nappa   : F1_SCORE - Intercept list (4)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0]
+08-04 01:11:16.648 26843 27117 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:16.648 26843 27117 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:16.648 26843 27117 D Nappa   : F1_SCORE - FN list (4)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0]
+08-04 01:11:16.654 26843 27118 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.newsblur.com/rss_feeds/icon/0
+08-04 01:11:16.654 26843 27118 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.newsblur.com/rss_feeds/icon/0
+08-04 01:11:16.654 26843 27118 D Nappa   : -------------F1_SCORE #5 -----------
+08-04 01:11:16.654 26843 27118 D Nappa   : F1_SCORE - Intercept list (4)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0]
+08-04 01:11:16.654 26843 27118 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:16.654 26843 27118 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:16.654 26843 27118 D Nappa   : F1_SCORE - FN list (4)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0]
+08-04 01:11:16.660 26843 27119 D Nappa   : F1_SCORE add_intercept_url - (new) - https://s3.amazonaws.com/icons.newsblur.com/6882243.png
+08-04 01:11:16.660 26843 27119 D Nappa   : F1_SCORE add_fn_url - (new) - https://s3.amazonaws.com/icons.newsblur.com/6882243.png
+08-04 01:11:16.660 26843 27119 D Nappa   : -------------F1_SCORE #6 -----------
+08-04 01:11:16.660 26843 27119 D Nappa   : F1_SCORE - Intercept list (5)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png]
+08-04 01:11:16.660 26843 27119 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:16.660 26843 27119 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:16.660 26843 27119 D Nappa   : F1_SCORE - FN list (5)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png]
+08-04 01:11:16.668 26843 27121 D Nappa   : F1_SCORE add_intercept_url - (new) - https://s3.amazonaws.com/icons.newsblur.com/18178.png
+08-04 01:11:16.668 26843 27121 D Nappa   : F1_SCORE add_fn_url - (new) - https://s3.amazonaws.com/icons.newsblur.com/18178.png
+08-04 01:11:16.668 26843 27121 D Nappa   : -------------F1_SCORE #7 -----------
+08-04 01:11:16.668 26843 27121 D Nappa   : F1_SCORE - Intercept list (6)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png]
+08-04 01:11:16.668 26843 27121 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:16.668 26843 27121 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:16.668 26843 27121 D Nappa   : F1_SCORE - FN list (6)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png]
+08-04 01:11:16.676 26843 27123 D Nappa   : F1_SCORE add_intercept_url - (new) - https://s3.amazonaws.com/icons.newsblur.com/5762506.png
+08-04 01:11:16.676 26843 27123 D Nappa   : F1_SCORE add_fn_url - (new) - https://s3.amazonaws.com/icons.newsblur.com/5762506.png
+08-04 01:11:16.676 26843 27123 D Nappa   : -------------F1_SCORE #8 -----------
+08-04 01:11:16.676 26843 27123 D Nappa   : F1_SCORE - Intercept list (7)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png]
+08-04 01:11:16.676 26843 27123 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:16.676 26843 27123 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:16.676 26843 27123 D Nappa   : F1_SCORE - FN list (7)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png]
+08-04 01:11:16.687 26843 27120 D Nappa   : F1_SCORE add_intercept_url - (new) - http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 01:11:16.687 26843 27120 D Nappa   : F1_SCORE add_fn_url - (new) - http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 01:11:16.687 26843 27120 D Nappa   : -------------F1_SCORE #9 -----------
+08-04 01:11:16.687 26843 27120 D Nappa   : F1_SCORE - Intercept list (8)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs]
+08-04 01:11:16.687 26843 27120 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:16.687 26843 27120 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:16.687 26843 27120 D Nappa   : F1_SCORE - FN list (8)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs]
+08-04 01:11:16.696 26843 27122 D Nappa   : F1_SCORE add_intercept_url - (new) - https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png
+08-04 01:11:16.696 26843 27122 D Nappa   : F1_SCORE add_fn_url - (new) - https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png
+08-04 01:11:16.696 26843 27122 D Nappa   : -------------F1_SCORE #10 -----------
+08-04 01:11:16.696 26843 27122 D Nappa   : F1_SCORE - Intercept list (9)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png]
+08-04 01:11:16.696 26843 27122 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:16.696 26843 27122 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:16.696 26843 27122 D Nappa   : F1_SCORE - FN list (9)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png]
+08-04 01:11:16.732 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:16.732 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:16.732 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:16.732 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:16.732 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:16.833 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:16.833 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:16.833 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:16.833 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:16.833 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:16.933 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:16.933 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:16.933 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:16.934 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:16.934 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:17.034 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:17.034 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:17.034 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:17.034 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:17.034 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:17.134 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:17.135 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:17.135 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:17.135 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:17.135 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:17.235 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:17.235 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:17.235 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:17.235 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:17.235 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:17.336 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:17.336 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:17.336 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:17.336 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:17.336 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:17.436 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:17.436 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:17.436 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:17.436 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:17.436 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:26.178 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- start
+08-04 01:11:26.183 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- end
+08-04 01:11:26.183 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:11:26.189 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList for 10293 ms
+08-04 01:11:26.192 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:11:26.281 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:26.281 26843 26843 D Nappa   : madePredictionFromActivity = true, 
+08-04 01:11:26.281 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:26.281 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:11:26.281 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading, 
+08-04 01:11:26.281 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:26.281 26843 26843 D Nappa   : madePredictionFromExtra = true, 
+08-04 01:11:26.281 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:26.281 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:11:26.281 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading, 
+08-04 01:11:26.281 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction istrue
+08-04 01:11:26.281 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - start
+08-04 01:11:26.281 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity- finished
+08-04 01:11:26.382 26843 26843 D Nappa   : registerActivity: (new) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:26.387 26843 26859 D Nappa   : Updating activity map nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading: 3
+08-04 01:11:26.390 26843 26872 D Nappa   : {nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList=2, nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading=3, nappagreedy.com.newsblur.activity.Main=1}
+08-04 01:11:26.390 26843 26843 D Nappa   : SHOULD_PREFETCH true
+08-04 01:11:26.487 26843 27376 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:26.490 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:26.490 26843 26843 D Nappa   : STATS Number of requests not prefetched: 8
+08-04 01:11:26.490 26843 26843 D Nappa   : STATS Number of requests prefetched: 0
+08-04 01:11:26.490 26843 26843 D Nappa   : STATS Time saved until now: 0.0
+08-04 01:11:26.682 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction istrue
+08-04 01:11:26.682 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - start
+08-04 01:11:26.682 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra- finished
+08-04 01:11:26.880 26843 27121 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.newsblur.com/rss_feeds/icon/0
+08-04 01:11:26.880 26843 27121 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.newsblur.com/rss_feeds/icon/0
+08-04 01:11:26.880 26843 27121 D Nappa   : -------------F1_SCORE #11 -----------
+08-04 01:11:26.880 26843 27121 D Nappa   : F1_SCORE - Intercept list (9)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png]
+08-04 01:11:26.880 26843 27121 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:26.880 26843 27121 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:26.880 26843 27121 D Nappa   : F1_SCORE - FN list (9)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png]
+08-04 01:11:26.901 26843 27123 D Nappa   : F1_SCORE add_intercept_url - (new) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:11:26.901 26843 27119 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.newsblur.com/rss_feeds/icon/0
+08-04 01:11:26.901 26843 27119 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.newsblur.com/rss_feeds/icon/0
+08-04 01:11:26.901 26843 27123 D Nappa   : F1_SCORE add_fn_url - (new) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:11:26.901 26843 27119 D Nappa   : -------------F1_SCORE #12 -----------
+08-04 01:11:26.902 26843 27123 D Nappa   : -------------F1_SCORE #12 -----------
+08-04 01:11:26.902 26843 27119 D Nappa   : F1_SCORE - Intercept list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:26.902 26843 27119 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:26.902 26843 27119 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:26.902 26843 27123 D Nappa   : F1_SCORE - Intercept list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:26.902 26843 27119 D Nappa   : F1_SCORE - FN list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:26.902 26843 27123 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:26.902 26843 27123 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:26.902 26843 27123 D Nappa   : F1_SCORE - FN list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:26.902 26843 27117 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:11:26.902 26843 27117 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:11:26.902 26843 27117 D Nappa   : -------------F1_SCORE #14 -----------
+08-04 01:11:26.902 26843 27117 D Nappa   : F1_SCORE - Intercept list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:26.902 26843 27117 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:26.902 26843 27117 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:26.903 26843 27117 D Nappa   : F1_SCORE - FN list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:26.919 26843 27118 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:11:26.919 26843 27118 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:11:26.919 26843 27116 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:11:26.919 26843 27118 D Nappa   : -------------F1_SCORE #15 -----------
+08-04 01:11:26.919 26843 27116 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:11:26.919 26843 27116 D Nappa   : -------------F1_SCORE #15 -----------
+08-04 01:11:26.919 26843 27118 D Nappa   : F1_SCORE - Intercept list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:26.919 26843 27118 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:26.919 26843 27118 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:26.919 26843 27118 D Nappa   : F1_SCORE - FN list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:26.919 26843 27116 D Nappa   : F1_SCORE - Intercept list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:26.920 26843 27116 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:26.920 26843 27116 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:26.921 26843 27116 D Nappa   : F1_SCORE - FN list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:26.980 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:26.980 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:26.980 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading -> 
+08-04 01:11:26.980 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:26.980 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:11:26.980 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:26.980 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:26.981 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:27.057 26843 27437 D Nappa   : TAG okHttpClient initialized
+08-04 01:11:27.081 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:27.081 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:27.081 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading -> 
+08-04 01:11:27.083 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:27.083 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:11:27.083 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:27.083 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:27.083 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:27.184 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:27.184 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:27.184 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading -> 
+08-04 01:11:27.184 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:27.185 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:11:27.185 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:27.185 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:27.185 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:27.285 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:27.285 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:27.285 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading -> 
+08-04 01:11:27.285 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:27.285 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:11:27.285 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:27.285 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:27.285 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:27.386 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:27.386 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:27.386 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading -> 
+08-04 01:11:27.386 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:27.386 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:11:27.386 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:27.386 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:27.386 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:27.487 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:27.487 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:27.487 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading -> 
+08-04 01:11:27.487 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:27.487 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:11:27.487 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:27.487 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:27.487 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:27.487 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - starting new prediction
+08-04 01:11:27.487 26843 26872 D Nappa   : Current node - currentActivityName - nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:27.487 26843 26872 D Nappa   : Current node - activityGraph.getCurrent() - nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:27.490 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - finished new prediction
+08-04 01:11:27.843 26843 27119 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:11:27.843 26843 27119 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:11:27.843 26843 27119 D Nappa   : -------------F1_SCORE #17 -----------
+08-04 01:11:27.843 26843 27119 D Nappa   : F1_SCORE - Intercept list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:27.843 26843 27119 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:27.844 26843 27119 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:27.844 26843 27119 D Nappa   : F1_SCORE - FN list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:27.872 26843 27121 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:11:27.872 26843 27121 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:11:27.872 26843 27121 D Nappa   : -------------F1_SCORE #18 -----------
+08-04 01:11:27.872 26843 27121 D Nappa   : F1_SCORE - Intercept list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:27.872 26843 27121 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:27.872 26843 27121 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:27.872 26843 27121 D Nappa   : F1_SCORE - FN list (10)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547]
+08-04 01:11:27.943 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:27.944 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:27.944 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading -> 
+08-04 01:11:27.944 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:27.944 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:11:27.944 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:27.944 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:27.944 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:28.045 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:28.046 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:28.046 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading -> 
+08-04 01:11:28.046 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:28.046 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:11:28.046 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:28.046 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:28.046 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:38.925 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading for 12435 ms
+08-04 01:11:39.013 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:39.013 26843 26843 D Nappa   : madePredictionFromActivity = true, 
+08-04 01:11:39.013 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading, 
+08-04 01:11:39.013 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:11:39.013 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:39.013 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:39.013 26843 26843 D Nappa   : madePredictionFromExtra = false, 
+08-04 01:11:39.013 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading, 
+08-04 01:11:39.013 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:11:39.013 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:39.013 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction istrue
+08-04 01:11:39.013 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - start
+08-04 01:11:39.013 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity- finished
+08-04 01:11:39.114 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:39.114 26843 26843 D Nappa   : SHOULD_PREFETCH false
+08-04 01:11:39.114 26843 26843 D Nappa   : STATS Number of requests not prefetched: 8
+08-04 01:11:39.114 26843 26843 D Nappa   : STATS Number of requests prefetched: 0
+08-04 01:11:39.114 26843 26843 D Nappa   : STATS Time saved until now: 0.0
+08-04 01:11:39.142 26843 27695 D Nappa   : TAG okHttpClient initialized
+08-04 01:11:39.153 26843 27695 D Nappa   : F1_SCORE add_intercept_url - (new) - https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true
+08-04 01:11:39.153 26843 27695 D Nappa   : F1_SCORE add_fn_url - (new) - https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true
+08-04 01:11:39.153 26843 27695 D Nappa   : -------------F1_SCORE #19 -----------
+08-04 01:11:39.154 26843 27695 D Nappa   : F1_SCORE - Intercept list (11)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true]
+08-04 01:11:39.154 26843 27695 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:39.154 26843 27695 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:39.154 26843 27695 D Nappa   : F1_SCORE - FN list (11)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true]
+08-04 01:11:39.254 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:39.254 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:39.254 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:39.254 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:39.254 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:39.415 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction isfalse
+08-04 01:11:40.710 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- start
+08-04 01:11:40.715 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- end
+08-04 01:11:40.715 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:11:40.722 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList for 1608 ms
+08-04 01:11:40.724 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:11:40.842 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:40.842 26843 26843 D Nappa   : madePredictionFromActivity = false, 
+08-04 01:11:40.842 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:40.842 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:11:40.842 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading, 
+08-04 01:11:40.842 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:40.842 26843 26843 D Nappa   : madePredictionFromExtra = true, 
+08-04 01:11:40.842 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:40.842 26843 26843 D Nappa   : predictedNextActivityFromExtra = [nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading], 
+08-04 01:11:40.842 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading, 
+08-04 01:11:40.842 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction isfalse
+08-04 01:11:40.943 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:40.943 26843 26843 D Nappa   : SHOULD_PREFETCH true
+08-04 01:11:41.043 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:41.044 26843 26843 D Nappa   : STATS Number of requests not prefetched: 9
+08-04 01:11:41.044 26843 26843 D Nappa   : STATS Number of requests prefetched: 0
+08-04 01:11:41.044 26843 26843 D Nappa   : STATS Time saved until now: 0.0
+08-04 01:11:41.243 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction istrue
+08-04 01:11:41.243 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - start
+08-04 01:11:41.243 26843 26872 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - checking prediction VS current activity for extras
+08-04 01:11:41.244 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra- finished
+08-04 01:11:41.290 26843 27765 D Nappa   : TAG okHttpClient initialized
+08-04 01:11:41.544 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - starting new prediction
+08-04 01:11:41.544 26843 26872 D Nappa   : Current node - currentActivityName - nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:41.544 26843 26872 D Nappa   : Current node - activityGraph.getCurrent() - nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:41.545 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - finished new prediction
+08-04 01:11:45.643 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading for 4599 ms
+08-04 01:11:45.770 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:45.770 26843 26843 D Nappa   : madePredictionFromActivity = true, 
+08-04 01:11:45.770 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading, 
+08-04 01:11:45.770 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:11:45.770 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:45.770 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:45.770 26843 26843 D Nappa   : madePredictionFromExtra = false, 
+08-04 01:11:45.770 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading, 
+08-04 01:11:45.770 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:11:45.770 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:45.770 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction istrue
+08-04 01:11:45.770 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - start
+08-04 01:11:45.770 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity- finished
+08-04 01:11:45.871 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:45.871 26843 26843 D Nappa   : SHOULD_PREFETCH false
+08-04 01:11:45.871 26843 26843 D Nappa   : STATS Number of requests not prefetched: 9
+08-04 01:11:45.871 26843 26843 D Nappa   : STATS Number of requests prefetched: 0
+08-04 01:11:45.872 26843 26843 D Nappa   : STATS Time saved until now: 0.0
+08-04 01:11:46.171 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction isfalse
+08-04 01:11:47.548 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList for 1676 ms
+08-04 01:11:47.702 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:47.702 26843 26843 D Nappa   : madePredictionFromActivity = false, 
+08-04 01:11:47.702 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:47.702 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:11:47.702 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:11:47.702 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:47.702 26843 26843 D Nappa   : madePredictionFromExtra = false, 
+08-04 01:11:47.702 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:47.702 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:11:47.702 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:11:47.702 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction isfalse
+08-04 01:11:47.802 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.Main
+08-04 01:11:47.803 26843 26843 D Nappa   : SHOULD_PREFETCH false
+08-04 01:11:47.803 26843 26843 D Nappa   : STATS Number of requests not prefetched: 9
+08-04 01:11:47.803 26843 26843 D Nappa   : STATS Number of requests prefetched: 0
+08-04 01:11:47.803 26843 26843 D Nappa   : STATS Time saved until now: 0.0
+08-04 01:11:48.102 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction isfalse
+08-04 01:11:49.524 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- start
+08-04 01:11:49.529 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- end
+08-04 01:11:49.529 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:11:49.538 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.Main for 1735 ms
+08-04 01:11:49.693 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:49.693 26843 26843 D Nappa   : madePredictionFromActivity = false, 
+08-04 01:11:49.693 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:11:49.693 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:11:49.693 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:49.693 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:11:49.693 26843 26843 D Nappa   : madePredictionFromExtra = true, 
+08-04 01:11:49.693 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:11:49.693 26843 26843 D Nappa   : predictedNextActivityFromExtra = [nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading], 
+08-04 01:11:49.693 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:11:49.693 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction isfalse
+08-04 01:11:49.793 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:49.794 26843 26843 D Nappa   : SHOULD_PREFETCH true
+08-04 01:11:49.894 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:49.894 26843 26843 D Nappa   : SUCCESSORS nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:11:49.894 26843 26843 D Nappa   : STATS Number of requests not prefetched: 9
+08-04 01:11:49.894 26843 26843 D Nappa   : STATS Number of requests prefetched: 0
+08-04 01:11:49.895 26843 26843 D Nappa   : STATS Time saved until now: 0.0
+08-04 01:11:50.037 26843 27950 D Nappa   : F1_SCORE add_intercept_url - (already in) - http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 01:11:50.038 26843 27950 D Nappa   : F1_SCORE add_fn_url - (already in) - http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 01:11:50.038 26843 27950 D Nappa   : -------------F1_SCORE #23 -----------
+08-04 01:11:50.038 26843 27950 D Nappa   : F1_SCORE - Intercept list (11)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true]
+08-04 01:11:50.038 26843 27950 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:50.038 26843 27950 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:50.038 26843 27950 D Nappa   : F1_SCORE - FN list (11)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true]
+08-04 01:11:50.138 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:50.138 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:50.138 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:50.138 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:50.138 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:50.138 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction istrue
+08-04 01:11:50.138 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - start
+08-04 01:11:50.138 26843 26872 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - checking prediction VS current activity for extras
+08-04 01:11:50.139 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra- finished
+08-04 01:11:50.394 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - starting new prediction
+08-04 01:11:50.395 26843 26872 D Nappa   : Current node - currentActivityName - nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:50.395 26843 26872 D Nappa   : Current node - activityGraph.getCurrent() - nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:50.397 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - finished new prediction
+08-04 01:11:55.911 26843 27765 D Nappa   : F1_SCORE add_intercept_url - (new) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:11:55.911 26843 27765 D Nappa   : F1_SCORE add_fn_url - (new) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:11:55.911 26843 27765 D Nappa   : -------------F1_SCORE #24 -----------
+08-04 01:11:55.911 26843 27765 D Nappa   : F1_SCORE - Intercept list (12)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0]
+08-04 01:11:55.911 26843 27765 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:55.911 26843 27765 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:55.912 26843 27765 D Nappa   : F1_SCORE - FN list (12)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0]
+08-04 01:11:56.011 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:56.011 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:56.011 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:56.011 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:56.011 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:11:58.231 26843 27765 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:11:58.232 26843 27765 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:11:58.232 26843 27765 D Nappa   : -------------F1_SCORE #25 -----------
+08-04 01:11:58.232 26843 27765 D Nappa   : F1_SCORE - Intercept list (12)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0]
+08-04 01:11:58.232 26843 27765 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:11:58.232 26843 27765 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:11:58.232 26843 27765 D Nappa   : F1_SCORE - FN list (12)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0]
+08-04 01:11:58.332 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:11:58.332 26843 26872 D Nappa   : PARENTS 
+08-04 01:11:58.332 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList -> 
+08-04 01:11:58.332 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:11:58.332 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:12:00.249 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- start
+08-04 01:12:00.251 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- end
+08-04 01:12:00.251 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:12:00.255 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:12:00.263 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList for 10368 ms
+08-04 01:12:00.393 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:00.393 26843 26843 D Nappa   : madePredictionFromActivity = true, 
+08-04 01:12:00.393 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:12:00.393 26843 26843 D Nappa   : predictedNextActivityFromActivity = [nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading], 
+08-04 01:12:00.393 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading, 
+08-04 01:12:00.393 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:00.393 26843 26843 D Nappa   : madePredictionFromExtra = true, 
+08-04 01:12:00.393 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:12:00.393 26843 26843 D Nappa   : predictedNextActivityFromExtra = [nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading], 
+08-04 01:12:00.393 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading, 
+08-04 01:12:00.393 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction istrue
+08-04 01:12:00.393 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - start
+08-04 01:12:00.393 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - checking prediction VS current activity for activities
+08-04 01:12:00.393 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity- finished
+08-04 01:12:00.494 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:12:00.495 26843 26843 D Nappa   : SHOULD_PREFETCH true
+08-04 01:12:00.595 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:12:00.595 26843 26843 D Nappa   : STATS Number of requests not prefetched: 9
+08-04 01:12:00.596 26843 26843 D Nappa   : STATS Number of requests prefetched: 1
+08-04 01:12:00.596 26843 26843 D Nappa   : STATS Time saved until now: 0.033
+08-04 01:12:00.794 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction istrue
+08-04 01:12:00.794 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - start
+08-04 01:12:00.794 26843 26872 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - checking prediction VS current activity for extras
+08-04 01:12:00.794 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra- finished
+08-04 01:12:01.096 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - starting new prediction
+08-04 01:12:01.096 26843 26872 D Nappa   : Current node - currentActivityName - nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:12:01.096 26843 26872 D Nappa   : Current node - activityGraph.getCurrent() - nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:12:01.097 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - finished new prediction
+08-04 01:12:02.182 26843 27765 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:12:02.182 26843 27765 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:12:02.182 26843 27765 D Nappa   : -------------F1_SCORE #26 -----------
+08-04 01:12:02.182 26843 27765 D Nappa   : F1_SCORE - Intercept list (12)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0]
+08-04 01:12:02.182 26843 27765 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:02.182 26843 27765 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:02.182 26843 27765 D Nappa   : F1_SCORE - FN list (12)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0]
+08-04 01:12:02.282 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading
+08-04 01:12:02.282 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:02.282 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading -> 
+08-04 01:12:02.282 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:12:02.282 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:12:02.282 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:12:02.282 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:02.282 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@e)
+08-04 01:12:05.038 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading for 4442 ms
+08-04 01:12:05.150 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:05.150 26843 26843 D Nappa   : madePredictionFromActivity = true, 
+08-04 01:12:05.150 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading, 
+08-04 01:12:05.150 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:12:05.150 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:12:05.150 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:05.150 26843 26843 D Nappa   : madePredictionFromExtra = false, 
+08-04 01:12:05.150 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading, 
+08-04 01:12:05.150 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:12:05.150 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:12:05.150 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction istrue
+08-04 01:12:05.150 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - start
+08-04 01:12:05.151 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity- finished
+08-04 01:12:05.251 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList
+08-04 01:12:05.251 26843 26843 D Nappa   : SHOULD_PREFETCH false
+08-04 01:12:05.252 26843 26843 D Nappa   : STATS Number of requests not prefetched: 9
+08-04 01:12:05.252 26843 26843 D Nappa   : STATS Number of requests prefetched: 1
+08-04 01:12:05.252 26843 26843 D Nappa   : STATS Time saved until now: 0.033
+08-04 01:12:05.551 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction isfalse
+08-04 01:12:06.820 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList for 1568 ms
+08-04 01:12:06.942 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:06.942 26843 26843 D Nappa   : madePredictionFromActivity = false, 
+08-04 01:12:06.942 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:12:06.942 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:12:06.942 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:12:06.942 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:06.942 26843 26843 D Nappa   : madePredictionFromExtra = false, 
+08-04 01:12:06.942 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, 
+08-04 01:12:06.942 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:12:06.942 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:12:06.942 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction isfalse
+08-04 01:12:07.042 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.Main
+08-04 01:12:07.042 26843 26843 D Nappa   : SHOULD_PREFETCH false
+08-04 01:12:07.042 26843 26843 D Nappa   : STATS Number of requests not prefetched: 9
+08-04 01:12:07.042 26843 26843 D Nappa   : STATS Number of requests prefetched: 1
+08-04 01:12:07.042 26843 26843 D Nappa   : STATS Time saved until now: 0.033
+08-04 01:12:07.342 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction isfalse
+08-04 01:12:08.811 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- start
+08-04 01:12:08.814 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- end
+08-04 01:12:08.814 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:12:08.824 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.Main for 1781 ms
+08-04 01:12:08.993 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:08.993 26843 26843 D Nappa   : madePredictionFromActivity = false, 
+08-04 01:12:08.993 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:12:08.993 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:12:08.993 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:08.994 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:08.994 26843 26843 D Nappa   : madePredictionFromExtra = true, 
+08-04 01:12:08.994 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:12:08.994 26843 26843 D Nappa   : predictedNextActivityFromExtra = [nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading], 
+08-04 01:12:08.994 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:08.994 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction isfalse
+08-04 01:12:09.094 26843 26843 D Nappa   : registerActivity: (new) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:09.100 26843 26857 D Nappa   : Updating activity map nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList: 4
+08-04 01:12:09.101 26843 26843 D Nappa   : SHOULD_PREFETCH true
+08-04 01:12:09.101 26843 26872 D Nappa   : {nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList=4, nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList=2, nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading=3, nappagreedy.com.newsblur.activity.Main=1}
+08-04 01:12:09.201 26843 28342 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:09.202 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:09.202 26843 26843 D Nappa   : STATS Number of requests not prefetched: 9
+08-04 01:12:09.202 26843 26843 D Nappa   : STATS Number of requests prefetched: 1
+08-04 01:12:09.202 26843 26843 D Nappa   : STATS Time saved until now: 0.033
+08-04 01:12:09.336 26843 28344 D Nappa   : F1_SCORE add_intercept_url - (already in) - http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 01:12:09.337 26843 28344 D Nappa   : F1_SCORE add_fn_url - (already in) - http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 01:12:09.337 26843 28344 D Nappa   : -------------F1_SCORE #29 -----------
+08-04 01:12:09.337 26843 28344 D Nappa   : F1_SCORE - Intercept list (12)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0]
+08-04 01:12:09.337 26843 28344 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:09.337 26843 28344 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:09.337 26843 28344 D Nappa   : F1_SCORE - FN list (12)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0]
+08-04 01:12:09.352 26843 27120 D Nappa   : F1_SCORE add_intercept_url - (new) - https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg
+08-04 01:12:09.352 26843 27120 D Nappa   : F1_SCORE add_fn_url - (new) - https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg
+08-04 01:12:09.352 26843 27120 D Nappa   : -------------F1_SCORE #30 -----------
+08-04 01:12:09.353 26843 27120 D Nappa   : F1_SCORE - Intercept list (13)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg]
+08-04 01:12:09.353 26843 27120 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:09.353 26843 27120 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:09.353 26843 27120 D Nappa   : F1_SCORE - FN list (13)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg]
+08-04 01:12:09.437 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:09.437 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:09.437 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList -> 
+08-04 01:12:09.437 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:09.437 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:09.538 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:09.538 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:09.538 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList -> 
+08-04 01:12:09.538 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:09.538 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:09.538 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction istrue
+08-04 01:12:09.539 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - start
+08-04 01:12:09.539 26843 26872 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - checking prediction VS current activity for extras
+08-04 01:12:09.539 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra- finished
+08-04 01:12:09.702 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - starting new prediction
+08-04 01:12:09.702 26843 26872 D Nappa   : Current node - currentActivityName - nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:09.702 26843 26872 D Nappa   : Current node - activityGraph.getCurrent() - nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:09.703 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - finished new prediction
+08-04 01:12:10.246 26843 27765 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:12:10.246 26843 27765 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:12:10.246 26843 27765 D Nappa   : -------------F1_SCORE #31 -----------
+08-04 01:12:10.246 26843 27765 D Nappa   : F1_SCORE - Intercept list (13)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg]
+08-04 01:12:10.246 26843 27765 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:10.246 26843 27765 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:10.246 26843 27765 D Nappa   : F1_SCORE - FN list (13)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg]
+08-04 01:12:10.346 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:10.346 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:10.346 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList -> 
+08-04 01:12:10.346 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:10.347 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:12.550 26843 27765 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:12:12.550 26843 27765 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:12:12.550 26843 27765 D Nappa   : -------------F1_SCORE #32 -----------
+08-04 01:12:12.551 26843 27765 D Nappa   : F1_SCORE - Intercept list (13)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg]
+08-04 01:12:12.551 26843 27765 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:12.551 26843 27765 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:12.551 26843 27765 D Nappa   : F1_SCORE - FN list (13)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg]
+08-04 01:12:12.650 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:12.651 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:12.651 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList -> 
+08-04 01:12:12.651 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:12.651 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:16.529 26843 27765 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:12:16.529 26843 27765 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:12:16.529 26843 27765 D Nappa   : -------------F1_SCORE #33 -----------
+08-04 01:12:16.530 26843 27765 D Nappa   : F1_SCORE - Intercept list (13)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg]
+08-04 01:12:16.530 26843 27765 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:16.530 26843 27765 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:16.530 26843 27765 D Nappa   : F1_SCORE - FN list (13)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg]
+08-04 01:12:16.629 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:16.630 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:16.630 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList -> 
+08-04 01:12:16.630 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:16.630 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:17.530 26843 27765 D Nappa   : F1_SCORE add_intercept_url - (new) - https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all
+08-04 01:12:17.530 26843 27765 D Nappa   : F1_SCORE add_fn_url - (new) - https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all
+08-04 01:12:17.530 26843 27765 D Nappa   : -------------F1_SCORE #34 -----------
+08-04 01:12:17.530 26843 27765 D Nappa   : F1_SCORE - Intercept list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:17.530 26843 27765 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:17.530 26843 27765 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:17.530 26843 27765 D Nappa   : F1_SCORE - FN list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:17.630 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:17.631 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:17.631 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList -> 
+08-04 01:12:17.631 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:17.631 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:19.520 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- start
+08-04 01:12:19.521 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- end
+08-04 01:12:19.521 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:12:19.527 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:12:19.535 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList for 10333 ms
+08-04 01:12:19.670 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:19.670 26843 26843 D Nappa   : madePredictionFromActivity = true, 
+08-04 01:12:19.670 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:19.670 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:12:19.670 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesReading, 
+08-04 01:12:19.670 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:19.670 26843 26843 D Nappa   : madePredictionFromExtra = true, 
+08-04 01:12:19.670 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:19.670 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:12:19.670 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesReading, 
+08-04 01:12:19.670 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction istrue
+08-04 01:12:19.670 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - start
+08-04 01:12:19.670 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity- finished
+08-04 01:12:19.770 26843 26843 D Nappa   : registerActivity: (new) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:19.774 26843 26859 D Nappa   : Updating activity map nappagreedy.com.newsblur.activity.AllSharedStoriesReading: 5
+08-04 01:12:19.775 26843 26872 D Nappa   : {nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList=4, nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList=2, nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading=3, nappagreedy.com.newsblur.activity.Main=1, nappagreedy.com.newsblur.activity.AllSharedStoriesReading=5}
+08-04 01:12:19.775 26843 26843 D Nappa   : SHOULD_PREFETCH true
+08-04 01:12:19.875 26843 28524 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:19.875 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:19.875 26843 26843 D Nappa   : STATS Number of requests not prefetched: 11
+08-04 01:12:19.875 26843 26843 D Nappa   : STATS Number of requests prefetched: 2
+08-04 01:12:19.876 26843 26843 D Nappa   : STATS Time saved until now: 0.066
+08-04 01:12:20.070 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction istrue
+08-04 01:12:20.072 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - start
+08-04 01:12:20.072 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra- finished
+08-04 01:12:20.376 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - starting new prediction
+08-04 01:12:20.376 26843 26872 D Nappa   : Current node - currentActivityName - nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:20.376 26843 26872 D Nappa   : Current node - activityGraph.getCurrent() - nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:20.377 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - finished new prediction
+08-04 01:12:27.123 26843 27118 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:12:27.123 26843 27118 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:12:27.123 26843 27118 D Nappa   : -------------F1_SCORE #35 -----------
+08-04 01:12:27.124 26843 27118 D Nappa   : F1_SCORE - Intercept list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:27.124 26843 27118 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:27.124 26843 27118 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:27.124 26843 27116 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:12:27.124 26843 27118 D Nappa   : F1_SCORE - FN list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:27.124 26843 27116 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:12:27.124 26843 27116 D Nappa   : -------------F1_SCORE #36 -----------
+08-04 01:12:27.125 26843 27116 D Nappa   : F1_SCORE - Intercept list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:27.125 26843 27116 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:27.125 26843 27116 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:27.126 26843 27116 D Nappa   : F1_SCORE - FN list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:27.130 26843 27117 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:12:27.130 26843 27117 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:12:27.130 26843 27117 D Nappa   : -------------F1_SCORE #37 -----------
+08-04 01:12:27.130 26843 27117 D Nappa   : F1_SCORE - Intercept list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:27.130 26843 27117 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:27.130 26843 27117 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:27.130 26843 27117 D Nappa   : F1_SCORE - FN list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:27.138 26843 27123 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:12:27.138 26843 27123 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:12:27.138 26843 27123 D Nappa   : -------------F1_SCORE #38 -----------
+08-04 01:12:27.139 26843 27123 D Nappa   : F1_SCORE - Intercept list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:27.139 26843 27123 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:27.139 26843 27123 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:27.139 26843 27123 D Nappa   : F1_SCORE - FN list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:27.223 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:27.224 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:27.224 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesReading -> 
+08-04 01:12:27.224 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:27.224 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:12:27.224 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:27.224 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:27.224 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:27.324 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:27.324 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:27.324 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesReading -> 
+08-04 01:12:27.324 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:27.324 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:12:27.325 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:27.325 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:27.325 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:27.425 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:27.425 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:27.425 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesReading -> 
+08-04 01:12:27.425 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:27.425 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:12:27.425 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:27.425 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:27.426 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:27.526 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:27.527 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:27.527 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesReading -> 
+08-04 01:12:27.527 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:27.527 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:12:27.527 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:27.527 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:27.527 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:27.863 26843 27119 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:12:27.863 26843 27119 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:12:27.864 26843 27119 D Nappa   : -------------F1_SCORE #39 -----------
+08-04 01:12:27.864 26843 27119 D Nappa   : F1_SCORE - Intercept list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:27.864 26843 27119 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:27.864 26843 27119 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:27.867 26843 27119 D Nappa   : F1_SCORE - FN list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:27.894 26843 27121 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:12:27.894 26843 27121 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.gravatar.com/avatar/f5934485a0863578733c447016505547
+08-04 01:12:27.895 26843 27121 D Nappa   : -------------F1_SCORE #40 -----------
+08-04 01:12:27.895 26843 27121 D Nappa   : F1_SCORE - Intercept list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:27.895 26843 27121 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:27.895 26843 27121 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:27.895 26843 27121 D Nappa   : F1_SCORE - FN list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:27.963 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:27.963 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:27.963 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesReading -> 
+08-04 01:12:27.964 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:27.964 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:12:27.964 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:27.964 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:27.964 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:28.065 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:28.065 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:28.065 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesReading -> 
+08-04 01:12:28.065 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:28.065 26843 26872 D Nappa   : PARENTS has extra: (story_hash, 0:65a6e4)
+08-04 01:12:28.067 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:28.068 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:28.068 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:32.293 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.AllSharedStoriesReading for 12417 ms
+08-04 01:12:32.412 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:32.412 26843 26843 D Nappa   : madePredictionFromActivity = true, 
+08-04 01:12:32.412 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesReading, 
+08-04 01:12:32.412 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:12:32.412 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:32.412 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:32.412 26843 26843 D Nappa   : madePredictionFromExtra = false, 
+08-04 01:12:32.412 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesReading, 
+08-04 01:12:32.412 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:12:32.412 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:32.412 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction istrue
+08-04 01:12:32.412 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - start
+08-04 01:12:32.412 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity- finished
+08-04 01:12:32.512 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:32.513 26843 26843 D Nappa   : SHOULD_PREFETCH false
+08-04 01:12:32.513 26843 26843 D Nappa   : STATS Number of requests not prefetched: 11
+08-04 01:12:32.513 26843 26843 D Nappa   : STATS Number of requests prefetched: 2
+08-04 01:12:32.513 26843 26843 D Nappa   : STATS Time saved until now: 0.066
+08-04 01:12:32.812 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction isfalse
+08-04 01:12:34.051 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- start
+08-04 01:12:34.053 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- end
+08-04 01:12:34.053 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:12:34.056 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:12:34.065 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList for 1551 ms
+08-04 01:12:34.220 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:34.220 26843 26843 D Nappa   : madePredictionFromActivity = false, 
+08-04 01:12:34.220 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:34.220 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:12:34.220 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesReading, 
+08-04 01:12:34.220 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:34.220 26843 26843 D Nappa   : madePredictionFromExtra = true, 
+08-04 01:12:34.220 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:34.220 26843 26843 D Nappa   : predictedNextActivityFromExtra = [nappagreedy.com.newsblur.activity.AllSharedStoriesReading], 
+08-04 01:12:34.220 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesReading, 
+08-04 01:12:34.220 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction isfalse
+08-04 01:12:34.320 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:34.321 26843 26843 D Nappa   : SHOULD_PREFETCH true
+08-04 01:12:34.421 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:34.421 26843 26843 D Nappa   : STATS Number of requests not prefetched: 11
+08-04 01:12:34.421 26843 26843 D Nappa   : STATS Number of requests prefetched: 2
+08-04 01:12:34.421 26843 26843 D Nappa   : STATS Time saved until now: 0.066
+08-04 01:12:34.620 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction istrue
+08-04 01:12:34.621 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - start
+08-04 01:12:34.621 26843 26872 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - checking prediction VS current activity for extras
+08-04 01:12:34.621 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra- finished
+08-04 01:12:34.921 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - starting new prediction
+08-04 01:12:34.921 26843 26872 D Nappa   : Current node - currentActivityName - nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:34.922 26843 26872 D Nappa   : Current node - activityGraph.getCurrent() - nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:34.923 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - finished new prediction
+08-04 01:12:38.991 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.AllSharedStoriesReading for 4570 ms
+08-04 01:12:39.160 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:39.160 26843 26843 D Nappa   : madePredictionFromActivity = true, 
+08-04 01:12:39.160 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesReading, 
+08-04 01:12:39.160 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:12:39.160 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:39.160 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:39.160 26843 26843 D Nappa   : madePredictionFromExtra = false, 
+08-04 01:12:39.160 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesReading, 
+08-04 01:12:39.160 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:12:39.160 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:39.161 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction istrue
+08-04 01:12:39.161 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - start
+08-04 01:12:39.161 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity- finished
+08-04 01:12:39.262 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:39.262 26843 26843 D Nappa   : SHOULD_PREFETCH false
+08-04 01:12:39.262 26843 26843 D Nappa   : STATS Number of requests not prefetched: 11
+08-04 01:12:39.262 26843 26843 D Nappa   : STATS Number of requests prefetched: 2
+08-04 01:12:39.262 26843 26843 D Nappa   : STATS Time saved until now: 0.066
+08-04 01:12:39.563 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction isfalse
+08-04 01:12:40.762 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList for 1500 ms
+08-04 01:12:40.894 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:40.894 26843 26843 D Nappa   : madePredictionFromActivity = false, 
+08-04 01:12:40.894 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:40.894 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:12:40.894 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:12:40.894 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:40.894 26843 26843 D Nappa   : madePredictionFromExtra = false, 
+08-04 01:12:40.894 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:40.894 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:12:40.894 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:12:40.894 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction isfalse
+08-04 01:12:40.995 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.Main
+08-04 01:12:40.995 26843 26843 D Nappa   : SHOULD_PREFETCH false
+08-04 01:12:40.995 26843 26843 D Nappa   : STATS Number of requests not prefetched: 11
+08-04 01:12:40.995 26843 26843 D Nappa   : STATS Number of requests prefetched: 2
+08-04 01:12:40.995 26843 26843 D Nappa   : STATS Time saved until now: 0.066
+08-04 01:12:41.297 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction isfalse
+08-04 01:12:42.747 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- start
+08-04 01:12:42.751 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- end
+08-04 01:12:42.751 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:12:42.761 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.Main for 1766 ms
+08-04 01:12:42.946 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:42.946 26843 26843 D Nappa   : madePredictionFromActivity = false, 
+08-04 01:12:42.946 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:12:42.946 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:12:42.946 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:42.946 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:42.946 26843 26843 D Nappa   : madePredictionFromExtra = true, 
+08-04 01:12:42.946 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:12:42.946 26843 26843 D Nappa   : predictedNextActivityFromExtra = [nappagreedy.com.newsblur.activity.GlobalSharedStoriesItemsList, nappagreedy.com.newsblur.activity.GlobalSharedStoriesReading], 
+08-04 01:12:42.946 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:42.946 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction isfalse
+08-04 01:12:43.047 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:43.047 26843 26843 D Nappa   : SHOULD_PREFETCH true
+08-04 01:12:43.148 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:43.148 26843 26843 D Nappa   : SUCCESSORS nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:43.148 26843 26843 D Nappa   : STATS Number of requests not prefetched: 11
+08-04 01:12:43.148 26843 26843 D Nappa   : STATS Number of requests prefetched: 2
+08-04 01:12:43.148 26843 26843 D Nappa   : STATS Time saved until now: 0.066
+08-04 01:12:43.291 26843 27122 D Nappa   : F1_SCORE add_intercept_url - (already in) - http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 01:12:43.292 26843 27122 D Nappa   : F1_SCORE add_fn_url - (already in) - http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-04 01:12:43.292 26843 27122 D Nappa   : -------------F1_SCORE #44 -----------
+08-04 01:12:43.292 26843 27122 D Nappa   : F1_SCORE - Intercept list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:43.292 26843 27122 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:12:43.292 26843 27122 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:12:43.292 26843 27122 D Nappa   : F1_SCORE - FN list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:12:43.392 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:43.392 26843 26872 D Nappa   : PARENTS 
+08-04 01:12:43.392 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList -> 
+08-04 01:12:43.392 26843 26872 D Nappa   : PARENTS nappagreedy.com.newsblur.activity.Main
+08-04 01:12:43.392 26843 26872 D Nappa   : PARENTS has extra: (feed_set, nappagreedy.com.newsblur.util.FeedSet@1bc)
+08-04 01:12:43.392 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction istrue
+08-04 01:12:43.392 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - start
+08-04 01:12:43.392 26843 26872 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - checking prediction VS current activity for extras
+08-04 01:12:43.392 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra- finished
+08-04 01:12:43.648 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - starting new prediction
+08-04 01:12:43.648 26843 26872 D Nappa   : Current node - currentActivityName - nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:43.648 26843 26872 D Nappa   : Current node - activityGraph.getCurrent() - nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:43.650 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - finished new prediction
+08-04 01:12:53.439 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- start
+08-04 01:12:53.442 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - notifyExtras- end
+08-04 01:12:53.442 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:12:53.445 26843 26872 D Nappa   : PREFSTRAT2 ADDING NEW ACTEXTRADATA
+08-04 01:12:53.454 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList for 10306 ms
+08-04 01:12:53.599 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:53.599 26843 26843 D Nappa   : madePredictionFromActivity = true, 
+08-04 01:12:53.599 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:53.599 26843 26843 D Nappa   : predictedNextActivityFromActivity = [nappagreedy.com.newsblur.activity.AllSharedStoriesReading], 
+08-04 01:12:53.599 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesReading, 
+08-04 01:12:53.599 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:53.599 26843 26843 D Nappa   : madePredictionFromExtra = true, 
+08-04 01:12:53.599 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:53.599 26843 26843 D Nappa   : predictedNextActivityFromExtra = [nappagreedy.com.newsblur.activity.AllSharedStoriesReading], 
+08-04 01:12:53.599 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesReading, 
+08-04 01:12:53.599 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction istrue
+08-04 01:12:53.599 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - start
+08-04 01:12:53.599 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - checking prediction VS current activity for activities
+08-04 01:12:53.599 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity- finished
+08-04 01:12:53.699 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:53.700 26843 26843 D Nappa   : SHOULD_PREFETCH true
+08-04 01:12:53.800 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:53.800 26843 26843 D Nappa   : STATS Number of requests not prefetched: 11
+08-04 01:12:53.800 26843 26843 D Nappa   : STATS Number of requests prefetched: 3
+08-04 01:12:53.800 26843 26843 D Nappa   : STATS Time saved until now: 0.099
+08-04 01:12:53.999 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction istrue
+08-04 01:12:54.000 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - start
+08-04 01:12:54.000 26843 26872 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - checking prediction VS current activity for extras
+08-04 01:12:54.000 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra- finished
+08-04 01:12:54.300 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - starting new prediction
+08-04 01:12:54.300 26843 26872 D Nappa   : Current node - currentActivityName - nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:54.301 26843 26872 D Nappa   : Current node - activityGraph.getCurrent() - nappagreedy.com.newsblur.activity.AllSharedStoriesReading
+08-04 01:12:54.301 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - finished new prediction
+08-04 01:12:58.346 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.AllSharedStoriesReading for 4546 ms
+08-04 01:12:58.478 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:58.478 26843 26843 D Nappa   : madePredictionFromActivity = true, 
+08-04 01:12:58.478 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesReading, 
+08-04 01:12:58.478 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:12:58.478 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:58.478 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:12:58.478 26843 26843 D Nappa   : madePredictionFromExtra = false, 
+08-04 01:12:58.478 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesReading, 
+08-04 01:12:58.478 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:12:58.478 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:12:58.478 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction istrue
+08-04 01:12:58.478 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - start
+08-04 01:12:58.478 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity- finished
+08-04 01:12:58.578 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList
+08-04 01:12:58.578 26843 26843 D Nappa   : SHOULD_PREFETCH false
+08-04 01:12:58.579 26843 26843 D Nappa   : STATS Number of requests not prefetched: 11
+08-04 01:12:58.579 26843 26843 D Nappa   : STATS Number of requests prefetched: 3
+08-04 01:12:58.579 26843 26843 D Nappa   : STATS Time saved until now: 0.099
+08-04 01:12:58.878 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction isfalse
+08-04 01:13:00.097 26843 26843 D Nappa   : Stayed on nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList for 1518 ms
+08-04 01:13:00.270 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:13:00.270 26843 26843 D Nappa   : madePredictionFromActivity = false, 
+08-04 01:13:00.270 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:13:00.270 26843 26843 D Nappa   : predictedNextActivityFromActivity = [], 
+08-04 01:13:00.270 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:13:00.270 26843 26843 D Nappa   : setCurrentActivity - MetricStrategyAccuracy - 
+08-04 01:13:00.270 26843 26843 D Nappa   : madePredictionFromExtra = false, 
+08-04 01:13:00.270 26843 26843 D Nappa   : fromActivity = nappagreedy.com.newsblur.activity.AllSharedStoriesItemsList, 
+08-04 01:13:00.270 26843 26843 D Nappa   : predictedNextActivityFromExtra = [], 
+08-04 01:13:00.270 26843 26843 D Nappa   : activity.getClass().getCanonicalName() = nappagreedy.com.newsblur.activity.Main, 
+08-04 01:13:00.270 26843 26843 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from activity - made prediction isfalse
+08-04 01:13:00.371 26843 26843 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.Main
+08-04 01:13:00.371 26843 26843 D Nappa   : SHOULD_PREFETCH false
+08-04 01:13:00.372 26843 26843 D Nappa   : STATS Number of requests not prefetched: 11
+08-04 01:13:00.372 26843 26843 D Nappa   : STATS Number of requests prefetched: 3
+08-04 01:13:00.372 26843 26843 D Nappa   : STATS Time saved until now: 0.099
+08-04 01:13:00.671 26843 26872 D Nappa   : PREFETCH_ON_EXTRA - setCurrentActivity - logs - from extra - made prediction isfalse
+08-04 01:13:01.767 26843 27765 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:13:01.767 26843 27765 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:13:01.767 26843 27765 D Nappa   : -------------F1_SCORE #47 -----------
+08-04 01:13:01.767 26843 27765 D Nappa   : F1_SCORE - Intercept list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:13:01.767 26843 27765 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:13:01.767 26843 27765 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:13:01.767 26843 27765 D Nappa   : F1_SCORE - FN list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:13:01.867 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.Main
+08-04 01:13:01.867 26843 26872 D Nappa   : PARENTS 
+08-04 01:13:01.867 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.Main -> 
+08-04 01:13:04.153 26843 27765 D Nappa   : F1_SCORE add_intercept_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:13:04.153 26843 27765 D Nappa   : F1_SCORE add_fn_url - (already in) - https://www.newsblur.com/reader/feed_unread_count?feed_id=0
+08-04 01:13:04.153 26843 27765 D Nappa   : -------------F1_SCORE #48 -----------
+08-04 01:13:04.153 26843 27765 D Nappa   : F1_SCORE - Intercept list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:13:04.153 26843 27765 D Nappa   : F1_SCORE - Prefetch list (0)= []
+08-04 01:13:04.154 26843 27765 D Nappa   : F1_SCORE - TP list (0)= []
+08-04 01:13:04.154 26843 27765 D Nappa   : F1_SCORE - FN list (14)= [https://www.newsblur.com/reader/feeds/?update_counts=true, https://www.newsblur.com/reader/unread_story_hashes?include_timestamps=1, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true, https://www.newsblur.com/rss_feeds/icon/0, https://s3.amazonaws.com/icons.newsblur.com/6882243.png, https://s3.amazonaws.com/icons.newsblur.com/18178.png, https://s3.amazonaws.com/icons.newsblur.com/5762506.png, http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png, https://www.gravatar.com/avatar/f5934485a0863578733c447016505547, https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true, https://www.newsblur.com/reader/feed_unread_count?feed_id=0, https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg, https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all]
+08-04 01:13:04.253 26843 26872 D Nappa   : registerActivity: (already in) nappagreedy.com.newsblur.activity.Main
+08-04 01:13:04.254 26843 26872 D Nappa   : PARENTS 
+08-04 01:13:04.254 26843 26872 D Nappa   : Of: nappagreedy.com.newsblur.activity.Main -> 

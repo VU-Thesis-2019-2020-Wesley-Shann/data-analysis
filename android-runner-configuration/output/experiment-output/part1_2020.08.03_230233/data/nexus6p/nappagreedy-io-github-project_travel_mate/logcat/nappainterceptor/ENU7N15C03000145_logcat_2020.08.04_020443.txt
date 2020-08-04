@@ -1,0 +1,560 @@
+--------- beginning of main
+--------- beginning of system
+08-04 02:02:23.762  7339  7459 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-user
+08-04 02:02:23.763  7339  7459 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:23.763  7339  7459 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:23.763  7339  7459 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:23.764  7339  7459 D CustomInterceptor: CACHED STATS: size = '0', maxSize = '100', hitCount = '0', createCount = '0', putCount = '0', evictionCount = '0', missCount = '0', toString = 'LruCache[maxSize=100,hits=0,misses=0,hitRate=0%]', 
+08-04 02:02:23.764  7339  7459 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 02:02:23.835  7339  7463 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-all-cities/10
+08-04 02:02:23.836  7339  7463 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:23.836  7339  7463 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:23.836  7339  7463 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:23.836  7339  7463 D CustomInterceptor: CACHED STATS: size = '0', maxSize = '100', hitCount = '0', createCount = '0', putCount = '0', evictionCount = '0', missCount = '1', toString = 'LruCache[maxSize=100,hits=0,misses=1,hitRate=0%]', 
+08-04 02:02:23.836  7339  7463 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 02:02:24.284  7339  7463 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 02:02:24.298  7339  7459 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: HEADER RESPONSE
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: HEADER RESPONSE
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: Allow GET, OPTIONS
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: Allow GET, OPTIONS
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: Connection keep-alive
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: Connection keep-alive
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: Content-Length 185
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: Content-Length 1588
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: Content-Type application/json
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: Content-Type application/json
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: Date Tue, 04 Aug 2020 00:02:19 GMT
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: Date Tue, 04 Aug 2020 00:02:19 GMT
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: Expires Tue, 04 Aug 2020 00:07:24 GMT+00:00
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: Expires Tue, 04 Aug 2020 00:07:24 GMT+00:00
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: Server gunicorn/19.8.1
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: Server gunicorn/19.8.1
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: Vary Accept
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: Vary Accept
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: Via 1.1 vegur
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: Via 1.1 vegur
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-04 02:02:24.322  7339  7459 D CustomInterceptor: CACHEABLE true
+08-04 02:02:24.322  7339  7463 D CustomInterceptor: CACHEABLE true
+08-04 02:02:24.323  7339  7459 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-user
+08-04 02:02:24.323  7339  7463 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-all-cities/10
+08-04 02:02:24.323  7339  7459 D CustomInterceptor: REQ_SERV_BY net
+08-04 02:02:24.323  7339  7463 D CustomInterceptor: REQ_SERV_BY net
+08-04 02:02:24.323  7339  7459 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-user
+08-04 02:02:24.323  7339  7463 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-all-cities/10
+08-04 02:02:24.324  7339  7463 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 02:02:24.329  7339  7459 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 02:02:24.448  7339  7480 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:02:24.449  7339  7480 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:24.449  7339  7480 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:24.449  7339  7480 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:24.449  7339  7480 D CustomInterceptor: CACHED STATS: size = '2', maxSize = '100', hitCount = '2', createCount = '0', putCount = '2', evictionCount = '0', missCount = '2', toString = 'LruCache[maxSize=100,hits=2,misses=2,hitRate=50%]', 
+08-04 02:02:24.449  7339  7480 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 02:02:24.935  7339  7480 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 02:02:24.936  7339  7480 D CustomInterceptor: HEADER RESPONSE
+08-04 02:02:24.936  7339  7480 D CustomInterceptor: Allow GET, OPTIONS
+08-04 02:02:24.936  7339  7480 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 02:02:24.936  7339  7480 D CustomInterceptor: Connection keep-alive
+08-04 02:02:24.936  7339  7480 D CustomInterceptor: Content-Length 36
+08-04 02:02:24.936  7339  7480 D CustomInterceptor: Content-Type application/json
+08-04 02:02:24.936  7339  7480 D CustomInterceptor: Date Tue, 04 Aug 2020 00:02:20 GMT
+08-04 02:02:24.936  7339  7480 D CustomInterceptor: Expires Tue, 04 Aug 2020 00:07:24 GMT+00:00
+08-04 02:02:24.936  7339  7480 D CustomInterceptor: Server gunicorn/19.8.1
+08-04 02:02:24.936  7339  7480 D CustomInterceptor: Vary Accept
+08-04 02:02:24.937  7339  7480 D CustomInterceptor: Via 1.1 vegur
+08-04 02:02:24.937  7339  7480 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-04 02:02:24.937  7339  7480 D CustomInterceptor: CACHEABLE true
+08-04 02:02:24.937  7339  7480 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:02:24.937  7339  7480 D CustomInterceptor: REQ_SERV_BY net
+08-04 02:02:24.937  7339  7480 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:02:24.969  7339  7480 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 02:02:28.941  7339  7622 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-weather/1
+08-04 02:02:28.941  7339  7622 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:28.941  7339  7622 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:28.941  7339  7622 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:28.941  7339  7622 D CustomInterceptor: CACHED STATS: size = '3', maxSize = '100', hitCount = '3', createCount = '0', putCount = '3', evictionCount = '0', missCount = '3', toString = 'LruCache[maxSize=100,hits=3,misses=3,hitRate=50%]', 
+08-04 02:02:28.941  7339  7622 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 02:02:28.942  7339  7624 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city/1
+08-04 02:02:28.942  7339  7624 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:28.942  7339  7624 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:28.942  7339  7624 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:28.942  7339  7624 D CustomInterceptor: CACHED STATS: size = '3', maxSize = '100', hitCount = '3', createCount = '0', putCount = '3', evictionCount = '0', missCount = '4', toString = 'LruCache[maxSize=100,hits=3,misses=4,hitRate=42%]', 
+08-04 02:02:28.942  7339  7624 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 02:02:29.408  7339  7622 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: HEADER RESPONSE
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: Allow GET, OPTIONS
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: Connection keep-alive
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: Content-Length 238
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: Content-Type application/json
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: Date Tue, 04 Aug 2020 00:02:24 GMT
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: Expires Tue, 04 Aug 2020 00:07:29 GMT+00:00
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: Server gunicorn/19.8.1
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: Vary Accept
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: Via 1.1 vegur
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: CACHEABLE true
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-city-weather/1
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: REQ_SERV_BY net
+08-04 02:02:29.409  7339  7622 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-city-weather/1
+08-04 02:02:29.417  7339  7624 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 02:02:29.419  7339  7624 D CustomInterceptor: HEADER RESPONSE
+08-04 02:02:29.419  7339  7624 D CustomInterceptor: Allow GET, OPTIONS
+08-04 02:02:29.419  7339  7624 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 02:02:29.419  7339  7624 D CustomInterceptor: Connection keep-alive
+08-04 02:02:29.419  7339  7624 D CustomInterceptor: Content-Length 530
+08-04 02:02:29.419  7339  7624 D CustomInterceptor: Content-Type application/json
+08-04 02:02:29.419  7339  7624 D CustomInterceptor: Date Tue, 04 Aug 2020 00:02:24 GMT
+08-04 02:02:29.419  7339  7624 D CustomInterceptor: Expires Tue, 04 Aug 2020 00:07:29 GMT+00:00
+08-04 02:02:29.419  7339  7624 D CustomInterceptor: Server gunicorn/19.8.1
+08-04 02:02:29.420  7339  7624 D CustomInterceptor: Vary Accept
+08-04 02:02:29.420  7339  7624 D CustomInterceptor: Via 1.1 vegur
+08-04 02:02:29.420  7339  7624 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-04 02:02:29.420  7339  7624 D CustomInterceptor: CACHEABLE true
+08-04 02:02:29.420  7339  7624 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-city/1
+08-04 02:02:29.420  7339  7624 D CustomInterceptor: REQ_SERV_BY net
+08-04 02:02:29.420  7339  7624 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-city/1
+08-04 02:02:29.444  7339  7622 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 02:02:29.450  7339  7624 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 02:02:33.605  7339  7747 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-04 02:02:33.606  7339  7747 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:33.606  7339  7747 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:33.606  7339  7747 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:33.606  7339  7747 D CustomInterceptor: CACHED STATS: size = '5', maxSize = '100', hitCount = '5', createCount = '0', putCount = '5', evictionCount = '0', missCount = '5', toString = 'LruCache[maxSize=100,hits=5,misses=5,hitRate=50%]', 
+08-04 02:02:33.606  7339  7747 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 02:02:34.109  7339  7747 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 02:02:34.109  7339  7747 D CustomInterceptor: HEADER RESPONSE
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: Allow GET, OPTIONS
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: Connection keep-alive
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: Content-Length 55024
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: Content-Type application/json
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: Date Tue, 04 Aug 2020 00:02:28 GMT
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: Expires Tue, 04 Aug 2020 00:07:34 GMT+00:00
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: Server gunicorn/19.8.1
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: Vary Accept
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: Via 1.1 vegur
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: CACHEABLE true
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: REQ_SERV_BY net
+08-04 02:02:34.110  7339  7747 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-04 02:02:34.119  7339  7747 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 02:02:39.869  7339  7922 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-facts/1
+08-04 02:02:39.869  7339  7922 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:39.869  7339  7922 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:39.869  7339  7922 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:39.869  7339  7922 D CustomInterceptor: CACHED STATS: size = '6', maxSize = '100', hitCount = '6', createCount = '0', putCount = '6', evictionCount = '0', missCount = '6', toString = 'LruCache[maxSize=100,hits=6,misses=6,hitRate=50%]', 
+08-04 02:02:39.869  7339  7922 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 02:02:40.356  7339  7922 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 02:02:40.357  7339  7922 D CustomInterceptor: HEADER RESPONSE
+08-04 02:02:40.357  7339  7922 D CustomInterceptor: Allow GET, OPTIONS
+08-04 02:02:40.357  7339  7922 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 02:02:40.357  7339  7922 D CustomInterceptor: Connection keep-alive
+08-04 02:02:40.357  7339  7922 D CustomInterceptor: Content-Length 1793
+08-04 02:02:40.357  7339  7922 D CustomInterceptor: Content-Type application/json
+08-04 02:02:40.357  7339  7922 D CustomInterceptor: Date Tue, 04 Aug 2020 00:02:35 GMT
+08-04 02:02:40.357  7339  7922 D CustomInterceptor: Expires Tue, 04 Aug 2020 00:07:40 GMT+00:00
+08-04 02:02:40.357  7339  7922 D CustomInterceptor: Server gunicorn/19.8.1
+08-04 02:02:40.357  7339  7922 D CustomInterceptor: Vary Accept
+08-04 02:02:40.358  7339  7922 D CustomInterceptor: Via 1.1 vegur
+08-04 02:02:40.358  7339  7922 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-04 02:02:40.358  7339  7922 D CustomInterceptor: CACHEABLE true
+08-04 02:02:40.358  7339  7922 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-city-facts/1
+08-04 02:02:40.358  7339  7922 D CustomInterceptor: REQ_SERV_BY net
+08-04 02:02:40.358  7339  7922 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-city-facts/1
+08-04 02:02:40.359  7339  7922 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 02:02:40.364  7339  7934 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-images/1
+08-04 02:02:40.365  7339  7934 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:40.365  7339  7934 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:40.365  7339  7934 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:40.365  7339  7934 D CustomInterceptor: CACHED STATS: size = '7', maxSize = '100', hitCount = '7', createCount = '0', putCount = '7', evictionCount = '0', missCount = '7', toString = 'LruCache[maxSize=100,hits=7,misses=7,hitRate=50%]', 
+08-04 02:02:40.365  7339  7934 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 02:02:40.868  7339  7934 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 02:02:40.869  7339  7934 D CustomInterceptor: HEADER RESPONSE
+08-04 02:02:40.869  7339  7934 D CustomInterceptor: Allow GET, OPTIONS
+08-04 02:02:40.869  7339  7934 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 02:02:40.869  7339  7934 D CustomInterceptor: Connection keep-alive
+08-04 02:02:40.869  7339  7934 D CustomInterceptor: Content-Length 183
+08-04 02:02:40.870  7339  7934 D CustomInterceptor: Content-Type application/json
+08-04 02:02:40.870  7339  7934 D CustomInterceptor: Date Tue, 04 Aug 2020 00:02:36 GMT
+08-04 02:02:40.870  7339  7934 D CustomInterceptor: Expires Tue, 04 Aug 2020 00:07:40 GMT+00:00
+08-04 02:02:40.870  7339  7934 D CustomInterceptor: Server gunicorn/19.8.1
+08-04 02:02:40.870  7339  7934 D CustomInterceptor: Vary Accept
+08-04 02:02:40.870  7339  7934 D CustomInterceptor: Via 1.1 vegur
+08-04 02:02:40.870  7339  7934 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-04 02:02:40.870  7339  7934 D CustomInterceptor: CACHEABLE true
+08-04 02:02:40.870  7339  7934 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-city-images/1
+08-04 02:02:40.870  7339  7934 D CustomInterceptor: REQ_SERV_BY net
+08-04 02:02:40.870  7339  7934 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-city-images/1
+08-04 02:02:40.901  7339  7934 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 02:02:44.371  7339  8038 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-facts/1
+08-04 02:02:44.372  7339  8038 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:44.372  7339  8038 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:44.372  7339  8038 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:44.372  7339  8038 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=8,misses=8,hitRate=50%]', 
+08-04 02:02:44.372  7339  8038 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-city-facts/1
+08-04 02:02:44.372  7339  8038 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-city-facts/1, sending it back
+08-04 02:02:44.372  7339  8038 D CustomInterceptor: CONTENT [{"id":2,"fact":"As early as in the year 1911, British announced to shift their capital from the then Calcutta to Delhi and it was shifted to Delhi in 1912.","source_text":"service sutra","source_url":"https://www.servicesutra.com/blog/20-amazing-interesting-facts-about-delhi/"},{"id":3,"fact":"It has a population of 11 million and metropolitan population of 16.3 million. This makes city the second most populous city in India.","source_text":"service sutra","source_url":"https://www.servicesutra.com/blog/20-amazing-interesting-facts-about-delhi/"},{"id":4,"fact":"Delhi has been inhabited since 6th It has been the capital of many empires, and this is the reason this city has been ransacked and built many times.","source_text":"service sutra","source_url":"https://www.servicesutra.com/blog/20-amazing-interesting-facts-about-delhi/"},{"id":5,"fact":"According to a survey 10,500 people die in Delhi due to pollution.","source_text":"service sutra","source_url":"https://www.servicesutra.com/blog/20-amazing-interesting-facts-about-delhi/"},{"id":6,"fact":"Delhi is largest commercial centre in Northern part of India. Delhi has country’s largest and fastest growing retail industries. Besides that manufacturing of several goods has considerably increased. Nearly 1,440,000 people work in various manufacturing sectors in and around Delhi.","source_text":"service sutra","source_url":"https://www.servicesutra.com/blog/20-amazing-interesting-facts-about-delhi/"},{"id":7,"fact":"Indira Gandhi National Airport of Delhi is the city’s main gateway for city’s domestic as well as International civilian air traffic. This is one of the busiest in south Asia.","source_text":"service sutra","source_url":"https://www.servicesutra.com/blog/20-amazing-interesting-facts-about-delhi/"}]
+08-04 02:02:44.372  7339  8038 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:02:44.374  7339  8039 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-images/1
+08-04 02:02:44.375  7339  8039 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:44.375  7339  8039 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:44.375  7339  8039 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:44.375  7339  8039 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '9', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=9,misses=8,hitRate=52%]', 
+08-04 02:02:44.375  7339  8039 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-city-images/1
+08-04 02:02:44.375  7339  8039 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-city-images/1, sending it back
+08-04 02:02:44.375  7339  8039 D CustomInterceptor: CONTENT [{"id":17,"image_url":"https://upload.wikimedia.org/wikipedia/commons/9/94/%E0%B4%96%E0%B5%81%E0%B4%A4%E0%B5%8D%E0%B4%AC%E0%B5%8D_%E0%B4%AE%E0%B4%BF%E0%B4%A8%E0%B4%BE%E0%B5%BC1.jpg"}]
+08-04 02:02:44.375  7339  8039 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:02:48.901  7339  8158 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-04 02:02:48.903  7339  8158 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:48.903  7339  8158 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:48.903  7339  8158 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:48.903  7339  8158 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '10', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=10,misses=8,hitRate=55%]', 
+08-04 02:02:48.903  7339  8158 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-04 02:02:48.903  7339  8158 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-city-information/1, sending it back
+08-04 02:02:48.904  7339  8158 D CustomInterceptor: CONTENT {"Summary":"Delhi (English: ; Hindi: [ˈdɪlːi] Dillī; Punjabi: [ˈdɪlːi] Dillī; Urdu: [ˈdeːɦli] Dēhlī), officially known as the National Capital Territory of Delhi (NCT), is a city and a union territory of India containing New Delhi, the capital of India.It is bordered by the state of Haryana on three sides and by Uttar Pradesh to the east. The NCT covers an area of 1,484 square kilometres (573 sq mi). According to the 2011 census, Delhi's city proper population was over 11 million, the second-highest in India after Mumbai, while the whole NCT's population was about 16.8 million. Delhi's urban area is now considered to extend beyond the NCT boundaries, and include the neighbouring satellite cities of Ghaziabad, Faridabad, Gurgaon and Noida in an area called the National Capital Region (NCR) and had an estimated 2016 population of over 26 million people, making it the world's second-largest urban area according to the United Nations. Recent estimates of the metro economy of its urban area have ranked Delhi either the most or second-most productive metro area of India. Delhi is the second-wealthiest city in India after Mumbai and is home to 18 billionaires and 23,000 millionaires. Delhi ranks fifth among the Indian states and union territories in human development index. Delhi has the second-highest GDP per capita in India. Delhi is of great historical significance as an important commercial, transport, and cultural hub, as well as the political centre of India.Delhi has been continuously inhabited since the 6th century BCE. Through most of its history, Delhi has served as a capital of various kingdoms and empires, most notably the Pandavas, the Delhi Sultanate and the Mughal Empire. The city has been captured, ransacked and rebuilt several times, particularly during the medieval period, and modern Delhi is a cluster of a number of cities spread across the metropolitan region. For many centuries Delhi has been a dominant trading and commercial centre in northern India, and after 1990s it has emerged as an important node in the international corporate and financial network.A union territory, the political administration of the NCT of Delhi today more closely resembles that of a state of India, with its own legislature, high court and an executive council of ministers headed by a Chief Minister. New Delhi is jointly administered by the federal government of India and the local government of Delhi, and serves as the capital of the nation as well as the NCT of Delhi. Delhi hosted the inaugural 1951 Asian Games, 1982 Asian Games, 1983 NAM Summit, 2010 Men's Hockey World Cup, 2010 Commonwealth Games, 2012 BRICS Summit and was one of the major host cities of the 2011 Cricket World Cup.Delhi is also the centre of the National Capital Region (NCR), which is a unique 'interstate regional planning' area created by the National Capital Region Planning Board Act of 1985.","Toponym":"There are a number of myths and legends associated with the origin of the name Delhi. One of them is derived from Dhillu or Dilu, a king who built a city at this location in 50 BCE and named it after himself. Another legend holds that the name of the city is based on the Hindi/Prakrit word dhili (loose) and that it was used by the Tomaras to refer to the city because the iron pillar of Delhi had a weak foundation and had to be moved. According to Panjab Notes and Queries, the name of the city at the time of King Prithviraj was  dilpat, and that dilpat and dilli are probably derived from the old Hindi word dil meaning eminence. The former director of the Archaeological Survey of India, Alexander Cunningham, mentioned that dilli later became dihli/dehli. Some suggest the coins in circulation in the region under the Tomaras were called dehliwal. According to the Bhavishya Purana, King Prithiviraja of Indraprastha built a new fort in the modern-day Purana Qila area for the convenience of all four castes in his kingdom. He ordered the construction of a gateway to the fort and later named the fort dehali.
+08-04 02:02:48.904  7339  8158 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:02:55.527  7339  8307 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:02:55.528  7339  8307 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:55.528  7339  8307 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:55.528  7339  8307 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:55.528  7339  8307 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '11', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=11,misses=8,hitRate=57%]', 
+08-04 02:02:55.528  7339  8307 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:02:55.528  7339  8307 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:02:55.528  7339  8307 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:02:55.528  7339  8307 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:02:57.219  7339  8352 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-weather/1
+08-04 02:02:57.220  7339  8353 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city/1
+08-04 02:02:57.220  7339  8352 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:57.220  7339  8352 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:57.220  7339  8352 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:57.220  7339  8352 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '12', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=12,misses=8,hitRate=60%]', 
+08-04 02:02:57.220  7339  8352 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-city-weather/1
+08-04 02:02:57.220  7339  8352 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-city-weather/1, sending it back
+08-04 02:02:57.220  7339  8352 D CustomInterceptor: CONTENT {"temp":33.15,"temp_units":"C","max_temp":33.33,"min_temp":33.0,"code":721,"condensed":"Haze","description":"haze","icon":"http://openweathermap.org/img/w/50n.png","humidity":70,"humidity_units":"%","pressure":1000,"pressure_units":"hPa"}
+08-04 02:02:57.220  7339  8352 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:02:57.220  7339  8353 D CustomInterceptor: HEADER REQUEST
+08-04 02:02:57.220  7339  8353 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:02:57.220  7339  8353 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:02:57.220  7339  8353 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '13', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=13,misses=8,hitRate=61%]', 
+08-04 02:02:57.221  7339  8353 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-city/1
+08-04 02:02:57.221  7339  8353 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-city/1, sending it back
+08-04 02:02:57.221  7339  8353 D CustomInterceptor: CONTENT {"id":1,"city_name":"Delhi","description":"Delhi, officially the National Capital Territory of Delhi, is the Capital territory of India. During the British Raj, Delhi was part of the province of Punjab and is still historically and culturally connected to the Punjab region.","latitude":"28.613900","longitude":"77.209000","facts_count":6,"images":["https://upload.wikimedia.org/wikipedia/commons/9/94/%E0%B4%96%E0%B5%81%E0%B4%A4%E0%B5%8D%E0%B4%AC%E0%B5%8D_%E0%B4%AE%E0%B4%BF%E0%B4%A8%E0%B4%BE%E0%B5%BC1.jpg"],"has_visited":false}
+08-04 02:02:57.221  7339  8353 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:03:01.946  7339  8460 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-04 02:03:01.947  7339  8460 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:01.947  7339  8460 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:01.947  7339  8460 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:01.947  7339  8460 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '14', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=14,misses=8,hitRate=63%]', 
+08-04 02:03:01.947  7339  8460 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-04 02:03:01.947  7339  8460 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-city-information/1, sending it back
+08-04 02:03:01.948  7339  8460 D CustomInterceptor: CONTENT {"Summary":"Delhi (English: ; Hindi: [ˈdɪlːi] Dillī; Punjabi: [ˈdɪlːi] Dillī; Urdu: [ˈdeːɦli] Dēhlī), officially known as the National Capital Territory of Delhi (NCT), is a city and a union territory of India containing New Delhi, the capital of India.It is bordered by the state of Haryana on three sides and by Uttar Pradesh to the east. The NCT covers an area of 1,484 square kilometres (573 sq mi). According to the 2011 census, Delhi's city proper population was over 11 million, the second-highest in India after Mumbai, while the whole NCT's population was about 16.8 million. Delhi's urban area is now considered to extend beyond the NCT boundaries, and include the neighbouring satellite cities of Ghaziabad, Faridabad, Gurgaon and Noida in an area called the National Capital Region (NCR) and had an estimated 2016 population of over 26 million people, making it the world's second-largest urban area according to the United Nations. Recent estimates of the metro economy of its urban area have ranked Delhi either the most or second-most productive metro area of India. Delhi is the second-wealthiest city in India after Mumbai and is home to 18 billionaires and 23,000 millionaires. Delhi ranks fifth among the Indian states and union territories in human development index. Delhi has the second-highest GDP per capita in India. Delhi is of great historical significance as an important commercial, transport, and cultural hub, as well as the political centre of India.Delhi has been continuously inhabited since the 6th century BCE. Through most of its history, Delhi has served as a capital of various kingdoms and empires, most notably the Pandavas, the Delhi Sultanate and the Mughal Empire. The city has been captured, ransacked and rebuilt several times, particularly during the medieval period, and modern Delhi is a cluster of a number of cities spread across the metropolitan region. For many centuries Delhi has been a dominant trading and commercial centre in northern India, and after 1990s it has emerged as an important node in the international corporate and financial network.A union territory, the political administration of the NCT of Delhi today more closely resembles that of a state of India, with its own legislature, high court and an executive council of ministers headed by a Chief Minister. New Delhi is jointly administered by the federal government of India and the local government of Delhi, and serves as the capital of the nation as well as the NCT of Delhi. Delhi hosted the inaugural 1951 Asian Games, 1982 Asian Games, 1983 NAM Summit, 2010 Men's Hockey World Cup, 2010 Commonwealth Games, 2012 BRICS Summit and was one of the major host cities of the 2011 Cricket World Cup.Delhi is also the centre of the National Capital Region (NCR), which is a unique 'interstate regional planning' area created by the National Capital Region Planning Board Act of 1985.","Toponym":"There are a number of myths and legends associated with the origin of the name Delhi. One of them is derived from Dhillu or Dilu, a king who built a city at this location in 50 BCE and named it after himself. Another legend holds that the name of the city is based on the Hindi/Prakrit word dhili (loose) and that it was used by the Tomaras to refer to the city because the iron pillar of Delhi had a weak foundation and had to be moved. According to Panjab Notes and Queries, the name of the city at the time of King Prithviraj was  dilpat, and that dilpat and dilli are probably derived from the old Hindi word dil meaning eminence. The former director of the Archaeological Survey of India, Alexander Cunningham, mentioned that dilli later became dihli/dehli. Some suggest the coins in circulation in the region under the Tomaras were called dehliwal. According to the Bhavishya Purana, King Prithiviraja of Indraprastha built a new fort in the modern-day Purana Qila area for the convenience of all four castes in his kingdom. He ordered the construction of a gateway to the fort and later named the fort dehali.
+08-04 02:03:01.948  7339  8460 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:03:08.542  7339  8603 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:08.543  7339  8603 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:08.543  7339  8603 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:08.543  7339  8603 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:08.543  7339  8603 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '15', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=15,misses=8,hitRate=65%]', 
+08-04 02:03:08.543  7339  8603 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:08.543  7339  8603 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:03:08.544  7339  8603 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:03:08.544  7339  8603 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:03:11.612  7339  8690 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:11.613  7339  8690 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:11.613  7339  8690 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:11.613  7339  8690 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:11.613  7339  8690 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '16', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=16,misses=8,hitRate=66%]', 
+08-04 02:03:11.613  7339  8690 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:11.613  7339  8690 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:03:11.613  7339  8690 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:03:11.613  7339  8690 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:03:18.854  7339  8860 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:18.855  7339  8860 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:18.855  7339  8860 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:18.855  7339  8860 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:18.855  7339  8860 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '17', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=17,misses=8,hitRate=68%]', 
+08-04 02:03:18.855  7339  8860 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:18.855  7339  8860 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:03:18.855  7339  8860 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:03:18.855  7339  8860 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:03:23.485  7339  8961 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:23.486  7339  8961 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:23.487  7339  8961 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:23.487  7339  8961 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:23.487  7339  8961 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '18', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=18,misses=8,hitRate=69%]', 
+08-04 02:03:23.487  7339  8961 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:23.487  7339  8961 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:03:23.487  7339  8961 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:03:23.487  7339  8961 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:03:29.216  7339  9097 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:03:29.216  7339  9097 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:29.217  7339  9097 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:29.217  7339  9097 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:29.217  7339  9097 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '19', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=19,misses=8,hitRate=70%]', 
+08-04 02:03:29.217  7339  9097 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 02:03:29.218  7339  9098 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:03:29.219  7339  9098 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:29.219  7339  9098 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:29.219  7339  9098 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:29.219  7339  9098 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '19', createCount = '0', putCount = '8', evictionCount = '0', missCount = '9', toString = 'LruCache[maxSize=100,hits=19,misses=9,hitRate=67%]', 
+08-04 02:03:29.219  7339  9098 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 02:03:29.739  7339  9098 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 02:03:29.740  7339  9098 D CustomInterceptor: HEADER RESPONSE
+08-04 02:03:29.740  7339  9098 D CustomInterceptor: Allow GET, OPTIONS
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: Connection keep-alive
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: Content-Length 6426
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: Content-Type application/json
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: Date Tue, 04 Aug 2020 00:03:25 GMT
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: Expires Tue, 04 Aug 2020 00:08:29 GMT+00:00
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: Server gunicorn/19.8.1
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: Vary Accept
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: Via 1.1 vegur
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: CACHEABLE true
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: REQ_SERV_BY net
+08-04 02:03:29.741  7339  9098 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:03:29.743  7339  9098 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 02:03:29.753  7339  9097 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 02:03:29.754  7339  9097 D CustomInterceptor: HEADER RESPONSE
+08-04 02:03:29.754  7339  9097 D CustomInterceptor: Allow GET, OPTIONS
+08-04 02:03:29.754  7339  9097 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 02:03:29.754  7339  9097 D CustomInterceptor: Connection keep-alive
+08-04 02:03:29.755  7339  9097 D CustomInterceptor: Content-Length 6426
+08-04 02:03:29.755  7339  9097 D CustomInterceptor: Content-Type application/json
+08-04 02:03:29.755  7339  9097 D CustomInterceptor: Date Tue, 04 Aug 2020 00:03:25 GMT
+08-04 02:03:29.755  7339  9097 D CustomInterceptor: Expires Tue, 04 Aug 2020 00:08:29 GMT+00:00
+08-04 02:03:29.755  7339  9097 D CustomInterceptor: Server gunicorn/19.8.1
+08-04 02:03:29.755  7339  9097 D CustomInterceptor: Vary Accept
+08-04 02:03:29.755  7339  9097 D CustomInterceptor: Via 1.1 vegur
+08-04 02:03:29.755  7339  9097 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-04 02:03:29.755  7339  9097 D CustomInterceptor: CACHEABLE true
+08-04 02:03:29.755  7339  9097 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:03:29.755  7339  9097 D CustomInterceptor: REQ_SERV_BY net
+08-04 02:03:29.755  7339  9097 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:03:29.757  7339  9097 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 02:03:34.212  7339  9187 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:34.213  7339  9187 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:34.213  7339  9187 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:34.213  7339  9187 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:34.213  7339  9187 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '21', createCount = '0', putCount = '10', evictionCount = '0', missCount = '10', toString = 'LruCache[maxSize=100,hits=21,misses=10,hitRate=67%]', 
+08-04 02:03:34.213  7339  9187 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:34.213  7339  9187 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:03:34.213  7339  9187 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:03:34.213  7339  9187 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:03:36.172  7339  9232 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:03:36.172  7339  9232 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:36.172  7339  9232 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:36.173  7339  9232 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:36.173  7339  9232 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '22', createCount = '0', putCount = '10', evictionCount = '0', missCount = '10', toString = 'LruCache[maxSize=100,hits=22,misses=10,hitRate=68%]', 
+08-04 02:03:36.173  7339  9232 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:03:36.173  7339  9232 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020, sending it back
+08-04 02:03:36.173  7339  9232 D CustomInterceptor: CONTENT [{"month":"January","date":1,"day":"Wednesday","name":"New Year's Day","type":"Restricted"},{"month":"January","date":2,"day":"Thursday","name":"Guru Govind Singh Jayanti","type":"Restricted"},{"month":"January","date":14,"day":"Tuesday","name":"Lohri","type":"Restricted"},{"month":"January","date":15,"day":"Wednesday","name":"Pongal","type":"Restricted"},{"month":"January","date":15,"day":"Wednesday","name":"Makar Sankranti","type":"Restricted"},{"month":"January","date":25,"day":"Saturday","name":"Chinese New Year","type":"Observance"},{"month":"January","date":26,"day":"Sunday","name":"Republic Day","type":"Gazetted"},{"month":"January","date":30,"day":"Thursday","name":"Vasant Panchami","type":"Restricted"},{"month":"February","date":9,"day":"Sunday","name":"Guru Ravidas Jayanti","type":"Restricted"},{"month":"February","date":14,"day":"Friday","name":"Valentine's Day","type":"Observance"},{"month":"February","date":18,"day":"Tuesday","name":"Maharishi Dayanand Saraswati Jayanti","type":"Restricted"},{"month":"February","date":19,"day":"Wednesday","name":"Shivaji Jayanti","type":"Restricted"},{"month":"February","date":21,"day":"Friday","name":"Maha Shivaratri/Shivaratri","type":"Gazetted"},{"month":"March","date":9,"day":"Monday","name":"Holika Dahana","type":"Restricted"},{"month":"March","date":9,"day":"Monday","name":"Hazarat Ali's Birthday","type":"Restricted"},{"month":"March","date":10,"day":"Tuesday","name":"Holi","type":"Gazetted"},{"month":"March","date":20,"day":"Friday","name":"March Equinox","type":"Season"},{"month":"March","date":25,"day":"Wednesday","name":"Chaitra Sukhladi","type":"Restricted"},{"month":"April","date":2,"day":"Thursday","name":"Rama Navami","type":"Gazetted"},{"month":"April","date":6,"day":"Monday","name":"Mahavir Jayanti","type":"Gazetted"},{"month":"April","date":9,"day":"Thursday","name":"First day of Passover","type":"Observance"},{"month":"April","date":9,"day":"Thursday","name":"Maundy Thursday","type":"Observance,"},{"month":"April","date":10,"day":"Friday","name":"Good Friday","type":"Gazetted"},{"month":"April","date":12,"day":"Sunday","name":"Easter Day","type":"Restricted"},{"month":"April","date":13,"day":"Monday","name":"Vaisakhi","type":"Restricted"},{"month":"April","date":14,"day":"Tuesday","name":"Mesadi/Vaisakhadi","type":"Restricted"},{"month":"April","date":14,"day":"Tuesday","name":"Ambedkar Jayanti","type":"Central"},{"month":"May","date":1,"day":"Friday","name":"May Day","type":"Observance"},{"month":"May","date":7,"day":"Thursday","name":"Buddha Purnima/Vesak","type":"Gazetted"},{"month":"May","date":7,"day":"Thursday","name":"Birthday of Ravindranath","type":"Restricted"},{"month":"May","date":10,"day":"Sunday","name":"Mother's Day","type":"Observance"},{"month":"May","date":22,"day":"Friday","name":"Jamat Ul-Vida","type":"Restricted"},{"month":"May","date":25,"day":"Monday","name":"Ramzan Id/Eid-ul-Fitar","type":"Gazetted"},{"month":"May","date":25,"day":"Monday","name":"Ramzan Id/Eid-ul-Fitar","type":"Muslim,"},{"month":"June","date":21,"day":"Sunday","name":"June Solstice","type":"Season"},{"month":"June","date":21,"day":"Sunday","name":"Father's Day","type":"Observance"},{"month":"June","date":23,"day":"Tuesday","name":"Rath Yatra","type":"Restricted"},{"month":"July","date":5,"day":"Sunday","name":"Guru Purnima","type":"Observance"},{"month":"July","date":31,"day":"Friday","name":"Bakr Id/Eid ul-Adha","type":"Gazetted"},{"month":"August","date":2,"day":"Sunday","name":"Friendship Day","type":"Observance"},{"month":"August","date":3,"day":"Monday","name":"Raksha Bandhan (Rakhi)","type":"Restricted"},{"month":"August","date":11,"day":"Tuesday","name":"Janmashtami (Smarta)","type":"Restricted"},{"month":"August","date":12,"day":"Wednesday","name":"Janmashtami","type":"Gazetted"},{"month":"August","date":15,"day":"Saturday","name":"Independence Day","type":"Gazetted"},{"month":"August","date":16,"day":"Sunday","name":"Parsi New Year","type":"Restricted"},{"month":"August","date":22,"day":"Saturday","name":"Gan
+08-04 02:03:36.173  7339  9232 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:03:36.174  7339  9233 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:03:36.175  7339  9233 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:36.175  7339  9233 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:36.175  7339  9233 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:36.175  7339  9233 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '23', createCount = '0', putCount = '10', evictionCount = '0', missCount = '10', toString = 'LruCache[maxSize=100,hits=23,misses=10,hitRate=69%]', 
+08-04 02:03:36.175  7339  9233 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:03:36.175  7339  9233 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020, sending it back
+08-04 02:03:36.176  7339  9233 D CustomInterceptor: CONTENT [{"month":"January","date":1,"day":"Wednesday","name":"New Year's Day","type":"Restricted"},{"month":"January","date":2,"day":"Thursday","name":"Guru Govind Singh Jayanti","type":"Restricted"},{"month":"January","date":14,"day":"Tuesday","name":"Lohri","type":"Restricted"},{"month":"January","date":15,"day":"Wednesday","name":"Pongal","type":"Restricted"},{"month":"January","date":15,"day":"Wednesday","name":"Makar Sankranti","type":"Restricted"},{"month":"January","date":25,"day":"Saturday","name":"Chinese New Year","type":"Observance"},{"month":"January","date":26,"day":"Sunday","name":"Republic Day","type":"Gazetted"},{"month":"January","date":30,"day":"Thursday","name":"Vasant Panchami","type":"Restricted"},{"month":"February","date":9,"day":"Sunday","name":"Guru Ravidas Jayanti","type":"Restricted"},{"month":"February","date":14,"day":"Friday","name":"Valentine's Day","type":"Observance"},{"month":"February","date":18,"day":"Tuesday","name":"Maharishi Dayanand Saraswati Jayanti","type":"Restricted"},{"month":"February","date":19,"day":"Wednesday","name":"Shivaji Jayanti","type":"Restricted"},{"month":"February","date":21,"day":"Friday","name":"Maha Shivaratri/Shivaratri","type":"Gazetted"},{"month":"March","date":9,"day":"Monday","name":"Holika Dahana","type":"Restricted"},{"month":"March","date":9,"day":"Monday","name":"Hazarat Ali's Birthday","type":"Restricted"},{"month":"March","date":10,"day":"Tuesday","name":"Holi","type":"Gazetted"},{"month":"March","date":20,"day":"Friday","name":"March Equinox","type":"Season"},{"month":"March","date":25,"day":"Wednesday","name":"Chaitra Sukhladi","type":"Restricted"},{"month":"April","date":2,"day":"Thursday","name":"Rama Navami","type":"Gazetted"},{"month":"April","date":6,"day":"Monday","name":"Mahavir Jayanti","type":"Gazetted"},{"month":"April","date":9,"day":"Thursday","name":"First day of Passover","type":"Observance"},{"month":"April","date":9,"day":"Thursday","name":"Maundy Thursday","type":"Observance,"},{"month":"April","date":10,"day":"Friday","name":"Good Friday","type":"Gazetted"},{"month":"April","date":12,"day":"Sunday","name":"Easter Day","type":"Restricted"},{"month":"April","date":13,"day":"Monday","name":"Vaisakhi","type":"Restricted"},{"month":"April","date":14,"day":"Tuesday","name":"Mesadi/Vaisakhadi","type":"Restricted"},{"month":"April","date":14,"day":"Tuesday","name":"Ambedkar Jayanti","type":"Central"},{"month":"May","date":1,"day":"Friday","name":"May Day","type":"Observance"},{"month":"May","date":7,"day":"Thursday","name":"Buddha Purnima/Vesak","type":"Gazetted"},{"month":"May","date":7,"day":"Thursday","name":"Birthday of Ravindranath","type":"Restricted"},{"month":"May","date":10,"day":"Sunday","name":"Mother's Day","type":"Observance"},{"month":"May","date":22,"day":"Friday","name":"Jamat Ul-Vida","type":"Restricted"},{"month":"May","date":25,"day":"Monday","name":"Ramzan Id/Eid-ul-Fitar","type":"Gazetted"},{"month":"May","date":25,"day":"Monday","name":"Ramzan Id/Eid-ul-Fitar","type":"Muslim,"},{"month":"June","date":21,"day":"Sunday","name":"June Solstice","type":"Season"},{"month":"June","date":21,"day":"Sunday","name":"Father's Day","type":"Observance"},{"month":"June","date":23,"day":"Tuesday","name":"Rath Yatra","type":"Restricted"},{"month":"July","date":5,"day":"Sunday","name":"Guru Purnima","type":"Observance"},{"month":"July","date":31,"day":"Friday","name":"Bakr Id/Eid ul-Adha","type":"Gazetted"},{"month":"August","date":2,"day":"Sunday","name":"Friendship Day","type":"Observance"},{"month":"August","date":3,"day":"Monday","name":"Raksha Bandhan (Rakhi)","type":"Restricted"},{"month":"August","date":11,"day":"Tuesday","name":"Janmashtami (Smarta)","type":"Restricted"},{"month":"August","date":12,"day":"Wednesday","name":"Janmashtami","type":"Gazetted"},{"month":"August","date":15,"day":"Saturday","name":"Independence Day","type":"Gazetted"},{"month":"August","date":16,"day":"Sunday","name":"Parsi New Year","type":"Restricted"},{"month":"August","date":22,"day":"Saturday","name":"Gan
+08-04 02:03:36.176  7339  9233 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:03:40.937  7339  9317 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:40.938  7339  9317 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:40.938  7339  9317 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:40.938  7339  9317 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:40.938  7339  9317 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '24', createCount = '0', putCount = '10', evictionCount = '0', missCount = '10', toString = 'LruCache[maxSize=100,hits=24,misses=10,hitRate=70%]', 
+08-04 02:03:40.939  7339  9317 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:40.939  7339  9317 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:03:40.939  7339  9317 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:03:40.939  7339  9317 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:03:46.361  7339  9444 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-notifications
+08-04 02:03:46.361  7339  9444 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:46.362  7339  9444 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:46.362  7339  9444 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:46.362  7339  9444 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '25', createCount = '0', putCount = '10', evictionCount = '0', missCount = '10', toString = 'LruCache[maxSize=100,hits=25,misses=10,hitRate=71%]', 
+08-04 02:03:46.362  7339  9444 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 02:03:46.363  7339  9445 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-notifications
+08-04 02:03:46.364  7339  9445 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:46.364  7339  9445 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:46.364  7339  9445 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:46.364  7339  9445 D CustomInterceptor: CACHED STATS: size = '9', maxSize = '100', hitCount = '25', createCount = '0', putCount = '10', evictionCount = '0', missCount = '11', toString = 'LruCache[maxSize=100,hits=25,misses=11,hitRate=69%]', 
+08-04 02:03:46.364  7339  9445 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-04 02:03:46.943  7339  9444 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: HEADER RESPONSE
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: Allow GET, OPTIONS
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: Connection keep-alive
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: Content-Length 2
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: Content-Type application/json
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: Date Tue, 04 Aug 2020 00:03:41 GMT
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: Expires Tue, 04 Aug 2020 00:08:46 GMT+00:00
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: Server gunicorn/19.8.1
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: Vary Accept
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: Via 1.1 vegur
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-04 02:03:46.944  7339  9444 D CustomInterceptor: CACHEABLE true
+08-04 02:03:46.945  7339  9444 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-notifications
+08-04 02:03:46.945  7339  9444 D CustomInterceptor: REQ_SERV_BY net
+08-04 02:03:46.945  7339  9444 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-notifications
+08-04 02:03:46.947  7339  9445 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-04 02:03:46.948  7339  9445 D CustomInterceptor: HEADER RESPONSE
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: Allow GET, OPTIONS
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: Connection keep-alive
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: Content-Length 2
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: Content-Type application/json
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: Date Tue, 04 Aug 2020 00:03:41 GMT
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: Expires Tue, 04 Aug 2020 00:08:46 GMT+00:00
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: Server gunicorn/19.8.1
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: Vary Accept
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: Via 1.1 vegur
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: CACHEABLE true
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-notifications
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: REQ_SERV_BY net
+08-04 02:03:46.949  7339  9445 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-notifications
+08-04 02:03:46.970  7339  9444 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 02:03:46.979  7339  9445 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-04 02:03:51.295  7339  9536 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:51.298  7339  9536 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:51.298  7339  9536 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:51.298  7339  9536 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:51.299  7339  9536 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '27', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=27,misses=12,hitRate=69%]', 
+08-04 02:03:51.299  7339  9536 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:51.299  7339  9536 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:03:51.299  7339  9536 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:03:51.299  7339  9536 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:03:54.031  7339  9603 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:54.031  7339  9603 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:54.032  7339  9603 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:54.032  7339  9603 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:54.032  7339  9603 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '28', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=28,misses=12,hitRate=70%]', 
+08-04 02:03:54.032  7339  9603 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:54.032  7339  9603 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:03:54.032  7339  9603 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:03:54.032  7339  9603 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:03:57.834  7339  9679 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:57.835  7339  9679 D CustomInterceptor: HEADER REQUEST
+08-04 02:03:57.835  7339  9679 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:03:57.835  7339  9679 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:03:57.835  7339  9679 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '29', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=29,misses=12,hitRate=70%]', 
+08-04 02:03:57.835  7339  9679 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:03:57.835  7339  9679 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:03:57.836  7339  9679 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:03:57.836  7339  9679 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:04:05.673  7339  9810 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:04:05.674  7339  9810 D CustomInterceptor: HEADER REQUEST
+08-04 02:04:05.674  7339  9810 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:04:05.674  7339  9810 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:04:05.674  7339  9810 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '30', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=30,misses=12,hitRate=71%]', 
+08-04 02:04:05.674  7339  9810 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:04:05.674  7339  9810 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:04:05.674  7339  9810 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:04:05.674  7339  9810 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:04:10.389  7339  9910 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:04:10.395  7339  9910 D CustomInterceptor: HEADER REQUEST
+08-04 02:04:10.395  7339  9910 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:04:10.395  7339  9910 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:04:10.395  7339  9910 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '31', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=31,misses=12,hitRate=72%]', 
+08-04 02:04:10.395  7339  9910 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:04:10.396  7339  9910 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:04:10.396  7339  9910 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:04:10.396  7339  9910 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:04:16.256  7339 10040 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:04:16.257  7339 10040 D CustomInterceptor: HEADER REQUEST
+08-04 02:04:16.258  7339 10040 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:04:16.258  7339 10040 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:04:16.258  7339 10040 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '32', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=32,misses=12,hitRate=72%]', 
+08-04 02:04:16.258  7339 10040 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:04:16.258  7339 10040 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020, sending it back
+08-04 02:04:16.258  7339 10040 D CustomInterceptor: CONTENT [{"month":"January","date":1,"day":"Wednesday","name":"New Year's Day","type":"Restricted"},{"month":"January","date":2,"day":"Thursday","name":"Guru Govind Singh Jayanti","type":"Restricted"},{"month":"January","date":14,"day":"Tuesday","name":"Lohri","type":"Restricted"},{"month":"January","date":15,"day":"Wednesday","name":"Pongal","type":"Restricted"},{"month":"January","date":15,"day":"Wednesday","name":"Makar Sankranti","type":"Restricted"},{"month":"January","date":25,"day":"Saturday","name":"Chinese New Year","type":"Observance"},{"month":"January","date":26,"day":"Sunday","name":"Republic Day","type":"Gazetted"},{"month":"January","date":30,"day":"Thursday","name":"Vasant Panchami","type":"Restricted"},{"month":"February","date":9,"day":"Sunday","name":"Guru Ravidas Jayanti","type":"Restricted"},{"month":"February","date":14,"day":"Friday","name":"Valentine's Day","type":"Observance"},{"month":"February","date":18,"day":"Tuesday","name":"Maharishi Dayanand Saraswati Jayanti","type":"Restricted"},{"month":"February","date":19,"day":"Wednesday","name":"Shivaji Jayanti","type":"Restricted"},{"month":"February","date":21,"day":"Friday","name":"Maha Shivaratri/Shivaratri","type":"Gazetted"},{"month":"March","date":9,"day":"Monday","name":"Holika Dahana","type":"Restricted"},{"month":"March","date":9,"day":"Monday","name":"Hazarat Ali's Birthday","type":"Restricted"},{"month":"March","date":10,"day":"Tuesday","name":"Holi","type":"Gazetted"},{"month":"March","date":20,"day":"Friday","name":"March Equinox","type":"Season"},{"month":"March","date":25,"day":"Wednesday","name":"Chaitra Sukhladi","type":"Restricted"},{"month":"April","date":2,"day":"Thursday","name":"Rama Navami","type":"Gazetted"},{"month":"April","date":6,"day":"Monday","name":"Mahavir Jayanti","type":"Gazetted"},{"month":"April","date":9,"day":"Thursday","name":"First day of Passover","type":"Observance"},{"month":"April","date":9,"day":"Thursday","name":"Maundy Thursday","type":"Observance,"},{"month":"April","date":10,"day":"Friday","name":"Good Friday","type":"Gazetted"},{"month":"April","date":12,"day":"Sunday","name":"Easter Day","type":"Restricted"},{"month":"April","date":13,"day":"Monday","name":"Vaisakhi","type":"Restricted"},{"month":"April","date":14,"day":"Tuesday","name":"Mesadi/Vaisakhadi","type":"Restricted"},{"month":"April","date":14,"day":"Tuesday","name":"Ambedkar Jayanti","type":"Central"},{"month":"May","date":1,"day":"Friday","name":"May Day","type":"Observance"},{"month":"May","date":7,"day":"Thursday","name":"Buddha Purnima/Vesak","type":"Gazetted"},{"month":"May","date":7,"day":"Thursday","name":"Birthday of Ravindranath","type":"Restricted"},{"month":"May","date":10,"day":"Sunday","name":"Mother's Day","type":"Observance"},{"month":"May","date":22,"day":"Friday","name":"Jamat Ul-Vida","type":"Restricted"},{"month":"May","date":25,"day":"Monday","name":"Ramzan Id/Eid-ul-Fitar","type":"Gazetted"},{"month":"May","date":25,"day":"Monday","name":"Ramzan Id/Eid-ul-Fitar","type":"Muslim,"},{"month":"June","date":21,"day":"Sunday","name":"June Solstice","type":"Season"},{"month":"June","date":21,"day":"Sunday","name":"Father's Day","type":"Observance"},{"month":"June","date":23,"day":"Tuesday","name":"Rath Yatra","type":"Restricted"},{"month":"July","date":5,"day":"Sunday","name":"Guru Purnima","type":"Observance"},{"month":"July","date":31,"day":"Friday","name":"Bakr Id/Eid ul-Adha","type":"Gazetted"},{"month":"August","date":2,"day":"Sunday","name":"Friendship Day","type":"Observance"},{"month":"August","date":3,"day":"Monday","name":"Raksha Bandhan (Rakhi)","type":"Restricted"},{"month":"August","date":11,"day":"Tuesday","name":"Janmashtami (Smarta)","type":"Restricted"},{"month":"August","date":12,"day":"Wednesday","name":"Janmashtami","type":"Gazetted"},{"month":"August","date":15,"day":"Saturday","name":"Independence Day","type":"Gazetted"},{"month":"August","date":16,"day":"Sunday","name":"Parsi New Year","type":"Restricted"},{"month":"August","date":22,"day":"Saturday","name":"Gan
+08-04 02:04:16.258  7339 10040 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:04:16.261  7339 10041 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:04:16.261  7339 10041 D CustomInterceptor: HEADER REQUEST
+08-04 02:04:16.261  7339 10041 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:04:16.262  7339 10041 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:04:16.262  7339 10041 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '33', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=33,misses=12,hitRate=73%]', 
+08-04 02:04:16.262  7339 10041 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:04:16.262  7339 10041 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020, sending it back
+08-04 02:04:16.262  7339 10041 D CustomInterceptor: CONTENT [{"month":"January","date":1,"day":"Wednesday","name":"New Year's Day","type":"Restricted"},{"month":"January","date":2,"day":"Thursday","name":"Guru Govind Singh Jayanti","type":"Restricted"},{"month":"January","date":14,"day":"Tuesday","name":"Lohri","type":"Restricted"},{"month":"January","date":15,"day":"Wednesday","name":"Pongal","type":"Restricted"},{"month":"January","date":15,"day":"Wednesday","name":"Makar Sankranti","type":"Restricted"},{"month":"January","date":25,"day":"Saturday","name":"Chinese New Year","type":"Observance"},{"month":"January","date":26,"day":"Sunday","name":"Republic Day","type":"Gazetted"},{"month":"January","date":30,"day":"Thursday","name":"Vasant Panchami","type":"Restricted"},{"month":"February","date":9,"day":"Sunday","name":"Guru Ravidas Jayanti","type":"Restricted"},{"month":"February","date":14,"day":"Friday","name":"Valentine's Day","type":"Observance"},{"month":"February","date":18,"day":"Tuesday","name":"Maharishi Dayanand Saraswati Jayanti","type":"Restricted"},{"month":"February","date":19,"day":"Wednesday","name":"Shivaji Jayanti","type":"Restricted"},{"month":"February","date":21,"day":"Friday","name":"Maha Shivaratri/Shivaratri","type":"Gazetted"},{"month":"March","date":9,"day":"Monday","name":"Holika Dahana","type":"Restricted"},{"month":"March","date":9,"day":"Monday","name":"Hazarat Ali's Birthday","type":"Restricted"},{"month":"March","date":10,"day":"Tuesday","name":"Holi","type":"Gazetted"},{"month":"March","date":20,"day":"Friday","name":"March Equinox","type":"Season"},{"month":"March","date":25,"day":"Wednesday","name":"Chaitra Sukhladi","type":"Restricted"},{"month":"April","date":2,"day":"Thursday","name":"Rama Navami","type":"Gazetted"},{"month":"April","date":6,"day":"Monday","name":"Mahavir Jayanti","type":"Gazetted"},{"month":"April","date":9,"day":"Thursday","name":"First day of Passover","type":"Observance"},{"month":"April","date":9,"day":"Thursday","name":"Maundy Thursday","type":"Observance,"},{"month":"April","date":10,"day":"Friday","name":"Good Friday","type":"Gazetted"},{"month":"April","date":12,"day":"Sunday","name":"Easter Day","type":"Restricted"},{"month":"April","date":13,"day":"Monday","name":"Vaisakhi","type":"Restricted"},{"month":"April","date":14,"day":"Tuesday","name":"Mesadi/Vaisakhadi","type":"Restricted"},{"month":"April","date":14,"day":"Tuesday","name":"Ambedkar Jayanti","type":"Central"},{"month":"May","date":1,"day":"Friday","name":"May Day","type":"Observance"},{"month":"May","date":7,"day":"Thursday","name":"Buddha Purnima/Vesak","type":"Gazetted"},{"month":"May","date":7,"day":"Thursday","name":"Birthday of Ravindranath","type":"Restricted"},{"month":"May","date":10,"day":"Sunday","name":"Mother's Day","type":"Observance"},{"month":"May","date":22,"day":"Friday","name":"Jamat Ul-Vida","type":"Restricted"},{"month":"May","date":25,"day":"Monday","name":"Ramzan Id/Eid-ul-Fitar","type":"Gazetted"},{"month":"May","date":25,"day":"Monday","name":"Ramzan Id/Eid-ul-Fitar","type":"Muslim,"},{"month":"June","date":21,"day":"Sunday","name":"June Solstice","type":"Season"},{"month":"June","date":21,"day":"Sunday","name":"Father's Day","type":"Observance"},{"month":"June","date":23,"day":"Tuesday","name":"Rath Yatra","type":"Restricted"},{"month":"July","date":5,"day":"Sunday","name":"Guru Purnima","type":"Observance"},{"month":"July","date":31,"day":"Friday","name":"Bakr Id/Eid ul-Adha","type":"Gazetted"},{"month":"August","date":2,"day":"Sunday","name":"Friendship Day","type":"Observance"},{"month":"August","date":3,"day":"Monday","name":"Raksha Bandhan (Rakhi)","type":"Restricted"},{"month":"August","date":11,"day":"Tuesday","name":"Janmashtami (Smarta)","type":"Restricted"},{"month":"August","date":12,"day":"Wednesday","name":"Janmashtami","type":"Gazetted"},{"month":"August","date":15,"day":"Saturday","name":"Independence Day","type":"Gazetted"},{"month":"August","date":16,"day":"Sunday","name":"Parsi New Year","type":"Restricted"},{"month":"August","date":22,"day":"Saturday","name":"Gan
+08-04 02:04:16.262  7339 10041 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:04:21.235  7339 10116 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:04:21.237  7339 10116 D CustomInterceptor: HEADER REQUEST
+08-04 02:04:21.237  7339 10116 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:04:21.237  7339 10116 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:04:21.237  7339 10116 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '34', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=34,misses=12,hitRate=73%]', 
+08-04 02:04:21.237  7339 10116 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:04:21.237  7339 10116 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:04:21.238  7339 10116 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:04:21.238  7339 10116 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:04:23.215  7339 10152 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:04:23.216  7339 10152 D CustomInterceptor: HEADER REQUEST
+08-04 02:04:23.216  7339 10152 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:04:23.216  7339 10152 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:04:23.216  7339 10152 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '35', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=35,misses=12,hitRate=74%]', 
+08-04 02:04:23.216  7339 10152 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:04:23.216  7339 10152 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020, sending it back
+08-04 02:04:23.216  7339 10152 D CustomInterceptor: CONTENT [{"month":"January","date":1,"day":"Wednesday","name":"New Year's Day","type":"Restricted"},{"month":"January","date":2,"day":"Thursday","name":"Guru Govind Singh Jayanti","type":"Restricted"},{"month":"January","date":14,"day":"Tuesday","name":"Lohri","type":"Restricted"},{"month":"January","date":15,"day":"Wednesday","name":"Pongal","type":"Restricted"},{"month":"January","date":15,"day":"Wednesday","name":"Makar Sankranti","type":"Restricted"},{"month":"January","date":25,"day":"Saturday","name":"Chinese New Year","type":"Observance"},{"month":"January","date":26,"day":"Sunday","name":"Republic Day","type":"Gazetted"},{"month":"January","date":30,"day":"Thursday","name":"Vasant Panchami","type":"Restricted"},{"month":"February","date":9,"day":"Sunday","name":"Guru Ravidas Jayanti","type":"Restricted"},{"month":"February","date":14,"day":"Friday","name":"Valentine's Day","type":"Observance"},{"month":"February","date":18,"day":"Tuesday","name":"Maharishi Dayanand Saraswati Jayanti","type":"Restricted"},{"month":"February","date":19,"day":"Wednesday","name":"Shivaji Jayanti","type":"Restricted"},{"month":"February","date":21,"day":"Friday","name":"Maha Shivaratri/Shivaratri","type":"Gazetted"},{"month":"March","date":9,"day":"Monday","name":"Holika Dahana","type":"Restricted"},{"month":"March","date":9,"day":"Monday","name":"Hazarat Ali's Birthday","type":"Restricted"},{"month":"March","date":10,"day":"Tuesday","name":"Holi","type":"Gazetted"},{"month":"March","date":20,"day":"Friday","name":"March Equinox","type":"Season"},{"month":"March","date":25,"day":"Wednesday","name":"Chaitra Sukhladi","type":"Restricted"},{"month":"April","date":2,"day":"Thursday","name":"Rama Navami","type":"Gazetted"},{"month":"April","date":6,"day":"Monday","name":"Mahavir Jayanti","type":"Gazetted"},{"month":"April","date":9,"day":"Thursday","name":"First day of Passover","type":"Observance"},{"month":"April","date":9,"day":"Thursday","name":"Maundy Thursday","type":"Observance,"},{"month":"April","date":10,"day":"Friday","name":"Good Friday","type":"Gazetted"},{"month":"April","date":12,"day":"Sunday","name":"Easter Day","type":"Restricted"},{"month":"April","date":13,"day":"Monday","name":"Vaisakhi","type":"Restricted"},{"month":"April","date":14,"day":"Tuesday","name":"Mesadi/Vaisakhadi","type":"Restricted"},{"month":"April","date":14,"day":"Tuesday","name":"Ambedkar Jayanti","type":"Central"},{"month":"May","date":1,"day":"Friday","name":"May Day","type":"Observance"},{"month":"May","date":7,"day":"Thursday","name":"Buddha Purnima/Vesak","type":"Gazetted"},{"month":"May","date":7,"day":"Thursday","name":"Birthday of Ravindranath","type":"Restricted"},{"month":"May","date":10,"day":"Sunday","name":"Mother's Day","type":"Observance"},{"month":"May","date":22,"day":"Friday","name":"Jamat Ul-Vida","type":"Restricted"},{"month":"May","date":25,"day":"Monday","name":"Ramzan Id/Eid-ul-Fitar","type":"Gazetted"},{"month":"May","date":25,"day":"Monday","name":"Ramzan Id/Eid-ul-Fitar","type":"Muslim,"},{"month":"June","date":21,"day":"Sunday","name":"June Solstice","type":"Season"},{"month":"June","date":21,"day":"Sunday","name":"Father's Day","type":"Observance"},{"month":"June","date":23,"day":"Tuesday","name":"Rath Yatra","type":"Restricted"},{"month":"July","date":5,"day":"Sunday","name":"Guru Purnima","type":"Observance"},{"month":"July","date":31,"day":"Friday","name":"Bakr Id/Eid ul-Adha","type":"Gazetted"},{"month":"August","date":2,"day":"Sunday","name":"Friendship Day","type":"Observance"},{"month":"August","date":3,"day":"Monday","name":"Raksha Bandhan (Rakhi)","type":"Restricted"},{"month":"August","date":11,"day":"Tuesday","name":"Janmashtami (Smarta)","type":"Restricted"},{"month":"August","date":12,"day":"Wednesday","name":"Janmashtami","type":"Gazetted"},{"month":"August","date":15,"day":"Saturday","name":"Independence Day","type":"Gazetted"},{"month":"August","date":16,"day":"Sunday","name":"Parsi New Year","type":"Restricted"},{"month":"August","date":22,"day":"Saturday","name":"Gan
+08-04 02:04:23.217  7339 10152 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:04:23.217  7339 10153 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:04:23.218  7339 10153 D CustomInterceptor: HEADER REQUEST
+08-04 02:04:23.218  7339 10153 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:04:23.218  7339 10153 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:04:23.218  7339 10153 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '36', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=36,misses=12,hitRate=75%]', 
+08-04 02:04:23.219  7339 10153 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020
+08-04 02:04:23.219  7339 10153 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-upcoming-holidays/2020, sending it back
+08-04 02:04:23.219  7339 10153 D CustomInterceptor: CONTENT [{"month":"January","date":1,"day":"Wednesday","name":"New Year's Day","type":"Restricted"},{"month":"January","date":2,"day":"Thursday","name":"Guru Govind Singh Jayanti","type":"Restricted"},{"month":"January","date":14,"day":"Tuesday","name":"Lohri","type":"Restricted"},{"month":"January","date":15,"day":"Wednesday","name":"Pongal","type":"Restricted"},{"month":"January","date":15,"day":"Wednesday","name":"Makar Sankranti","type":"Restricted"},{"month":"January","date":25,"day":"Saturday","name":"Chinese New Year","type":"Observance"},{"month":"January","date":26,"day":"Sunday","name":"Republic Day","type":"Gazetted"},{"month":"January","date":30,"day":"Thursday","name":"Vasant Panchami","type":"Restricted"},{"month":"February","date":9,"day":"Sunday","name":"Guru Ravidas Jayanti","type":"Restricted"},{"month":"February","date":14,"day":"Friday","name":"Valentine's Day","type":"Observance"},{"month":"February","date":18,"day":"Tuesday","name":"Maharishi Dayanand Saraswati Jayanti","type":"Restricted"},{"month":"February","date":19,"day":"Wednesday","name":"Shivaji Jayanti","type":"Restricted"},{"month":"February","date":21,"day":"Friday","name":"Maha Shivaratri/Shivaratri","type":"Gazetted"},{"month":"March","date":9,"day":"Monday","name":"Holika Dahana","type":"Restricted"},{"month":"March","date":9,"day":"Monday","name":"Hazarat Ali's Birthday","type":"Restricted"},{"month":"March","date":10,"day":"Tuesday","name":"Holi","type":"Gazetted"},{"month":"March","date":20,"day":"Friday","name":"March Equinox","type":"Season"},{"month":"March","date":25,"day":"Wednesday","name":"Chaitra Sukhladi","type":"Restricted"},{"month":"April","date":2,"day":"Thursday","name":"Rama Navami","type":"Gazetted"},{"month":"April","date":6,"day":"Monday","name":"Mahavir Jayanti","type":"Gazetted"},{"month":"April","date":9,"day":"Thursday","name":"First day of Passover","type":"Observance"},{"month":"April","date":9,"day":"Thursday","name":"Maundy Thursday","type":"Observance,"},{"month":"April","date":10,"day":"Friday","name":"Good Friday","type":"Gazetted"},{"month":"April","date":12,"day":"Sunday","name":"Easter Day","type":"Restricted"},{"month":"April","date":13,"day":"Monday","name":"Vaisakhi","type":"Restricted"},{"month":"April","date":14,"day":"Tuesday","name":"Mesadi/Vaisakhadi","type":"Restricted"},{"month":"April","date":14,"day":"Tuesday","name":"Ambedkar Jayanti","type":"Central"},{"month":"May","date":1,"day":"Friday","name":"May Day","type":"Observance"},{"month":"May","date":7,"day":"Thursday","name":"Buddha Purnima/Vesak","type":"Gazetted"},{"month":"May","date":7,"day":"Thursday","name":"Birthday of Ravindranath","type":"Restricted"},{"month":"May","date":10,"day":"Sunday","name":"Mother's Day","type":"Observance"},{"month":"May","date":22,"day":"Friday","name":"Jamat Ul-Vida","type":"Restricted"},{"month":"May","date":25,"day":"Monday","name":"Ramzan Id/Eid-ul-Fitar","type":"Gazetted"},{"month":"May","date":25,"day":"Monday","name":"Ramzan Id/Eid-ul-Fitar","type":"Muslim,"},{"month":"June","date":21,"day":"Sunday","name":"June Solstice","type":"Season"},{"month":"June","date":21,"day":"Sunday","name":"Father's Day","type":"Observance"},{"month":"June","date":23,"day":"Tuesday","name":"Rath Yatra","type":"Restricted"},{"month":"July","date":5,"day":"Sunday","name":"Guru Purnima","type":"Observance"},{"month":"July","date":31,"day":"Friday","name":"Bakr Id/Eid ul-Adha","type":"Gazetted"},{"month":"August","date":2,"day":"Sunday","name":"Friendship Day","type":"Observance"},{"month":"August","date":3,"day":"Monday","name":"Raksha Bandhan (Rakhi)","type":"Restricted"},{"month":"August","date":11,"day":"Tuesday","name":"Janmashtami (Smarta)","type":"Restricted"},{"month":"August","date":12,"day":"Wednesday","name":"Janmashtami","type":"Gazetted"},{"month":"August","date":15,"day":"Saturday","name":"Independence Day","type":"Gazetted"},{"month":"August","date":16,"day":"Sunday","name":"Parsi New Year","type":"Restricted"},{"month":"August","date":22,"day":"Saturday","name":"Gan
+08-04 02:04:23.219  7339 10153 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:04:28.093  7339 10266 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:04:28.094  7339 10266 D CustomInterceptor: HEADER REQUEST
+08-04 02:04:28.094  7339 10266 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:04:28.094  7339 10266 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:04:28.094  7339 10266 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '37', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=37,misses=12,hitRate=75%]', 
+08-04 02:04:28.094  7339 10266 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:04:28.094  7339 10266 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:04:28.094  7339 10266 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:04:28.095  7339 10266 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:04:33.851  7339 10377 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-notifications
+08-04 02:04:33.851  7339 10377 D CustomInterceptor: HEADER REQUEST
+08-04 02:04:33.852  7339 10377 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:04:33.852  7339 10377 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:04:33.852  7339 10377 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '38', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=38,misses=12,hitRate=76%]', 
+08-04 02:04:33.852  7339 10377 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-notifications
+08-04 02:04:33.852  7339 10377 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-notifications, sending it back
+08-04 02:04:33.852  7339 10377 D CustomInterceptor: CONTENT []
+08-04 02:04:33.852  7339 10377 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:04:33.853  7339 10378 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-notifications
+08-04 02:04:33.854  7339 10378 D CustomInterceptor: HEADER REQUEST
+08-04 02:04:33.854  7339 10378 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:04:33.854  7339 10378 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:04:33.854  7339 10378 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '39', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=39,misses=12,hitRate=76%]', 
+08-04 02:04:33.854  7339 10378 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-notifications
+08-04 02:04:33.854  7339 10378 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-notifications, sending it back
+08-04 02:04:33.854  7339 10378 D CustomInterceptor: CONTENT []
+08-04 02:04:33.854  7339 10378 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:04:38.799  7339 10467 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:04:38.802  7339 10467 D CustomInterceptor: HEADER REQUEST
+08-04 02:04:38.802  7339 10467 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:04:38.802  7339 10467 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:04:38.802  7339 10467 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '40', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=40,misses=12,hitRate=76%]', 
+08-04 02:04:38.802  7339 10467 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:04:38.802  7339 10467 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:04:38.803  7339 10467 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:04:38.803  7339 10467 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-04 02:04:41.545  7339 10533 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:04:41.546  7339 10533 D CustomInterceptor: HEADER REQUEST
+08-04 02:04:41.546  7339 10533 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-04 02:04:41.546  7339 10533 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-04 02:04:41.546  7339 10533 D CustomInterceptor: CACHED STATS: size = '10', maxSize = '100', hitCount = '41', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=41,misses=12,hitRate=77%]', 
+08-04 02:04:41.546  7339 10533 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-04 02:04:41.546  7339 10533 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-04 02:04:41.546  7339 10533 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-04 02:04:41.546  7339 10533 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
