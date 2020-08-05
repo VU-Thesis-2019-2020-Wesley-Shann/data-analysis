@@ -1,0 +1,878 @@
+--------- beginning of main
+--------- beginning of system
+08-05 00:59:50.365 12100 17830 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true
+08-05 00:59:50.368 12100 17830 D CustomInterceptor: HEADER REQUEST
+08-05 00:59:50.368 12100 17830 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 00:59:50.368 12100 17830 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Thu, 04 Aug 2022 22:31:07 GMT; Max-Age=63072000; Path=/
+08-05 00:59:50.368 12100 17830 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-05 00:59:50.368 12100 17830 D CustomInterceptor: CACHED STATS: size = '0', maxSize = '100', hitCount = '0', createCount = '0', putCount = '0', evictionCount = '0', missCount = '0', toString = 'LruCache[maxSize=100,hits=0,misses=0,hitRate=0%]', 
+08-05 00:59:50.368 12100 17830 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 00:59:50.951 12100 17830 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 00:59:50.970 12100 17830 D CustomInterceptor: HEADER RESPONSE
+08-05 00:59:50.970 12100 17830 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 00:59:50.970 12100 17830 D CustomInterceptor: Connection close
+08-05 00:59:50.970 12100 17830 D CustomInterceptor: Content-Type application/json
+08-05 00:59:50.970 12100 17830 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:46 GMT
+08-05 00:59:50.970 12100 17830 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:04:50 GMT+00:00
+08-05 00:59:50.970 12100 17830 D CustomInterceptor: Server gunicorn/19.7.0
+08-05 00:59:50.970 12100 17830 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 00:59:50.970 12100 17830 D CustomInterceptor: Vary Cookie, Accept-Encoding
+08-05 00:59:50.970 12100 17830 D CustomInterceptor: X-gunicorn-server app12
+08-05 00:59:50.970 12100 17830 D CustomInterceptor: X-Homer Save me, Jeebus.
+08-05 00:59:50.971 12100 17830 D CustomInterceptor: CACHEABLE true
+08-05 00:59:50.971 12100 17830 D CustomInterceptor: REQ https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true
+08-05 00:59:50.971 12100 17830 D CustomInterceptor: REQ_SERV_BY net
+08-05 00:59:50.971 12100 17830 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all&global_feed=true
+08-05 00:59:50.974 12100 17830 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 00:59:51.090 12100 17867 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/icons.newsblur.com/6882243.png
+08-05 00:59:51.091 12100 17867 D CustomInterceptor: HEADER REQUEST
+08-05 00:59:51.091 12100 17867 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 00:59:51.091 12100 17867 D CustomInterceptor: CACHED STATS: size = '1', maxSize = '100', hitCount = '1', createCount = '0', putCount = '1', evictionCount = '0', missCount = '1', toString = 'LruCache[maxSize=100,hits=1,misses=1,hitRate=50%]', 
+08-05 00:59:51.091 12100 17867 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 00:59:51.099 12100 17869 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/icons.newsblur.com/18178.png
+08-05 00:59:51.100 12100 17869 D CustomInterceptor: HEADER REQUEST
+08-05 00:59:51.100 12100 17869 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 00:59:51.100 12100 17869 D CustomInterceptor: CACHED STATS: size = '1', maxSize = '100', hitCount = '1', createCount = '0', putCount = '1', evictionCount = '0', missCount = '2', toString = 'LruCache[maxSize=100,hits=1,misses=2,hitRate=33%]', 
+08-05 00:59:51.100 12100 17869 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 00:59:51.109 12100 17871 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/icons.newsblur.com/5762506.png
+08-05 00:59:51.110 12100 17871 D CustomInterceptor: HEADER REQUEST
+08-05 00:59:51.110 12100 17871 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 00:59:51.110 12100 17871 D CustomInterceptor: CACHED STATS: size = '1', maxSize = '100', hitCount = '1', createCount = '0', putCount = '1', evictionCount = '0', missCount = '3', toString = 'LruCache[maxSize=100,hits=1,misses=3,hitRate=25%]', 
+08-05 00:59:51.110 12100 17871 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 00:59:51.118 12100 17873 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/icons.newsblur.com/5762506.png
+08-05 00:59:51.119 12100 17873 D CustomInterceptor: HEADER REQUEST
+08-05 00:59:51.119 12100 17873 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 00:59:51.119 12100 17873 D CustomInterceptor: CACHED STATS: size = '1', maxSize = '100', hitCount = '1', createCount = '0', putCount = '1', evictionCount = '0', missCount = '4', toString = 'LruCache[maxSize=100,hits=1,misses=4,hitRate=20%]', 
+08-05 00:59:51.119 12100 17873 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 00:59:51.119 12100 17868 D CustomInterceptor: NETWORK-PROVIDER http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-05 00:59:51.119 12100 17868 D CustomInterceptor: HEADER REQUEST
+08-05 00:59:51.119 12100 17868 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 00:59:51.119 12100 17868 D CustomInterceptor: CACHED STATS: size = '1', maxSize = '100', hitCount = '1', createCount = '0', putCount = '1', evictionCount = '0', missCount = '5', toString = 'LruCache[maxSize=100,hits=1,misses=5,hitRate=16%]', 
+08-05 00:59:51.119 12100 17868 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 00:59:51.127 12100 17877 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/icons.newsblur.com/7702341.png
+08-05 00:59:51.128 12100 17877 D CustomInterceptor: HEADER REQUEST
+08-05 00:59:51.128 12100 17877 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 00:59:51.128 12100 17877 D CustomInterceptor: CACHED STATS: size = '1', maxSize = '100', hitCount = '1', createCount = '0', putCount = '1', evictionCount = '0', missCount = '6', toString = 'LruCache[maxSize=100,hits=1,misses=6,hitRate=14%]', 
+08-05 00:59:51.128 12100 17877 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 00:59:51.129 12100 17870 D CustomInterceptor: NETWORK-PROVIDER https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png
+08-05 00:59:51.130 12100 17870 D CustomInterceptor: HEADER REQUEST
+08-05 00:59:51.130 12100 17870 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 00:59:51.130 12100 17870 D CustomInterceptor: CACHED STATS: size = '1', maxSize = '100', hitCount = '1', createCount = '0', putCount = '1', evictionCount = '0', missCount = '7', toString = 'LruCache[maxSize=100,hits=1,misses=7,hitRate=12%]', 
+08-05 00:59:51.130 12100 17870 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 00:59:51.136 12100 17880 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/icons.newsblur.com/6326827.png
+08-05 00:59:51.137 12100 17880 D CustomInterceptor: HEADER REQUEST
+08-05 00:59:51.137 12100 17880 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 00:59:51.137 12100 17880 D CustomInterceptor: CACHED STATS: size = '1', maxSize = '100', hitCount = '1', createCount = '0', putCount = '1', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=1,misses=8,hitRate=11%]', 
+08-05 00:59:51.137 12100 17880 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 00:59:51.138 12100 17872 D CustomInterceptor: NETWORK-PROVIDER https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg
+08-05 00:59:51.139 12100 17872 D CustomInterceptor: HEADER REQUEST
+08-05 00:59:51.139 12100 17872 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 00:59:51.139 12100 17872 D CustomInterceptor: CACHED STATS: size = '1', maxSize = '100', hitCount = '1', createCount = '0', putCount = '1', evictionCount = '0', missCount = '9', toString = 'LruCache[maxSize=100,hits=1,misses=9,hitRate=10%]', 
+08-05 00:59:51.139 12100 17872 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 00:59:51.147 12100 17875 D CustomInterceptor: NETWORK-PROVIDER https://i.cbc.ca/1.5665164.1595891792!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_460/ont-windsor-hum-20200727.jpg
+08-05 00:59:51.148 12100 17875 D CustomInterceptor: HEADER REQUEST
+08-05 00:59:51.148 12100 17875 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 00:59:51.148 12100 17875 D CustomInterceptor: CACHED STATS: size = '1', maxSize = '100', hitCount = '1', createCount = '0', putCount = '1', evictionCount = '0', missCount = '10', toString = 'LruCache[maxSize=100,hits=1,misses=10,hitRate=9%]', 
+08-05 00:59:51.148 12100 17875 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 00:59:51.156 12100 17879 D CustomInterceptor: NETWORK-PROVIDER https://pbs.twimg.com/profile_images/847818629840228354/VXyQHfn0_normal.jpg
+08-05 00:59:51.156 12100 17879 D CustomInterceptor: HEADER REQUEST
+08-05 00:59:51.156 12100 17879 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 00:59:51.156 12100 17879 D CustomInterceptor: CACHED STATS: size = '1', maxSize = '100', hitCount = '1', createCount = '0', putCount = '1', evictionCount = '0', missCount = '11', toString = 'LruCache[maxSize=100,hits=1,misses=11,hitRate=8%]', 
+08-05 00:59:51.157 12100 17879 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: HEADER RESPONSE
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: Cache-Control max-age=3600
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: Content-Length 43
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: Content-Type image/gif
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:47 GMT
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:59:47 GMT
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: Server GSE
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: X-Content-Type-Options nosniff
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: X-XSS-Protection 1; mode=block
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: CACHEABLE true
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: REQ http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: REQ_SERV_BY net
+08-05 00:59:51.240 12100 17868 D CustomInterceptor: PREFLIB Adding response to lrucache - http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-05 00:59:51.241 12100 17868 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: HEADER RESPONSE
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: accept-ranges bytes
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: access-control-allow-origin *
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: access-control-expose-headers Content-Length
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: age 343659
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: cache-control max-age=604800, must-revalidate
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: content-length 1883
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: content-type image/jpeg
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: date Tue, 04 Aug 2020 22:59:47 GMT
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: last-modified Fri, 07 Apr 2017 19:39:12 GMT
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: server ECS (amb/6B75)
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: strict-transport-security max-age=631138519
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: surrogate-key profile_images profile_images/bucket/7 profile_images/847818629840228354
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: x-cache HIT
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: x-connection-hash 5bc2acd143b42e333e34589eb452e880
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: x-content-type-options nosniff
+08-05 00:59:51.572 12100 17879 D CustomInterceptor: x-response-time 123
+08-05 00:59:51.573 12100 17879 D CustomInterceptor: CACHEABLE true
+08-05 00:59:51.573 12100 17879 D CustomInterceptor: REQ https://pbs.twimg.com/profile_images/847818629840228354/VXyQHfn0_normal.jpg
+08-05 00:59:51.573 12100 17879 D CustomInterceptor: REQ_SERV_BY net
+08-05 00:59:51.573 12100 17879 D CustomInterceptor: PREFLIB Adding response to lrucache - https://pbs.twimg.com/profile_images/847818629840228354/VXyQHfn0_normal.jpg
+08-05 00:59:51.589 12100 17879 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 00:59:51.593 12100 17875 D CustomInterceptor: HEADER RESPONSE
+08-05 00:59:51.593 12100 17875 D CustomInterceptor: cache-control no-transform, max-age=43200
+08-05 00:59:51.593 12100 17875 D CustomInterceptor: content-length 24098
+08-05 00:59:51.593 12100 17875 D CustomInterceptor: content-type image/jpeg
+08-05 00:59:51.593 12100 17875 D CustomInterceptor: date Tue, 04 Aug 2020 22:59:47 GMT
+08-05 00:59:51.593 12100 17875 D CustomInterceptor: expires Wed, 05 Aug 2020 10:59:47 GMT
+08-05 00:59:51.593 12100 17875 D CustomInterceptor: last-modified Tue, 04 Aug 2020 04:31:46 GMT
+08-05 00:59:51.593 12100 17875 D CustomInterceptor: server Akamai Image Manager
+08-05 00:59:51.593 12100 17875 D CustomInterceptor: CACHEABLE true
+08-05 00:59:51.593 12100 17875 D CustomInterceptor: REQ https://i.cbc.ca/1.5665164.1595891792!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_460/ont-windsor-hum-20200727.jpg
+08-05 00:59:51.593 12100 17875 D CustomInterceptor: REQ_SERV_BY net
+08-05 00:59:51.593 12100 17875 D CustomInterceptor: PREFLIB Adding response to lrucache - https://i.cbc.ca/1.5665164.1595891792!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_460/ont-windsor-hum-20200727.jpg
+08-05 00:59:51.611 12100 17875 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 00:59:51.614 12100 17870 D CustomInterceptor: HEADER RESPONSE
+08-05 00:59:51.614 12100 17870 D CustomInterceptor: accept-ranges bytes
+08-05 00:59:51.614 12100 17870 D CustomInterceptor: access-control-allow-headers X-Requested-With
+08-05 00:59:51.614 12100 17870 D CustomInterceptor: access-control-allow-origin *
+08-05 00:59:51.614 12100 17870 D CustomInterceptor: cache-control public, max-age=31557600
+08-05 00:59:51.614 12100 17870 D CustomInterceptor: content-length 79351
+08-05 00:59:51.614 12100 17870 D CustomInterceptor: content-type image/png
+08-05 00:59:51.614 12100 17870 D CustomInterceptor: date Tue, 04 Aug 2020 22:59:47 GMT
+08-05 00:59:51.614 12100 17870 D CustomInterceptor: etag "b17a734fb67cc334f872374df18d4823"
+08-05 00:59:51.614 12100 17870 D CustomInterceptor: last-modified Tue, 04 Aug 2020 16:22:59 GMT
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: server nginx
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: server-timing akam;dur=60;start=2020-07-28T11:13:12.502Z;total=1330;desc=miss,rtt;dur=0
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: status 200 OK
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: timing-allow-origin *
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: vary User-Agent
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: via 1.1 varnish
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: x-cache HIT, HIT
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: x-cache-hits 1, 1
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: x-cld-vary User-Agent
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: x-request-id 118e90281c8e5540ce13bb2507dc55c0
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: x-served-by cache-bwi5145-BWI, cache-ams21045-AMS
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: x-timer S1595958603.567940,VS0,VE1
+08-05 00:59:51.615 12100 17870 D CustomInterceptor: CACHEABLE true
+08-05 00:59:51.616 12100 17870 D CustomInterceptor: REQ https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png
+08-05 00:59:51.616 12100 17870 D CustomInterceptor: REQ_SERV_BY net
+08-05 00:59:51.616 12100 17870 D CustomInterceptor: PREFLIB Adding response to lrucache - https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-90532920-this-chart-shows-how-effective-masks-can-be.png
+08-05 00:59:51.657 12100 17872 D CustomInterceptor: HEADER RESPONSE
+08-05 00:59:51.657 12100 17872 D CustomInterceptor: accept-ranges bytes
+08-05 00:59:51.657 12100 17872 D CustomInterceptor: access-control-allow-headers X-Requested-With
+08-05 00:59:51.657 12100 17872 D CustomInterceptor: access-control-allow-origin *
+08-05 00:59:51.657 12100 17872 D CustomInterceptor: cache-control public, max-age=31557600
+08-05 00:59:51.657 12100 17872 D CustomInterceptor: content-length 56376
+08-05 00:59:51.657 12100 17872 D CustomInterceptor: content-type image/jpeg
+08-05 00:59:51.657 12100 17872 D CustomInterceptor: date Tue, 04 Aug 2020 22:59:47 GMT
+08-05 00:59:51.657 12100 17872 D CustomInterceptor: etag "437a696a349f51922bbe425cbbf1673b"
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: last-modified Tue, 04 Aug 2020 14:21:54 GMT
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: server nginx
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: server-timing akam;dur=33;start=2020-07-28T09:12:08.228Z;total=491;desc=miss,rtt;dur=0
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: status 200 OK
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: timing-allow-origin *
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: vary User-Agent
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: via 1.1 varnish
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: x-cache HIT, HIT
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: x-cache-hits 1, 1
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: x-cld-vary User-Agent
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: x-request-id 6b3617c9242430f089caa1d322b343a6
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: x-served-by cache-bwi5143-BWI, cache-ams21045-AMS
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: x-timer S1595958603.517924,VS0,VE1
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: CACHEABLE true
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: REQ https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: REQ_SERV_BY net
+08-05 00:59:51.658 12100 17872 D CustomInterceptor: PREFLIB Adding response to lrucache - https://images.fastcompany.net/image/upload/w_1280,q_auto,f_auto,fl_lossy/wp-cms/uploads/2020/07/p-1-quit-after-covid.jpg
+08-05 00:59:51.659 12100 17870 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 00:59:51.678 12100 17869 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 00:59:51.678 12100 17869 D CustomInterceptor: HEADER RESPONSE
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: Accept-Ranges bytes
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: Content-Length 243
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: Content-Type image/png
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:48 GMT
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: ETag "ff3726165bbd11816de674a75693fba7"
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:04:51 GMT+00:00
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: Last-Modified Mon, 03 Aug 2020 23:13:44 GMT
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: Server AmazonS3
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: x-amz-id-2 wne6NNWwn08ntKiKKy9kUukC8PyYkR/ZQjdI2daB9u3xPvfEXggbnrzXM/bpIcjfZt7xqxMiHNE=
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: x-amz-request-id 8C96FD80B0A0B0DD
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: CACHEABLE true
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: REQ https://s3.amazonaws.com/icons.newsblur.com/18178.png
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: REQ_SERV_BY net
+08-05 00:59:51.679 12100 17869 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/icons.newsblur.com/18178.png
+08-05 00:59:51.711 12100 17869 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 00:59:51.712 12100 17872 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 00:59:51.814 12100 17871 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 00:59:51.815 12100 17871 D CustomInterceptor: HEADER RESPONSE
+08-05 00:59:51.815 12100 17871 D CustomInterceptor: Accept-Ranges bytes
+08-05 00:59:51.815 12100 17871 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 00:59:51.815 12100 17871 D CustomInterceptor: Content-Length 477
+08-05 00:59:51.815 12100 17871 D CustomInterceptor: Content-Type image/png
+08-05 00:59:51.815 12100 17871 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:48 GMT
+08-05 00:59:51.815 12100 17871 D CustomInterceptor: ETag "c9bf1f07378831e51f45ddc262f16afc"
+08-05 00:59:51.815 12100 17871 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:04:51 GMT+00:00
+08-05 00:59:51.815 12100 17871 D CustomInterceptor: Last-Modified Tue, 04 Aug 2020 22:36:46 GMT
+08-05 00:59:51.815 12100 17871 D CustomInterceptor: Server AmazonS3
+08-05 00:59:51.815 12100 17871 D CustomInterceptor: x-amz-id-2 94Rwk5ojWxCqHXBHdbTnIfMwWvr8BoPO9FIAVluZq4vB828m+Cmx0ha8bhtO/NPhl223fsMKZj0=
+08-05 00:59:51.815 12100 17871 D CustomInterceptor: x-amz-request-id 0EA63B351126C2AD
+08-05 00:59:51.816 12100 17871 D CustomInterceptor: CACHEABLE true
+08-05 00:59:51.816 12100 17871 D CustomInterceptor: REQ https://s3.amazonaws.com/icons.newsblur.com/5762506.png
+08-05 00:59:51.816 12100 17871 D CustomInterceptor: REQ_SERV_BY net
+08-05 00:59:51.816 12100 17871 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/icons.newsblur.com/5762506.png
+08-05 00:59:51.828 12100 17867 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 00:59:51.829 12100 17867 D CustomInterceptor: HEADER RESPONSE
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: Accept-Ranges bytes
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: Content-Length 145
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: Content-Type image/png
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:48 GMT
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: ETag "b48046b4e0d289b5a850262f03eb2d2d"
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:04:51 GMT+00:00
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: Last-Modified Mon, 03 Aug 2020 19:06:34 GMT
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: Server AmazonS3
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: x-amz-id-2 nDiDQANtDNVqEPucOfLtnn1Sx7gr+QY+8aAbQ7XZXU86Z7PKjjK674CpOsLT5+9Veg1xKpYxLtE=
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: x-amz-request-id 6Z1W4S4Z6X7N1J4P
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: CACHEABLE true
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: REQ https://s3.amazonaws.com/icons.newsblur.com/6882243.png
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: REQ_SERV_BY net
+08-05 00:59:51.830 12100 17867 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/icons.newsblur.com/6882243.png
+08-05 00:59:51.837 12100 17873 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 00:59:51.838 12100 17873 D CustomInterceptor: HEADER RESPONSE
+08-05 00:59:51.838 12100 17873 D CustomInterceptor: Accept-Ranges bytes
+08-05 00:59:51.838 12100 17873 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 00:59:51.838 12100 17873 D CustomInterceptor: Content-Length 477
+08-05 00:59:51.838 12100 17873 D CustomInterceptor: Content-Type image/png
+08-05 00:59:51.838 12100 17873 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:48 GMT
+08-05 00:59:51.838 12100 17873 D CustomInterceptor: ETag "c9bf1f07378831e51f45ddc262f16afc"
+08-05 00:59:51.839 12100 17873 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:04:51 GMT+00:00
+08-05 00:59:51.839 12100 17873 D CustomInterceptor: Last-Modified Tue, 04 Aug 2020 22:36:46 GMT
+08-05 00:59:51.839 12100 17873 D CustomInterceptor: Server AmazonS3
+08-05 00:59:51.839 12100 17873 D CustomInterceptor: x-amz-id-2 94Rwk5ojWxCqHXBHdbTnIfMwWvr8BoPO9FIAVluZq4vB828m+Cmx0ha8bhtO/NPhl223fsMKZj0=
+08-05 00:59:51.839 12100 17873 D CustomInterceptor: x-amz-request-id 0EA63B351126C2AD
+08-05 00:59:51.839 12100 17873 D CustomInterceptor: CACHEABLE true
+08-05 00:59:51.839 12100 17873 D CustomInterceptor: REQ https://s3.amazonaws.com/icons.newsblur.com/5762506.png
+08-05 00:59:51.839 12100 17873 D CustomInterceptor: REQ_SERV_BY net
+08-05 00:59:51.839 12100 17873 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/icons.newsblur.com/5762506.png
+08-05 00:59:51.850 12100 17871 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 00:59:51.855 12100 17880 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: HEADER RESPONSE
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: Accept-Ranges bytes
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: Content-Length 796
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: Content-Type image/png
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:48 GMT
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: ETag "24c57573e7ba93e56f4d2ba16c9d2b26"
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:04:51 GMT+00:00
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: Last-Modified Tue, 04 Aug 2020 05:56:15 GMT
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: Server AmazonS3
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: x-amz-id-2 9DRaJufWP45fA05qYB5LACqA8MYn9maTIhhgSuZGftrS8Dm+YozVs6LXwJVzSwPwFjOpSnNNFYU=
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: x-amz-request-id A328D1BEBD912F67
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: CACHEABLE true
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: REQ https://s3.amazonaws.com/icons.newsblur.com/6326827.png
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: REQ_SERV_BY net
+08-05 00:59:51.856 12100 17880 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/icons.newsblur.com/6326827.png
+08-05 00:59:51.858 12100 17877 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 00:59:51.859 12100 17877 D CustomInterceptor: HEADER RESPONSE
+08-05 00:59:51.859 12100 17877 D CustomInterceptor: Accept-Ranges bytes
+08-05 00:59:51.859 12100 17877 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 00:59:51.859 12100 17877 D CustomInterceptor: Content-Length 2228
+08-05 00:59:51.859 12100 17877 D CustomInterceptor: Content-Type image/png
+08-05 00:59:51.859 12100 17877 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:48 GMT
+08-05 00:59:51.859 12100 17877 D CustomInterceptor: ETag "a38dcdfa1e0df848dd1cd4b5b7016264"
+08-05 00:59:51.859 12100 17877 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:04:51 GMT+00:00
+08-05 00:59:51.859 12100 17877 D CustomInterceptor: Last-Modified Tue, 04 Aug 2020 15:39:42 GMT
+08-05 00:59:51.859 12100 17877 D CustomInterceptor: Server AmazonS3
+08-05 00:59:51.859 12100 17877 D CustomInterceptor: x-amz-id-2 KU2jVmbBRDjtzEFOCZYLApZrrt76ls+oWor4R3+PgGUdiuIlOB95bqFWENJqLgUDVqYP4hcCZRY=
+08-05 00:59:51.859 12100 17877 D CustomInterceptor: x-amz-request-id C54E9A3D4963B8E0
+08-05 00:59:51.860 12100 17877 D CustomInterceptor: CACHEABLE true
+08-05 00:59:51.860 12100 17877 D CustomInterceptor: REQ https://s3.amazonaws.com/icons.newsblur.com/7702341.png
+08-05 00:59:51.860 12100 17877 D CustomInterceptor: REQ_SERV_BY net
+08-05 00:59:51.860 12100 17877 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/icons.newsblur.com/7702341.png
+08-05 00:59:51.860 12100 17867 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 00:59:51.862 12100 17877 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 00:59:51.873 12100 17873 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 00:59:51.882 12100 17880 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:01.178 12100 17871 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/avatars.newsblur.com/avatars/33448/thumbnail_profile_1420383332.gif
+08-05 01:00:01.180 12100 17871 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:01.180 12100 17871 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:01.181 12100 17871 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '12', createCount = '0', putCount = '12', evictionCount = '0', missCount = '12', toString = 'LruCache[maxSize=100,hits=12,misses=12,hitRate=50%]', 
+08-05 01:00:01.181 12100 17871 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:01.230 12100 17877 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/media/img/reader/default_profile_photo.png
+08-05 01:00:01.230 12100 17880 D CustomInterceptor: NETWORK-PROVIDER https://pbs.twimg.com/profile_images/1186729813748248576/D6FFru_U_normal.jpg
+08-05 01:00:01.230 12100 17873 D CustomInterceptor: NETWORK-PROVIDER https://pbs.twimg.com/profile_images/1186729813748248576/D6FFru_U_normal.jpg
+08-05 01:00:01.231 12100 17877 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:01.231 12100 17877 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:01.231 12100 17877 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '12', createCount = '0', putCount = '12', evictionCount = '0', missCount = '13', toString = 'LruCache[maxSize=100,hits=12,misses=13,hitRate=48%]', 
+08-05 01:00:01.231 12100 17877 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:01.231 12100 17880 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:01.231 12100 17880 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:01.232 12100 17880 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '12', createCount = '0', putCount = '12', evictionCount = '0', missCount = '14', toString = 'LruCache[maxSize=100,hits=12,misses=14,hitRate=46%]', 
+08-05 01:00:01.232 12100 17880 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:01.232 12100 17873 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:01.232 12100 17873 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:01.232 12100 17873 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '12', createCount = '0', putCount = '12', evictionCount = '0', missCount = '15', toString = 'LruCache[maxSize=100,hits=12,misses=15,hitRate=44%]', 
+08-05 01:00:01.232 12100 17873 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:01.236 12100 17869 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/avatars.newsblur.com/avatars/33448/thumbnail_profile_1420383332.gif
+08-05 01:00:01.240 12100 17869 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:01.240 12100 17869 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:01.240 12100 17869 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '12', createCount = '0', putCount = '12', evictionCount = '0', missCount = '16', toString = 'LruCache[maxSize=100,hits=12,misses=16,hitRate=42%]', 
+08-05 01:00:01.240 12100 17869 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:01.265 12100 17867 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/media/img/reader/default_profile_photo.png
+08-05 01:00:01.265 12100 17867 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:01.265 12100 17867 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:01.265 12100 17867 D CustomInterceptor: CACHED STATS: size = '11', maxSize = '100', hitCount = '12', createCount = '0', putCount = '12', evictionCount = '0', missCount = '17', toString = 'LruCache[maxSize=100,hits=12,misses=17,hitRate=41%]', 
+08-05 01:00:01.265 12100 17867 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:01.311 12100 17871 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:00:01.315 12100 17871 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:01.315 12100 17871 D CustomInterceptor: Accept-Ranges bytes
+08-05 01:00:01.315 12100 17871 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:00:01.316 12100 17871 D CustomInterceptor: Content-Length 4737
+08-05 01:00:01.316 12100 17871 D CustomInterceptor: Content-Type image/gif
+08-05 01:00:01.316 12100 17871 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:57 GMT
+08-05 01:00:01.316 12100 17871 D CustomInterceptor: ETag "281f447661f4b68e23ba5d56850d3409"
+08-05 01:00:01.316 12100 17871 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:05:01 GMT+00:00
+08-05 01:00:01.316 12100 17871 D CustomInterceptor: Last-Modified Sun, 11 Jan 2015 20:05:22 GMT
+08-05 01:00:01.316 12100 17871 D CustomInterceptor: Server AmazonS3
+08-05 01:00:01.316 12100 17871 D CustomInterceptor: x-amz-id-2 2MkjuqXhZyt1Y4C/HNE98o/VIQeOVxPPKuIYxYiVJYQIcIP+HPKDQmqks5iOUyeZEGb5OJBhpJY=
+08-05 01:00:01.316 12100 17871 D CustomInterceptor: x-amz-request-id 54FD84394F10DEE1
+08-05 01:00:01.317 12100 17871 D CustomInterceptor: CACHEABLE true
+08-05 01:00:01.317 12100 17871 D CustomInterceptor: REQ https://s3.amazonaws.com/avatars.newsblur.com/avatars/33448/thumbnail_profile_1420383332.gif
+08-05 01:00:01.317 12100 17871 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:01.317 12100 17871 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/avatars.newsblur.com/avatars/33448/thumbnail_profile_1420383332.gif
+08-05 01:00:01.319 12100 17871 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:01.374 12100 17869 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:00:01.375 12100 17869 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:01.375 12100 17869 D CustomInterceptor: Accept-Ranges bytes
+08-05 01:00:01.376 12100 17869 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:00:01.376 12100 17869 D CustomInterceptor: Content-Length 4737
+08-05 01:00:01.376 12100 17869 D CustomInterceptor: Content-Type image/gif
+08-05 01:00:01.376 12100 17869 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:57 GMT
+08-05 01:00:01.376 12100 17869 D CustomInterceptor: ETag "281f447661f4b68e23ba5d56850d3409"
+08-05 01:00:01.376 12100 17869 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:05:01 GMT+00:00
+08-05 01:00:01.376 12100 17869 D CustomInterceptor: Last-Modified Sun, 11 Jan 2015 20:05:22 GMT
+08-05 01:00:01.376 12100 17869 D CustomInterceptor: Server AmazonS3
+08-05 01:00:01.376 12100 17869 D CustomInterceptor: x-amz-id-2 2MkjuqXhZyt1Y4C/HNE98o/VIQeOVxPPKuIYxYiVJYQIcIP+HPKDQmqks5iOUyeZEGb5OJBhpJY=
+08-05 01:00:01.376 12100 17869 D CustomInterceptor: x-amz-request-id 54FD84394F10DEE1
+08-05 01:00:01.376 12100 17869 D CustomInterceptor: CACHEABLE true
+08-05 01:00:01.377 12100 17869 D CustomInterceptor: REQ https://s3.amazonaws.com/avatars.newsblur.com/avatars/33448/thumbnail_profile_1420383332.gif
+08-05 01:00:01.377 12100 17869 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:01.377 12100 17869 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/avatars.newsblur.com/avatars/33448/thumbnail_profile_1420383332.gif
+08-05 01:00:01.379 12100 17871 D CustomInterceptor: NETWORK-PROVIDER https://pbs.twimg.com/profile_images/1186729813748248576/D6FFru_U_normal.jpg
+08-05 01:00:01.380 12100 17869 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:01.380 12100 17871 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:01.380 12100 17871 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:01.380 12100 17871 D CustomInterceptor: CACHED STATS: size = '12', maxSize = '100', hitCount = '14', createCount = '0', putCount = '14', evictionCount = '0', missCount = '18', toString = 'LruCache[maxSize=100,hits=14,misses=18,hitRate=43%]', 
+08-05 01:00:01.380 12100 17871 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:01.391 12100 17869 D CustomInterceptor: NETWORK-PROVIDER https://pbs.twimg.com/profile_images/1186729813748248576/D6FFru_U_normal.jpg
+08-05 01:00:01.392 12100 17869 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:01.392 12100 17869 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:01.392 12100 17869 D CustomInterceptor: CACHED STATS: size = '12', maxSize = '100', hitCount = '14', createCount = '0', putCount = '14', evictionCount = '0', missCount = '19', toString = 'LruCache[maxSize=100,hits=14,misses=19,hitRate=42%]', 
+08-05 01:00:01.392 12100 17869 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:01.405 12100 18242 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-05 01:00:01.406 12100 18242 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:01.406 12100 18242 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:01.406 12100 18242 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Thu, 04 Aug 2022 22:31:07 GMT; Max-Age=63072000; Path=/
+08-05 01:00:01.407 12100 18242 D CustomInterceptor: CACHED STATS: size = '12', maxSize = '100', hitCount = '14', createCount = '0', putCount = '14', evictionCount = '0', missCount = '20', toString = 'LruCache[maxSize=100,hits=14,misses=20,hitRate=41%]', 
+08-05 01:00:01.407 12100 18242 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-05 01:00:01.640 12100 17880 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:01.640 12100 17880 D CustomInterceptor: accept-ranges bytes
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: access-control-allow-origin *
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: access-control-expose-headers Content-Length
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: age 340652
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: cache-control max-age=604800, must-revalidate
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: content-length 2111
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: content-type image/jpeg
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: date Tue, 04 Aug 2020 22:59:57 GMT
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: last-modified Wed, 30 Oct 2019 00:51:19 GMT
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: server ECS (amb/6B77)
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: strict-transport-security max-age=631138519
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: surrogate-key profile_images profile_images/bucket/5 profile_images/1186729813748248576
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: x-cache HIT
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: x-connection-hash fcbfb700ac5a5f02725f8980c3807fc2
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: x-content-type-options nosniff
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: x-response-time 108
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: CACHEABLE true
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: REQ https://pbs.twimg.com/profile_images/1186729813748248576/D6FFru_U_normal.jpg
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:01.641 12100 17880 D CustomInterceptor: PREFLIB Adding response to lrucache - https://pbs.twimg.com/profile_images/1186729813748248576/D6FFru_U_normal.jpg
+08-05 01:00:01.654 12100 17880 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:01.671 12100 17873 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:01.671 12100 17873 D CustomInterceptor: accept-ranges bytes
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: access-control-allow-origin *
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: access-control-expose-headers Content-Length
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: age 340652
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: cache-control max-age=604800, must-revalidate
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: content-length 2111
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: content-type image/jpeg
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: date Tue, 04 Aug 2020 22:59:57 GMT
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: last-modified Wed, 30 Oct 2019 00:51:19 GMT
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: server ECS (amb/6B77)
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: strict-transport-security max-age=631138519
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: surrogate-key profile_images profile_images/bucket/5 profile_images/1186729813748248576
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: x-cache HIT
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: x-connection-hash fcbfb700ac5a5f02725f8980c3807fc2
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: x-content-type-options nosniff
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: x-response-time 108
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: CACHEABLE true
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: REQ https://pbs.twimg.com/profile_images/1186729813748248576/D6FFru_U_normal.jpg
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:01.672 12100 17873 D CustomInterceptor: PREFLIB Adding response to lrucache - https://pbs.twimg.com/profile_images/1186729813748248576/D6FFru_U_normal.jpg
+08-05 01:00:01.672 12100 17880 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/media/img/reader/default_profile_photo.png
+08-05 01:00:01.673 12100 17880 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:01.673 12100 17880 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:01.673 12100 17880 D CustomInterceptor: CACHED STATS: size = '13', maxSize = '100', hitCount = '15', createCount = '0', putCount = '15', evictionCount = '0', missCount = '21', toString = 'LruCache[maxSize=100,hits=15,misses=21,hitRate=41%]', 
+08-05 01:00:01.673 12100 17880 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:01.674 12100 17873 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:01.739 12100 17869 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:01.740 12100 17869 D CustomInterceptor: accept-ranges bytes
+08-05 01:00:01.740 12100 17869 D CustomInterceptor: access-control-allow-origin *
+08-05 01:00:01.740 12100 17869 D CustomInterceptor: access-control-expose-headers Content-Length
+08-05 01:00:01.740 12100 17869 D CustomInterceptor: age 340652
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: cache-control max-age=604800, must-revalidate
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: content-length 2111
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: content-type image/jpeg
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: date Tue, 04 Aug 2020 22:59:57 GMT
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: last-modified Wed, 30 Oct 2019 00:51:19 GMT
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: server ECS (amb/6B77)
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: strict-transport-security max-age=631138519
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: surrogate-key profile_images profile_images/bucket/5 profile_images/1186729813748248576
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: x-cache HIT
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: x-connection-hash fcbfb700ac5a5f02725f8980c3807fc2
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: x-content-type-options nosniff
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: x-response-time 108
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: CACHEABLE true
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: REQ https://pbs.twimg.com/profile_images/1186729813748248576/D6FFru_U_normal.jpg
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:01.741 12100 17869 D CustomInterceptor: PREFLIB Adding response to lrucache - https://pbs.twimg.com/profile_images/1186729813748248576/D6FFru_U_normal.jpg
+08-05 01:00:01.751 12100 17869 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:01.760 12100 17871 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: accept-ranges bytes
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: access-control-allow-origin *
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: access-control-expose-headers Content-Length
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: age 340652
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: cache-control max-age=604800, must-revalidate
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: content-length 2111
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: content-type image/jpeg
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: date Tue, 04 Aug 2020 22:59:57 GMT
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: last-modified Wed, 30 Oct 2019 00:51:19 GMT
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: server ECS (amb/6B77)
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: strict-transport-security max-age=631138519
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: surrogate-key profile_images profile_images/bucket/5 profile_images/1186729813748248576
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: x-cache HIT
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: x-connection-hash fcbfb700ac5a5f02725f8980c3807fc2
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: x-content-type-options nosniff
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: x-response-time 108
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: CACHEABLE true
+08-05 01:00:01.761 12100 17871 D CustomInterceptor: REQ https://pbs.twimg.com/profile_images/1186729813748248576/D6FFru_U_normal.jpg
+08-05 01:00:01.762 12100 17871 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:01.762 12100 17871 D CustomInterceptor: PREFLIB Adding response to lrucache - https://pbs.twimg.com/profile_images/1186729813748248576/D6FFru_U_normal.jpg
+08-05 01:00:01.763 12100 17871 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: Accept-Ranges bytes
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: Cache-Control max-age=315360000
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: Connection close
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: Content-Length 17022
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: Content-Type image/png
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:56 GMT
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: ETag "5a9473c0-427e"
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: Expires Fri, 08 Jan 2038 05:06:17 GMT
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: Last-Modified Tue, 06 Mar 2018 02:03:42 GMT
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: Server nginx/1.11.8
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: X-nginx-server app14
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: CACHEABLE true
+08-05 01:00:01.813 12100 17867 D CustomInterceptor: REQ https://www.newsblur.com/media/img/reader/default_profile_photo.png
+08-05 01:00:01.814 12100 17867 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:01.814 12100 17867 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/media/img/reader/default_profile_photo.png
+08-05 01:00:01.819 12100 17867 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: Accept-Ranges bytes
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: Cache-Control max-age=315360000
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: Connection close
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: Content-Length 17022
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: Content-Type image/png
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:56 GMT
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: ETag "5a9473c0-427e"
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: Expires Fri, 08 Jan 2038 05:06:17 GMT
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: Last-Modified Tue, 06 Mar 2018 02:03:42 GMT
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: Server nginx/1.11.8
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: X-nginx-server app14
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: CACHEABLE true
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: REQ https://www.newsblur.com/media/img/reader/default_profile_photo.png
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:01.886 12100 17877 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/media/img/reader/default_profile_photo.png
+08-05 01:00:01.890 12100 17877 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:01.922 12100 18242 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: Connection close
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: Content-Type application/json
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:57 GMT
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:05:01 GMT+00:00
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: Server gunicorn/19.7.0
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: Transfer-Encoding chunked
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: Vary Cookie
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: X-gunicorn-server app04
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: X-Sideshow-Bob I'll be back. You can't keep the Democrats out of the White House forever, and when they get in, I'm back on the streets, with all my criminal buddies.
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: CACHEABLE true
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: REQ https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-05 01:00:01.923 12100 18242 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:01.942 12100 18242 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true
+08-05 01:00:01.944 12100 18242 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:01.944 12100 18242 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:01.944 12100 18242 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Thu, 04 Aug 2022 22:31:07 GMT; Max-Age=63072000; Path=/
+08-05 01:00:01.944 12100 18242 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-05 01:00:01.944 12100 18242 D CustomInterceptor: CACHED STATS: size = '14', maxSize = '100', hitCount = '20', createCount = '0', putCount = '20', evictionCount = '0', missCount = '22', toString = 'LruCache[maxSize=100,hits=20,misses=22,hitRate=47%]', 
+08-05 01:00:01.944 12100 18242 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:02.262 12100 17880 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:02.262 12100 17880 D CustomInterceptor: Accept-Ranges bytes
+08-05 01:00:02.262 12100 17880 D CustomInterceptor: Cache-Control max-age=315360000
+08-05 01:00:02.262 12100 17880 D CustomInterceptor: Connection close
+08-05 01:00:02.262 12100 17880 D CustomInterceptor: Content-Length 17022
+08-05 01:00:02.262 12100 17880 D CustomInterceptor: Content-Type image/png
+08-05 01:00:02.262 12100 17880 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:57 GMT
+08-05 01:00:02.262 12100 17880 D CustomInterceptor: ETag "5a9473c0-427e"
+08-05 01:00:02.262 12100 17880 D CustomInterceptor: Expires Fri, 08 Jan 2038 05:06:18 GMT
+08-05 01:00:02.262 12100 17880 D CustomInterceptor: Last-Modified Tue, 06 Mar 2018 02:03:43 GMT
+08-05 01:00:02.262 12100 17880 D CustomInterceptor: Server nginx/1.11.8
+08-05 01:00:02.263 12100 17880 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:00:02.263 12100 17880 D CustomInterceptor: X-nginx-server app14
+08-05 01:00:02.263 12100 17880 D CustomInterceptor: CACHEABLE true
+08-05 01:00:02.263 12100 17880 D CustomInterceptor: REQ https://www.newsblur.com/media/img/reader/default_profile_photo.png
+08-05 01:00:02.263 12100 17880 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:02.263 12100 17880 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/media/img/reader/default_profile_photo.png
+08-05 01:00:02.266 12100 17880 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:02.341 12100 18242 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:00:02.342 12100 18242 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: Connection close
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: Content-Type application/json
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: Date Tue, 04 Aug 2020 22:59:58 GMT
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:05:02 GMT+00:00
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: Server gunicorn/19.7.0
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: Vary Cookie, Accept-Encoding
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: X-gunicorn-server app09
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: X-Marge Get ready, skanks! It's time for the truth train!
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: CACHEABLE true
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: REQ https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:02.343 12100 18242 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/social/river_stories?order=newest&page=2&read_filter=all&global_feed=true
+08-05 01:00:02.348 12100 18242 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:13.389 12100 18532 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/social/river_stories?order=newest&page=3&read_filter=all&global_feed=true
+08-05 01:00:13.390 12100 18532 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:13.390 12100 18532 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:13.390 12100 18532 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Thu, 04 Aug 2022 22:31:07 GMT; Max-Age=63072000; Path=/
+08-05 01:00:13.390 12100 18532 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-05 01:00:13.391 12100 18532 D CustomInterceptor: CACHED STATS: size = '15', maxSize = '100', hitCount = '22', createCount = '0', putCount = '22', evictionCount = '0', missCount = '23', toString = 'LruCache[maxSize=100,hits=22,misses=23,hitRate=48%]', 
+08-05 01:00:13.391 12100 18532 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:13.910 12100 18532 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:00:13.911 12100 18532 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:13.911 12100 18532 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:00:13.911 12100 18532 D CustomInterceptor: Connection close
+08-05 01:00:13.911 12100 18532 D CustomInterceptor: Content-Type application/json
+08-05 01:00:13.911 12100 18532 D CustomInterceptor: Date Tue, 04 Aug 2020 23:00:09 GMT
+08-05 01:00:13.911 12100 18532 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:05:13 GMT+00:00
+08-05 01:00:13.911 12100 18532 D CustomInterceptor: Server gunicorn/19.7.0
+08-05 01:00:13.911 12100 18532 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:00:13.911 12100 18532 D CustomInterceptor: Vary Cookie, Accept-Encoding
+08-05 01:00:13.911 12100 18532 D CustomInterceptor: X-gunicorn-server app16
+08-05 01:00:13.911 12100 18532 D CustomInterceptor: X-Kent-Brockman ...And the fluffy kitten played with that ball of string all through the night. On a lighter note, a Kwik-E-Mart clerk was brutally murdered last night.
+08-05 01:00:13.913 12100 18532 D CustomInterceptor: CACHEABLE true
+08-05 01:00:13.913 12100 18532 D CustomInterceptor: REQ https://www.newsblur.com/social/river_stories?order=newest&page=3&read_filter=all&global_feed=true
+08-05 01:00:13.913 12100 18532 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:13.913 12100 18532 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/social/river_stories?order=newest&page=3&read_filter=all&global_feed=true
+08-05 01:00:13.932 12100 18532 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:14.037 12100 18532 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/social/river_stories?order=newest&page=4&read_filter=all&global_feed=true
+08-05 01:00:14.038 12100 18532 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:14.038 12100 18532 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:14.038 12100 18532 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Thu, 04 Aug 2022 22:31:07 GMT; Max-Age=63072000; Path=/
+08-05 01:00:14.038 12100 18532 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-05 01:00:14.038 12100 18532 D CustomInterceptor: CACHED STATS: size = '16', maxSize = '100', hitCount = '23', createCount = '0', putCount = '23', evictionCount = '0', missCount = '24', toString = 'LruCache[maxSize=100,hits=23,misses=24,hitRate=48%]', 
+08-05 01:00:14.038 12100 18532 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:14.607 12100 18532 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:00:14.608 12100 18532 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:14.608 12100 18532 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:00:14.608 12100 18532 D CustomInterceptor: Connection close
+08-05 01:00:14.608 12100 18532 D CustomInterceptor: Content-Type application/json
+08-05 01:00:14.608 12100 18532 D CustomInterceptor: Date Tue, 04 Aug 2020 23:00:09 GMT
+08-05 01:00:14.609 12100 18532 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:05:14 GMT+00:00
+08-05 01:00:14.609 12100 18532 D CustomInterceptor: Server gunicorn/19.7.0
+08-05 01:00:14.609 12100 18532 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:00:14.609 12100 18532 D CustomInterceptor: Vary Cookie, Accept-Encoding
+08-05 01:00:14.609 12100 18532 D CustomInterceptor: X-gunicorn-server app01
+08-05 01:00:14.609 12100 18532 D CustomInterceptor: X-Homer Books are useless! I only ever read one book, "To Kill A Mockingbird," and it gave me absolutely no insight on how to kill mockingbirds! Sure it taught me not to judge a man by the color of his skin...but what good does *that* do me?
+08-05 01:00:14.609 12100 18532 D CustomInterceptor: CACHEABLE true
+08-05 01:00:14.609 12100 18532 D CustomInterceptor: REQ https://www.newsblur.com/social/river_stories?order=newest&page=4&read_filter=all&global_feed=true
+08-05 01:00:14.609 12100 18532 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:14.609 12100 18532 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/social/river_stories?order=newest&page=4&read_filter=all&global_feed=true
+08-05 01:00:14.615 12100 18532 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:15.314 12100 17869 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/avatars.newsblur.com/avatars/136960/thumbnail_profile_1364434554.jpg
+08-05 01:00:15.315 12100 17869 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:15.315 12100 17869 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:15.315 12100 17869 D CustomInterceptor: CACHED STATS: size = '17', maxSize = '100', hitCount = '24', createCount = '0', putCount = '24', evictionCount = '0', missCount = '25', toString = 'LruCache[maxSize=100,hits=24,misses=25,hitRate=48%]', 
+08-05 01:00:15.315 12100 17869 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:15.401 12100 17869 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:00:15.403 12100 17869 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:15.403 12100 17869 D CustomInterceptor: Accept-Ranges bytes
+08-05 01:00:15.403 12100 17869 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:00:15.403 12100 17869 D CustomInterceptor: Content-Length 3140
+08-05 01:00:15.404 12100 17869 D CustomInterceptor: Content-Type image/jpeg
+08-05 01:00:15.404 12100 17869 D CustomInterceptor: Date Tue, 04 Aug 2020 23:00:11 GMT
+08-05 01:00:15.404 12100 17869 D CustomInterceptor: ETag "798a0a1b2e4dfbe50c1fc578f2748179"
+08-05 01:00:15.404 12100 17869 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:05:15 GMT+00:00
+08-05 01:00:15.404 12100 17869 D CustomInterceptor: Last-Modified Thu, 04 Apr 2013 06:45:48 GMT
+08-05 01:00:15.404 12100 17869 D CustomInterceptor: Server AmazonS3
+08-05 01:00:15.404 12100 17869 D CustomInterceptor: x-amz-id-2 WQpRBFI7Ftip23b2Bk/5HM9+lCB4iDvnFxBqOH5C+VSBtltlC5V4JREgvTrL73awdF0r0bZWvVk=
+08-05 01:00:15.404 12100 17869 D CustomInterceptor: x-amz-request-id 99F2807CACB0AF90
+08-05 01:00:15.404 12100 17869 D CustomInterceptor: CACHEABLE true
+08-05 01:00:15.404 12100 17869 D CustomInterceptor: REQ https://s3.amazonaws.com/avatars.newsblur.com/avatars/136960/thumbnail_profile_1364434554.jpg
+08-05 01:00:15.404 12100 17869 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:15.404 12100 17869 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/avatars.newsblur.com/avatars/136960/thumbnail_profile_1364434554.jpg
+08-05 01:00:15.408 12100 17869 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:15.492 12100 18612 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-05 01:00:15.492 12100 18612 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:15.493 12100 18612 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:15.493 12100 18612 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Thu, 04 Aug 2022 22:31:07 GMT; Max-Age=63072000; Path=/
+08-05 01:00:15.493 12100 18612 D CustomInterceptor: CACHED STATS: size = '18', maxSize = '100', hitCount = '25', createCount = '0', putCount = '25', evictionCount = '0', missCount = '26', toString = 'LruCache[maxSize=100,hits=25,misses=26,hitRate=49%]', 
+08-05 01:00:15.493 12100 18612 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-05 01:00:16.004 12100 18612 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: Connection close
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: Content-Type application/json
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: Date Tue, 04 Aug 2020 23:00:11 GMT
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:05:16 GMT+00:00
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: Server gunicorn/19.7.0
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: Transfer-Encoding chunked
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: Vary Cookie
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: X-gunicorn-server app09
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: X-Homer Oh, I'm in no condition to drive. Wait a minute. I don't have to listen to myself. I'm drunk.
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: CACHEABLE true
+08-05 01:00:16.007 12100 18612 D CustomInterceptor: REQ https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-05 01:00:16.008 12100 18612 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:16.063 12100 18612 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-05 01:00:16.063 12100 18612 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:16.063 12100 18612 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:16.063 12100 18612 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Thu, 04 Aug 2022 22:31:07 GMT; Max-Age=63072000; Path=/
+08-05 01:00:16.063 12100 18612 D CustomInterceptor: CACHED STATS: size = '18', maxSize = '100', hitCount = '25', createCount = '0', putCount = '25', evictionCount = '0', missCount = '27', toString = 'LruCache[maxSize=100,hits=25,misses=27,hitRate=48%]', 
+08-05 01:00:16.063 12100 18612 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-05 01:00:16.451 12100 18612 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:00:16.452 12100 18612 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:16.452 12100 18612 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:00:16.452 12100 18612 D CustomInterceptor: Connection close
+08-05 01:00:16.452 12100 18612 D CustomInterceptor: Content-Type application/json
+08-05 01:00:16.452 12100 18612 D CustomInterceptor: Date Tue, 04 Aug 2020 23:00:11 GMT
+08-05 01:00:16.452 12100 18612 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:05:16 GMT+00:00
+08-05 01:00:16.452 12100 18612 D CustomInterceptor: Server gunicorn/19.7.0
+08-05 01:00:16.452 12100 18612 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:00:16.453 12100 18612 D CustomInterceptor: Transfer-Encoding chunked
+08-05 01:00:16.453 12100 18612 D CustomInterceptor: Vary Cookie
+08-05 01:00:16.453 12100 18612 D CustomInterceptor: X-gunicorn-server app09
+08-05 01:00:16.453 12100 18612 D CustomInterceptor: X-Homer Oh, I'm in no condition to drive. Wait a minute. I don't have to listen to myself. I'm drunk.
+08-05 01:00:16.453 12100 18612 D CustomInterceptor: CACHEABLE true
+08-05 01:00:16.453 12100 18612 D CustomInterceptor: REQ https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-05 01:00:16.453 12100 18612 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:19.942 12100 18707 D CustomInterceptor: NETWORK-PROVIDER http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-05 01:00:19.943 12100 18707 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:19.943 12100 18707 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:19.943 12100 18707 D CustomInterceptor: CACHED STATS: size = '18', maxSize = '100', hitCount = '25', createCount = '0', putCount = '25', evictionCount = '0', missCount = '28', toString = 'LruCache[maxSize=100,hits=25,misses=28,hitRate=47%]', 
+08-05 01:00:19.943 12100 18707 D CustomInterceptor: PREFLIB GET REQUEST http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-05 01:00:19.943 12100 18707 D CustomInterceptor: PREFLIB found http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, sending it back
+08-05 01:00:19.943 12100 18707 D CustomInterceptor: CONTENT GIF89aÀ€À€ï¿½À€À€ï¿½ï¿½ï¿½À€À€À€!ï¿½À€À€À€À€,À€À€À€À€À€À€À€DÀ€;
+08-05 01:00:19.944 12100 18707 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-05 01:00:21.703 12100 18757 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/feed_unread_count?feed_id=6882243&feed_id=18178
+08-05 01:00:21.704 12100 18757 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:21.704 12100 18757 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:21.704 12100 18757 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Thu, 04 Aug 2022 22:31:07 GMT; Max-Age=63072000; Path=/
+08-05 01:00:21.704 12100 18757 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-05 01:00:21.704 12100 18757 D CustomInterceptor: CACHED STATS: size = '18', maxSize = '100', hitCount = '26', createCount = '0', putCount = '25', evictionCount = '0', missCount = '28', toString = 'LruCache[maxSize=100,hits=26,misses=28,hitRate=48%]', 
+08-05 01:00:21.704 12100 18757 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:22.307 12100 18757 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:00:22.308 12100 18757 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:22.308 12100 18757 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:00:22.308 12100 18757 D CustomInterceptor: Connection close
+08-05 01:00:22.308 12100 18757 D CustomInterceptor: Content-Type application/json
+08-05 01:00:22.308 12100 18757 D CustomInterceptor: Date Tue, 04 Aug 2020 23:00:17 GMT
+08-05 01:00:22.308 12100 18757 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:05:22 GMT+00:00
+08-05 01:00:22.308 12100 18757 D CustomInterceptor: Last-Modified Tue, 04 Aug 2020 23:00:17 GMT
+08-05 01:00:22.309 12100 18757 D CustomInterceptor: Server gunicorn/19.7.0
+08-05 01:00:22.309 12100 18757 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:00:22.309 12100 18757 D CustomInterceptor: Transfer-Encoding chunked
+08-05 01:00:22.309 12100 18757 D CustomInterceptor: Vary Cookie
+08-05 01:00:22.309 12100 18757 D CustomInterceptor: X-gunicorn-server app26
+08-05 01:00:22.309 12100 18757 D CustomInterceptor: X-Milhouse Look out, Itchy! He's Irish!
+08-05 01:00:22.309 12100 18757 D CustomInterceptor: CACHEABLE true
+08-05 01:00:22.309 12100 18757 D CustomInterceptor: REQ https://www.newsblur.com/reader/feed_unread_count?feed_id=6882243&feed_id=18178
+08-05 01:00:22.309 12100 18757 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:22.309 12100 18757 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/reader/feed_unread_count?feed_id=6882243&feed_id=18178
+08-05 01:00:22.313 12100 18757 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:23.673 12100 17868 D CustomInterceptor: NETWORK-PROVIDER http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-05 01:00:23.673 12100 17868 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:23.674 12100 17868 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:23.674 12100 17868 D CustomInterceptor: CACHED STATS: size = '19', maxSize = '100', hitCount = '27', createCount = '0', putCount = '26', evictionCount = '0', missCount = '29', toString = 'LruCache[maxSize=100,hits=27,misses=29,hitRate=48%]', 
+08-05 01:00:23.674 12100 17868 D CustomInterceptor: PREFLIB GET REQUEST http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-05 01:00:23.674 12100 17868 D CustomInterceptor: PREFLIB found http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, sending it back
+08-05 01:00:23.674 12100 17868 D CustomInterceptor: CONTENT GIF89aÀ€À€ï¿½À€À€ï¿½ï¿½ï¿½À€À€À€!ï¿½À€À€À€À€,À€À€À€À€À€À€À€DÀ€;
+08-05 01:00:23.674 12100 17868 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-05 01:00:43.019 12100 19253 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all
+08-05 01:00:43.019 12100 19253 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:43.019 12100 19253 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:43.020 12100 19253 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Thu, 04 Aug 2022 22:31:07 GMT; Max-Age=63072000; Path=/
+08-05 01:00:43.020 12100 19253 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-05 01:00:43.020 12100 19253 D CustomInterceptor: CACHED STATS: size = '19', maxSize = '100', hitCount = '28', createCount = '0', putCount = '26', evictionCount = '0', missCount = '29', toString = 'LruCache[maxSize=100,hits=28,misses=29,hitRate=49%]', 
+08-05 01:00:43.020 12100 19253 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:43.029 12100 18707 D CustomInterceptor: NETWORK-PROVIDER http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-05 01:00:43.030 12100 18707 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:43.030 12100 18707 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:43.030 12100 18707 D CustomInterceptor: CACHED STATS: size = '19', maxSize = '100', hitCount = '28', createCount = '0', putCount = '26', evictionCount = '0', missCount = '30', toString = 'LruCache[maxSize=100,hits=28,misses=30,hitRate=48%]', 
+08-05 01:00:43.031 12100 18707 D CustomInterceptor: PREFLIB GET REQUEST http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-05 01:00:43.031 12100 18707 D CustomInterceptor: PREFLIB found http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, sending it back
+08-05 01:00:43.031 12100 18707 D CustomInterceptor: CONTENT GIF89aÀ€À€ï¿½À€À€ï¿½ï¿½ï¿½À€À€À€!ï¿½À€À€À€À€,À€À€À€À€À€À€À€DÀ€;
+08-05 01:00:43.031 12100 18707 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-05 01:00:43.044 12100 17871 D CustomInterceptor: NETWORK-PROVIDER https://s3.amazonaws.com/icons.newsblur.com/850543.png
+08-05 01:00:43.049 12100 17871 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:43.049 12100 17871 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:43.050 12100 17871 D CustomInterceptor: CACHED STATS: size = '19', maxSize = '100', hitCount = '29', createCount = '0', putCount = '26', evictionCount = '0', missCount = '30', toString = 'LruCache[maxSize=100,hits=29,misses=30,hitRate=49%]', 
+08-05 01:00:43.050 12100 17871 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:43.064 12100 17870 D CustomInterceptor: NETWORK-PROVIDER https://64.media.tumblr.com/58fdb3e3c1b2ba1306c2d1be0119460e/75c91623ddb4dfe2-55/s1280x1920/18a33520ca63b4c9f1d09ba5a5eb6fab3b9c104d.jpg
+08-05 01:00:43.065 12100 17870 D CustomInterceptor: HEADER REQUEST
+08-05 01:00:43.065 12100 17870 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:00:43.065 12100 17870 D CustomInterceptor: CACHED STATS: size = '19', maxSize = '100', hitCount = '29', createCount = '0', putCount = '26', evictionCount = '0', missCount = '31', toString = 'LruCache[maxSize=100,hits=29,misses=31,hitRate=48%]', 
+08-05 01:00:43.065 12100 17870 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:00:43.170 12100 17871 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:00:43.171 12100 17871 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:43.171 12100 17871 D CustomInterceptor: Accept-Ranges bytes
+08-05 01:00:43.171 12100 17871 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:00:43.171 12100 17871 D CustomInterceptor: Content-Length 29813
+08-05 01:00:43.171 12100 17871 D CustomInterceptor: Content-Type image/png
+08-05 01:00:43.172 12100 17871 D CustomInterceptor: Date Tue, 04 Aug 2020 23:00:39 GMT
+08-05 01:00:43.172 12100 17871 D CustomInterceptor: ETag "2e9f38d04b9c3543ab1afa639f10a12c"
+08-05 01:00:43.172 12100 17871 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:05:43 GMT+00:00
+08-05 01:00:43.172 12100 17871 D CustomInterceptor: Last-Modified Wed, 29 Jul 2020 15:51:21 GMT
+08-05 01:00:43.172 12100 17871 D CustomInterceptor: Server AmazonS3
+08-05 01:00:43.172 12100 17871 D CustomInterceptor: x-amz-id-2 OL1290teXyGdqC7U8Pd4WI2l/qcJduJfLqdzvTuawjyLutOOxSrnIh9z1S95KUSFXPgpquoSU8o=
+08-05 01:00:43.172 12100 17871 D CustomInterceptor: x-amz-request-id E968082CFA096F97
+08-05 01:00:43.172 12100 17871 D CustomInterceptor: CACHEABLE true
+08-05 01:00:43.172 12100 17871 D CustomInterceptor: REQ https://s3.amazonaws.com/icons.newsblur.com/850543.png
+08-05 01:00:43.172 12100 17871 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:43.172 12100 17871 D CustomInterceptor: PREFLIB Adding response to lrucache - https://s3.amazonaws.com/icons.newsblur.com/850543.png
+08-05 01:00:43.202 12100 17871 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: access-control-allow-methods GET
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: access-control-allow-origin *
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: access-control-max-age 86400
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: cache-control max-age=315360000
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: content-disposition inline; filename="tumblr_58fdb3e3c1b2ba1306c2d1be0119460e_18a33520_1280.jpg"
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: content-length 117046
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: content-type image/jpeg
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: date Tue, 04 Aug 2020 23:00:39 GMT
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: etag "d8b4bf447e29532c2e4c3d94d13b9f69-1498089600-37c5a04"
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: last-modified Sat, 01 Aug 2020 14:32:11 GMT
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: server nginx
+08-05 01:00:43.435 12100 17870 D CustomInterceptor: strict-transport-security max-age=31536000; preload
+08-05 01:00:43.436 12100 17870 D CustomInterceptor: timing-allow-origin *
+08-05 01:00:43.436 12100 17870 D CustomInterceptor: x-frames 1
+08-05 01:00:43.436 12100 17870 D CustomInterceptor: x-nc MISS ams 4
+08-05 01:00:43.436 12100 17870 D CustomInterceptor: CACHEABLE true
+08-05 01:00:43.436 12100 17870 D CustomInterceptor: REQ https://64.media.tumblr.com/58fdb3e3c1b2ba1306c2d1be0119460e/75c91623ddb4dfe2-55/s1280x1920/18a33520ca63b4c9f1d09ba5a5eb6fab3b9c104d.jpg
+08-05 01:00:43.436 12100 17870 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:43.436 12100 17870 D CustomInterceptor: PREFLIB Adding response to lrucache - https://64.media.tumblr.com/58fdb3e3c1b2ba1306c2d1be0119460e/75c91623ddb4dfe2-55/s1280x1920/18a33520ca63b4c9f1d09ba5a5eb6fab3b9c104d.jpg
+08-05 01:00:43.498 12100 17870 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:00:43.603 12100 19253 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:00:43.604 12100 19253 D CustomInterceptor: HEADER RESPONSE
+08-05 01:00:43.604 12100 19253 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:00:43.604 12100 19253 D CustomInterceptor: Connection close
+08-05 01:00:43.604 12100 19253 D CustomInterceptor: Content-Type application/json
+08-05 01:00:43.604 12100 19253 D CustomInterceptor: Date Tue, 04 Aug 2020 23:00:39 GMT
+08-05 01:00:43.604 12100 19253 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:05:43 GMT+00:00
+08-05 01:00:43.604 12100 19253 D CustomInterceptor: Server gunicorn/19.7.0
+08-05 01:00:43.605 12100 19253 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:00:43.605 12100 19253 D CustomInterceptor: Transfer-Encoding chunked
+08-05 01:00:43.605 12100 19253 D CustomInterceptor: Vary Cookie
+08-05 01:00:43.605 12100 19253 D CustomInterceptor: X-gunicorn-server app04
+08-05 01:00:43.605 12100 19253 D CustomInterceptor: X-Homer Kids, kids. I'm not going to die. That only happens to bad people.
+08-05 01:00:43.605 12100 19253 D CustomInterceptor: CACHEABLE true
+08-05 01:00:43.605 12100 19253 D CustomInterceptor: REQ https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all
+08-05 01:00:43.605 12100 19253 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:00:43.605 12100 19253 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/social/river_stories?order=newest&page=1&read_filter=all
+08-05 01:00:43.607 12100 19253 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:01:08.385 12100 19800 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-05 01:01:08.385 12100 19800 D CustomInterceptor: HEADER REQUEST
+08-05 01:01:08.385 12100 19800 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:01:08.386 12100 19800 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Thu, 04 Aug 2022 22:31:07 GMT; Max-Age=63072000; Path=/
+08-05 01:01:08.386 12100 19800 D CustomInterceptor: CACHED STATS: size = '22', maxSize = '100', hitCount = '32', createCount = '0', putCount = '29', evictionCount = '0', missCount = '32', toString = 'LruCache[maxSize=100,hits=32,misses=32,hitRate=50%]', 
+08-05 01:01:08.386 12100 19800 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-05 01:01:08.992 12100 19800 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:01:08.993 12100 19800 D CustomInterceptor: HEADER RESPONSE
+08-05 01:01:08.993 12100 19800 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:01:08.993 12100 19800 D CustomInterceptor: Connection close
+08-05 01:01:08.993 12100 19800 D CustomInterceptor: Content-Type application/json
+08-05 01:01:08.993 12100 19800 D CustomInterceptor: Date Tue, 04 Aug 2020 23:01:04 GMT
+08-05 01:01:08.993 12100 19800 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:06:08 GMT+00:00
+08-05 01:01:08.993 12100 19800 D CustomInterceptor: Server gunicorn/19.7.0
+08-05 01:01:08.993 12100 19800 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:01:08.993 12100 19800 D CustomInterceptor: Transfer-Encoding chunked
+08-05 01:01:08.993 12100 19800 D CustomInterceptor: Vary Cookie
+08-05 01:01:08.993 12100 19800 D CustomInterceptor: X-gunicorn-server app03
+08-05 01:01:08.993 12100 19800 D CustomInterceptor: X-Homer Weaseling out of things is important to learn. It's what separates us from the animals...except the weasel.
+08-05 01:01:08.994 12100 19800 D CustomInterceptor: CACHEABLE true
+08-05 01:01:08.994 12100 19800 D CustomInterceptor: REQ https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-05 01:01:08.994 12100 19800 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:01:09.008 12100 19800 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-05 01:01:09.008 12100 19800 D CustomInterceptor: HEADER REQUEST
+08-05 01:01:09.008 12100 19800 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:01:09.008 12100 19800 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Thu, 04 Aug 2022 22:31:07 GMT; Max-Age=63072000; Path=/
+08-05 01:01:09.008 12100 19800 D CustomInterceptor: CACHED STATS: size = '22', maxSize = '100', hitCount = '32', createCount = '0', putCount = '29', evictionCount = '0', missCount = '33', toString = 'LruCache[maxSize=100,hits=32,misses=33,hitRate=49%]', 
+08-05 01:01:09.009 12100 19800 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEPOST
+08-05 01:01:09.501 12100 19800 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:01:09.502 12100 19800 D CustomInterceptor: HEADER RESPONSE
+08-05 01:01:09.502 12100 19800 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:01:09.502 12100 19800 D CustomInterceptor: Connection close
+08-05 01:01:09.502 12100 19800 D CustomInterceptor: Content-Type application/json
+08-05 01:01:09.502 12100 19800 D CustomInterceptor: Date Tue, 04 Aug 2020 23:01:05 GMT
+08-05 01:01:09.502 12100 19800 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:06:09 GMT+00:00
+08-05 01:01:09.502 12100 19800 D CustomInterceptor: Server gunicorn/19.7.0
+08-05 01:01:09.502 12100 19800 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:01:09.502 12100 19800 D CustomInterceptor: Transfer-Encoding chunked
+08-05 01:01:09.502 12100 19800 D CustomInterceptor: Vary Cookie
+08-05 01:01:09.502 12100 19800 D CustomInterceptor: X-gunicorn-server app03
+08-05 01:01:09.503 12100 19800 D CustomInterceptor: X-Homer Weaseling out of things is important to learn. It's what separates us from the animals...except the weasel.
+08-05 01:01:09.503 12100 19800 D CustomInterceptor: CACHEABLE true
+08-05 01:01:09.503 12100 19800 D CustomInterceptor: REQ https://www.newsblur.com/reader/mark_story_hashes_as_read/
+08-05 01:01:09.503 12100 19800 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:01:14.636 12100 19942 D CustomInterceptor: NETWORK-PROVIDER https://www.newsblur.com/reader/feed_unread_count?feed_id=5762506
+08-05 01:01:14.638 12100 19942 D CustomInterceptor: HEADER REQUEST
+08-05 01:01:14.638 12100 19942 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:01:14.638 12100 19942 D CustomInterceptor: Cookie newsblur_sessionid=qlbd3ilzka7q9q07v2htr96j75kh6za7; Domain=.newsblur.com; expires=Thu, 04 Aug 2022 22:31:07 GMT; Max-Age=63072000; Path=/
+08-05 01:01:14.638 12100 19942 D CustomInterceptor: User-Agent NewsBlur Android app (Huawei Nexus 6P 6.0 9.0b1)
+08-05 01:01:14.638 12100 19942 D CustomInterceptor: CACHED STATS: size = '22', maxSize = '100', hitCount = '32', createCount = '0', putCount = '29', evictionCount = '0', missCount = '34', toString = 'LruCache[maxSize=100,hits=32,misses=34,hitRate=48%]', 
+08-05 01:01:14.638 12100 19942 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-05 01:01:15.234 12100 19942 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-05 01:01:15.235 12100 19942 D CustomInterceptor: HEADER RESPONSE
+08-05 01:01:15.235 12100 19942 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-05 01:01:15.235 12100 19942 D CustomInterceptor: Connection close
+08-05 01:01:15.235 12100 19942 D CustomInterceptor: Content-Type application/json
+08-05 01:01:15.235 12100 19942 D CustomInterceptor: Date Tue, 04 Aug 2020 23:01:10 GMT
+08-05 01:01:15.235 12100 19942 D CustomInterceptor: Expires Tue, 04 Aug 2020 23:06:15 GMT+00:00
+08-05 01:01:15.235 12100 19942 D CustomInterceptor: Last-Modified Tue, 04 Aug 2020 23:01:10 GMT
+08-05 01:01:15.236 12100 19942 D CustomInterceptor: Server gunicorn/19.7.0
+08-05 01:01:15.236 12100 19942 D CustomInterceptor: Strict-Transport-Security max-age=0; includeSubDomains
+08-05 01:01:15.236 12100 19942 D CustomInterceptor: Transfer-Encoding chunked
+08-05 01:01:15.236 12100 19942 D CustomInterceptor: Vary Cookie
+08-05 01:01:15.236 12100 19942 D CustomInterceptor: X-gunicorn-server app26
+08-05 01:01:15.236 12100 19942 D CustomInterceptor: X-Sideshow-Bob Attempted murder? Now honestly, what is that? Do they give a Nobel Prize for attempted chemistry?
+08-05 01:01:15.236 12100 19942 D CustomInterceptor: CACHEABLE true
+08-05 01:01:15.236 12100 19942 D CustomInterceptor: REQ https://www.newsblur.com/reader/feed_unread_count?feed_id=5762506
+08-05 01:01:15.236 12100 19942 D CustomInterceptor: REQ_SERV_BY net
+08-05 01:01:15.236 12100 19942 D CustomInterceptor: PREFLIB Adding response to lrucache - https://www.newsblur.com/reader/feed_unread_count?feed_id=5762506
+08-05 01:01:15.238 12100 19942 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-05 01:01:16.812 12100 18707 D CustomInterceptor: NETWORK-PROVIDER http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-05 01:01:16.813 12100 18707 D CustomInterceptor: HEADER REQUEST
+08-05 01:01:16.813 12100 18707 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-05 01:01:16.813 12100 18707 D CustomInterceptor: CACHED STATS: size = '23', maxSize = '100', hitCount = '33', createCount = '0', putCount = '30', evictionCount = '0', missCount = '35', toString = 'LruCache[maxSize=100,hits=33,misses=35,hitRate=48%]', 
+08-05 01:01:16.813 12100 18707 D CustomInterceptor: PREFLIB GET REQUEST http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs
+08-05 01:01:16.813 12100 18707 D CustomInterceptor: PREFLIB found http://feeds.feedburner.com/~r/retort/~4/UffaFMiJbNs, sending it back
+08-05 01:01:16.813 12100 18707 D CustomInterceptor: CONTENT GIF89aÀ€À€ï¿½À€À€ï¿½ï¿½ï¿½À€À€À€!ï¿½À€À€À€À€,À€À€À€À€À€À€À€DÀ€;
+08-05 01:01:16.813 12100 18707 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
