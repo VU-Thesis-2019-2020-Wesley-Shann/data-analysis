@@ -5,7 +5,9 @@
 
 source("util.R")
 
-rq1.data <- cbind(experiment.source.trepn(), experiment.source.android())
+rq1.data <- experiment.source.runtime()
+
+#plot(rq1.android$mem)
 #names(mydata.trepn)
 #plot(mydata.trepn$subject.id, mydata.trepn$trepn.battery.nonzero.joule)
 #experiment.source.android()

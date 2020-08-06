@@ -86,8 +86,15 @@ experiment.source.android <- function() {
 
   dataframe <- rename(dataframe, c(
     "cpu" = "android.cpu",
-    "men" = "android.memory"
+    "mem" = "android.memory"
   ))
+
+  dataframe
+}
+
+experiment.source.runtime <- function() {
+  dataframe <- cbind(experiment.source.trepn(), experiment.source.android())
+  dataframe <- dataframe[, !duplicated(names(dataframe))]
 
   dataframe
 }
