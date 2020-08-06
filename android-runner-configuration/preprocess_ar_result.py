@@ -550,8 +550,11 @@ def aggregate_subject_trepn(exp):
                     values_avg = [x / number_of_rows for x in values_sum]
                     # print('\tvalues_avg', values_avg)
 
-                    values_avg_battery_above_zero = [x / number_of_rows_with_battery_power_raw_above_zero for x in
-                                                     values_sum[1:3]]
+                    if number_of_rows_with_battery_power_raw_above_zero != 0:
+                        values_avg_battery_above_zero = [x / number_of_rows_with_battery_power_raw_above_zero for x in
+                                                        values_sum[1:3]]
+                    else:
+                        values_avg_battery_above_zero = [0, 0]
                     # print('\tvalues_avg_battery_above_zero', values_avg_battery_above_zero)
 
                     aggregated_row_values = [run_number, duration] + values_avg + values_avg_battery_above_zero
