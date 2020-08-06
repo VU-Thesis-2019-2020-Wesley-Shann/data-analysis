@@ -63,13 +63,31 @@ experiment.source.csv <- function(file) {
 experiment.source.trepn <- function() {
   dataframe <- experiment.source.csv("Aggregate-Trepn.csv")
 
+  # Rename columns
   dataframe <- rename(dataframe, c(
-    "Duration..ms." = "run.duration"
+    "Duration..ms." = "run.duration.ms",
+    "Memory.Usage..KB." = "trepn.memory.kb",
+    "Battery.Power..uW...Raw." = "trepn.battery.raw.uw",
+    "Battery.Power..uW...Delta." = "trepn.battery.delta.uw",
+    "CPU.Load...." = "trepn.cpu",
+    "Battery.Power..uW...Raw...Non.zero." = "trepn.battery.nonzero.raw.uw",
+    "Battery.Power..uW...Delta...Non.zero." = "trepn.battery.nonzero.delta.uw"
   ))
+
+  # Parse power from watts to Joule
+  dataframe$trepn.battery.joule <- (dataframe$trepn.battery.raw.uw / (10 ^ 6)) * (dataframe$run.duration.ms / 1000)
+  dataframe$trepn.battery.nonzero.joule <- (dataframe$trepn.battery.nonzero.raw.uw / (10 ^ 6)) * (dataframe$run.duration.ms / 1000)
 
   dataframe
 }
 
 experiment.source.android <- function() {
-  2
+  dataframe <- experiment.source.csv("Aggregate-Android.csv")
+
+  dataframe <- rename(dataframe, c(
+    "cpu" = "android.cpu",
+    "men" = "android.memory",
+  ))
+
+  dataframe
 }

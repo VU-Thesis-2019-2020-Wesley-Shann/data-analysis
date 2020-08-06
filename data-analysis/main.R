@@ -5,8 +5,9 @@
 
 source("util.R")
 
-mydata.trepn <- experiment.source.trepn()
+rq1.data <- cbind(experiment.source.trepn(), experiment.source.android())
 names(mydata.trepn)
+plot(mydata.trepn$subject.id, mydata.trepn$trepn.battery.nonzero.joule)
 #experiment.source.android()
 
 #e <- c("a", "b", "c")
