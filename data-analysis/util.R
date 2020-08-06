@@ -78,16 +78,23 @@ experiment.source.trepn <- function() {
   dataframe$trepn.battery.joule <- (dataframe$trepn.battery.raw.uw / (10^6)) * (dataframe$run.duration.ms / 1000)
   dataframe$trepn.battery.nonzero.joule <- (dataframe$trepn.battery.nonzero.raw.uw / (10^6)) * (dataframe$run.duration.ms / 1000)
 
+  # Parse duration from ms to s
+  dataframe$run.duration.s <- dataframe$run.duration.ms / 1000
+
   dataframe
 }
 
 experiment.source.android <- function() {
   dataframe <- experiment.source.csv("Aggregate-Android.csv")
 
+  # Rename columns
   dataframe <- rename(dataframe, c(
     "cpu" = "android.cpu",
-    "mem" = "android.memory"
+    "mem" = "android.memory.kb"
   ))
+
+  # Parse memory from KB to MB
+  dataframe$android.memory.mb <- dataframe$android.memory.kb / 1000
 
   dataframe
 }
