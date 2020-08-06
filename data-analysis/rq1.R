@@ -9,6 +9,15 @@ source("util/read_data.R")
 
 rq1.data <- experiment.source.runtime()
 
+plot(rq1.data$android.memory.mb)
+
+aes <- aes_string(
+  y = "android.memory.mb",
+  x = "subject.id.short"
+)
+ggplot(rq1.data, aes) + geom_boxplot()
+
+
 #plot(rq1.android$mem)
 #names(mydata.trepn)
 #plot(mydata.trepn$subject.id, mydata.trepn$trepn.battery.nonzero.joule)

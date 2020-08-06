@@ -104,8 +104,15 @@ experiment.source.android <- function() {
 
 experiment.source.runtime <- function() {
   dataframe <- cbind(experiment.source.trepn(), experiment.source.android())
+
+  # Remove duplicated columns from aggregating trepn and android (rows matches the runs)
   dataframe <- dataframe[, !duplicated(names(dataframe))]
+
+  # Sort dataframe columns by name
   dataframe <- dataframe[, order(colnames(dataframe))]
+
+  # Sort dataframe rows by subject
+  dataframe <- dataframe[order(dataframe$subject.name),]
 
   dataframe
 }
