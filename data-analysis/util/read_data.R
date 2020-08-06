@@ -112,7 +112,7 @@ experiment.source.runtime <- function() {
   dataframe <- dataframe[, order(colnames(dataframe))]
 
   # Sort dataframe rows by subject
-  dataframe <- dataframe[order(dataframe$subject.name),]
+  dataframe <- dataframe[order(dataframe$subject.name, dataframe$subject.treatment), ]
 
   dataframe
 }
