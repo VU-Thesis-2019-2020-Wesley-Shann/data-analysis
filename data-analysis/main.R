@@ -3,6 +3,8 @@
 # Created by: sshann
 # Created on: 04-08-20
 
+library(ggplot2)
+
 source("util/read_data.R")
 
 rq1.data <- experiment.source.runtime()

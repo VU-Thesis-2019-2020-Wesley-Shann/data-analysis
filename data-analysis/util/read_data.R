@@ -34,7 +34,7 @@ experiment.source.csv <- function(file) {
   dataframe <- rename(dataframe, c(
     "App.package" = "subject.android.package",
     "Treatment" = "subject.treatment",
-    "Subject" = "subject.id",
+    "Subject" = "subject.id.long",
     "Run.number" = "run.number"
   ))
 
@@ -49,9 +49,12 @@ experiment.source.csv <- function(file) {
                                               ifelse(dataframe$subject.android.package == "org.quantumbadger.redreader", "RedReader",
                                                      "Unkown subject name")))))))
 
+  dataframe$subject.id.short <- paste(dataframe$subject.treatment, dataframe$subject.name, sep = " ~ ")
+
   # Set factors
   dataframe$subject.treatment <- as.factor(dataframe$subject.treatment)
-  dataframe$subject.id <- as.factor(dataframe$subject.id)
+  dataframe$subject.id.long <- as.factor(dataframe$subject.id.long)
+  dataframe$subject.id.short <- as.factor(dataframe$subject.id.short)
   dataframe$subject.android.package <- as.factor(dataframe$subject.android.package)
   dataframe$experiment.part <- as.factor(dataframe$experiment.part)
   dataframe$run.number <- as.factor(dataframe$run.number)
