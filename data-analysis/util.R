@@ -75,8 +75,8 @@ experiment.source.trepn <- function() {
   ))
 
   # Parse power from watts to Joule
-  dataframe$trepn.battery.joule <- (dataframe$trepn.battery.raw.uw / (10 ^ 6)) * (dataframe$run.duration.ms / 1000)
-  dataframe$trepn.battery.nonzero.joule <- (dataframe$trepn.battery.nonzero.raw.uw / (10 ^ 6)) * (dataframe$run.duration.ms / 1000)
+  dataframe$trepn.battery.joule <- (dataframe$trepn.battery.raw.uw / (10^6)) * (dataframe$run.duration.ms / 1000)
+  dataframe$trepn.battery.nonzero.joule <- (dataframe$trepn.battery.nonzero.raw.uw / (10^6)) * (dataframe$run.duration.ms / 1000)
 
   dataframe
 }
@@ -86,7 +86,7 @@ experiment.source.android <- function() {
 
   dataframe <- rename(dataframe, c(
     "cpu" = "android.cpu",
-    "men" = "android.memory",
+    "men" = "android.memory"
   ))
 
   dataframe
