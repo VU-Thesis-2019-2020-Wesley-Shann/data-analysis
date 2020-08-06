@@ -1,0 +1,258 @@
+--------- beginning of main
+--------- beginning of system
+08-06 12:06:56.998 12077 12256 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-user
+08-06 12:06:56.999 12077 12256 D CustomInterceptor: HEADER REQUEST
+08-06 12:06:56.999 12077 12256 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:06:57.000 12077 12256 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:06:57.000 12077 12256 D CustomInterceptor: CACHED STATS: size = '0', maxSize = '100', hitCount = '0', createCount = '0', putCount = '0', evictionCount = '0', missCount = '0', toString = 'LruCache[maxSize=100,hits=0,misses=0,hitRate=0%]', 
+08-06 12:06:57.000 12077 12256 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-06 12:06:57.060 12077 12261 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-all-cities/10
+08-06 12:06:57.061 12077 12261 D CustomInterceptor: HEADER REQUEST
+08-06 12:06:57.061 12077 12261 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:06:57.061 12077 12261 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:06:57.061 12077 12261 D CustomInterceptor: CACHED STATS: size = '0', maxSize = '100', hitCount = '0', createCount = '0', putCount = '0', evictionCount = '0', missCount = '1', toString = 'LruCache[maxSize=100,hits=0,misses=1,hitRate=0%]', 
+08-06 12:06:57.061 12077 12261 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-06 12:06:57.608 12077 12256 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-06 12:06:57.609 12077 12261 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: HEADER RESPONSE
+08-06 12:06:57.630 12077 12256 D CustomInterceptor: HEADER RESPONSE
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: Allow GET, OPTIONS
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: Connection keep-alive
+08-06 12:06:57.630 12077 12256 D CustomInterceptor: Allow GET, OPTIONS
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: Content-Length 1588
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: Content-Type application/json
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: Date Thu, 06 Aug 2020 10:06:53 GMT
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: Expires Thu, 06 Aug 2020 10:11:57 GMT+00:00
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: Server gunicorn/19.8.1
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: Vary Accept
+08-06 12:06:57.630 12077 12256 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: Via 1.1 vegur
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-06 12:06:57.630 12077 12256 D CustomInterceptor: Connection keep-alive
+08-06 12:06:57.630 12077 12256 D CustomInterceptor: Content-Length 185
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: CACHEABLE true
+08-06 12:06:57.630 12077 12256 D CustomInterceptor: Content-Type application/json
+08-06 12:06:57.630 12077 12256 D CustomInterceptor: Date Thu, 06 Aug 2020 10:06:53 GMT
+08-06 12:06:57.630 12077 12256 D CustomInterceptor: Expires Thu, 06 Aug 2020 10:11:57 GMT+00:00
+08-06 12:06:57.630 12077 12256 D CustomInterceptor: Server gunicorn/19.8.1
+08-06 12:06:57.630 12077 12256 D CustomInterceptor: Vary Accept
+08-06 12:06:57.630 12077 12256 D CustomInterceptor: Via 1.1 vegur
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-all-cities/10
+08-06 12:06:57.630 12077 12256 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: REQ_SERV_BY net
+08-06 12:06:57.630 12077 12261 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-all-cities/10
+08-06 12:06:57.631 12077 12256 D CustomInterceptor: CACHEABLE true
+08-06 12:06:57.631 12077 12256 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-user
+08-06 12:06:57.631 12077 12256 D CustomInterceptor: REQ_SERV_BY net
+08-06 12:06:57.631 12077 12256 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-user
+08-06 12:06:57.632 12077 12261 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-06 12:06:57.632 12077 12256 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-06 12:06:57.635 12077 12281 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-06 12:06:57.636 12077 12281 D CustomInterceptor: HEADER REQUEST
+08-06 12:06:57.636 12077 12281 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:06:57.636 12077 12281 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:06:57.637 12077 12281 D CustomInterceptor: CACHED STATS: size = '2', maxSize = '100', hitCount = '2', createCount = '0', putCount = '2', evictionCount = '0', missCount = '2', toString = 'LruCache[maxSize=100,hits=2,misses=2,hitRate=50%]', 
+08-06 12:06:57.637 12077 12281 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-06 12:06:58.217 12077 12281 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-06 12:06:58.218 12077 12281 D CustomInterceptor: HEADER RESPONSE
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: Allow GET, OPTIONS
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: Connection keep-alive
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: Content-Length 36
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: Content-Type application/json
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: Date Thu, 06 Aug 2020 10:06:54 GMT
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: Expires Thu, 06 Aug 2020 10:11:58 GMT+00:00
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: Server gunicorn/19.8.1
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: Vary Accept
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: Via 1.1 vegur
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: CACHEABLE true
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: REQ_SERV_BY net
+08-06 12:06:58.219 12077 12281 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-06 12:06:58.249 12077 12281 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-06 12:07:01.898 12077 12422 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-weather/1
+08-06 12:07:01.899 12077 12422 D CustomInterceptor: HEADER REQUEST
+08-06 12:07:01.899 12077 12422 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:07:01.899 12077 12423 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city/1
+08-06 12:07:01.899 12077 12422 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:07:01.899 12077 12422 D CustomInterceptor: CACHED STATS: size = '3', maxSize = '100', hitCount = '3', createCount = '0', putCount = '3', evictionCount = '0', missCount = '3', toString = 'LruCache[maxSize=100,hits=3,misses=3,hitRate=50%]', 
+08-06 12:07:01.899 12077 12422 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-06 12:07:01.899 12077 12423 D CustomInterceptor: HEADER REQUEST
+08-06 12:07:01.899 12077 12423 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:07:01.899 12077 12423 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:07:01.899 12077 12423 D CustomInterceptor: CACHED STATS: size = '3', maxSize = '100', hitCount = '3', createCount = '0', putCount = '3', evictionCount = '0', missCount = '4', toString = 'LruCache[maxSize=100,hits=3,misses=4,hitRate=42%]', 
+08-06 12:07:01.899 12077 12423 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-06 12:07:02.509 12077 12422 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: HEADER RESPONSE
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: Allow GET, OPTIONS
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: Connection keep-alive
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: Content-Length 238
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: Content-Type application/json
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: Date Thu, 06 Aug 2020 10:06:58 GMT
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: Expires Thu, 06 Aug 2020 10:12:02 GMT+00:00
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: Server gunicorn/19.8.1
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: Vary Accept
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: Via 1.1 vegur
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: CACHEABLE true
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-city-weather/1
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: REQ_SERV_BY net
+08-06 12:07:02.510 12077 12422 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-city-weather/1
+08-06 12:07:02.535 12077 12423 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-06 12:07:02.536 12077 12423 D CustomInterceptor: HEADER RESPONSE
+08-06 12:07:02.536 12077 12423 D CustomInterceptor: Allow GET, OPTIONS
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: Connection keep-alive
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: Content-Length 530
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: Content-Type application/json
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: Date Thu, 06 Aug 2020 10:06:58 GMT
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: Expires Thu, 06 Aug 2020 10:12:02 GMT+00:00
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: Server gunicorn/19.8.1
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: Vary Accept
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: Via 1.1 vegur
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: CACHEABLE true
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-city/1
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: REQ_SERV_BY net
+08-06 12:07:02.537 12077 12423 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-city/1
+08-06 12:07:02.540 12077 12422 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-06 12:07:02.570 12077 12423 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-06 12:07:06.679 12077 12531 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-06 12:07:06.680 12077 12531 D CustomInterceptor: HEADER REQUEST
+08-06 12:07:06.680 12077 12531 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:07:06.680 12077 12531 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:07:06.680 12077 12531 D CustomInterceptor: CACHED STATS: size = '5', maxSize = '100', hitCount = '5', createCount = '0', putCount = '5', evictionCount = '0', missCount = '5', toString = 'LruCache[maxSize=100,hits=5,misses=5,hitRate=50%]', 
+08-06 12:07:06.680 12077 12531 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-06 12:07:07.412 12077 12531 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-06 12:07:07.413 12077 12531 D CustomInterceptor: HEADER RESPONSE
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: Allow GET, OPTIONS
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: Connection keep-alive
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: Content-Length 55024
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: Content-Type application/json
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: Date Thu, 06 Aug 2020 10:07:02 GMT
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: Expires Thu, 06 Aug 2020 10:12:07 GMT+00:00
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: Server gunicorn/19.8.1
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: Vary Accept
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: Via 1.1 vegur
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: CACHEABLE true
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: REQ_SERV_BY net
+08-06 12:07:07.414 12077 12531 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-06 12:07:07.422 12077 12531 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-06 12:07:13.215 12077 12692 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-facts/1
+08-06 12:07:13.216 12077 12692 D CustomInterceptor: HEADER REQUEST
+08-06 12:07:13.216 12077 12692 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:07:13.216 12077 12692 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:07:13.216 12077 12692 D CustomInterceptor: CACHED STATS: size = '6', maxSize = '100', hitCount = '6', createCount = '0', putCount = '6', evictionCount = '0', missCount = '6', toString = 'LruCache[maxSize=100,hits=6,misses=6,hitRate=50%]', 
+08-06 12:07:13.216 12077 12692 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-06 12:07:13.741 12077 12692 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-06 12:07:13.741 12077 12692 D CustomInterceptor: HEADER RESPONSE
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: Allow GET, OPTIONS
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: Connection keep-alive
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: Content-Length 1793
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: Content-Type application/json
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: Date Thu, 06 Aug 2020 10:07:09 GMT
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: Expires Thu, 06 Aug 2020 10:12:13 GMT+00:00
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: Server gunicorn/19.8.1
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: Vary Accept
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: Via 1.1 vegur
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: CACHEABLE true
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-city-facts/1
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: REQ_SERV_BY net
+08-06 12:07:13.742 12077 12692 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-city-facts/1
+08-06 12:07:13.744 12077 12692 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-06 12:07:13.747 12077 12704 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-images/1
+08-06 12:07:13.748 12077 12704 D CustomInterceptor: HEADER REQUEST
+08-06 12:07:13.748 12077 12704 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:07:13.748 12077 12704 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:07:13.748 12077 12704 D CustomInterceptor: CACHED STATS: size = '7', maxSize = '100', hitCount = '7', createCount = '0', putCount = '7', evictionCount = '0', missCount = '7', toString = 'LruCache[maxSize=100,hits=7,misses=7,hitRate=50%]', 
+08-06 12:07:13.748 12077 12704 D CustomInterceptor: PREFLIB NOT A GET REQUEST OR NOT IN CACHEGET
+08-06 12:07:14.469 12077 12704 D CustomInterceptor: CACHE_CONTROL SETTING NEW MAX-AGE
+08-06 12:07:14.470 12077 12704 D CustomInterceptor: HEADER RESPONSE
+08-06 12:07:14.470 12077 12704 D CustomInterceptor: Allow GET, OPTIONS
+08-06 12:07:14.470 12077 12704 D CustomInterceptor: Cache-Control public, immutable, max-age=300, only-if-cached, max-stale=300
+08-06 12:07:14.470 12077 12704 D CustomInterceptor: Connection keep-alive
+08-06 12:07:14.470 12077 12704 D CustomInterceptor: Content-Length 183
+08-06 12:07:14.470 12077 12704 D CustomInterceptor: Content-Type application/json
+08-06 12:07:14.470 12077 12704 D CustomInterceptor: Date Thu, 06 Aug 2020 10:07:10 GMT
+08-06 12:07:14.470 12077 12704 D CustomInterceptor: Expires Thu, 06 Aug 2020 10:12:14 GMT+00:00
+08-06 12:07:14.470 12077 12704 D CustomInterceptor: Server gunicorn/19.8.1
+08-06 12:07:14.470 12077 12704 D CustomInterceptor: Vary Accept
+08-06 12:07:14.470 12077 12704 D CustomInterceptor: Via 1.1 vegur
+08-06 12:07:14.470 12077 12704 D CustomInterceptor: X-Frame-Options SAMEORIGIN
+08-06 12:07:14.471 12077 12704 D CustomInterceptor: CACHEABLE true
+08-06 12:07:14.471 12077 12704 D CustomInterceptor: REQ https://project-travel-mate.herokuapp.com/api/get-city-images/1
+08-06 12:07:14.471 12077 12704 D CustomInterceptor: REQ_SERV_BY net
+08-06 12:07:14.471 12077 12704 D CustomInterceptor: PREFLIB Adding response to lrucache - https://project-travel-mate.herokuapp.com/api/get-city-images/1
+08-06 12:07:14.500 12077 12704 D CustomInterceptor: interceptor_finished : return_type #3 : request served from remote and added to cache
+08-06 12:07:17.733 12077 12807 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-facts/1
+08-06 12:07:17.734 12077 12807 D CustomInterceptor: HEADER REQUEST
+08-06 12:07:17.734 12077 12807 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:07:17.734 12077 12807 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:07:17.734 12077 12807 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '8', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=8,misses=8,hitRate=50%]', 
+08-06 12:07:17.734 12077 12807 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-city-facts/1
+08-06 12:07:17.734 12077 12807 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-city-facts/1, sending it back
+08-06 12:07:17.734 12077 12807 D CustomInterceptor: CONTENT [{"id":2,"fact":"As early as in the year 1911, British announced to shift their capital from the then Calcutta to Delhi and it was shifted to Delhi in 1912.","source_text":"service sutra","source_url":"https://www.servicesutra.com/blog/20-amazing-interesting-facts-about-delhi/"},{"id":3,"fact":"It has a population of 11 million and metropolitan population of 16.3 million. This makes city the second most populous city in India.","source_text":"service sutra","source_url":"https://www.servicesutra.com/blog/20-amazing-interesting-facts-about-delhi/"},{"id":4,"fact":"Delhi has been inhabited since 6th It has been the capital of many empires, and this is the reason this city has been ransacked and built many times.","source_text":"service sutra","source_url":"https://www.servicesutra.com/blog/20-amazing-interesting-facts-about-delhi/"},{"id":5,"fact":"According to a survey 10,500 people die in Delhi due to pollution.","source_text":"service sutra","source_url":"https://www.servicesutra.com/blog/20-amazing-interesting-facts-about-delhi/"},{"id":6,"fact":"Delhi is largest commercial centre in Northern part of India. Delhi has country’s largest and fastest growing retail industries. Besides that manufacturing of several goods has considerably increased. Nearly 1,440,000 people work in various manufacturing sectors in and around Delhi.","source_text":"service sutra","source_url":"https://www.servicesutra.com/blog/20-amazing-interesting-facts-about-delhi/"},{"id":7,"fact":"Indira Gandhi National Airport of Delhi is the city’s main gateway for city’s domestic as well as International civilian air traffic. This is one of the busiest in south Asia.","source_text":"service sutra","source_url":"https://www.servicesutra.com/blog/20-amazing-interesting-facts-about-delhi/"}]
+08-06 12:07:17.734 12077 12807 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-06 12:07:17.736 12077 12808 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-images/1
+08-06 12:07:17.737 12077 12808 D CustomInterceptor: HEADER REQUEST
+08-06 12:07:17.737 12077 12808 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:07:17.737 12077 12808 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:07:17.737 12077 12808 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '9', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=9,misses=8,hitRate=52%]', 
+08-06 12:07:17.737 12077 12808 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-city-images/1
+08-06 12:07:17.737 12077 12808 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-city-images/1, sending it back
+08-06 12:07:17.737 12077 12808 D CustomInterceptor: CONTENT [{"id":17,"image_url":"https://upload.wikimedia.org/wikipedia/commons/9/94/%E0%B4%96%E0%B5%81%E0%B4%A4%E0%B5%8D%E0%B4%AC%E0%B5%8D_%E0%B4%AE%E0%B4%BF%E0%B4%A8%E0%B4%BE%E0%B5%BC1.jpg"}]
+08-06 12:07:17.737 12077 12808 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-06 12:07:22.273 12077 12933 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-06 12:07:22.273 12077 12933 D CustomInterceptor: HEADER REQUEST
+08-06 12:07:22.273 12077 12933 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:07:22.273 12077 12933 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:07:22.274 12077 12933 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '10', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=10,misses=8,hitRate=55%]', 
+08-06 12:07:22.274 12077 12933 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-06 12:07:22.274 12077 12933 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-city-information/1, sending it back
+08-06 12:07:22.275 12077 12933 D CustomInterceptor: CONTENT {"Summary":"Delhi (English: ; Hindi: [ˈdɪlːi] Dillī; Punjabi: [ˈdɪlːi] Dillī; Urdu: [ˈdeːɦli] Dēhlī), officially known as the National Capital Territory of Delhi (NCT), is a city and a union territory of India containing New Delhi, the capital of India.It is bordered by the state of Haryana on three sides and by Uttar Pradesh to the east. The NCT covers an area of 1,484 square kilometres (573 sq mi). According to the 2011 census, Delhi's city proper population was over 11 million, the second-highest in India after Mumbai, while the whole NCT's population was about 16.8 million. Delhi's urban area is now considered to extend beyond the NCT boundaries, and include the neighbouring satellite cities of Ghaziabad, Faridabad, Gurgaon and Noida in an area called the National Capital Region (NCR) and had an estimated 2016 population of over 26 million people, making it the world's second-largest urban area according to the United Nations. Recent estimates of the metro economy of its urban area have ranked Delhi either the most or second-most productive metro area of India. Delhi is the second-wealthiest city in India after Mumbai and is home to 18 billionaires and 23,000 millionaires. Delhi ranks fifth among the Indian states and union territories in human development index. Delhi has the second-highest GDP per capita in India. Delhi is of great historical significance as an important commercial, transport, and cultural hub, as well as the political centre of India.Delhi has been continuously inhabited since the 6th century BCE. Through most of its history, Delhi has served as a capital of various kingdoms and empires, most notably the Pandavas, the Delhi Sultanate and the Mughal Empire. The city has been captured, ransacked and rebuilt several times, particularly during the medieval period, and modern Delhi is a cluster of a number of cities spread across the metropolitan region. For many centuries Delhi has been a dominant trading and commercial centre in northern India, and after 1990s it has emerged as an important node in the international corporate and financial network.A union territory, the political administration of the NCT of Delhi today more closely resembles that of a state of India, with its own legislature, high court and an executive council of ministers headed by a Chief Minister. New Delhi is jointly administered by the federal government of India and the local government of Delhi, and serves as the capital of the nation as well as the NCT of Delhi. Delhi hosted the inaugural 1951 Asian Games, 1982 Asian Games, 1983 NAM Summit, 2010 Men's Hockey World Cup, 2010 Commonwealth Games, 2012 BRICS Summit and was one of the major host cities of the 2011 Cricket World Cup.Delhi is also the centre of the National Capital Region (NCR), which is a unique 'interstate regional planning' area created by the National Capital Region Planning Board Act of 1985.","Toponym":"There are a number of myths and legends associated with the origin of the name Delhi. One of them is derived from Dhillu or Dilu, a king who built a city at this location in 50 BCE and named it after himself. Another legend holds that the name of the city is based on the Hindi/Prakrit word dhili (loose) and that it was used by the Tomaras to refer to the city because the iron pillar of Delhi had a weak foundation and had to be moved. According to Panjab Notes and Queries, the name of the city at the time of King Prithviraj was  dilpat, and that dilpat and dilli are probably derived from the old Hindi word dil meaning eminence. The former director of the Archaeological Survey of India, Alexander Cunningham, mentioned that dilli later became dihli/dehli. Some suggest the coins in circulation in the region under the Tomaras were called dehliwal. According to the Bhavishya Purana, King Prithiviraja of Indraprastha built a new fort in the modern-day Purana Qila area for the convenience of all four castes in his kingdom. He ordered the construction of a gateway to the fort and later named the fort dehali.
+08-06 12:07:22.275 12077 12933 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-06 12:07:28.896 12077 13073 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-06 12:07:28.897 12077 13073 D CustomInterceptor: HEADER REQUEST
+08-06 12:07:28.897 12077 13073 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:07:28.897 12077 13073 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:07:28.897 12077 13073 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '11', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=11,misses=8,hitRate=57%]', 
+08-06 12:07:28.897 12077 13073 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications
+08-06 12:07:28.897 12077 13073 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/number-of-unread-notifications, sending it back
+08-06 12:07:28.898 12077 13073 D CustomInterceptor: CONTENT {"number_of_unread_notifications":0}
+08-06 12:07:28.898 12077 13073 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-06 12:07:30.593 12077 13118 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-weather/1
+08-06 12:07:30.593 12077 13119 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city/1
+08-06 12:07:30.594 12077 13118 D CustomInterceptor: HEADER REQUEST
+08-06 12:07:30.594 12077 13118 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:07:30.594 12077 13118 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:07:30.594 12077 13118 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '12', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=12,misses=8,hitRate=60%]', 
+08-06 12:07:30.594 12077 13118 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-city-weather/1
+08-06 12:07:30.594 12077 13119 D CustomInterceptor: HEADER REQUEST
+08-06 12:07:30.594 12077 13118 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-city-weather/1, sending it back
+08-06 12:07:30.594 12077 13119 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:07:30.594 12077 13119 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:07:30.594 12077 13118 D CustomInterceptor: CONTENT {"temp":33.15,"temp_units":"C","max_temp":33.33,"min_temp":33.0,"code":721,"condensed":"Haze","description":"haze","icon":"http://openweathermap.org/img/w/50n.png","humidity":70,"humidity_units":"%","pressure":1000,"pressure_units":"hPa"}
+08-06 12:07:30.594 12077 13118 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-06 12:07:30.594 12077 13119 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '13', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=13,misses=8,hitRate=61%]', 
+08-06 12:07:30.594 12077 13119 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-city/1
+08-06 12:07:30.594 12077 13119 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-city/1, sending it back
+08-06 12:07:30.594 12077 13119 D CustomInterceptor: CONTENT {"id":1,"city_name":"Delhi","description":"Delhi, officially the National Capital Territory of Delhi, is the Capital territory of India. During the British Raj, Delhi was part of the province of Punjab and is still historically and culturally connected to the Punjab region.","latitude":"28.613900","longitude":"77.209000","facts_count":6,"images":["https://upload.wikimedia.org/wikipedia/commons/9/94/%E0%B4%96%E0%B5%81%E0%B4%A4%E0%B5%8D%E0%B4%AC%E0%B5%8D_%E0%B4%AE%E0%B4%BF%E0%B4%A8%E0%B4%BE%E0%B5%BC1.jpg"],"has_visited":false}
+08-06 12:07:30.594 12077 13119 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+08-06 12:07:35.339 12077 13216 D CustomInterceptor: NETWORK-PROVIDER https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-06 12:07:35.340 12077 13216 D CustomInterceptor: HEADER REQUEST
+08-06 12:07:35.340 12077 13216 D CustomInterceptor: Authorization Token e817cf733b7893037942a7dc5507f3c5a98408e6
+08-06 12:07:35.340 12077 13216 D CustomInterceptor: Cache-Control max-age=300, max-stale=300
+08-06 12:07:35.340 12077 13216 D CustomInterceptor: CACHED STATS: size = '8', maxSize = '100', hitCount = '14', createCount = '0', putCount = '8', evictionCount = '0', missCount = '8', toString = 'LruCache[maxSize=100,hits=14,misses=8,hitRate=63%]', 
+08-06 12:07:35.340 12077 13216 D CustomInterceptor: PREFLIB GET REQUEST https://project-travel-mate.herokuapp.com/api/get-city-information/1
+08-06 12:07:35.341 12077 13216 D CustomInterceptor: PREFLIB found https://project-travel-mate.herokuapp.com/api/get-city-information/1, sending it back
+08-06 12:07:35.341 12077 13216 D CustomInterceptor: CONTENT {"Summary":"Delhi (English: ; Hindi: [ˈdɪlːi] Dillī; Punjabi: [ˈdɪlːi] Dillī; Urdu: [ˈdeːɦli] Dēhlī), officially known as the National Capital Territory of Delhi (NCT), is a city and a union territory of India containing New Delhi, the capital of India.It is bordered by the state of Haryana on three sides and by Uttar Pradesh to the east. The NCT covers an area of 1,484 square kilometres (573 sq mi). According to the 2011 census, Delhi's city proper population was over 11 million, the second-highest in India after Mumbai, while the whole NCT's population was about 16.8 million. Delhi's urban area is now considered to extend beyond the NCT boundaries, and include the neighbouring satellite cities of Ghaziabad, Faridabad, Gurgaon and Noida in an area called the National Capital Region (NCR) and had an estimated 2016 population of over 26 million people, making it the world's second-largest urban area according to the United Nations. Recent estimates of the metro economy of its urban area have ranked Delhi either the most or second-most productive metro area of India. Delhi is the second-wealthiest city in India after Mumbai and is home to 18 billionaires and 23,000 millionaires. Delhi ranks fifth among the Indian states and union territories in human development index. Delhi has the second-highest GDP per capita in India. Delhi is of great historical significance as an important commercial, transport, and cultural hub, as well as the political centre of India.Delhi has been continuously inhabited since the 6th century BCE. Through most of its history, Delhi has served as a capital of various kingdoms and empires, most notably the Pandavas, the Delhi Sultanate and the Mughal Empire. The city has been captured, ransacked and rebuilt several times, particularly during the medieval period, and modern Delhi is a cluster of a number of cities spread across the metropolitan region. For many centuries Delhi has been a dominant trading and commercial centre in northern India, and after 1990s it has emerged as an important node in the international corporate and financial network.A union territory, the political administration of the NCT of Delhi today more closely resembles that of a state of India, with its own legislature, high court and an executive council of ministers headed by a Chief Minister. New Delhi is jointly administered by the federal government of India and the local government of Delhi, and serves as the capital of the nation as well as the NCT of Delhi. Delhi hosted the inaugural 1951 Asian Games, 1982 Asian Games, 1983 NAM Summit, 2010 Men's Hockey World Cup, 2010 Commonwealth Games, 2012 BRICS Summit and was one of the major host cities of the 2011 Cricket World Cup.Delhi is also the centre of the National Capital Region (NCR), which is a unique 'interstate regional planning' area created by the National Capital Region Planning Board Act of 1985.","Toponym":"There are a number of myths and legends associated with the origin of the name Delhi. One of them is derived from Dhillu or Dilu, a king who built a city at this location in 50 BCE and named it after himself. Another legend holds that the name of the city is based on the Hindi/Prakrit word dhili (loose) and that it was used by the Tomaras to refer to the city because the iron pillar of Delhi had a weak foundation and had to be moved. According to Panjab Notes and Queries, the name of the city at the time of King Prithviraj was  dilpat, and that dilpat and dilli are probably derived from the old Hindi word dil meaning eminence. The former director of the Archaeological Survey of India, Alexander Cunningham, mentioned that dilli later became dihli/dehli. Some suggest the coins in circulation in the region under the Tomaras were called dehliwal. According to the Bhavishya Purana, King Prithiviraja of Indraprastha built a new fort in the modern-day Purana Qila area for the convenience of all four castes in his kingdom. He ordered the construction of a gateway to the fort and later named the fort dehali.
+08-06 12:07:35.341 12077 13216 D CustomInterceptor: interceptor_finished : return_type #2 : request served from cache
+--------- beginning of crash
