@@ -102,6 +102,7 @@ experiment.source.android <- function() {
 experiment.source.runtime <- function() {
   dataframe <- cbind(experiment.source.trepn(), experiment.source.android())
   dataframe <- dataframe[, !duplicated(names(dataframe))]
+  dataframe <- dataframe[, order(colnames(dataframe))]
 
   dataframe
 }
