@@ -7,15 +7,15 @@ library(ggplot2)
 
 source("util/read_data.R")
 
-rq1.data <- experiment.source.runtime()
+rq1.dataframe <- experiment.source.runtime()
 
-plot(rq1.data$android.memory.mb)
+plot(rq1.dataframe$android.memory.mb)
 
 aes <- aes_string(
   y = "android.memory.mb",
   x = "subject.id.short"
 )
-ggplot(rq1.data, aes) + geom_boxplot()
+ggplot(rq1.dataframe, aes) + geom_boxplot()
 
 
 #plot(rq1.android$mem)
