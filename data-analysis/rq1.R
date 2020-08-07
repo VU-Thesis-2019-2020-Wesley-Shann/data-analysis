@@ -14,6 +14,9 @@ source("util/read_data.R")
 source("util/write_data.R")
 source("util/plot.R")
 
+print("===================")
+print("Running RQ 1 script")
+
 # Read data
 print("Reading data")
 rq1.dataframe <- experiment.source.runtime()
