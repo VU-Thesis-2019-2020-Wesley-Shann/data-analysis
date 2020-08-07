@@ -38,19 +38,8 @@ for (subject_id in unique(rq1.dataframe$subject.id)) {
   )
   rq1.summary.duration_per_subject_treatment.columns <- cbind(rq1.summary.duration_per_subject_treatment.columns, subject_id)
 }
-colnames(rq1.summary.duration_per_subject_treatment) <-rq1.summary.duration_per_subject_treatment.columns
+colnames(rq1.summary.duration_per_subject_treatment) <- rq1.summary.duration_per_subject_treatment.columns
 experiment.write.latex(1, t(rq1.summary.duration_per_subject_treatment), "duration_per_subject_treatment-summary.tex")
 
 # Make plots of the data
-aes <- aes_string(
-  x = "subject.id",
-  #y = "android.memory.mb",
-  #  y = "trepn.battery.joule",
-  y = "trepn.battery.nonzero.joule"
-)
-
-theme <- theme(
-  axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
-)
-
-ggplot(rq1.dataframe, aes) + geom_boxplot()
+experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,], "trepn.battery.nonzero.joule")
