@@ -6,7 +6,7 @@
 
 source("util/read_data.R")
 
-rq3.dataframe <- experiment.source.prefetching.accuracy()
+rq3.dataframe <- experiment.source.prefetching_accuracy()
 
 aes <- aes_string(
   y = "f1_score",

@@ -5,7 +5,7 @@
 
 source("util/read_data.R")
 
-rq4.dataframe <- experiment.source.strategy.accuracy()
+rq4.dataframe <- experiment.source.strategy_accuracy()
 
 aes <- aes_string(
   y = "f1_score",

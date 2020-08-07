@@ -131,7 +131,7 @@ experiment.source.runtime <- function() {
   dataframe
 }
 
-experiment.source.prefetching.accuracy <- function() {
+experiment.source.prefetching_accuracy <- function() {
   dataframe <- experiment.source.csv("Aggregation-MetricPrefetchingAccuracy.csv")
 
   # Drop columns
@@ -163,7 +163,7 @@ experiment.source.prefetching.accuracy <- function() {
   dataframe
 }
 
-experiment.source.strategy.accuracy <- function() {
+experiment.source.strategy_accuracy <- function() {
   dataframe <- experiment.source.csv("Aggregation-MetricStrategyAccuracy.csv")
 
   # Drop columns
