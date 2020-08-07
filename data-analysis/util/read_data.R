@@ -131,6 +131,13 @@ experiment.source.prefetching.accuracy <- function() {
     "TRUE_POSITIVE" = "true.positive"
   ))
 
+  # Calculate other metrics
+  dataframe$precision <- dataframe$true.positive / (dataframe$true.positive + dataframe$false.positive)
+  dataframe$recall <- dataframe$true.positive / (dataframe$true.positive + dataframe$false.negative)
+  dataframe$accuracy <- dataframe$true.positive / (dataframe$true.positive +
+    dataframe$false.positive +
+    dataframe$false.negative)
+
   # Sort dataframe columns by name
   dataframe <- dataframe[, order(colnames(dataframe))]
 
