@@ -36,6 +36,9 @@ experiment.plot.violin <- function(dataframe, axis_y_column, axis_y_legend, titl
     fill = fill
   )) +
     geom_violin() +
+    geom_boxplot(
+      width = 0.2
+    ) +
     labs(
       title = title,
       x = axis_x_legend,
@@ -50,7 +53,7 @@ experiment.plot.violin <- function(dataframe, axis_y_column, axis_y_legend, titl
 
 experiment.plot.violin.treatment <- function(dataframe, axis_y_column, axis_y_legend, title) {
   experiment.plot.violin(dataframe, axis_y_column, axis_y_legend, title,
-                          axis_x_column = "subject.treatment.name.long",
-                          fill = "subject.treatment.name.long",
-                          axis_x_legend = "Treatments")
+                         axis_x_column = "subject.treatment.name.long",
+                         fill = "subject.treatment.name.long",
+                         axis_x_legend = "Treatments")
 }
