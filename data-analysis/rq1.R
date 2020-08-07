@@ -8,6 +8,7 @@ library(ggplot2)
 library(xtable)
 
 source("util/read_data.R")
+source("util/write_data.R")
 
 rq1.dataframe <- experiment.source.runtime()
 
