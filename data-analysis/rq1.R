@@ -27,7 +27,11 @@ rq1.summary <- cbind(
   summary(rq1.dataframe[rq1.columns_to_take_summary])
 )
 colnames(rq1.summary)[1] <- "trepn.battery.nonzero.joule"
-experiment.write.latex(1, t(rq1.summary), "data-summary.tex")
+experiment.write.latex(rq = 1,
+                       dataframe = t(rq1.summary),
+                       file_name = "data-summary.tex",
+                       caption = "Overview of the runtime metrics per subject and treatment.",
+                       label = "tab:results:rq1:summary:all")
 
 # Take the duration time per subject and write to file
 print("Summarizing duration data")
@@ -42,10 +46,15 @@ for (subject_id in unique(rq1.dataframe$subject.id)) {
 }
 colnames(rq1.summary.duration_per_subject_treatment) <- rq1.summary.duration_per_subject_treatment.columns
 rq1.summary.duration_per_subject_treatment <- rq1.summary.duration_per_subject_treatment[-c(2, 3, 5),]
-experiment.write.latex(1, t(rq1.summary.duration_per_subject_treatment), "duration_per_subject_treatment-summary.tex")
+experiment.write.latex(rq = 1,
+                       dataframe = t(rq1.summary.duration_per_subject_treatment),
+                       file_name = "duration_per_subject_treatment-summary.tex",
+                       caption = "Overview of the runtime duration per subject and treatment.",
+                       label = "tab:results:rq1:summary:duration")
 
 # Make plots of the data
 print("Generating plots")
+
 experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                         "trepn.battery.nonzero.joule",
                         "Battery comsumption (J)",
