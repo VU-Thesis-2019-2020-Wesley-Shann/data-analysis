@@ -28,7 +28,7 @@ rq1.dataframe <- experiment.source.runtime()
 
 
 ################################  Phase 1a Descriptive statistics ###############################
-
+print("Phase 1. Data exploration")
 # Take the duration time per subject and write to file
 print("Summarizing runtime duration")
 rq1.summary.run.duration <- experiment.subject.summary(dataframe = rq1.dataframe, property = "run.duration.s")
@@ -149,6 +149,7 @@ experiment.write.plot(filename = "freqpoly_memory_per_treatment.png", rq = 1)
 #################################################################################################
 #######################  Phase 2: Normality Check and Data Transformation #######################
 #################################################################################################
+print("Phase 2. Normality Check and Data Transformation")
 
 ##################################  Phase 2a Normality check ####################################
 # Battery

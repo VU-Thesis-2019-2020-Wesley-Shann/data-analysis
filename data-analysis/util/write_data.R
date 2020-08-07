@@ -25,5 +25,5 @@ experiment.write.plot <- function(filename, rq, plot = last_plot()) {
 }
 
 experiment.write.text <- function(filename, rq, data) {
-  print(data, file = paste(experiment.write.base_dir, paste0("rq", rq), filename, sep = "/"))
+  capture.output(data, file = paste(experiment.write.base_dir, paste0("rq", rq), filename, sep = "/"))
 }
