@@ -14,7 +14,7 @@ experiment.plot.boxplot <- function(dataframe, axis_y_column, axis_y_legend, tit
   )) +
     geom_boxplot() +
     labs(
-      title = title,
+      title = paste("Boxplot:", title),
       x = axis_x_legend,
       y = axis_y_legend
     ) +
@@ -38,7 +38,7 @@ experiment.plot.violin <- function(dataframe, axis_y_column, axis_y_legend, titl
       draw_quantiles = c(0.25, 0.5, 0.75)
     ) +
     labs(
-      title = title,
+      title = paste("Violin plot:", title),
       x = axis_x_legend,
       y = axis_y_legend
     ) +
@@ -59,7 +59,7 @@ experiment.plot.freqpoly <- function(dataframe, axis_x_column, axis_x_legend, ti
       size = 1
     ) +
     labs(
-      title = title,
+      title = paste("Frequency plot:", title),
       x = axis_x_legend,
       legend = "Treatments",
       y = "Count"
@@ -78,8 +78,8 @@ experiment.plot.qqplot <- function(dataframe, sample_column, sample_legend, titl
     stat_qq() +
     stat_qq_line() +
     labs(
-      title = title,
-      y = paste("Sample ~ ", sample_legend),
+      title = paste("QQ-Plot:", title),
+      y = paste("Sample", sample_legend, sep = " ~ "),
       legend = "Treatments",
       x = "Theoretical"
     ) +
