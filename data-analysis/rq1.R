@@ -74,7 +74,8 @@ experiment.write.plot(filename = "boxplot_battery_per_subject_treatment.png", rq
 my_plot <- experiment.plot.violin(rq1.dataframe[rq1.filter.non_zero_battery,],
                                   "trepn.battery.nonzero.joule",
                                   "Battery comsumption (J)",
-                                  "Battery comsumption per treatment")
+                                  "Battery comsumption per treatment") +
+  expand_limits(y = 0)
 experiment.write.plot(filename = "violin_battery_per_treatment.png", rq = 1)
 
 my_plot <- experiment.plot.boxplot(rq1.dataframe,
@@ -113,5 +114,6 @@ my_plot <- experiment.plot.violin(rq1.dataframe,
                                   "android.memory.mb",
                                   "Memory consumption (MB)",
                                   "Memory consumption per treatment",
-                                  boxplot_width = 0.05)
+                                  boxplot_width = 0.05) +
+  expand_limits(y = 0)
 experiment.write.plot(filename = "violin_memory_per_treatment.png", rq = 1)
