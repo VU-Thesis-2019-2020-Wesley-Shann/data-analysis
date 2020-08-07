@@ -190,7 +190,7 @@ experiment.write.text(data = shapiro.test(rq1.dataframe$android.memory.mb),
 ##################################  Phase 2a Data Transformation ####################################
 print("Transform data")
 # https://www.datanovia.com/en/lessons/transform-data-to-normal-distribution-in-r/
-# https://rcompanion.org/handbook/I_12.htm
+# https://rcompanion.org/handbook/I_12.html
 
 # Metric      Method        p-value     is normal (p-value > 0.05)
 # -----       ------        -------     --------------------------
