@@ -82,12 +82,12 @@ def is_nappa_metric(tag):
            tag == 'MetricStrategyAccuracy'
 
 
-def parse_logcat_to_csv(exp, tag, properties, nappa_only, use_all_lines=True):
+def parse_logcat_to_csv(exp, tag, properties, use_all_lines=True):
     all_subjects_path = get_subject_base_path(exp)
     for subject_path in all_subjects_path:
         base_path = subject_path + '/logcat/'
         subject_name = get_subject_package_from_path(subject_path)
-        if nappa_only and 'nappa' not in subject_name and is_nappa_metric(tag):
+        if 'nappa' not in subject_name and is_nappa_metric(tag):
             continue
         print('\t\t- Parsing subject %s' % subject_name)
         for filename in os.listdir(base_path):
@@ -146,7 +146,7 @@ def parse_exp_logcat_to_csv(exp):
         "REQUEST_PROTOCOL": TYPE_STRING,
         "REQUEST_URL": TYPE_STRING,
     }
-    parse_logcat_to_csv(exp, 'MetricNetworkRequestExecutionTime', network_duration, False)
+    parse_logcat_to_csv(exp, 'MetricNetworkRequestExecutionTime', network_duration)
 
     print('\tstrategy_duration')
     strategy_duration = {
@@ -157,7 +157,7 @@ def parse_exp_logcat_to_csv(exp):
         "NUMBER_OF_CHILDREN_NODES": TYPE_NUMBER,
         "STRATEGY_RUN_SUCCESSFULLY": TYPE_NUMBER,
     }
-    parse_logcat_to_csv(exp, 'MetricNappaPrefetchingStrategyExecutionTime', strategy_duration, True)
+    parse_logcat_to_csv(exp, 'MetricNappaPrefetchingStrategyExecutionTime', strategy_duration)
 
     print('\tprefetching_accuracy')
     prefetching_accuracy = {
@@ -167,7 +167,7 @@ def parse_exp_logcat_to_csv(exp):
         "FALSE_POSITIVE": TYPE_NUMBER,
         "FALSE_NEGATIVE": TYPE_NUMBER,
     }
-    parse_logcat_to_csv(exp, 'MetricPrefetchingAccuracy', prefetching_accuracy, True, False)
+    parse_logcat_to_csv(exp, 'MetricPrefetchingAccuracy', prefetching_accuracy, False)
 
     print('\tstrategy_accuracy')
     strategy_accuracy = {
@@ -181,7 +181,7 @@ def parse_exp_logcat_to_csv(exp):
         "EXCEPTION_COUNT": TYPE_NUMBER,
         "NO_SUCCESSOR_COUNT": TYPE_NUMBER,
     }
-    parse_logcat_to_csv(exp, 'MetricStrategyAccuracy', strategy_accuracy, True, False)
+    parse_logcat_to_csv(exp, 'MetricStrategyAccuracy', strategy_accuracy, False)
 
 
 def set_write_permissions():
