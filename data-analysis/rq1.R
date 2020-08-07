@@ -41,6 +41,7 @@ for (subject_id in unique(rq1.dataframe$subject.id)) {
   rq1.summary.duration_per_subject_treatment.columns <- cbind(rq1.summary.duration_per_subject_treatment.columns, subject_id)
 }
 colnames(rq1.summary.duration_per_subject_treatment) <- rq1.summary.duration_per_subject_treatment.columns
+rq1.summary.duration_per_subject_treatment <- rq1.summary.duration_per_subject_treatment[-c(2, 3, 5),]
 experiment.write.latex(1, t(rq1.summary.duration_per_subject_treatment), "duration_per_subject_treatment-summary.tex")
 
 # Make plots of the data
