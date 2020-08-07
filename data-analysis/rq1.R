@@ -5,6 +5,7 @@
 
 # Load required libraries
 library(dplyr)
+library(ggsci)
 library(ggplot2)
 library(xtable)
 

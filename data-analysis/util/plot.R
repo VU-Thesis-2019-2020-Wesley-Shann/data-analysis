@@ -24,5 +24,6 @@ experiment.plot.boxplot <- function(dataframe, axis_y_column, axis_y_legend, tit
   ggplot(dataframe, aes) +
     geom_boxplot() +
     labs +
-    theme
+    theme +
+    scale_fill_tron()
 }
