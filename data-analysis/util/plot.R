@@ -61,7 +61,27 @@ experiment.plot.freqpoly <- function(dataframe, axis_x_column, axis_x_legend, ti
     labs(
       title = title,
       x = axis_x_legend,
+      legend = "Treatments",
       y = "Count"
+    ) +
+    theme(
+      legend.position = "bottom"
+    ) +
+    scale_color_tron()
+}
+
+experiment.plot.qqplot <- function(dataframe, sample_column, sample_legend, title) {
+  ggplot(dataframe, aes_string(
+    sample = sample_column,
+    colour = "subject.treatment.name.long"
+  )) +
+    stat_qq() +
+    stat_qq_line() +
+    labs(
+      title = title,
+      y = paste("Sample ~ ", sample_legend),
+      legend = "Treatments",
+      x = "Theoretical"
     ) +
     theme(
       legend.position = "bottom"
