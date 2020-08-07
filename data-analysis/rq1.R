@@ -28,7 +28,9 @@ rq1.summary <- cbind(
 
 colnames(rq1.summary)[4] <- "trepn.battery.nonzero.joule"
 
-print(xtable(t(rq1.summary), type = "latex"), file = )
+experiment.write.latex(1, t(rq1.summary), "data-summary.tex")
+#experiment.write
+#print(xtable(t(rq1.summary), type = "latex"), file = )
 #print(xtable(newobject2, type = "latex"), file = "filename2.tex")
 
 aes <- aes_string(
