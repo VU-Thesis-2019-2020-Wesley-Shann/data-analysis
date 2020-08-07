@@ -62,6 +62,15 @@ experiment.write.latex(rq = 1,
                        caption = "Overview of the CPU load.",
                        label = "tab:results:rq1:summary:cpu")
 
+# Take the duration time per subject and write to file
+print("Summarizing memory consumption")
+rq1.summary.android.memory.mb <- experiment.subject.summary(dataframe = rq1.dataframe, property = "android.memory.mb")
+experiment.write.latex(rq = 1,
+                       dataframe = t(rq1.summary.android.memory.mb),
+                       file_name = "summary-memory.tex",
+                       caption = "Overview of the memory consumption.",
+                       label = "tab:results:rq1:summary:memory")
+
 # Make plots of the data
 print("Generating plots")
 
