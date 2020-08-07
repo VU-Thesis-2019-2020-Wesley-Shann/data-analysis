@@ -35,19 +35,10 @@ experiment.write.latex(rq = 1,
 
 # Take the duration time per subject and write to file
 print("Summarizing duration data")
-rq1.summary.duration_per_subject_treatment <- NULL
-rq1.summary.duration_per_subject_treatment.columns <- NULL
-for (subject_id in unique(rq1.dataframe$subject.id)) {
-  rq1.summary.duration_per_subject_treatment <- cbind(
-    rq1.summary.duration_per_subject_treatment,
-    as.matrix(summary(rq1.dataframe[experiment.subject.filter_per_id(rq1.dataframe, subject_id),]$run.duration.s))
-  )
-  rq1.summary.duration_per_subject_treatment.columns <- cbind(rq1.summary.duration_per_subject_treatment.columns, subject_id)
-}
-colnames(rq1.summary.duration_per_subject_treatment) <- rq1.summary.duration_per_subject_treatment.columns
-rq1.summary.duration_per_subject_treatment <- rq1.summary.duration_per_subject_treatment[-c(2, 3, 5),]
+rq1.summary.duration <- experiment.subject.summary(dataframe = rq1.dataframe, property = "run.duration.s")
+rq1.summary.duration <- rq1.summary.duration[-c(2, 3, 5),]
 experiment.write.latex(rq = 1,
-                       dataframe = t(rq1.summary.duration_per_subject_treatment),
+                       dataframe = t(rq1.summary.duration),
                        file_name = "duration_per_subject_treatment-summary.tex",
                        caption = "Overview of the runtime duration per subject and treatment.",
                        label = "tab:results:rq1:summary:duration")
