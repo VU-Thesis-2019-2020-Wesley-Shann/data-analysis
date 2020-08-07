@@ -26,13 +26,16 @@ rq1.dataframe <- experiment.source.runtime()
 #####################################  Phase 1: Exploration #####################################
 #################################################################################################
 
+
+################################  Phase 1a Descriptive statistics ###############################
+
 # Take the duration time per subject and write to file
 print("Summarizing runtime duration")
 rq1.summary.run.duration <- experiment.subject.summary(dataframe = rq1.dataframe, property = "run.duration.s")
 rq1.summary.run.duration <- rq1.summary.run.duration[-c(2, 3, 5),]
 experiment.write.latex(rq = 1,
                        dataframe = t(rq1.summary.run.duration),
-                       file_name = "summary-duration.tex",
+                       filename = "summary-duration.tex",
                        caption = "Overview of the runtime duration.",
                        label = "tab:results:rq1:summary:duration")
 
@@ -43,7 +46,7 @@ rq1.summary.trepn.battery.nonzero.joule <- experiment.subject.summary(dataframe 
                                                                       property = "trepn.battery.nonzero.joule")
 experiment.write.latex(rq = 1,
                        dataframe = t(rq1.summary.trepn.battery.nonzero.joule),
-                       file_name = "summary-battery.tex",
+                       filename = "summary-battery.tex",
                        caption = "Overview of the battery consumption.",
                        label = "tab:results:rq1:summary:battery")
 
@@ -52,7 +55,7 @@ print("Summarizing CPU load")
 rq1.summary.trepn.cpu <- experiment.subject.summary(dataframe = rq1.dataframe, property = "trepn.cpu")
 experiment.write.latex(rq = 1,
                        dataframe = t(rq1.summary.trepn.cpu),
-                       file_name = "summary-cpu.tex",
+                       filename = "summary-cpu.tex",
                        caption = "Overview of the CPU load.",
                        label = "tab:results:rq1:summary:cpu")
 
@@ -61,13 +64,12 @@ print("Summarizing memory consumption")
 rq1.summary.android.memory.mb <- experiment.subject.summary(dataframe = rq1.dataframe, property = "android.memory.mb")
 experiment.write.latex(rq = 1,
                        dataframe = t(rq1.summary.android.memory.mb),
-                       file_name = "summary-memory.tex",
+                       filename = "summary-memory.tex",
                        caption = "Overview of the memory consumption.",
                        label = "tab:results:rq1:summary:memory")
 
-# Make plots of the data
+#######################################  Phase 1b Plots ########################################
 print("Generating plots")
-
 # Battery
 my_plot <- experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                                    "trepn.battery.nonzero.joule",
@@ -148,12 +150,17 @@ experiment.write.plot(filename = "freqpoly_memory_per_treatment.png", rq = 1)
 #######################  Phase 2: Normality Check and Data Transformation #######################
 #################################################################################################
 
+##################################  Phase 2a Normality check ####################################
 # Battery
 my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                                   "trepn.battery.nonzero.joule",
                                   "Battery comsumption (J)",
                                   "Battery comsumption per treatment")
 experiment.write.plot(filename = "qqplot_battery_per_treatment.png", rq = 1)
+
+experiment.write.text(data = shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery, "trepn.battery.nonzero.joule"]),
+                      filename = "test_shapiro_battery.txt",
+                      rq = 1)
 
 # CPU
 my_plot <- experiment.plot.qqplot(rq1.dataframe,
@@ -162,9 +169,17 @@ my_plot <- experiment.plot.qqplot(rq1.dataframe,
                                   "CPU load per treatment")
 experiment.write.plot(filename = "qqplot_cpu_per_treatment.png", rq = 1)
 
+experiment.write.text(data = shapiro.test(rq1.dataframe$trepn.cpu),
+                      filename = "test_shapiro_cpu.txt",
+                      rq = 1)
+
 # Memory
 my_plot <- experiment.plot.qqplot(rq1.dataframe,
                                   "android.memory.mb",
                                   "Memory consumption (MB)",
                                   "Memory consumption per treatment")
 experiment.write.plot(filename = "qqplot_memory_per_treatment.png", rq = 1)
+
+experiment.write.text(data = shapiro.test(rq1.dataframe$android.memory.mb),
+                      filename = "test_shapiro_memory.txt",
+                      rq = 1)
