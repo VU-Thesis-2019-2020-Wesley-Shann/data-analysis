@@ -61,7 +61,7 @@ experiment.source.csv <- function(file) {
                   ifelse(dataframe$subject.treatment.id == "nappatfpr", "PR",
                          "Unkown subject name")))
 
-  dataframe$subject.id.short <- paste(dataframe$subject.treatment.id, dataframe$subject.name, sep = " ~ ")
+  dataframe$subject.id.short <- paste0(dataframe$subject.name, " (", dataframe$subject.treatment.name.short , ")")
 
   # Set factors
   dataframe$subject.treatment.id <- as.factor(dataframe$subject.treatment.id)
