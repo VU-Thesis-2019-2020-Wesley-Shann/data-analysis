@@ -8,11 +8,6 @@ experiment.source.parts.1 <- "part1_2020.08.03_230233"
 experiment.source.parts.2 <- "part2_2020.08.05_002520"
 experiment.source.parts.3 <- "part3_2020.08.05_223421"
 
-subject.format.name <- function(dataframe) {
-  dataframe$subject_name <- ifelse(iris$Sepal.Length >= 5, "UP", "DOWN")
-  dataframe
-}
-
 # Open and concatenate the data of all three parts of the experiment
 experiment.source.csv <- function(file) {
   # Read data
