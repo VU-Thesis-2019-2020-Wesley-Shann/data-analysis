@@ -21,10 +21,10 @@ rq1.dataframe <- experiment.source.runtime()
 rq1.columns_to_take_summary <- c("run.duration.s", "android.memory.mb", "trepn.cpu")
 rq1.filter.non_zero_battery <- rq1.dataframe$trepn.battery.joule != 0
 rq1.summary <- cbind(
-  summary(rq1.dataframe[rq1.columns_to_take_summary]),
-  as.matrix(summary(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule))
+  as.matrix(summary(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule)),
+  summary(rq1.dataframe[rq1.columns_to_take_summary])
 )
-colnames(rq1.summary)[4] <- "trepn.battery.nonzero.joule"
+colnames(rq1.summary)[1] <- "trepn.battery.nonzero.joule"
 experiment.write.latex(1, t(rq1.summary), "data-summary.tex")
 
 # Take the duration time per subject and write to file
