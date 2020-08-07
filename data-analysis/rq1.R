@@ -80,12 +80,13 @@ experiment.write.plot(filename = "violin_battery_per_treatment.png", rq = 1)
 my_plot <- experiment.plot.boxplot(rq1.dataframe,
                                    "trepn.cpu",
                                    "CPU load (%)",
-                                   "CPU load per subject")
+                                   "CPU load per subject",
+                                   axis_y_max = 100)
 experiment.write.plot(filename = "boxplot_cpu_per_subject_treatment.png", rq = 1)
-
 
 my_plot <- experiment.plot.violin(rq1.dataframe,
                                   "trepn.cpu",
                                   "CPU load (%)",
-                                  "CPU load per treatment")
+                                  "CPU load per treatment",
+                                  axis_y_max = 100)
 experiment.write.plot(filename = "violin_cpu_per_treatment.png", rq = 1)
