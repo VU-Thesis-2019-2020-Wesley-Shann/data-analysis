@@ -65,7 +65,7 @@ experiment.plot.freqpoly <- function(dataframe, axis_x_column, axis_x_legend, ti
       title = paste("Frequency plot:", title),
       x = axis_x_legend,
       y = "Count",
-      legend = "Treatments"
+      colour = "Treatments"
     ) +
     scale_color_tron()
 }
@@ -81,7 +81,7 @@ experiment.plot.qqplot <- function(dataframe, sample_column, sample_legend, titl
       title = paste("QQ-Plot:", title),
       y = paste("Sample", sample_legend, sep = " ~ "),
       x = "Normal Theoretical Quantile",
-      legend = "Treatments"
+      colour = "Treatments"
     ) +
     theme(
       legend.position = "bottom"
