@@ -22,6 +22,10 @@ print("Running RQ 1 script")
 print("Reading data")
 rq1.dataframe <- experiment.source.runtime()
 
+#################################################################################################
+#####################################  Phase 1: Exploration #####################################
+#################################################################################################
+
 # Take the duration time per subject and write to file
 print("Summarizing runtime duration")
 rq1.summary.run.duration <- experiment.subject.summary(dataframe = rq1.dataframe, property = "run.duration.s")
@@ -85,12 +89,6 @@ my_plot <- experiment.plot.freqpoly(rq1.dataframe[rq1.filter.non_zero_battery,],
                                     "Battery comsumption per treatment")
 experiment.write.plot(filename = "freqpoly_battery_per_treatment.png", rq = 1)
 
-my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
-                                    "trepn.battery.nonzero.joule",
-                                    "Battery comsumption (J)",
-                                    "Battery comsumption per treatment")
-experiment.write.plot(filename = "qqplot_battery_per_treatment.png", rq = 1)
-
 
 # CPU
 my_plot <- experiment.plot.boxplot(rq1.dataframe,
@@ -112,12 +110,6 @@ my_plot <- experiment.plot.freqpoly(rq1.dataframe,
                                     "CPU load (%)",
                                     "CPU load per treatment")
 experiment.write.plot(filename = "freqpoly_cpu_per_treatment.png", rq = 1)
-
-my_plot <- experiment.plot.qqplot(rq1.dataframe,
-                                    "trepn.cpu",
-                                    "CPU load (%)",
-                                    "CPU load per treatment")
-experiment.write.plot(filename = "qqplot_cpu_per_treatment.png", rq = 1)
 
 # Memory
 my_plot <- experiment.plot.boxplot(rq1.dataframe,
@@ -151,9 +143,28 @@ my_plot <- experiment.plot.freqpoly(rq1.dataframe,
                                     "Memory consumption per treatment")
 experiment.write.plot(filename = "freqpoly_memory_per_treatment.png", rq = 1)
 
-my_plot <- experiment.plot.qqplot(rq1.dataframe,
-                                    "android.memory.mb",
-                                    "Memory consumption (MB)",
-                                    "Memory consumption per treatment")
-experiment.write.plot(filename = "qqplot_memory_per_treatment.png", rq = 1)
 
+#################################################################################################
+#######################  Phase 2: Normality Check and Data Transformation #######################
+#################################################################################################
+
+# Battery
+my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
+                                  "trepn.battery.nonzero.joule",
+                                  "Battery comsumption (J)",
+                                  "Battery comsumption per treatment")
+experiment.write.plot(filename = "qqplot_battery_per_treatment.png", rq = 1)
+
+# CPU
+my_plot <- experiment.plot.qqplot(rq1.dataframe,
+                                  "trepn.cpu",
+                                  "CPU load (%)",
+                                  "CPU load per treatment")
+experiment.write.plot(filename = "qqplot_cpu_per_treatment.png", rq = 1)
+
+# Memory
+my_plot <- experiment.plot.qqplot(rq1.dataframe,
+                                  "android.memory.mb",
+                                  "Memory consumption (MB)",
+                                  "Memory consumption per treatment")
+experiment.write.plot(filename = "qqplot_memory_per_treatment.png", rq = 1)
