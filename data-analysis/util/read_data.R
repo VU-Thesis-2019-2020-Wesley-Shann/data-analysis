@@ -166,18 +166,23 @@ experiment.source.prefetching.accuracy <- function() {
 experiment.source.strategy.accuracy <- function() {
   dataframe <- experiment.source.csv("Aggregation-MetricStrategyAccuracy.csv")
 
-  ## Drop columns
-  #columns_to_drop <- c("F1_SCORE_2", "subject.id.long")
-  #dataframe <- dataframe[, !(names(dataframe) %in% columns_to_drop)]
-  #
-  ## Rename columns
-  #dataframe <- rename(dataframe, c(
-  #  "F1_SCORE_1" = "f1.score",
-  #  "FALSE_NEGATIVE" = "false.negative",
-  #  "FALSE_POSITIVE" = "false.positive",
-  #  "TRUE_POSITIVE" = "true.positive",
-  #  "subject.id.short" = "subject.id"
-  #))
+  # Drop columns
+  columns_to_drop <- "subject.id.long"
+  dataframe <- dataframe[, !(names(dataframe) %in% columns_to_drop)]
+
+  # Rename columns
+  dataframe <- rename(dataframe, c(
+    "CASES_COUNT" = "count.cases",
+    "EXCEPTION_COUNT" = "count.exception",
+    "EXECUTION_COUNT" = "count.execution",
+    "INSUFFICIENT_SCORE_COUNT" = "count.insufficient_score",
+    "NO_SUCCESSOR_COUNT" = "count.no_sucessor",
+    "HIT_COUNT" = "count.hits",
+    "MISS_COUNT" = "count.misses",
+    "HIT_PERCENTAGE_TOTAL" = "accuracy.total",
+    "HIT_PERCENTAGE_WHEN_PREDICTED" = "accuracy.predicted",
+    "subject.id.short" = "subject.id"
+  ))
   #
   ## Calculate other metrics
   #dataframe$precision <- dataframe$true.positive / (dataframe$true.positive + dataframe$false.positive)
