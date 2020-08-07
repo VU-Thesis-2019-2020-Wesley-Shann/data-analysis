@@ -33,7 +33,7 @@ experiment.source.csv <- function(file) {
   # Rename columns
   dataframe <- rename(dataframe, c(
     "App.package" = "subject.android.package",
-    "Treatment" = "subject.treatment",
+    "Treatment" = "subject.treatment.id",
     "Subject" = "subject.id.long",
     "Run.number" = "run.number"
   ))
@@ -49,10 +49,22 @@ experiment.source.csv <- function(file) {
                                               ifelse(dataframe$subject.android.package == "org.quantumbadger.redreader", "RedReader",
                                                      "Unkown subject name")))))))
 
-  dataframe$subject.id.short <- paste(dataframe$subject.treatment, dataframe$subject.name, sep = " ~ ")
+  # Create additional data
+  dataframe$subject.treatment.name.long <-
+    ifelse(dataframe$subject.treatment.id == "baseline", "Baseline",
+           ifelse(dataframe$subject.treatment.id == "nappagreedy", "Greedy",
+                  ifelse(dataframe$subject.treatment.id == "nappatfpr", "TFPR",
+                         "Unkown subject name")))
+  dataframe$subject.treatment.name.short <-
+    ifelse(dataframe$subject.treatment.id == "baseline", "B",
+           ifelse(dataframe$subject.treatment.id == "nappagreedy", "G",
+                  ifelse(dataframe$subject.treatment.id == "nappatfpr", "PR",
+                         "Unkown subject name")))
+
+  dataframe$subject.id.short <- paste(dataframe$subject.treatment.id, dataframe$subject.name, sep = " ~ ")
 
   # Set factors
-  dataframe$subject.treatment <- as.factor(dataframe$subject.treatment)
+  dataframe$subject.treatment.id <- as.factor(dataframe$subject.treatment.id)
   dataframe$subject.id.long <- as.factor(dataframe$subject.id.long)
   dataframe$subject.id.short <- as.factor(dataframe$subject.id.short)
   dataframe$subject.android.package <- as.factor(dataframe$subject.android.package)
@@ -112,7 +124,7 @@ experiment.source.runtime <- function() {
   dataframe <- dataframe[, order(colnames(dataframe))]
 
   # Sort dataframe rows by subject
-  dataframe <- dataframe[order(dataframe$subject.name, dataframe$subject.treatment),]
+  dataframe <- dataframe[order(dataframe$subject.name, dataframe$subject.treatment.id),]
 
   dataframe
 }
@@ -144,7 +156,7 @@ experiment.source.prefetching.accuracy <- function() {
   dataframe <- dataframe[, order(colnames(dataframe))]
 
   # Sort dataframe rows by subject
-  dataframe <- dataframe[order(dataframe$subject.name, dataframe$subject.treatment),]
+  dataframe <- dataframe[order(dataframe$subject.name, dataframe$subject.treatment.id),]
 
   dataframe
 
