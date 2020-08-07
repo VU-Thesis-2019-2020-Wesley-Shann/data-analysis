@@ -3,16 +3,19 @@
 # Created by: sshann
 # Created on: 06-08-20
 
-experiment.plot.boxplot <- function(dataframe, axis_y_column, axis_y_legend, title) {
+experiment.plot.boxplot <- function(dataframe, axis_y_column, axis_y_legend, title,
+                                    axis_x_column = "subject.id",
+                                    fill = "subject.name",
+                                    axis_x_legend = "Subjects ~ Treatments") {
   ggplot(dataframe, aes_string(
-    x = "subject.id",
+    x = axis_x_column,
     y = axis_y_column,
-    fill = "subject.name"
+    fill = fill
   )) +
     geom_boxplot() +
     labs(
       title = title,
-      x = "Subjects ~ Treatments",
+      x = axis_x_legend,
       y = axis_y_legend
     ) +
     theme(
