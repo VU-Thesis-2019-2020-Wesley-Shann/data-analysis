@@ -3,8 +3,6 @@
 # Created by: sshann
 # Created on: 06-08-20
 
-library(plyr)
-
 experiment.source.dir <- "/home/sshann/Documents/thesis/experiments/experiment-results"
 experiment.source.parts.1 <- "part1_2020.08.03_230233"
 experiment.source.parts.2 <- "part2_2020.08.05_002520"
