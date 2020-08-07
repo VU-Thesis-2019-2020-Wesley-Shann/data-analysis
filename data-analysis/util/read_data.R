@@ -185,7 +185,14 @@ experiment.source.strategy.accuracy <- function() {
   ))
 
   ## Calculate other metrics
-  #dataframe$f1_score
+  dataframe$true_positive <- dataframe$count.hits
+  dataframe$false_positive <- dataframe$count.misses
+  dataframe$false_negative <- dataframe$count.execution -
+    dataframe$true_positive -
+    dataframe$false_positive
+  dataframe$precision <- dataframe$true_positive / (dataframe$true_positive + dataframe$false_positive)
+  dataframe$recall <- dataframe$true_positive / (dataframe$true_positive + dataframe$false_negative)
+  dataframe$f1_score <- dataframe$true_positive / (dataframe$true_positive + 1 / 2 * (dataframe$false_positive + dataframe$false_negative))
 
   # Sort dataframe columns by name
   dataframe <- dataframe[, order(colnames(dataframe))]
