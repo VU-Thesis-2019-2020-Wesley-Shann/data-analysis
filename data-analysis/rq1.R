@@ -223,7 +223,7 @@ shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.j
 
 # Battery ~ Tukey’s Ladder of Powers transformation
 # https://rcompanion.org/handbook/I_12.html#_Toc459550901
-my_data <- transformTukey(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.tukey, plotit = FALSE)
+my_data <- transformTukey(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule, plotit = FALSE)
 # We are dropping the row with 0 reading, so we can't return this to the original dataframe
 #    lambda      W Shapiro.p.value
 #437    0.9 0.9978          0.5687
@@ -292,6 +292,7 @@ rq1.dataframe$android.memory.mb.cube <- sign(rq1.dataframe$android.memory.mb) * 
 shapiro.test(rq1.dataframe$android.memory.mb.cube)
 # 0.95994, p-value = 4.445e-12
 
+qqnorm(rq1.dataframe$android.memory.mb.cube)
 # Memory ~ inverse
 rq1.dataframe$android.memory.mb.inverse <- 1 / rq1.dataframe$android.memory.mb
 shapiro.test(rq1.dataframe$android.memory.mb.inverse)
