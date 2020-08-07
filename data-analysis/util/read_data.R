@@ -120,15 +120,17 @@ experiment.source.runtime <- function() {
 experiment.source.prefetching.accuracy <- function() {
   dataframe <- experiment.source.csv("Aggregation-MetricPrefetchingAccuracy.csv")
 
-  duplicated_columns <- "F1_SCORE_2"
-  dataframe <- dataframe[, !(names(dataframe) %in% duplicated_columns)]
+  # Drop columns
+  columns_to_drop <- c("F1_SCORE_2", "subject.id.long")
+  dataframe <- dataframe[, !(names(dataframe) %in% columns_to_drop)]
 
   # Rename columns
   dataframe <- rename(dataframe, c(
     "F1_SCORE_1" = "f1.score",
     "FALSE_NEGATIVE" = "false.negative",
     "FALSE_POSITIVE" = "false.positive",
-    "TRUE_POSITIVE" = "true.positive"
+    "TRUE_POSITIVE" = "true.positive",
+    "subject.id.short" = "subject.id"
   ))
 
   # Calculate other metrics

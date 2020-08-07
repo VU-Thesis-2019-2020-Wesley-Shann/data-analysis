@@ -10,7 +10,7 @@ rq3.dataframe <- experiment.source.prefetching.accuracy()
 
 aes <- aes_string(
   y = "f1.score",
-  x = "subject.id.short"
+  x = "subject.id"
 )
 
 
