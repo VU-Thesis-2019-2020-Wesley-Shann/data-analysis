@@ -189,74 +189,38 @@ experiment.write.text(data = shapiro.test(rq1.dataframe$android.memory.mb),
 ##################################  Phase 2a Data Transformation ####################################
 print("Transform data")
 
-# Battery ~ log
-rq1.dataframe$trepn.battery.nonzero.joule.log <- log(rq1.dataframe$trepn.battery.nonzero.joule)
-my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
-                                  "trepn.battery.nonzero.joule.log",
-                                  "Battery comsumption (J) (logarithm)",
-                                  "Transformed (logarithm) Battery comsumption")
-experiment.write.plot(filename = "qqplot_battery_log_per_treatment.png", rq = 1)
+# Metric      Method    p-value   is normal (p-value > 0.05)
+# -----       ------    -------   --------------------------
+# Battery     sqrt      0.5963    yes
 
-experiment.write.text(data = shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.log),
-                      filename = "test_shapiro_battery_log.txt",
-                      rq = 1)
+# Battery ~ Natural log
+rq1.dataframe$trepn.battery.nonzero.joule.log <- log(rq1.dataframe$trepn.battery.nonzero.joule)
+shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.log)
+# W = 0.95054, p-value = 1.138e-13
+
 # Battery ~ squared
 rq1.dataframe$trepn.battery.nonzero.joule.square <- rq1.dataframe$trepn.battery.nonzero.joule^2
-my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
-                                  "trepn.battery.nonzero.joule.square",
-                                  "Battery comsumption (J) (squared)",
-                                  "Transformed (squared) Battery comsumption")
-experiment.write.plot(filename = "qqplot_battery_square_per_treatment.png", rq = 1)
-
-experiment.write.text(data = shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.square),
-                      filename = "test_shapiro_battery_square.txt",
-                      rq = 1)
-
-
+shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.square)
+# W = 0.78785, p-value < 2.2e-16
 
 # Battery ~ square root
 rq1.dataframe$trepn.battery.nonzero.joule.sqrt <- sqrt(rq1.dataframe$trepn.battery.nonzero.joule)
-my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
-                                  "trepn.battery.nonzero.joule.log",
-                                  "Battery comsumption (J) (square root)",
-                                  "Transformed (square root) Battery comsumption")
-experiment.write.plot(filename = "qqplot_battery_sqrt_per_treatment.png", rq = 1)
+shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.sqrt)
+# W = 0.99781, p-value = 0.5963
 
-experiment.write.text(data = shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.sqrt),
-                      filename = "test_shapiro_battery_sqrt.txt",
-                      rq = 1)
+# Battery ~ inverse
+rq1.dataframe$trepn.battery.nonzero.joule.inverse <- 1/rq1.dataframe$trepn.battery.nonzero.joule
+shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.inverse)
+# W = 0.48163, p-value < 2.2e-16
 
-# CPU ~ log
+
+# CPU ~ Natural log
 rq1.dataframe$trepn.cpu.log <- log(rq1.dataframe$trepn.cpu)
-my_plot <- experiment.plot.qqplot(rq1.dataframe,
-                                  "trepn.cpu.log",
-                                  "CPU load (%) (logarithm)",
-                                  "Transformed (logarithm) CPU load")
-experiment.write.plot(filename = "qqplot_cpu_log_per_treatment.png", rq = 1)
-
-experiment.write.text(data = shapiro.test(rq1.dataframe$trepn.cpu.log),
-                      filename = "test_shapiro_cpu_log.txt",
-                      rq = 1)
+shapiro.test(rq1.dataframe$trepn.cpu.log)
 # CPU ~ squared
 rq1.dataframe$trepn.cpu.squared <- rq1.dataframe$trepn.cpu^2
-my_plot <- experiment.plot.qqplot(rq1.dataframe,
-                                  "trepn.cpu.squared",
-                                  "CPU load (%) (squared)",
-                                  "Transformed (squared) CPU load")
-experiment.write.plot(filename = "qqplot_cpu_squared_per_treatment.png", rq = 1)
-
-experiment.write.text(data = shapiro.test(rq1.dataframe$trepn.cpu.squared),
-                      filename = "test_shapiro_cpu_squared.txt",
-                      rq = 1)
+shapiro.test(rq1.dataframe$trepn.cpu.squared)
 
 # CPU ~ square root
 rq1.dataframe$trepn.cpu.sqrt <- sqrt(rq1.dataframe$trepn.cpu)
-my_plot <- experiment.plot.qqplot(rq1.dataframe,
-                                  "trepn.cpu.sqrt",
-                                  "CPU load (%) (square root)",
-                                  "Transformed (square root) CPU load")
-experiment.write.plot(filename = "qqplot_cpu_sqrt_per_treatment.png", rq = 1)
-
-experiment.write.text(data = shapiro.test(rq1.dataframe$trepn.cpu.sqrt),
-                      filename = "test_shapiro_cpu_sqrt.txt",
-                      rq = 1)
+shapiro.test(rq1.dataframe$trepn.cpu.sqrt)
