@@ -48,3 +48,20 @@ experiment.plot.violin <- function(dataframe, axis_y_column, axis_y_legend, titl
     ) +
     scale_fill_tron()
 }
+
+experiment.plot.freqpoly <- function(dataframe, axis_x_column, axis_x_legend, title) {
+  ggplot(dataframe, aes_string(
+    axis_x_column,
+    colour = "subject.treatment.name.long"
+  )) +
+    geom_freqpoly(bins = 30) +
+    labs(
+      title = title,
+      x = axis_x_legend,
+      y = "Count"
+    ) +
+    theme(
+      legend.position = "bottom"
+    ) +
+    scale_color_tron()
+}

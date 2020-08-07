@@ -64,6 +64,7 @@ experiment.write.latex(rq = 1,
 # Make plots of the data
 print("Generating plots")
 
+# Battery
 my_plot <- experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                                    "trepn.battery.nonzero.joule",
                                    "Battery comsumption (J)",
@@ -78,6 +79,15 @@ my_plot <- experiment.plot.violin(rq1.dataframe[rq1.filter.non_zero_battery,],
   expand_limits(y = 0)
 experiment.write.plot(filename = "violin_battery_per_treatment.png", rq = 1)
 
+my_plot <- experiment.plot.freqpoly(rq1.dataframe[rq1.filter.non_zero_battery,],
+                                  "trepn.battery.nonzero.joule",
+                                  "Battery comsumption (J)",
+                                  "Battery comsumption per treatment") +
+  expand_limits(y = 0)
+experiment.write.plot(filename = "freqpoly_battery_per_treatment.png", rq = 1)
+
+
+# CPU
 my_plot <- experiment.plot.boxplot(rq1.dataframe,
                                    "trepn.cpu",
                                    "CPU load (%)",
@@ -92,6 +102,7 @@ my_plot <- experiment.plot.violin(rq1.dataframe,
   expand_limits(y = c(0, 100))
 experiment.write.plot(filename = "violin_cpu_per_treatment.png", rq = 1)
 
+# Memory
 my_plot <- experiment.plot.boxplot(rq1.dataframe,
                                    "android.memory.mb",
                                    "Memory consumption (MB)",
@@ -117,7 +128,3 @@ my_plot <- experiment.plot.violin(rq1.dataframe,
   expand_limits(y = 0)
 experiment.write.plot(filename = "violin_memory_per_treatment.png", rq = 1)
 
-ggplot(rq1.dataframe[rq1.filter.non_zero_battery,], aes(
-  trepn.battery.nonzero.joule
-)) +
-  geom_histogram(bins = 100, colour = "white")
