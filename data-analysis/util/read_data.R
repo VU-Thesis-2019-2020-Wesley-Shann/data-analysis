@@ -112,7 +112,31 @@ experiment.source.runtime <- function() {
   dataframe <- dataframe[, order(colnames(dataframe))]
 
   # Sort dataframe rows by subject
-  dataframe <- dataframe[order(dataframe$subject.name, dataframe$subject.treatment), ]
+  dataframe <- dataframe[order(dataframe$subject.name, dataframe$subject.treatment),]
 
   dataframe
+}
+
+experiment.source.prefetching.accuracy <- function() {
+  dataframe <- experiment.source.csv("Aggregation-MetricPrefetchingAccuracy.csv")
+
+  duplicated_columns <- "F1_SCORE_2"
+  dataframe <- dataframe[, !(names(dataframe) %in% duplicated_columns)]
+
+  # Rename columns
+  dataframe <- rename(dataframe, c(
+    "F1_SCORE_1" = "f1.score",
+    "FALSE_NEGATIVE" = "false.negative",
+    "FALSE_POSITIVE" = "false.positive",
+    "TRUE_POSITIVE" = "true.positive"
+  ))
+
+  # Sort dataframe columns by name
+  dataframe <- dataframe[, order(colnames(dataframe))]
+
+  # Sort dataframe rows by subject
+  dataframe <- dataframe[order(dataframe$subject.name, dataframe$subject.treatment),]
+
+  dataframe
+
 }
