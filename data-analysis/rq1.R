@@ -9,6 +9,7 @@ library(ggsci)
 library(ggplot2)
 library(xtable)
 library(rcompanion)
+library(MASS)
 
 # Load utility files
 source("util/subject.R")
@@ -273,6 +274,19 @@ rq1.dataframe$trepn.cpu.tukey <- transformTukey(rq1.dataframe$trepn.cpu, plotit 
 shapiro.test(rq1.dataframe$trepn.cpu.tukey)
 # W = 0.98488, p-value = 4.159e-06
 
+# CPU ~ Box–Cox transformation
+# https://rcompanion.org/handbook/I_12.html#_Toc459550904
+Box <- boxcox(rq1.dataframe$trepn.cpu ~ 1, lambda = seq(-6,6,0.1))
+Cox <- data.frame(Box$x, Box$y)
+Cox2 <- Cox[with(Cox, order(-Cox$Box.y)),]
+Cox2[1,]
+#   Box.x     Box.y
+#57  -0.4 -1241.318
+lambda <- Cox2[1, "Box.x"]
+rq1.dataframe$trepn.cpu.box <- (rq1.dataframe$trepn.cpu ^ lambda - 1)/lambda
+shapiro.test(rq1.dataframe$trepn.cpu.box)
+# W = 0.98487, p-value = 4.128e-06
+
 
 # Memory ~ Natural log
 rq1.dataframe$android.memory.mb.log <- log(rq1.dataframe$android.memory.mb)
@@ -309,6 +323,19 @@ rq1.dataframe$android.memory.mb.tukey <- transformTukey(rq1.dataframe$android.me
 #if (lambda <  0){TRANS = -1 * x ^ lambda}
 shapiro.test(rq1.dataframe$android.memory.mb.tukey)
 # W = 0.88275, p-value < 2.2e-16
+
+# Memory ~ Box–Cox transformation
+# https://rcompanion.org/handbook/I_12.html#_Toc459550904
+Box <- boxcox(rq1.dataframe$android.memory.mb ~ 1, lambda = seq(-6,6,0.1))
+Cox <- data.frame(Box$x, Box$y)
+Cox2 <- Cox[with(Cox, order(-Cox$Box.y)),]
+Cox2[1,]
+#   Box.x     Box.y
+#25  -3.6 -1036.238
+lambda <- Cox2[1, "Box.x"]
+rq1.dataframe$android.memory.mb.box <- (rq1.dataframe$android.memory.mb ^ lambda - 1)/lambda
+shapiro.test(rq1.dataframe$android.memory.mb.box)
+# W = 0.84861, p-value < 2.2e-16
 
 # Plot best cases
 
