@@ -11,6 +11,7 @@ library(xtable)
 # Load utility files
 source("util/read_data.R")
 source("util/write_data.R")
+source("util/plot.R")
 
 # Read data
 rq1.dataframe <- experiment.source.runtime()
@@ -25,7 +26,7 @@ rq1.summary <- cbind(
 colnames(rq1.summary)[4] <- "trepn.battery.nonzero.joule"
 experiment.write.latex(1, t(rq1.summary), "data-summary.tex")
 
-
+# Make plots of the data
 aes <- aes_string(
   x = "subject.id.short",
   #y = "android.memory.mb",
