@@ -81,14 +81,14 @@ experiment.write.plot(filename = "boxplot_battery_per_subject_treatment.png", rq
 my_plot <- experiment.plot.violin(rq1.dataframe[rq1.filter.non_zero_battery,],
                                   "trepn.battery.nonzero.joule",
                                   "Battery comsumption (J)",
-                                  "Battery comsumption per treatment") +
+                                  "Battery comsumption") +
   expand_limits(y = 0)
 experiment.write.plot(filename = "violin_battery_per_treatment.png", rq = 1)
 
 my_plot <- experiment.plot.freqpoly(rq1.dataframe[rq1.filter.non_zero_battery,],
                                     "trepn.battery.nonzero.joule",
                                     "Battery comsumption (J)",
-                                    "Battery comsumption per treatment")
+                                    "Battery comsumption")
 experiment.write.plot(filename = "freqpoly_battery_per_treatment.png", rq = 1)
 
 
@@ -103,14 +103,14 @@ experiment.write.plot(filename = "boxplot_cpu_per_subject_treatment.png", rq = 1
 my_plot <- experiment.plot.violin(rq1.dataframe,
                                   "trepn.cpu",
                                   "CPU load (%)",
-                                  "CPU load per treatment") +
+                                  "CPU load") +
   expand_limits(y = c(0, 100))
 experiment.write.plot(filename = "violin_cpu_per_treatment.png", rq = 1)
 
 my_plot <- experiment.plot.freqpoly(rq1.dataframe,
                                     "trepn.cpu",
                                     "CPU load (%)",
-                                    "CPU load per treatment")
+                                    "CPU load")
 experiment.write.plot(filename = "freqpoly_cpu_per_treatment.png", rq = 1)
 
 # Memory
@@ -135,14 +135,14 @@ experiment.write.plot(filename = "boxplot_memory_per_subject_treatment_above_200
 my_plot <- experiment.plot.violin(rq1.dataframe,
                                   "android.memory.mb",
                                   "Memory consumption (MB)",
-                                  "Memory consumption per treatment") +
+                                  "Memory consumption") +
   expand_limits(y = 0)
 experiment.write.plot(filename = "violin_memory_per_treatment.png", rq = 1)
 
 my_plot <- experiment.plot.freqpoly(rq1.dataframe,
                                     "android.memory.mb",
                                     "Memory consumption (MB)",
-                                    "Memory consumption per treatment")
+                                    "Memory consumption")
 experiment.write.plot(filename = "freqpoly_memory_per_treatment.png", rq = 1)
 
 
@@ -152,14 +152,15 @@ experiment.write.plot(filename = "freqpoly_memory_per_treatment.png", rq = 1)
 print("Phase 2. Normality Check and Data Transformation")
 
 ##################################  Phase 2a Normality check ####################################
+print("Check normality")
 # Battery
 my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                                   "trepn.battery.nonzero.joule",
                                   "Battery comsumption (J)",
-                                  "Battery comsumption per treatment")
+                                  "Battery comsumption")
 experiment.write.plot(filename = "qqplot_battery_per_treatment.png", rq = 1)
 
-experiment.write.text(data = shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery, "trepn.battery.nonzero.joule"]),
+experiment.write.text(data = shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule),
                       filename = "test_shapiro_battery.txt",
                       rq = 1)
 
@@ -167,7 +168,7 @@ experiment.write.text(data = shapiro.test(rq1.dataframe[rq1.filter.non_zero_batt
 my_plot <- experiment.plot.qqplot(rq1.dataframe,
                                   "trepn.cpu",
                                   "CPU load (%)",
-                                  "CPU load per treatment")
+                                  "CPU load")
 experiment.write.plot(filename = "qqplot_cpu_per_treatment.png", rq = 1)
 
 experiment.write.text(data = shapiro.test(rq1.dataframe$trepn.cpu),
@@ -178,9 +179,84 @@ experiment.write.text(data = shapiro.test(rq1.dataframe$trepn.cpu),
 my_plot <- experiment.plot.qqplot(rq1.dataframe,
                                   "android.memory.mb",
                                   "Memory consumption (MB)",
-                                  "Memory consumption per treatment")
+                                  "Memory consumption")
 experiment.write.plot(filename = "qqplot_memory_per_treatment.png", rq = 1)
 
 experiment.write.text(data = shapiro.test(rq1.dataframe$android.memory.mb),
                       filename = "test_shapiro_memory.txt",
+                      rq = 1)
+
+##################################  Phase 2a Data Transformation ####################################
+print("Transform data")
+
+# Battery ~ log
+rq1.dataframe$trepn.battery.nonzero.joule.log <- log(rq1.dataframe$trepn.battery.nonzero.joule)
+my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
+                                  "trepn.battery.nonzero.joule.log",
+                                  "Battery comsumption (J) (logarithm)",
+                                  "Transformed (logarithm) Battery comsumption")
+experiment.write.plot(filename = "qqplot_battery_log_per_treatment.png", rq = 1)
+
+experiment.write.text(data = shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.log),
+                      filename = "test_shapiro_battery_log.txt",
+                      rq = 1)
+# Battery ~ squared
+rq1.dataframe$trepn.battery.nonzero.joule.square <- rq1.dataframe$trepn.battery.nonzero.joule^2
+my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
+                                  "trepn.battery.nonzero.joule.square",
+                                  "Battery comsumption (J) (squared)",
+                                  "Transformed (squared) Battery comsumption")
+experiment.write.plot(filename = "qqplot_battery_square_per_treatment.png", rq = 1)
+
+experiment.write.text(data = shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.square),
+                      filename = "test_shapiro_battery_square.txt",
+                      rq = 1)
+
+
+
+# Battery ~ square root
+rq1.dataframe$trepn.battery.nonzero.joule.sqrt <- sqrt(rq1.dataframe$trepn.battery.nonzero.joule)
+my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
+                                  "trepn.battery.nonzero.joule.log",
+                                  "Battery comsumption (J) (square root)",
+                                  "Transformed (square root) Battery comsumption")
+experiment.write.plot(filename = "qqplot_battery_sqrt_per_treatment.png", rq = 1)
+
+experiment.write.text(data = shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.sqrt),
+                      filename = "test_shapiro_battery_sqrt.txt",
+                      rq = 1)
+
+# CPU ~ log
+rq1.dataframe$trepn.cpu.log <- log(rq1.dataframe$trepn.cpu)
+my_plot <- experiment.plot.qqplot(rq1.dataframe,
+                                  "trepn.cpu.log",
+                                  "CPU load (%) (logarithm)",
+                                  "Transformed (logarithm) CPU load")
+experiment.write.plot(filename = "qqplot_cpu_log_per_treatment.png", rq = 1)
+
+experiment.write.text(data = shapiro.test(rq1.dataframe$trepn.cpu.log),
+                      filename = "test_shapiro_cpu_log.txt",
+                      rq = 1)
+# CPU ~ squared
+rq1.dataframe$trepn.cpu.squared <- rq1.dataframe$trepn.cpu^2
+my_plot <- experiment.plot.qqplot(rq1.dataframe,
+                                  "trepn.cpu.squared",
+                                  "CPU load (%) (squared)",
+                                  "Transformed (squared) CPU load")
+experiment.write.plot(filename = "qqplot_cpu_squared_per_treatment.png", rq = 1)
+
+experiment.write.text(data = shapiro.test(rq1.dataframe$trepn.cpu.squared),
+                      filename = "test_shapiro_cpu_squared.txt",
+                      rq = 1)
+
+# CPU ~ square root
+rq1.dataframe$trepn.cpu.sqrt <- sqrt(rq1.dataframe$trepn.cpu)
+my_plot <- experiment.plot.qqplot(rq1.dataframe,
+                                  "trepn.cpu.sqrt",
+                                  "CPU load (%) (square root)",
+                                  "Transformed (square root) CPU load")
+experiment.write.plot(filename = "qqplot_cpu_sqrt_per_treatment.png", rq = 1)
+
+experiment.write.text(data = shapiro.test(rq1.dataframe$trepn.cpu.sqrt),
+                      filename = "test_shapiro_cpu_sqrt.txt",
                       rq = 1)
