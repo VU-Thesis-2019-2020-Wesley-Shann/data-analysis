@@ -8,6 +8,7 @@ library(dplyr)
 library(ggsci)
 library(ggplot2)
 library(xtable)
+library(rcompanion)
 
 # Load utility files
 source("util/subject.R")
@@ -189,9 +190,11 @@ experiment.write.text(data = shapiro.test(rq1.dataframe$android.memory.mb),
 ##################################  Phase 2a Data Transformation ####################################
 print("Transform data")
 
-# Metric      Method    p-value   is normal (p-value > 0.05)
-# -----       ------    -------   --------------------------
-# Battery     sqrt      0.5963    yes
+# Metric      Method    p-value     is normal (p-value > 0.05)
+# -----       ------    -------     --------------------------
+# Battery     sqrt      0.5963      yes
+# CPU         tukey     4.159e-06   no
+# Memory      cube      4.445e-12   no
 
 # Battery ~ Natural log
 rq1.dataframe$trepn.battery.nonzero.joule.log <- log(rq1.dataframe$trepn.battery.nonzero.joule)
@@ -208,19 +211,99 @@ rq1.dataframe$trepn.battery.nonzero.joule.sqrt <- sqrt(rq1.dataframe$trepn.batte
 shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.sqrt)
 # W = 0.99781, p-value = 0.5963
 
+# Battery ~ cube root
+rq1.dataframe$trepn.battery.nonzero.joule.cube <- sign(rq1.dataframe$trepn.battery.nonzero.joule) * abs(rq1.dataframe$trepn.battery.nonzero.joule)^(1 / 3)
+shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.cube)
+# W = 0.99345, p-value = 0.007739
+
 # Battery ~ inverse
-rq1.dataframe$trepn.battery.nonzero.joule.inverse <- 1/rq1.dataframe$trepn.battery.nonzero.joule
+rq1.dataframe$trepn.battery.nonzero.joule.inverse <- 1 / rq1.dataframe$trepn.battery.nonzero.joule
 shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.inverse)
 # W = 0.48163, p-value < 2.2e-16
+
+# Battery ~ Tukey’s Ladder of Powers transformation
+# https://rcompanion.org/handbook/I_12.html#_Toc459550901
+my_data <- transformTukey(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.tukey, plotit = FALSE)
+# We are dropping the row with 0 reading, so we can't return this to the original dataframe
+#    lambda      W Shapiro.p.value
+#437    0.9 0.9978          0.5687
+#
+#if (lambda >  0){TRANS = x ^ lambda}
+#if (lambda == 0){TRANS = log(x)}
+#if (lambda <  0){TRANS = -1 * x ^ lambda}
+shapiro.test(my_data)
+# W = 0.99766, p-value = 0.533
 
 
 # CPU ~ Natural log
 rq1.dataframe$trepn.cpu.log <- log(rq1.dataframe$trepn.cpu)
 shapiro.test(rq1.dataframe$trepn.cpu.log)
+# W = 0.97682, p-value = 1.951e-08
+
 # CPU ~ squared
 rq1.dataframe$trepn.cpu.squared <- rq1.dataframe$trepn.cpu^2
 shapiro.test(rq1.dataframe$trepn.cpu.squared)
+# W = 0.79024, p-value < 2.2e-16
 
 # CPU ~ square root
 rq1.dataframe$trepn.cpu.sqrt <- sqrt(rq1.dataframe$trepn.cpu)
 shapiro.test(rq1.dataframe$trepn.cpu.sqrt)
+# W = 0.94853, p-value = 5.342e-14
+
+# CPU ~ cube root
+rq1.dataframe$trepn.cpu.cube <- sign(rq1.dataframe$trepn.cpu) * abs(rq1.dataframe$trepn.cpu)^(1 / 3)
+shapiro.test(rq1.dataframe$trepn.cpu.cube)
+# W = 0.96004, p-value = 4.762e-12
+
+# CPU ~ inverse
+rq1.dataframe$trepn.cpu.inverse <- 1 / rq1.dataframe$trepn.cpu
+shapiro.test(rq1.dataframe$trepn.cpu.inverse)
+# W = 0.96685, p-value = 9.854e-11
+
+# CPU ~ Tukey’s Ladder of Powers transformation
+rq1.dataframe$trepn.cpu.tukey <- transformTukey(rq1.dataframe$trepn.cpu, plotit = FALSE)
+#    lambda      W Shapiro.p.value
+#384 -0.425 0.9849       4.159e-06
+#
+#if (lambda >  0){TRANS = x ^ lambda}
+#if (lambda == 0){TRANS = log(x)}
+#if (lambda <  0){TRANS = -1 * x ^ lambda}
+shapiro.test(rq1.dataframe$trepn.cpu.tukey)
+# W = 0.98488, p-value = 4.159e-06
+
+
+# Memory ~ Natural log
+rq1.dataframe$android.memory.mb.log <- log(rq1.dataframe$android.memory.mb)
+shapiro.test(rq1.dataframe$android.memory.mb.log)
+# W = 0.73568, p-value < 2.2e-16
+
+# Memory ~ squared
+rq1.dataframe$android.memory.mb.squared <- rq1.dataframe$android.memory.mb^2
+shapiro.test(rq1.dataframe$android.memory.mb.squared)
+# W = 0.64154, p-value < 2.2e-16
+
+# Memory ~ square root
+rq1.dataframe$android.memory.mb.sqrt <- sqrt(rq1.dataframe$android.memory.mb)
+shapiro.test(rq1.dataframe$android.memory.mb.sqrt)
+# 0.71323, p-value < 2.2e-16
+
+# Memory ~ cube root
+rq1.dataframe$android.memory.mb.cube <- sign(rq1.dataframe$android.memory.mb) * abs(rq1.dataframe$trepn.cpu)^(1 / 3)
+shapiro.test(rq1.dataframe$android.memory.mb.cube)
+# 0.95994, p-value = 4.445e-12
+
+# Memory ~ inverse
+rq1.dataframe$android.memory.mb.inverse <- 1 / rq1.dataframe$android.memory.mb
+shapiro.test(rq1.dataframe$android.memory.mb.inverse)
+# 0.77604, p-value < 2.2e-16
+
+# Memory ~ Tukey’s Ladder of Powers transformation
+rq1.dataframe$android.memory.mb.tukey <- transformTukey(rq1.dataframe$android.memory.mb, plotit = FALSE)
+#    lambda      W Shapiro.p.value
+#110 -7.275 0.8828       2.019e-21
+#
+#if (lambda >  0){TRANS = x ^ lambda}
+#if (lambda == 0){TRANS = log(x)}
+#if (lambda <  0){TRANS = -1 * x ^ lambda}
+shapiro.test(rq1.dataframe$android.memory.mb.tukey)
+# W = 0.88275, p-value < 2.2e-16
