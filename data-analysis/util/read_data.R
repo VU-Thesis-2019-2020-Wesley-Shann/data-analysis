@@ -141,18 +141,18 @@ experiment.source.prefetching.accuracy <- function() {
   # Rename columns
   dataframe <- rename(dataframe, c(
     "F1_SCORE_1" = "f1_score",
-    "FALSE_NEGATIVE" = "false.negative",
-    "FALSE_POSITIVE" = "false.positive",
-    "TRUE_POSITIVE" = "true.positive",
+    "FALSE_NEGATIVE" = "false_negative",
+    "FALSE_POSITIVE" = "false_positive",
+    "TRUE_POSITIVE" = "true_positive",
     "subject.id.short" = "subject.id"
   ))
 
   # Calculate other metrics
-  dataframe$precision <- dataframe$true.positive / (dataframe$true.positive + dataframe$false.positive)
-  dataframe$recall <- dataframe$true.positive / (dataframe$true.positive + dataframe$false.negative)
-  dataframe$accuracy <- dataframe$true.positive / (dataframe$true.positive +
-    dataframe$false.positive +
-    dataframe$false.negative)
+  dataframe$precision <- dataframe$true_positive / (dataframe$true_positive + dataframe$false_positive)
+  dataframe$recall <- dataframe$true_positive / (dataframe$true_positive + dataframe$false_negative)
+  dataframe$accuracy <- dataframe$true_positive / (dataframe$true_positive +
+    dataframe$false_positive +
+    dataframe$false_negative)
 
   # Sort dataframe columns by name
   dataframe <- dataframe[, order(colnames(dataframe))]
