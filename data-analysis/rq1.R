@@ -35,23 +35,31 @@ experiment.write.latex(rq = 1,
 
 # Take the duration time per subject and write to file
 print("Summarizing runtime duration")
-rq1.summary.run.duration <- experiment.subject.summary(dataframe = rq1.dataframe,
-                                                       property = "run.duration.s")
+rq1.summary.run.duration <- experiment.subject.summary(dataframe = rq1.dataframe, property = "run.duration.s")
 rq1.summary.run.duration <- rq1.summary.run.duration[-c(2, 3, 5),]
 experiment.write.latex(rq = 1,
                        dataframe = t(rq1.summary.run.duration),
-                       file_name = "summary-duration_per_subject_treatment.tex",
-                       caption = "Overview of the runtime duration per subject and treatment.",
+                       file_name = "summary-duration.tex",
+                       caption = "Overview of the runtime duration.",
                        label = "tab:results:rq1:summary:duration")
 
 # Take the duration time per subject and write to file
-print("Summarizing CPU load")
+print("Summarizing battery consumption")
 rq1.summary.trepn.battery.nonzero.joule <- experiment.subject.summary(dataframe = rq1.dataframe[rq1.filter.non_zero_battery,],
                                                                       property = "trepn.battery.nonzero.joule")
 experiment.write.latex(rq = 1,
                        dataframe = t(rq1.summary.trepn.battery.nonzero.joule),
-                       file_name = "summary-cpu_per_subject_treatment.tex",
-                       caption = "Overview of the CPU load per subject and treatment.",
+                       file_name = "summary-battery.tex",
+                       caption = "Overview of the battery consumption.",
+                       label = "tab:results:rq1:summary:battery")
+
+# Take the duration time per subject and write to file
+print("Summarizing CPU load")
+rq1.summary.trepn.cpu <- experiment.subject.summary(dataframe = rq1.dataframe, property = "trepn.cpu")
+experiment.write.latex(rq = 1,
+                       dataframe = t(rq1.summary.trepn.cpu),
+                       file_name = "summary-cpu.tex",
+                       caption = "Overview of the CPU load.",
                        label = "tab:results:rq1:summary:cpu")
 
 # Make plots of the data
