@@ -54,14 +54,14 @@ experiment.source.csv <- function(file) {
                   ifelse(dataframe$subject.treatment.id == "nappatfpr", "PR",
                          "Unkown subject name")))
 
-  dataframe$subject.id.short <- paste0(dataframe$subject.name, " (", dataframe$subject.treatment.name.short, ")")
+  dataframe$subject.id <- paste0(dataframe$subject.name, " (", dataframe$subject.treatment.name.short, ")")
 
   # Set factors
   dataframe$subject.treatment.id <- as.factor(dataframe$subject.treatment.id)
   dataframe$subject.treatment.name.short <- as.factor(dataframe$subject.treatment.name.short)
   dataframe$subject.treatment.name.long <- as.factor(dataframe$subject.treatment.name.long)
   dataframe$subject.id.long <- as.factor(dataframe$subject.id.long)
-  dataframe$subject.id.short <- as.factor(dataframe$subject.id.short)
+  dataframe$subject.id <- as.factor(dataframe$subject.id)
   dataframe$subject.android.package <- as.factor(dataframe$subject.android.package)
   dataframe$experiment.part <- as.factor(dataframe$experiment.part)
   dataframe$run.number <- as.factor(dataframe$run.number)
@@ -136,8 +136,7 @@ experiment.source.prefetching_accuracy <- function() {
     "F1_SCORE_1" = "f1_score",
     "FALSE_NEGATIVE" = "false_negative",
     "FALSE_POSITIVE" = "false_positive",
-    "TRUE_POSITIVE" = "true_positive",
-    "subject.id.short" = "subject.id"
+    "TRUE_POSITIVE" = "true_positive"
   ))
 
   # Calculate other metrics
@@ -173,8 +172,7 @@ experiment.source.strategy_accuracy <- function() {
     "HIT_COUNT" = "count.hits",
     "MISS_COUNT" = "count.misses",
     "HIT_PERCENTAGE_TOTAL" = "accuracy.total",
-    "HIT_PERCENTAGE_WHEN_PREDICTED" = "accuracy.predicted",
-    "subject.id.short" = "subject.id"
+    "HIT_PERCENTAGE_WHEN_PREDICTED" = "accuracy.predicted"
   ))
 
   ## Calculate other metrics
@@ -213,8 +211,7 @@ experiment.source.network_request_execution_time <- function() {
     "RESPONSE_CODE" = "response.code",
     "RESPONSE_LENGTH_HEADER" = "response.length.from_header.b",
     "RESPONSE_LENGTH_OKHTTP" = "response.length.from_okhttp.b",
-    "RESPONSE_METHOD" = "response.method",
-    "subject.id.short" = "subject.id"
+    "RESPONSE_METHOD" = "response.method"
   ))
 
   # Sort dataframe columns by name

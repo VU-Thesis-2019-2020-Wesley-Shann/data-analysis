@@ -28,7 +28,7 @@ experiment.write.latex(1, t(rq1.summary), "data-summary.tex")
 
 # Make plots of the data
 aes <- aes_string(
-  x = "subject.id.short",
+  x = "subject.id",
   #y = "android.memory.mb",
   #  y = "trepn.battery.joule",
   y = "trepn.battery.nonzero.joule"
