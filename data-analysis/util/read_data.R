@@ -161,5 +161,36 @@ experiment.source.prefetching.accuracy <- function() {
   dataframe <- dataframe[order(dataframe$subject.name, dataframe$subject.treatment.id),]
 
   dataframe
+}
 
+experiment.source.strategy.accuracy <- function() {
+  dataframe <- experiment.source.csv("Aggregation-MetricStrategyAccuracy.csv")
+
+  ## Drop columns
+  #columns_to_drop <- c("F1_SCORE_2", "subject.id.long")
+  #dataframe <- dataframe[, !(names(dataframe) %in% columns_to_drop)]
+  #
+  ## Rename columns
+  #dataframe <- rename(dataframe, c(
+  #  "F1_SCORE_1" = "f1.score",
+  #  "FALSE_NEGATIVE" = "false.negative",
+  #  "FALSE_POSITIVE" = "false.positive",
+  #  "TRUE_POSITIVE" = "true.positive",
+  #  "subject.id.short" = "subject.id"
+  #))
+  #
+  ## Calculate other metrics
+  #dataframe$precision <- dataframe$true.positive / (dataframe$true.positive + dataframe$false.positive)
+  #dataframe$recall <- dataframe$true.positive / (dataframe$true.positive + dataframe$false.negative)
+  #dataframe$accuracy <- dataframe$true.positive / (dataframe$true.positive +
+  #  dataframe$false.positive +
+  #  dataframe$false.negative)
+
+  # Sort dataframe columns by name
+  dataframe <- dataframe[, order(colnames(dataframe))]
+
+  # Sort dataframe rows by subject
+  dataframe <- dataframe[order(dataframe$subject.name, dataframe$subject.treatment.id),]
+
+  dataframe
 }
