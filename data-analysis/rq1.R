@@ -4,7 +4,7 @@
 # Created on: 04-08-20
 
 # Load required libraries
-library(plyr)
+library(dplyr)
 library(ggplot2)
 library(xtable)
 

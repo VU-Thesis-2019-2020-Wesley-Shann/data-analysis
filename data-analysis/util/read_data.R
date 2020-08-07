@@ -25,10 +25,10 @@ experiment.source.csv <- function(file) {
 
   # Rename columns
   dataframe <- rename(dataframe, c(
-    "App.package" = "subject.android.package",
-    "Treatment" = "subject.treatment.id",
-    "Subject" = "subject.id.long",
-    "Run.number" = "run.number"
+    "subject.android.package" = "App.package",
+    "subject.treatment.id" = "Treatment",
+    "subject.id.long" = "Subject",
+    "run.number" = "Run.number"
   ))
 
   # Set app name, not pretty, I know, but it works and we are short in time
@@ -75,13 +75,13 @@ experiment.source.trepn <- function() {
 
   # Rename columns
   dataframe <- rename(dataframe, c(
-    "Duration..ms." = "run.duration.ms",
-    "Memory.Usage..KB." = "trepn.memory.kb",
-    "Battery.Power..uW...Raw." = "trepn.battery.raw.uw",
-    "Battery.Power..uW...Delta." = "trepn.battery.delta.uw",
-    "CPU.Load...." = "trepn.cpu",
-    "Battery.Power..uW...Raw...Non.zero." = "trepn.battery.nonzero.raw.uw",
-    "Battery.Power..uW...Delta...Non.zero." = "trepn.battery.nonzero.delta.uw"
+    "run.duration.ms" = "Duration..ms.",
+    "trepn.memory.kb" = "Memory.Usage..KB.",
+    "trepn.battery.raw.uw" = "Battery.Power..uW...Raw.",
+    "trepn.battery.delta.uw" = "Battery.Power..uW...Delta.",
+    "trepn.cpu" = "CPU.Load....",
+    "trepn.battery.nonzero.raw.uw" = "Battery.Power..uW...Raw...Non.zero.",
+    "trepn.battery.nonzero.delta.uw" = "Battery.Power..uW...Delta...Non.zero."
   ))
 
   # Parse power from watts to Joule
@@ -99,8 +99,8 @@ experiment.source.android <- function() {
 
   # Rename columns
   dataframe <- rename(dataframe, c(
-    "cpu" = "android.cpu",
-    "mem" = "android.memory.kb"
+    "android.cpu" = "cpu",
+    "android.memory.kb" = "mem"
   ))
 
   # Parse memory from KB to MB
@@ -133,10 +133,10 @@ experiment.source.prefetching_accuracy <- function() {
 
   # Rename columns
   dataframe <- rename(dataframe, c(
-    "F1_SCORE_1" = "f1_score",
-    "FALSE_NEGATIVE" = "false_negative",
-    "FALSE_POSITIVE" = "false_positive",
-    "TRUE_POSITIVE" = "true_positive"
+    "f1_score" = "F1_SCORE_1",
+    "false_negative" = "FALSE_NEGATIVE",
+    "false_positive" = "FALSE_POSITIVE",
+    "true_positive" = "TRUE_POSITIVE"
   ))
 
   # Calculate other metrics
@@ -164,15 +164,15 @@ experiment.source.strategy_accuracy <- function() {
 
   # Rename columns
   dataframe <- rename(dataframe, c(
-    "CASES_COUNT" = "count.cases",
-    "EXCEPTION_COUNT" = "count.exception",
-    "EXECUTION_COUNT" = "count.execution",
-    "INSUFFICIENT_SCORE_COUNT" = "count.insufficient_score",
-    "NO_SUCCESSOR_COUNT" = "count.no_sucessor",
-    "HIT_COUNT" = "count.hits",
-    "MISS_COUNT" = "count.misses",
-    "HIT_PERCENTAGE_TOTAL" = "accuracy.total",
-    "HIT_PERCENTAGE_WHEN_PREDICTED" = "accuracy.predicted"
+    "count.cases" = "CASES_COUNT",
+    "count.exception" = "EXCEPTION_COUNT",
+    "count.execution" = "EXECUTION_COUNT",
+    "count.insufficient_score" = "INSUFFICIENT_SCORE_COUNT",
+    "count.no_sucessor" = "NO_SUCCESSOR_COUNT",
+    "count.hits" = "HIT_COUNT",
+    "count.misses" = "MISS_COUNT",
+    "accuracy.total" = "HIT_PERCENTAGE_TOTAL",
+    "accuracy.predicted" = "HIT_PERCENTAGE_WHEN_PREDICTED"
   ))
 
   ## Calculate other metrics
@@ -203,15 +203,15 @@ experiment.source.network_request_execution_time <- function() {
 
   # Rename columns
   dataframe <- rename(dataframe, c(
-    "REQUEST_DURATION_OKHTTP" = "request.duration.from_okhttp.ms",
-    "REQUEST_DURATION_SYSTEM" = "request.duration.from_system.ms",
-    "REQUEST_PROTOCOL" = "request.protocol",
-    "REQUEST_SYNCHRONOUS" = "request.is_synchronous",
-    "REQUEST_URL" = "request.url",
-    "RESPONSE_CODE" = "response.code",
-    "RESPONSE_LENGTH_HEADER" = "response.length.from_header.b",
-    "RESPONSE_LENGTH_OKHTTP" = "response.length.from_okhttp.b",
-    "RESPONSE_METHOD" = "response.method"
+    "request.duration.from_okhttp.ms" = "REQUEST_DURATION_OKHTTP",
+    "request.duration.from_system.ms" = "REQUEST_DURATION_SYSTEM",
+    "request.protocol" = "REQUEST_PROTOCOL",
+    "request.is_synchronous" = "REQUEST_SYNCHRONOUS",
+    "request.url" = "REQUEST_URL",
+    "response.code" = "RESPONSE_CODE",
+    "response.length.from_header.b" = "RESPONSE_LENGTH_HEADER",
+    "response.length.from_okhttp.b" = "RESPONSE_LENGTH_OKHTTP",
+    "response.method" = "RESPONSE_METHOD"
   ))
 
   # Sort dataframe columns by name

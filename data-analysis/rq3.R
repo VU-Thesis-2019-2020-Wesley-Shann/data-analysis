@@ -3,7 +3,7 @@
 # Created by: sshann
 # Created on: 07-08-20
 
-library(plyr)
+library(dplyr)
 library(ggplot2)
 
 source("util/read_data.R")
