@@ -28,16 +28,14 @@ experiment.plot.boxplot <- function(dataframe, axis_y_column, axis_y_legend, tit
 experiment.plot.violin <- function(dataframe, axis_y_column, axis_y_legend, title,
                                    axis_x_column = "subject.treatment.name.long",
                                    fill = "subject.treatment.name.long",
-                                   axis_x_legend = "Treatments",
-                                   boxplot_width = 0.2) {
+                                   axis_x_legend = "Treatments") {
   ggplot(dataframe, aes_string(
     x = axis_x_column,
     y = axis_y_column,
     fill = fill
   )) +
-    geom_violin() +
-    geom_boxplot(
-      width = boxplot_width
+    geom_violin(
+      draw_quantiles = c(0.25, 0.5, 0.75)
     ) +
     labs(
       title = title,

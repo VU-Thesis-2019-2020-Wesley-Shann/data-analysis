@@ -113,7 +113,11 @@ experiment.write.plot(filename = "boxplot_memory_per_subject_treatment_above_200
 my_plot <- experiment.plot.violin(rq1.dataframe,
                                   "android.memory.mb",
                                   "Memory consumption (MB)",
-                                  "Memory consumption per treatment",
-                                  boxplot_width = 0.05) +
+                                  "Memory consumption per treatment") +
   expand_limits(y = 0)
 experiment.write.plot(filename = "violin_memory_per_treatment.png", rq = 1)
+
+ggplot(rq1.dataframe[rq1.filter.non_zero_battery,], aes(
+  trepn.battery.nonzero.joule
+)) +
+  geom_histogram(bins = 100, colour = "white")
