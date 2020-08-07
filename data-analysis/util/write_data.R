@@ -15,3 +15,9 @@ experiment.write.latex <- function(rq, dataframe, file_name, label = NULL, digit
       label = label),
     file = paste(experiment.write.base_dir, paste0("rq", rq), file_name, sep = "/"))
 }
+
+experiment.write.plot <- function(path, filename, rq, plot = last_plot()) {
+  ggsave(plot = plot,
+         path = paste(experiment.write.base_dir, paste0("rq", rq), sep = "/"),
+         filename = filename)
+}

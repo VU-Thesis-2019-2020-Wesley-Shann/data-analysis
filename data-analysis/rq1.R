@@ -33,6 +33,7 @@ experiment.write.latex(rq = 1,
 
 # Take the duration time per subject and write to file
 print("Summarizing battery consumption")
+rq1.filter.non_zero_battery <- rq1.dataframe$trepn.battery.nonzero.joule != 0
 rq1.summary.trepn.battery.nonzero.joule <- experiment.subject.summary(dataframe = rq1.dataframe[rq1.filter.non_zero_battery,],
                                                                       property = "trepn.battery.nonzero.joule")
 experiment.write.latex(rq = 1,
@@ -66,3 +67,4 @@ experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                         "trepn.battery.nonzero.joule",
                         "Battery comsumption (J)",
                         "Boxplot: battery comsumption per subject")
+experiment.write.plot(filename = "boxplot_battery.png", rq = 1)
