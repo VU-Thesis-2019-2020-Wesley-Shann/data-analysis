@@ -9,7 +9,7 @@ source("util/read_data.R")
 rq3.dataframe <- experiment.source.prefetching.accuracy()
 
 aes <- aes_string(
-  y = "f1.score",
+  y = "f1_score",
   x = "subject.id"
 )
 
