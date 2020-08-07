@@ -65,6 +65,8 @@ experiment.source.csv <- function(file) {
 
   # Set factors
   dataframe$subject.treatment.id <- as.factor(dataframe$subject.treatment.id)
+  dataframe$subject.treatment.name.short <- as.factor(dataframe$subject.treatment.name.short)
+  dataframe$subject.treatment.name.long <- as.factor(dataframe$subject.treatment.name.long)
   dataframe$subject.id.long <- as.factor(dataframe$subject.id.long)
   dataframe$subject.id.short <- as.factor(dataframe$subject.id.short)
   dataframe$subject.android.package <- as.factor(dataframe$subject.android.package)
