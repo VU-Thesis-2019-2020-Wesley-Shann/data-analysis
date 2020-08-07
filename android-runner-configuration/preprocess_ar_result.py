@@ -208,7 +208,7 @@ def aggregate_subject_logcat(subject_base_path, tag, tabs_count):
                 run_number = run_number + 1
                 line = src_file.readline()
                 if should_write_header:
-                    header_csv = 'RUN_NUMBER,' + line
+                    header_csv = 'Run number,' + line
                     dst_file.write(header_csv)
                     should_write_header = False
                 while line:
@@ -238,7 +238,7 @@ def aggregate_experiment_logcat(exp, tag, tabs_count):
             with open(os.path.join(subject_aggregation_base_path, aggregation_file_name), 'r') as src_file:
                 line = src_file.readline()
                 if should_write_header:
-                    header_csv = 'TREATMENT,SUBJECT_NAME,APP_PACKAGE,' + line
+                    header_csv = 'Treatment,Subject,App package,' + line
                     dst_file.write(header_csv)
                     should_write_header = False
                 while line:
@@ -598,8 +598,8 @@ def main():
         # '2020.08.03_144821',
         # '2020.08.03_151956',
         # '2020.08.03_171332',
-        # '2020.08.03_230233',
-        # '2020.08.05_002520',
+        '2020.08.03_230233',
+        '2020.08.05_002520',
         '2020.08.05_223421',
     ]
 
