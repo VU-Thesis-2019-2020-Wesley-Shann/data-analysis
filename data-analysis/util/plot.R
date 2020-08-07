@@ -54,7 +54,10 @@ experiment.plot.freqpoly <- function(dataframe, axis_x_column, axis_x_legend, ti
     axis_x_column,
     colour = "subject.treatment.name.long"
   )) +
-    geom_freqpoly(bins = 30) +
+    geom_freqpoly(
+      bins = 30,
+      size = 1
+    ) +
     labs(
       title = title,
       x = axis_x_legend,
