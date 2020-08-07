@@ -68,4 +68,10 @@ my_plot <- experiment.plot.boxplot.subject(rq1.dataframe[rq1.filter.non_zero_bat
                         "trepn.battery.nonzero.joule",
                         "Battery comsumption (J)",
                         "Battery comsumption per subject")
-experiment.write.plot(filename = "boxplot_battery.png", rq = 1)
+experiment.write.plot(filename = "boxplot_battery_per_subject_treatment.png", rq = 1)
+
+my_plot <-experiment.plot.violin.treatment(rq1.dataframe[rq1.filter.non_zero_battery,],
+                        "trepn.battery.nonzero.joule",
+                        "Battery comsumption (J)",
+                        "Battery comsumption per treatment")
+experiment.write.plot(filename = "violin_battery_per_treatment.png", rq = 1)
