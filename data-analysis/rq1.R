@@ -31,7 +31,6 @@ experiment.write.latex(1, t(rq1.summary), "data-summary.tex")
 rq1.summary.duration_per_subject_treatment <- NULL
 rq1.summary.duration_per_subject_treatment.columns <- NULL
 for (subject_id in unique(rq1.dataframe$subject.id)) {
-  print(subject_id)
   rq1.summary.duration_per_subject_treatment <- cbind(
     rq1.summary.duration_per_subject_treatment,
     as.matrix(summary(rq1.dataframe[experiment.subject.filter_per_id(rq1.dataframe, subject_id),]$run.duration.s))
