@@ -66,5 +66,5 @@ print("Generating plots")
 my_plot <- experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                         "trepn.battery.nonzero.joule",
                         "Battery comsumption (J)",
-                        "Boxplot: battery comsumption per subject")
+                        "Battery comsumption per subject")
 experiment.write.plot(filename = "boxplot_battery.png", rq = 1)
