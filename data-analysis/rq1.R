@@ -46,4 +46,7 @@ experiment.write.latex(1, t(rq1.summary.duration_per_subject_treatment), "durati
 
 # Make plots of the data
 print("Generating plots")
-experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,], "trepn.battery.nonzero.joule")
+experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,],
+                        "trepn.battery.nonzero.joule",
+                        "Battery comsumption (J)",
+                        "Boxplot: battery comsumption per subject")
