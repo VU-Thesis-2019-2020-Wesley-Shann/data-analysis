@@ -212,7 +212,7 @@ experiment.source.network_request_execution_time <- function() {
 
   # Rename columns
   dataframe <- rename(dataframe, c(
-    "REQUEST_DURATION_OKHTTP" = "request.duration.from_okttp.ms",
+    "REQUEST_DURATION_OKHTTP" = "request.duration.from_okhttp.ms",
     "REQUEST_DURATION_SYSTEM" = "request.duration.from_system.ms",
     "REQUEST_PROTOCOL" = "request.protocol",
     "REQUEST_SYNCHRONOUS" = "request.is_synchronous",
