@@ -11,7 +11,8 @@ source("util/read_data.R")
 rq2.dataframe <- experiment.source.network_request_execution_time()
 
 aes <- aes_string(
-  y = "f1_score",
+  #y = "request.duration.from_system.ms",
+  y = "response.length.from_okhttp.b",
   x = "subject.id"
 )
 
@@ -24,7 +25,7 @@ labs <- labs(
 
 )
 
-#ggplot(rq2.dataframe, aes) +
-#  geom_boxplot() +
-#  labs +
-#  theme
+ggplot(rq2.dataframe, aes) +
+  geom_boxplot() +
+  labs +
+  theme
