@@ -61,7 +61,7 @@ experiment.source.csv <- function(file) {
                   ifelse(dataframe$subject.treatment.id == "nappatfpr", "PR",
                          "Unkown subject name")))
 
-  dataframe$subject.id.short <- paste0(dataframe$subject.name, " (", dataframe$subject.treatment.name.short , ")")
+  dataframe$subject.id.short <- paste0(dataframe$subject.name, " (", dataframe$subject.treatment.name.short, ")")
 
   # Set factors
   dataframe$subject.treatment.id <- as.factor(dataframe$subject.treatment.id)
@@ -193,6 +193,27 @@ experiment.source.strategy_accuracy <- function() {
   dataframe$precision <- dataframe$true_positive / (dataframe$true_positive + dataframe$false_positive)
   dataframe$recall <- dataframe$true_positive / (dataframe$true_positive + dataframe$false_negative)
   dataframe$f1_score <- dataframe$true_positive / (dataframe$true_positive + 1 / 2 * (dataframe$false_positive + dataframe$false_negative))
+
+  # Sort dataframe columns by name
+  dataframe <- dataframe[, order(colnames(dataframe))]
+
+  # Sort dataframe rows by subject
+  dataframe <- dataframe[order(dataframe$subject.name, dataframe$subject.treatment.id),]
+
+  dataframe
+}
+
+experiment.source.network_request_execution_time <- function() {
+  dataframe <- experiment.source.csv("Aggregation-MetricNetworkRequestExecutionTime.csv")
+
+  # Drop columns
+  columns_to_drop <- "subject.id.long"
+  dataframe <- dataframe[, !(names(dataframe) %in% columns_to_drop)]
+
+  # Rename columns
+  dataframe <- rename(dataframe, c(
+    "subject.id.short" = "subject.id"
+  ))
 
   # Sort dataframe columns by name
   dataframe <- dataframe[, order(colnames(dataframe))]
