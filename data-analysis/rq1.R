@@ -9,6 +9,7 @@ library(ggplot2)
 library(xtable)
 
 # Load utility files
+source("util/subject.R")
 source("util/read_data.R")
 source("util/write_data.R")
 source("util/plot.R")
@@ -25,6 +26,9 @@ rq1.summary <- cbind(
 )
 colnames(rq1.summary)[4] <- "trepn.battery.nonzero.joule"
 experiment.write.latex(1, t(rq1.summary), "data-summary.tex")
+
+# Take the duration time per subject and write to file
+
 
 # Make plots of the data
 aes <- aes_string(
