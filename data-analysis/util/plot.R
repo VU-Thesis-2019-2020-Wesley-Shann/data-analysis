@@ -4,7 +4,6 @@
 # Created on: 06-08-20
 
 experiment.plot.boxplot <- function(dataframe, axis_y_column, axis_y_legend, title,
-                                    axis_y_max = NA,
                                     axis_x_column = "subject.id",
                                     fill = "subject.name",
                                     axis_x_legend = "Subjects ~ Treatments") {
@@ -14,7 +13,6 @@ experiment.plot.boxplot <- function(dataframe, axis_y_column, axis_y_legend, tit
     fill = fill
   )) +
     geom_boxplot() +
-    expand_limits(y = c(0, axis_y_max)) +
     labs(
       title = title,
       x = axis_x_legend,
@@ -28,10 +26,10 @@ experiment.plot.boxplot <- function(dataframe, axis_y_column, axis_y_legend, tit
 }
 
 experiment.plot.violin <- function(dataframe, axis_y_column, axis_y_legend, title,
-                                   axis_y_max = NA,
                                    axis_x_column = "subject.treatment.name.long",
                                    fill = "subject.treatment.name.long",
-                                   axis_x_legend = "Treatments") {
+                                   axis_x_legend = "Treatments",
+                                   boxplot_width = 0.2) {
   ggplot(dataframe, aes_string(
     x = axis_x_column,
     y = axis_y_column,
@@ -39,9 +37,8 @@ experiment.plot.violin <- function(dataframe, axis_y_column, axis_y_legend, titl
   )) +
     geom_violin() +
     geom_boxplot(
-      width = 0.2
+      width = boxplot_width
     ) +
-    expand_limits(y = c(0, axis_y_max)) +
     labs(
       title = title,
       x = axis_x_legend,

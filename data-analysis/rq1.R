@@ -80,13 +80,38 @@ experiment.write.plot(filename = "violin_battery_per_treatment.png", rq = 1)
 my_plot <- experiment.plot.boxplot(rq1.dataframe,
                                    "trepn.cpu",
                                    "CPU load (%)",
-                                   "CPU load per subject",
-                                   axis_y_max = 100)
+                                   "CPU load per subject") +
+  expand_limits(y = c(0, 100))
 experiment.write.plot(filename = "boxplot_cpu_per_subject_treatment.png", rq = 1)
 
 my_plot <- experiment.plot.violin(rq1.dataframe,
                                   "trepn.cpu",
                                   "CPU load (%)",
-                                  "CPU load per treatment",
-                                  axis_y_max = 100)
+                                  "CPU load per treatment") +
+  expand_limits(y = c(0, 100))
 experiment.write.plot(filename = "violin_cpu_per_treatment.png", rq = 1)
+
+my_plot <- experiment.plot.boxplot(rq1.dataframe,
+                                   "android.memory.mb",
+                                   "Memory consumption (MB)",
+                                   "Memory consumption per subject")
+experiment.write.plot(filename = "boxplot_memory_per_subject_treatment.png", rq = 1)
+
+my_plot <- experiment.plot.boxplot(rq1.dataframe[rq1.dataframe$android.memory.mb < 200,],
+                                   "android.memory.mb",
+                                   "Memory consumption (MB)",
+                                   "Memory consumption per subject")
+experiment.write.plot(filename = "boxplot_memory_per_subject_treatment_below_200.png", rq = 1)
+
+my_plot <- experiment.plot.boxplot(rq1.dataframe[rq1.dataframe$android.memory.mb > 200,],
+                                   "android.memory.mb",
+                                   "Memory consumption (MB)",
+                                   "Memory consumption per subject")
+experiment.write.plot(filename = "boxplot_memory_per_subject_treatment_above_200.png", rq = 1)
+
+my_plot <- experiment.plot.violin(rq1.dataframe,
+                                  "android.memory.mb",
+                                  "Memory consumption (MB)",
+                                  "Memory consumption per treatment",
+                                  boxplot_width = 0.05)
+experiment.write.plot(filename = "violin_memory_per_treatment.png", rq = 1)
