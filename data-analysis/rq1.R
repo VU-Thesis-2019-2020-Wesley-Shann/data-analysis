@@ -10,8 +10,6 @@ source("util/read_data.R")
 
 rq1.dataframe <- experiment.source.runtime()
 
-plot(rq1.dataframe$android.memory.mb)
-
 aes <- aes_string(
   y = "android.memory.mb",
   x = "subject.id.short"
