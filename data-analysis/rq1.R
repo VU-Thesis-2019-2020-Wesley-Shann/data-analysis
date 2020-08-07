@@ -3,35 +3,28 @@
 # Created by: sshann
 # Created on: 04-08-20
 
+# Load required libraries
 library(plyr)
 library(ggplot2)
 library(xtable)
 
+# Load utility files
 source("util/read_data.R")
 source("util/write_data.R")
 
+# Read data
 rq1.dataframe <- experiment.source.runtime()
 
-rq1.columns_to_take_summary <- c(
-  "run.duration.s",
-  "android.memory.mb",
-  "trepn.cpu"
-  #"trepn.battery.nonzero.joule" # contains 1 row with zero readings
-)
-
+# Take summary from the data and write to file
+rq1.columns_to_take_summary <- c("run.duration.s", "android.memory.mb", "trepn.cpu")
 rq1.filter.non_zero_battery <- rq1.dataframe$trepn.battery.joule != 0
-
 rq1.summary <- cbind(
   summary(rq1.dataframe[rq1.columns_to_take_summary]),
   as.matrix(summary(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule))
 )
-
 colnames(rq1.summary)[4] <- "trepn.battery.nonzero.joule"
-
 experiment.write.latex(1, t(rq1.summary), "data-summary.tex")
-#experiment.write
-#print(xtable(t(rq1.summary), type = "latex"), file = )
-#print(xtable(newobject2, type = "latex"), file = "filename2.tex")
+
 
 aes <- aes_string(
   x = "subject.id.short",
