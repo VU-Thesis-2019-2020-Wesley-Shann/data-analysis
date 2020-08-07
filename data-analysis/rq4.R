@@ -21,8 +21,7 @@ labs <- labs(
 
 )
 
-#rq4.subjects.above.0 <- c("Antenna Pod", "Hill'Fair", "Materialistic")
-#ggplot(rq4.dataframe[rq3.dataframe$subject.name %in% rq4.subjects.above.0,], aes) +
-#  geom_boxplot() +
-#  labs +
-#  theme
+ggplot(rq4.dataframe, aes) +
+  geom_boxplot() +
+  labs +
+  theme
