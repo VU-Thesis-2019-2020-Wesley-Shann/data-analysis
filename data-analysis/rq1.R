@@ -63,7 +63,7 @@ experiment.write.latex(rq = 1,
 # Make plots of the data
 print("Generating plots")
 
-experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,],
+my_plot <- experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                         "trepn.battery.nonzero.joule",
                         "Battery comsumption (J)",
                         "Boxplot: battery comsumption per subject")
