@@ -35,23 +35,43 @@ print("Phase 1. Data exploration")
 
 rq1.filter.non_zero_battery <- rq1.dataframe$trepn.battery.nonzero.joule != 0
 
-# Take the global summary
-experiment.write.latex(dataframe = t(summary(rq1.dataframe[c("run.duration.s", "trepn.cpu", "android.memory.mb")])),
-                       filename = "summary-global_duraion_cpu_memory.tex",
-                       rq = 1)
-experiment.write.latex(dataframe = t(summary(rq1.dataframe[rq1.filter.non_zero_battery, "trepn.battery.nonzero.joule"])),
-                       filename = "summary-global_battery.tex",
-                       rq = 1)
+rq1.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq1.dataframe, property = "run.duration.s", digits = 2)
+rq1.summary.treatment.duration <- rq1.summary.treatment.duration[-c(2, 3, 4, 5),]
+rownames(rq1.summary.treatment.duration) <- paste("Duration (s)", rownames(rq1.summary.treatment.duration))
+
+rq1.summary.treatment.battery <- experiment.treatment.summary(dataframe = rq1.dataframe[rq1.filter.non_zero_battery,], property = "trepn.battery.nonzero.joule", digits = 2)
+rownames(rq1.summary.treatment.battery) <- paste("Battery consumtpion (J)", rownames(rq1.summary.treatment.battery))
+
+rq1.summary.treatment.cpu <- experiment.treatment.summary(dataframe = rq1.dataframe, property = "trepn.cpu", digits = 2)
+rownames(rq1.summary.treatment.cpu) <- paste("CPU load (%)", rownames(rq1.summary.treatment.cpu))
+
+rq1.summary.treatment.memory <- experiment.treatment.summary(dataframe = rq1.dataframe, property = "android.memory.mb", digits = 4)
+rownames(rq1.summary.treatment.memory) <- paste("Memory consumption (MB)", rownames(rq1.summary.treatment.memory))
+
+rq1.summary.treatment.aggregate <- rbind(
+  rq1.summary.treatment.duration,
+  rq1.summary.treatment.battery,
+  rq1.summary.treatment.memory,
+  rq1.summary.treatment.cpu
+)
+rq1.summary.treatment.aggregate
+
+experiment.write.latex(rq = 1,
+                       dataframe = rq1.summary.treatment.aggregate,
+                       filename = "summary_treatment.tex",
+                       caption = "Overview of the runtime overhead per treatment.",
+                       label = "tab:results:rq1:summary:treatment")
 
 # Take the duration time per subject and write to file
 print("Summarizing runtime duration")
 rq1.summary.run.duration <- experiment.subject.summary(dataframe = rq1.dataframe, property = "run.duration.s")
-rq1.summary.run.duration <- rq1.summary.run.duration[-c(2, 3, 5),]
+rq1.summary.run.duration <- rq1.summary.run.duration[-c(2, 3, 4, 5),]
 experiment.write.latex(rq = 1,
                        dataframe = t(rq1.summary.run.duration),
                        filename = "summary-duration.tex",
                        caption = "Overview of the runtime duration.",
                        label = "tab:results:rq1:summary:duration")
+rownames(rq1.summary.run.duration) <- paste("Duration (s)", rownames(rq1.summary.run.duration))
 
 # Take the duration time per subject and write to file
 print("Summarizing battery consumption")
@@ -62,6 +82,7 @@ experiment.write.latex(rq = 1,
                        filename = "summary-battery.tex",
                        caption = "Overview of the battery consumption.",
                        label = "tab:results:rq1:summary:battery")
+rownames(rq1.summary.trepn.battery.nonzero.joule) <- paste("Battery consumtpion (J)", rownames(rq1.summary.trepn.battery.nonzero.joule))
 
 # Take the duration time per subject and write to file
 print("Summarizing CPU load")
@@ -71,6 +92,7 @@ experiment.write.latex(rq = 1,
                        filename = "summary-cpu.tex",
                        caption = "Overview of the CPU load.",
                        label = "tab:results:rq1:summary:cpu")
+rownames(rq1.summary.trepn.cpu) <- paste("CPU load (%)", rownames(rq1.summary.trepn.cpu))
 
 # Take the duration time per subject and write to file
 print("Summarizing memory consumption")
@@ -80,6 +102,23 @@ experiment.write.latex(rq = 1,
                        filename = "summary-memory.tex",
                        caption = "Overview of the memory consumption.",
                        label = "tab:results:rq1:summary:memory")
+rownames(rq1.summary.android.memory.mb) <- paste("Memory consumption (MB)", rownames(rq1.summary.android.memory.mb))
+
+rq3.summary.subject.aggregate <- rbind(
+  rq1.summary.run.duration,
+  rq1.summary.trepn.battery.nonzero.joule,
+  rq1.summary.android.memory.mb,
+  rq1.summary.trepn.cpu
+
+)
+rq3.summary.subject.aggregate
+
+experiment.write.latex(rq = 1,
+                       digits = 2,
+                       dataframe = rq3.summary.subject.aggregate,
+                       filename = "summary_subject.tex",
+                       caption = "Overview of the runtime overhead per subject.",
+                       label = "tab:results:rq3:summary:subject")
 
 #######################################  Phase 1b Plots ########################################
 print("Generating plots")
