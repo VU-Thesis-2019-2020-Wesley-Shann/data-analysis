@@ -404,7 +404,7 @@ experiment.write.text(data = shapiro.test(rq1.dataframe$android.memory.mb.cube),
                       rq = 1)
 
 #################################################################################################
-###################################  Phase 3: Hypothesis Test ###################################
+#################################### Phase 3: Hypothesis Test ###################################
 #################################################################################################
 print("Phase 3. Hypothesis Test")
 
@@ -414,10 +414,13 @@ print("Phase 3. Hypothesis Test")
 # CPU         Kruskal-Wallis
 # Memory      Kruskal-Wallis
 
+########################################## 3a: Battery #########################################
+
 # Battery ~ sqrt ~ normal ~ ANOVA
 rq1.hypothesis.battery.aov <- lm(trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery,])
 # lm creates an object of type linear model. Its properties can be extracted with other functions.
 # battery∼treatment is a model formula. Read it as: “explain battery using treatment”.
+
 rq1.hypothesis.battery.result <-anova(rq1.hypothesis.battery.aov)
 #Analysis of Variance Table
 #
@@ -429,7 +432,7 @@ rq1.hypothesis.battery.result <-anova(rq1.hypothesis.battery.aov)
 experiment.write.latex(dataframe = rq1.hypothesis.battery.result,
                        rq = 1,
                        digits = 4,
-                       filename = "hypothesis_battery_anova.latex",
+                       filename = "hypothesis_battery_anova.tex",
                        label = "tab:hypothesis:battery:anova",
                        caption = "Analysis of Variance for the linear model explaining the transformed (suqare root) battery consumption (J) using the prefetching treatment.")
 
@@ -449,6 +452,22 @@ summary(rq1.hypothesis.battery.aov)
 #Residual standard error: 3.6 on 626 degrees of freedom
 #Multiple R-squared:  0.0008113,	Adjusted R-squared:  -0.002381
 #F-statistic: 0.2541 on 2 and 626 DF,  p-value: 0.7757
+# estimates:
+#   mu_1 = 22.2480;
+#   mu_2 - mu_1 = 0.2347;
+#   mu_3 - mu_1 = 0405;
+# p-values:
+#   (H_0 : mu_1 = 0): 2e-16;
+#   (H_0 : mu_2 - mu_1 ): 0.505;
+#   (H_0 : mu_3 - mu_1 ): 0.908;
+experiment.write.latex(dataframe = rq1.hypothesis.battery.aov,
+                       rq = 1,
+                       digits = 4,
+                       filename = "hypothesis_battery_summary.tex",
+                       label = "tab:hypothesis:battery:summary",
+                       caption = "Overview of the linear model explaining the transformed (suqare root) battery consumption (J) using the prefetching treatment.")
+
+
 
 confint(rq1.anova.battery_aov)
 #                                     2.5 %    97.5 %
@@ -456,7 +475,12 @@ confint(rq1.anova.battery_aov)
 #subject.treatment.idnappagreedy -0.4561203  0.925441
 #subject.treatment.idnappatfpr   -0.6494547  0.730457
 
+############################################ 3b: CPU ###########################################
+
 # CPU ~ not normal ~ Kruskal-Wallis
 rq1.test.kruskal.cpu <- kruskal.test(trepn.cpu ~ subject.treatment.id, data = rq1.dataframe)
 summary(rq1.test.kruskal.cpu)
+
+########################################### 3c: Memory ##########################################
+
 # Memory ~ not normal ~ Kruskal-Wallis
