@@ -467,13 +467,22 @@ experiment.write.latex(dataframe = rq1.hypothesis.battery.aov,
                        label = "tab:hypothesis:battery:summary",
                        caption = "Overview of the linear model explaining the transformed (suqare root) battery consumption (J) using the prefetching treatment.")
 
-
-
-confint(rq1.anova.battery_aov)
+rq1.hypothesis.battery.confint <- confint(rq1.hypothesis.battery.aov)
 #                                     2.5 %    97.5 %
 #(Intercept)                     11.7601590 12.735904
 #subject.treatment.idnappagreedy -0.4561203  0.925441
 #subject.treatment.idnappatfpr   -0.6494547  0.730457
+# ( 95% confidence intervals:
+#   for mu_1 : [11.7601590, 12.735904];
+#   for mu_2 - mu_1 : [-0.4561203,  0.925441]
+#   for mu_3 - mu_1 : [-0.6494547,  0.730457]
+experiment.write.latex(dataframe = rq1.hypothesis.battery.confint,
+                       rq = 1,
+                       digits = 4,
+                       filename = "hypothesis_battery_confint.tex",
+                       label = "tab:hypothesis:battery:confint",
+                       caption = "Confidence intervals for the linear model explaining the transformed (suqare root) battery consumption (J) using the prefetching treatment.")
+
 
 ############################################ 3b: CPU ###########################################
 
