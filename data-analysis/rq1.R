@@ -484,7 +484,7 @@ experiment.write.latex(dataframe = confint(rq1.hypothesis.battery.lm),
                        label = "tab:hypothesis:battery:confint",
                        caption = "Confidence intervals for the linear model explaining the transformed (square root) battery consumption (J) using the prefetching treatment.")
 
-
+#http://www.sthda.com/english/wiki/wiki.php?title=one-way-anova-test-in-r
 rq1.hypothesis.battery.aov <- aov(trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery,])
 summary(rq1.hypothesis.battery.aov)
 #                      Df Sum Sq Mean Sq F value Pr(>F)
