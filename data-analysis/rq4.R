@@ -34,6 +34,7 @@ print("Phase 1. Data exploration")
 ################################  Phase 1a Descriptive statistics ###############################
 keep_min_max_mean <- c(2, 3, 5)
 keep_min_max_median <- c(2, 4, 5)
+rows_to_drop_from_summary <- c(2, 5)
 
 # Per treatment
 print("Descriptive statistics per treatment")
