@@ -233,3 +233,32 @@ experiment.source.network_request_execution_time <- function() {
 
   dataframe
 }
+
+experiment.source.prefetching_strategy_execution_time <- function() {
+  dataframe <- experiment.source.csv("Aggregation-MetricNappaPrefetchingStrategyExecutionTime.csv")
+
+  # Drop columns
+  columns_to_drop <- "subject.id.long"
+  dataframe <- dataframe[, !(names(dataframe) %in% columns_to_drop)]
+
+  # Rename columns
+  dataframe <- rename(dataframe, c(
+    "strategy.duration.nano_s" = "DURATION",
+    "strategy.current_node.numer_of_successors" = "NUMBER_OF_CHILDREN_NODES",
+    "strategy.selected_successors" = "NUMBER_OF_SELECTED_CHILDREN_NODES",
+    "strategy.selected_urls" = "NUMBER_OF_URLS",
+    "strategy.name" = "STRATEGY_CLASS",
+    "strategy.was_sucessful" = "STRATEGY_RUN_SUCCESSFULLY"
+  ))
+
+  dataframe$strategy.duration.micro_s <- dataframe$strategy.duration.nano_s / 1000
+  dataframe$strategy.duration.ms <- dataframe$strategy.duration.micro_s / 1000
+
+  # Sort dataframe columns by name
+  dataframe <- dataframe[, order(colnames(dataframe))]
+
+  # Sort dataframe rows by subject
+  dataframe <- dataframe[order(dataframe$subject.name, dataframe$subject.treatment.id),]
+
+  dataframe
+}
