@@ -218,6 +218,13 @@ experiment.source.network_request_execution_time <- function() {
     "response.method" = "RESPONSE_METHOD"
   ))
 
+  dataframe$response.length.from_header.kb <- ifelse(dataframe$response.length.from_header.b > -1,
+                                                     dataframe$response.length.from_header.b / 1000,
+                                                     dataframe$response.length.from_header.b)
+  dataframe$response.length.from_okhttp.kb <- ifelse(dataframe$response.length.from_okhttp.b > -1,
+                                                     dataframe$response.length.from_okhttp.b / 1000,
+                                                     dataframe$response.length.from_okhttp.b)
+
   # Sort dataframe columns by name
   dataframe <- dataframe[, order(colnames(dataframe))]
 
