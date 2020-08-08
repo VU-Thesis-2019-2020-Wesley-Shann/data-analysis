@@ -276,14 +276,14 @@ shapiro.test(rq1.dataframe$trepn.cpu.tukey)
 
 # CPU ~ Box–Cox transformation
 # https://rcompanion.org/handbook/I_12.html#_Toc459550904
-Box <- boxcox(rq1.dataframe$trepn.cpu ~ 1, lambda = seq(-6,6,0.1))
+Box <- boxcox(rq1.dataframe$trepn.cpu ~ 1, lambda = seq(-6, 6, 0.1))
 Cox <- data.frame(Box$x, Box$y)
 Cox2 <- Cox[with(Cox, order(-Cox$Box.y)),]
 Cox2[1,]
 #   Box.x     Box.y
 #57  -0.4 -1241.318
 lambda <- Cox2[1, "Box.x"]
-rq1.dataframe$trepn.cpu.box <- (rq1.dataframe$trepn.cpu ^ lambda - 1)/lambda
+rq1.dataframe$trepn.cpu.box <- (rq1.dataframe$trepn.cpu^lambda - 1) / lambda
 shapiro.test(rq1.dataframe$trepn.cpu.box)
 # W = 0.98487, p-value = 4.128e-06
 
@@ -326,14 +326,14 @@ shapiro.test(rq1.dataframe$android.memory.mb.tukey)
 
 # Memory ~ Box–Cox transformation
 # https://rcompanion.org/handbook/I_12.html#_Toc459550904
-Box <- boxcox(rq1.dataframe$android.memory.mb ~ 1, lambda = seq(-6,6,0.1))
+Box <- boxcox(rq1.dataframe$android.memory.mb ~ 1, lambda = seq(-6, 6, 0.1))
 Cox <- data.frame(Box$x, Box$y)
 Cox2 <- Cox[with(Cox, order(-Cox$Box.y)),]
 Cox2[1,]
 #   Box.x     Box.y
 #25  -3.6 -1036.238
 lambda <- Cox2[1, "Box.x"]
-rq1.dataframe$android.memory.mb.box <- (rq1.dataframe$android.memory.mb ^ lambda - 1)/lambda
+rq1.dataframe$android.memory.mb.box <- (rq1.dataframe$android.memory.mb^lambda - 1) / lambda
 shapiro.test(rq1.dataframe$android.memory.mb.box)
 # W = 0.84861, p-value < 2.2e-16
 
@@ -391,3 +391,44 @@ experiment.write.plot(filename = "qqplot_memory_cube_root.png", rq = 1)
 experiment.write.text(data = shapiro.test(rq1.dataframe$android.memory.mb.cube),
                       filename = "test_shapiro_memory_cube_root.txt",
                       rq = 1)
+
+#################################################################################################
+###################################  Phase 3: Hypothesis Test ###################################
+#################################################################################################
+print("Phase 3. Hypothesis Test")
+
+# Battery ~ sqrt ~ normal ~ ANOVA
+rq1.anova.battery_aov <- lm(trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery,])
+anova(rq1.anova.battery_aov)
+#Analysis of Variance Table
+#
+#Response: trepn.battery.nonzero.joule.sqrt
+#                      Df Sum Sq Mean Sq F value Pr(>F)
+#subject.treatment.id   2    6.6  3.2939  0.2541 0.7757
+#Residuals            626 8113.9 12.9615
+summary(rq1.anova.battery_aov)
+#Residuals:
+#    Min      1Q  Median      3Q     Max
+#-9.7769 -2.4115  0.0797  2.5722 11.0381
+#
+#Coefficients:
+#                                Estimate Std. Error t value Pr(>|t|)
+#(Intercept)                      12.2480     0.2484  49.300   <2e-16 ***
+#subject.treatment.idnappagreedy   0.2347     0.3518   0.667    0.505
+#subject.treatment.idnappatfpr     0.0405     0.3513   0.115    0.908
+#---
+#Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#
+#Residual standard error: 3.6 on 626 degrees of freedom
+#Multiple R-squared:  0.0008113,	Adjusted R-squared:  -0.002381
+#F-statistic: 0.2541 on 2 and 626 DF,  p-value: 0.7757
+confint(rq1.anova.battery_aov)
+#                                     2.5 %    97.5 %
+#(Intercept)                     11.7601590 12.735904
+#subject.treatment.idnappagreedy -0.4561203  0.925441
+#subject.treatment.idnappatfpr   -0.6494547  0.730457
+
+# CPU ~ not normal ~ Kruskal-Wallis
+rq1.test.kruskal.cpu <- kruskal.test(trepn.cpu ~ subject.treatment.id, data = rq1.dataframe)
+summary(rq1.test.kruskal.cpu)
+# Memory ~ not normal ~ Kruskal-Wallis
