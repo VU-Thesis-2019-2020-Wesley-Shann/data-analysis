@@ -577,7 +577,7 @@ experiment.write.text(data = rq1.hypothesis.memory.bonferroni,
 # --------------\
 # Pakcage effsize
 # omputes the Cliff's Delta effect size for ordinal variables with the related confidence interval using efficient algorithms.
-cliff.delta(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
+rq1.hypothesis.memory.cliff1 <- cliff.delta(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
 #Cliff's Delta
 #
 #delta estimate: -0.3243537 (small)
@@ -585,9 +585,13 @@ cliff.delta(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
 #     lower      upper
 #-0.4311086 -0.2086435
 
+experiment.write.text(data = rq1.hypothesis.memory.cliff1,
+                      rq = 1,
+                      filename = "hypothesis_memory_cliff.txt")
+
 # ---------------
 # Package rcompanion
 # Calculates Cliff's delta with confidence intervals by bootstrap
-cliffDelta(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
+rq1.hypothesis.memory.cliff2 <- cliffDelta(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
 #Cliff.delta
 #     -0.324
