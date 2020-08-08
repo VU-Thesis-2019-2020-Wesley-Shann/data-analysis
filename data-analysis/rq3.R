@@ -118,3 +118,79 @@ experiment.write.latex(rq = 3,
                        filename = "summary_subject.tex",
                        caption = "Overview of the prefetching accuracy per subject.",
                        label = "tab:results:rq3:summary:subject")
+
+#######################################  Phase 1b Plots ########################################
+print("Generating plots")
+
+# Filters
+rq3.filter.non_zero_f1_score <- rq3.dataframe$f1_score != 0
+rq3.filter.part1 <- rq3.dataframe$experiment.part == 1
+rq3.filter.part2 <- rq3.dataframe$experiment.part == 2
+rq3.filter.part3 <- rq3.dataframe$experiment.part == 3
+rq3.filter.antennaPod <- rq3.dataframe$subject.name == "Antenna Pod"
+rq3.filter.hillfair <- rq3.dataframe$subject.name == "Hill'Fair"
+rq3.filter.materialistic <- rq3.dataframe$subject.name == "Materialistic"
+
+# Boxplot
+my_plot <- experiment.plot.boxplot(rq3.dataframe[rq3.filter.non_zero_f1_score,],
+                                   "f1_score",
+                                   "F1 Score",
+                                   "F1 Score")
+experiment.write.plot(filename = "boxplot_f1_score.png", rq = 3)
+
+for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
+  for (part in c(1, 2, 3)) {
+    ggplot(rq3.dataframe[rq3.dataframe$experiment.part == part &
+                           rq3.dataframe$subject.name == subject,],
+           aes(
+             x = run.number,
+             y = f1_score,
+             colour = subject.id,
+             group = subject.id
+           )) +
+      geom_line(
+        linetype = "dashed"
+      ) +
+      geom_point() +
+      labs(
+        title = paste("F1-Score over runs", subject, paste0("(part ", part, ")")),
+        x = "Run",
+        y = "F1-Score",
+        colour = "Subject"
+      ) +
+      theme(
+        legend.position = "bottom"
+      ) +
+      scale_colour_tron() +
+      expand_limits(y = c(0, 1))
+    experiment.write.plot(filename = paste0("f1_score_over_runs_", subject, "_part_", part, ".png"), rq = 3)
+  }
+}
+
+subject <- "Materialistic"
+for (part in c(1, 2, 3)) {
+  ggplot(rq3.dataframe[rq3.dataframe$experiment.part == part &
+                         rq3.dataframe$subject.name == subject,],
+         aes(
+           x = run.number,
+           y = f1_score,
+           colour = subject.id,
+           group = subject.id
+         )) +
+    geom_line(
+      linetype = "dashed"
+    ) +
+    geom_point() +
+    labs(
+      title = paste("F1-Score over runs", subject, paste0("(part ", part, ")")),
+      x = "Run",
+      y = "F1-Score",
+      colour = "Subject"
+    ) +
+    theme(
+      legend.position = "bottom"
+    ) +
+    scale_colour_tron() +
+    expand_limits(y = 0)
+  experiment.write.plot(filename = paste0("f1_score_over_runs_zoom", subject, "_part_", part, ".png"), rq = 3)
+}
