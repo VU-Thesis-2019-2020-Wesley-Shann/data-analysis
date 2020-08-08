@@ -207,3 +207,35 @@ my_plot <- experiment.plot.freqpoly(rq3.dataframe,
                                     "F1 Score (All subjects)") +
   expand_limits(x = c(0, 1))
 experiment.write.plot(filename = "freqpoly_all_f1_score.png", rq = 3)
+
+
+#################################################################################################
+#######################  Phase 2: Normality Check and Data Transformation #######################
+#################################################################################################
+print("Phase 2. Normality Check and Data Transformation")
+
+##################################  Phase 2a Normality check ####################################
+print("Check normality")
+
+my_plot <- experiment.plot.qqplot(rq3.dataframe[rq3.filter.non_zero_f1_score,],
+                                  "f1_score",
+                                  "F1 Score",
+                                  "F1 Score (Subjects with score above 0)")
+experiment.write.plot(filename = "qqplot_above_zero_f1_score.png", rq = 3)
+
+shapiro.test(rq3.dataframe[rq3.filter.non_zero_f1_score,]$f1_score)
+# W = 0.76581, p-value = 1.158e-15
+experiment.write.text(data = shapiro.test(rq3.dataframe[rq3.filter.non_zero_f1_score,]$f1_score),
+                      filename = "test_shapiro_above_zero_f1_score.txt",
+                      rq = 3)
+my_plot <- experiment.plot.qqplot(rq3.dataframe,
+                                  "f1_score",
+                                  "F1 Score",
+                                  "F1 Score (All subjects)")
+experiment.write.plot(filename = "qqplot_all_f1_score.png", rq = 3)
+
+shapiro.test(rq3.dataframe$f1_score)
+# W = 0.61996, p-value < 2.2e-16
+experiment.write.text(data = shapiro.test(rq3.dataframe$f1_score),
+                      filename = "test_shapiro_all_f1_score.txt",
+                      rq = 3)
