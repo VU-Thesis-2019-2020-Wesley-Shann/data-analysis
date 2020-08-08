@@ -135,11 +135,13 @@ rq3.filter.materialistic <- rq3.dataframe$subject.name == "Materialistic"
 my_plot <- experiment.plot.boxplot(rq3.dataframe[rq3.filter.non_zero_f1_score,],
                                    "f1_score",
                                    "F1 Score",
-                                   "F1 Score")
+                                   "F1 Score") +
+      expand_limits(y = c(0, 1))
 experiment.write.plot(filename = "boxplot_f1_score.png", rq = 3)
 
 for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
   my_plot <- experiment.plot.boxplot(rq3.dataframe[rq3.dataframe$subject.name == subject,],
+                                     fill = "subject.treatment.name.long",
                                      "f1_score",
                                      "F1 Score",
                                      paste(subject, "~", "F1 Score"))
@@ -168,3 +170,11 @@ for (part in c(1, 2, 3)) {
     expand_limits(y = 0)
   experiment.write.plot(filename = paste0("f1_score_over_runs_zoom", subject, "_part_", part, ".png"), rq = 3)
 }
+
+# Violin plot
+my_plot <- experiment.plot.violin(rq3.dataframe[rq3.filter.non_zero_f1_score,],
+                                   "f1_score",
+                                   "F1 Score",
+                                   "F1 Score") +
+      expand_limits(y = c(0, 1))
+experiment.write.plot(filename = "violin_f1_score.png", rq = 3)
