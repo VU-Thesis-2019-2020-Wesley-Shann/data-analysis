@@ -408,8 +408,16 @@ experiment.write.text(data = shapiro.test(rq1.dataframe$android.memory.mb.cube),
 #################################################################################################
 print("Phase 3. Hypothesis Test")
 
+# Metric      Test              p-value     is H0 rejected (p-value < 0.05)
+# -----       ------            -------     --------------------------
+# Battery     One way ANOVA     0.7757      no
+# CPU         Kruskal-Wallis
+# Memory      Kruskal-Wallis
+
 # Battery ~ sqrt ~ normal ~ ANOVA
 rq1.anova.battery_aov <- lm(trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery,])
+# lm creates an object of type linear model. Its properties can be extracted with other functions.
+# battery∼treatment is a model formula. Read it as: “explain battery using treatment”.
 anova(rq1.anova.battery_aov)
 #Analysis of Variance Table
 #
@@ -417,6 +425,13 @@ anova(rq1.anova.battery_aov)
 #                      Df Sum Sq Mean Sq F value Pr(>F)
 #subject.treatment.id   2    6.6  3.2939  0.2541 0.7757
 #Residuals            626 8113.9 12.9615
+#The p-value for testing H_0: mu_1 = mu_2 = mu_3 is 0.7757: H_0 is not rejected
+experiment.write.latex(dataframe = rq1.anova.battery_aov,
+                       rq = 1,
+                       filename = "hypothesis_battery_anova.latex",
+                       label = "tab:hypothesis:battery:anova",
+                       caption = "Analysis of Variance for the linear model explaining the transformed (suqare root) battery consumption (J) using the prefetching treatment.")
+
 summary(rq1.anova.battery_aov)
 #Residuals:
 #    Min      1Q  Median      3Q     Max
@@ -433,6 +448,7 @@ summary(rq1.anova.battery_aov)
 #Residual standard error: 3.6 on 626 degrees of freedom
 #Multiple R-squared:  0.0008113,	Adjusted R-squared:  -0.002381
 #F-statistic: 0.2541 on 2 and 626 DF,  p-value: 0.7757
+
 confint(rq1.anova.battery_aov)
 #                                     2.5 %    97.5 %
 #(Intercept)                     11.7601590 12.735904
