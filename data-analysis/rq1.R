@@ -574,10 +574,10 @@ experiment.write.text(data = rq1.hypothesis.memory.bonferroni,
                       filename = "hypothesis_memory_bonferroni.txt")
 
 
-# --------------\
-# Pakcage effsize
-# omputes the Cliff's Delta effect size for ordinal variables with the related confidence interval using efficient algorithms.
-rq1.hypothesis.memory.cliff1 <- cliff.delta(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
+# Computes the Cliff's Delta effect size for ordinal variables with the related confidence interval using efficient algorithms.
+rq1.hypothesis.memory.cliff.baseline_greedy <- cliff.delta(
+  rq1.dataframe[rq1.dataframe$subject.treatment.id == "baseline", "android.memory.mb"],
+  rq1.dataframe[rq1.dataframe$subject.treatment.id == "nappagreedy", "android.memory.mb"])
 #Cliff's Delta
 #
 #delta estimate: -0.3243537 (small)
@@ -585,13 +585,34 @@ rq1.hypothesis.memory.cliff1 <- cliff.delta(android.memory.mb ~ subject.treatmen
 #     lower      upper
 #-0.4311086 -0.2086435
 
-experiment.write.text(data = rq1.hypothesis.memory.cliff1,
-                      rq = 1,
-                      filename = "hypothesis_memory_cliff.txt")
+rq1.hypothesis.memory.cliff.baseline_tfpr <- cliff.delta(
+  rq1.dataframe[rq1.dataframe$subject.treatment.id == "baseline", "android.memory.mb"],
+  rq1.dataframe[rq1.dataframe$subject.treatment.id == "nappatfpr", "android.memory.mb"])
+#Cliff's Delta
+#
+#delta estimate: -0.3461678 (medium)
+#95 percent confidence interval:
+#     lower      upper
+#-0.4510444 -0.2318614
 
-# ---------------
-# Package rcompanion
-# Calculates Cliff's delta with confidence intervals by bootstrap
-rq1.hypothesis.memory.cliff2 <- cliffDelta(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
-#Cliff.delta
-#     -0.324
+rq1.hypothesis.memory.cliff.greedy_tfpr <- cliff.delta(
+  rq1.dataframe[rq1.dataframe$subject.treatment.id == "nappagreedy", "android.memory.mb"],
+  rq1.dataframe[rq1.dataframe$subject.treatment.id == "nappatfpr", "android.memory.mb"])
+#Cliff's Delta
+#
+#delta estimate: -0.08353741 (negligible)
+#95 percent confidence interval:
+#      lower       upper
+#-0.19135289  0.02626994
+
+experiment.write.text(data = rq1.hypothesis.memory.cliff.baseline_greedy,
+                      rq = 1,
+                      filename = "hypothesis_memory_cliff_baseline_greedy.txt")
+
+experiment.write.text(data = rq1.hypothesis.memory.cliff.baseline_tfpr,
+                      rq = 1,
+                      filename = "hypothesis_memory_cliff_baseline_tfpr.txt")
+
+experiment.write.text(data = rq1.hypothesis.memory.cliff.greedy_tfpr,
+                      rq = 1,
+                      filename = "hypothesis_memory_cliff_greedy_tfpr.txt")
