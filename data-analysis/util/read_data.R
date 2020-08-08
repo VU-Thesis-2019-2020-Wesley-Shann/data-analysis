@@ -140,7 +140,9 @@ experiment.source.prefetching_accuracy <- function() {
   ))
 
   # Calculate other metrics
-  dataframe$precision <- dataframe$true_positive / (dataframe$true_positive + dataframe$false_positive)
+  dataframe$precision <- ifelse((dataframe$true_positive + dataframe$false_positive) == 0,
+                                0,
+                                dataframe$true_positive / (dataframe$true_positive + dataframe$false_positive))
   dataframe$recall <- dataframe$true_positive / (dataframe$true_positive + dataframe$false_negative)
   dataframe$accuracy <- dataframe$true_positive / (dataframe$true_positive +
     dataframe$false_positive +
@@ -181,7 +183,9 @@ experiment.source.strategy_accuracy <- function() {
   dataframe$false_negative <- dataframe$count.execution -
     dataframe$true_positive -
     dataframe$false_positive
-  dataframe$precision <- dataframe$true_positive / (dataframe$true_positive + dataframe$false_positive)
+  dataframe$precision <- ifelse((dataframe$true_positive + dataframe$false_positive) == 0,
+                                0,
+                                dataframe$true_positive / (dataframe$true_positive + dataframe$false_positive))
   dataframe$recall <- dataframe$true_positive / (dataframe$true_positive + dataframe$false_negative)
   dataframe$f1_score <- dataframe$true_positive / (dataframe$true_positive + 1 / 2 * (dataframe$false_positive + dataframe$false_negative))
 
