@@ -542,3 +542,53 @@ experiment.write.latex(dataframe = confint(rq1.hypothesis.cpu.lm),
 ########################################### 3c: Memory ##########################################
 
 # Memory ~ not normal ~ Kruskal-Wallis
+rq1.hypothesis.memory.result <- kruskal.test(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
+#	Kruskal-Wallis rank sum test
+#
+#data:  android.memory.mb by subject.treatment.id
+#Kruskal-Wallis chi-squared = 48.38, df = 2, p-value = 3.122e-11
+experiment.write.text(data = rq1.hypothesis.memory.result,
+                       rq = 1,
+                       filename = "hypothesis_memory_kruskal.txt")
+
+
+rq1.hypothesis.memory.lm <- lm(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
+summary(rq1.hypothesis.memory.lm)
+#Call:
+#lm(formula = android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
+#
+#Residuals:
+#   Min     1Q Median     3Q    Max
+#-62.44 -42.61 -28.42  41.82 150.36
+#
+#Coefficients:
+#                                Estimate Std. Error t value Pr(>|t|)
+#(Intercept)                      202.297      4.469  45.265   <2e-16 ***
+#subject.treatment.idnappagreedy    4.936      6.320   0.781    0.435
+#subject.treatment.idnappatfpr      6.185      6.320   0.979    0.328
+#---
+#Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#
+#Residual standard error: 64.76 on 627 degrees of freedom
+#Multiple R-squared:  0.001705,	Adjusted R-squared:  -0.001479
+#F-statistic: 0.5355 on 2 and 627 DF,  p-value: 0.5856
+experiment.write.latex(dataframe = summary(rq1.hypothesis.memory.lm),
+                       rq = 1,
+                       digits = 4,
+                       filename = "hypothesis_memory_summary.tex",
+                       label = "tab:hypothesis:memory:summary",
+                       caption = "Overview of the linear model explaining the memory consumption (MB) using the prefetching treatment.")
+
+confint(rq1.hypothesis.memory.lm)
+#                                     2.5 %    97.5 %
+#                                     2.5 %    97.5 %
+#(Intercept)                     193.520454 211.07331
+#subject.treatment.idnappagreedy  -7.475506  17.34798
+#subject.treatment.idnappatfpr    -6.226873  18.59661
+experiment.write.latex(dataframe = confint(rq1.hypothesis.memory.lm),
+                       rq = 1,
+                       digits = 4,
+                       filename = "hypothesis_memory_confint.tex",
+                       label = "tab:hypothesis:memory:confint",
+                       caption = "Confidence intervals for the linear model explaining the memory consumption (MB) using the prefetching treatment.")
+
