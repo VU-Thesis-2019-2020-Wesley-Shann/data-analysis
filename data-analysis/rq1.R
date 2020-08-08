@@ -237,6 +237,17 @@ my_data <- transformTukey(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.batt
 shapiro.test(my_data)
 # W = 0.99766, p-value = 0.533
 
+Box <- boxcox(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule ~ 1, lambda = seq(-6, 6, 0.1))
+Cox <- data.frame(Box$x, Box$y)
+Cox2 <- Cox[with(Cox, order(-Cox$Box.y)),]
+Cox2[1,]
+#   Box.x     Box.y
+#66   0.5 -1717.346
+lambda <- Cox2[1, "Box.x"]
+my_data <- (rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule^lambda - 1) / lambda
+shapiro.test(my_data)
+#W = 0.99781, p-value = 0.5963
+
 
 # CPU ~ Natural log
 rq1.dataframe$trepn.cpu.log <- log(rq1.dataframe$trepn.cpu)
