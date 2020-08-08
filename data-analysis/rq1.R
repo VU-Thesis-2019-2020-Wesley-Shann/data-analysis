@@ -10,6 +10,7 @@ library(ggplot2)
 library(xtable)
 library(rcompanion)
 library(MASS)
+library(effsize)
 
 # Load utility files
 source("util/subject.R")
@@ -530,7 +531,7 @@ rq1.hypothesis.cpu.result <- kruskal.test(trepn.cpu ~ subject.treatment.id, data
 #data:  trepn.cpu by subject.treatment.id
 #Kruskal-Wallis chi-squared = 0.78683, df = 2, p-value = 0.6747
 # kruskal.test performs the Kruskal-Wallis test and yields a p-value.
-# The p-value for testing H_0 : mu_1 = mu_2 = mu_3 = mu_4 is 0.6747: H_0 is not rejected.
+# The p-value for testing H_0 : F_1 = F_2 = F_3 is 0.6747: H_0 is not rejected.
 experiment.write.text(data = rq1.hypothesis.cpu.result,
                       rq = 1,
                       filename = "hypothesis_cpu_kruskal.txt")
@@ -635,6 +636,25 @@ rq1.hypothesis.memory.wilcox <- pairwise.wilcox.test(rq1.dataframe$android.memor
 experiment.write.text(data = rq1.hypothesis.memory.wilcox,
                       rq = 1,
                       filename = "hypothesis_memory_wilcox.tex")
+
+# --------------\
+# Pakcage effsize
+# omputes the Cliff's Delta effect size for ordinal variables with the related confidence interval using efficient algorithms.
+cliff.delta(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
+#Cliff's Delta
+#
+#delta estimate: -0.3243537 (small)
+#95 percent confidence interval:
+#     lower      upper
+#-0.4311086 -0.2086435
+
+# ---------------
+# Package rcompanion
+# Calculates Cliff's delta with confidence intervals by bootstrap
+cliffDelta(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
+#Cliff.delta
+#     -0.324
+
 
 rq1.hypothesis.memory.lm <- lm(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
 summary(rq1.hypothesis.memory.lm)
