@@ -419,6 +419,9 @@ experiment.write.text(data = shapiro.test(rq1.dataframe$android.memory.mb.cube),
 #################################################################################################
 print("Phase 3. Hypothesis Test")
 
+# Green Lab 2019-202 edition, slide 9A
+# http://www.sthda.com/english/wiki/wiki.php?title=one-way-anova-test-in-r
+
 # Hypothesistest
 # Metric      Test              p-value     is H0 rejected (p-value < 0.05)
 # -----       ------            -------     --------------------------
@@ -429,78 +432,20 @@ print("Phase 3. Hypothesis Test")
 ########################################## 3a: Battery #########################################
 
 # Battery ~ sqrt ~ normal ~ ANOVA
-rq1.hypothesis.battery.lm <- lm(trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery,])
-# lm creates an object of type linear model. Its properties can be extracted with other functions.
-# battery∼treatment is a model formula. Read it as: “explain battery using treatment”.
-
-anova(rq1.hypothesis.battery.lm)
-#Analysis of Variance Table
-#
-#Response: trepn.battery.nonzero.joule.sqrt
+rq1.hypothesis.battery.aov <- aov(trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery,])
+summary(rq1.hypothesis.battery.aov)
 #                      Df Sum Sq Mean Sq F value Pr(>F)
-#subject.treatment.id   2    6.6  3.2939  0.2541 0.7757
-#Residuals            626 8113.9 12.9615
-#The p-value for testing H_0: mu_1 = mu_2 = mu_3 is 0.7757: H_0 is not rejected
-experiment.write.latex(dataframe = anova(rq1.hypothesis.battery.lm),
+#subject.treatment.id   2      7   3.294   0.254  0.776
+#Residuals            626   8114  12.961
+#The p-value for testing H_0: mu_1 = mu_2 = mu_3 is 0.776: H_0 is not rejected
+experiment.write.latex(dataframe = summary(rq1.hypothesis.battery.aov),
                        rq = 1,
                        digits = 4,
                        filename = "hypothesis_battery_anova.tex",
                        label = "tab:hypothesis:battery:anova",
                        caption = "Analysis of Variance for the linear model explaining the transformed (square root) battery consumption (J) using the prefetching treatment.")
 
-summary(rq1.hypothesis.battery.lm)
-#Residuals:
-#    Min      1Q  Median      3Q     Max
-#-9.7769 -2.4115  0.0797  2.5722 11.0381
-#
-#Coefficients:
-#                                Estimate Std. Error t value Pr(>|t|)
-#(Intercept)                      12.2480     0.2484  49.300   <2e-16 ***
-#subject.treatment.idnappagreedy   0.2347     0.3518   0.667    0.505
-#subject.treatment.idnappatfpr     0.0405     0.3513   0.115    0.908
-#---
-#Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-#
-#Residual standard error: 3.6 on 626 degrees of freedom
-#Multiple R-squared:  0.0008113,	Adjusted R-squared:  -0.002381
-#F-statistic: 0.2541 on 2 and 626 DF,  p-value: 0.7757
-# estimates:
-#   mu_1 = 22.2480;
-#   mu_2 - mu_1 = 0.2347;
-#   mu_3 - mu_1 = 0405;
-# p-values:
-#   (H_0 : mu_1 = 0): 2e-16;
-#   (H_0 : mu_2 - mu_1 ): 0.505;
-#   (H_0 : mu_3 - mu_1 ): 0.908;
-experiment.write.latex(dataframe = summary(rq1.hypothesis.battery.lm),
-                       rq = 1,
-                       digits = 4,
-                       filename = "hypothesis_battery_summary.tex",
-                       label = "tab:hypothesis:battery:summary",
-                       caption = "Overview of the linear model explaining the transformed (square root) battery consumption (J) using the prefetching treatment.")
 
-confint(rq1.hypothesis.battery.lm)
-#                                     2.5 %    97.5 %
-#(Intercept)                     11.7601590 12.735904
-#subject.treatment.idnappagreedy -0.4561203  0.925441
-#subject.treatment.idnappatfpr   -0.6494547  0.730457
-# ( 95% confidence intervals:
-#   for mu_1 : [11.7601590, 12.735904];
-#   for mu_2 - mu_1 : [-0.4561203,  0.925441]
-#   for mu_3 - mu_1 : [-0.6494547,  0.730457]
-experiment.write.latex(dataframe = confint(rq1.hypothesis.battery.lm),
-                       rq = 1,
-                       digits = 4,
-                       filename = "hypothesis_battery_confint.tex",
-                       label = "tab:hypothesis:battery:confint",
-                       caption = "Confidence intervals for the linear model explaining the transformed (square root) battery consumption (J) using the prefetching treatment.")
-
-#http://www.sthda.com/english/wiki/wiki.php?title=one-way-anova-test-in-r
-rq1.hypothesis.battery.aov <- aov(trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery,])
-summary(rq1.hypothesis.battery.aov)
-#                      Df Sum Sq Mean Sq F value Pr(>F)
-#subject.treatment.id   2      7   3.294   0.254  0.776
-#Residuals            626   8114  12.961
 TukeyHSD(rq1.hypothesis.battery.aov)
 #  Tukey multiple comparisons of means
 #    95% family-wise confidence level
@@ -520,7 +465,6 @@ TukeyHSD(rq1.hypothesis.battery.aov)
 experiment.write.text(data = TukeyHSD(rq1.hypothesis.battery.aov),
                       rq = 1,
                       filename = "hypothesis_battery_tukey.tex")
-
 
 ############################################ 3b: CPU ###########################################
 
