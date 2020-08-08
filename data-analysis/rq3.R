@@ -140,57 +140,22 @@ experiment.write.plot(filename = "boxplot_f1_score.png", rq = 3)
 
 for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
   for (part in c(1, 2, 3)) {
-    ggplot(rq3.dataframe[rq3.dataframe$experiment.part == part &
-                           rq3.dataframe$subject.name == subject,],
-           aes(
-             x = run.number,
-             y = f1_score,
-             colour = subject.id,
-             group = subject.id
-           )) +
-      geom_line(
-        linetype = "dashed"
-      ) +
-      geom_point() +
-      labs(
-        title = paste("F1-Score over runs", subject, paste0("(part ", part, ")")),
-        x = "Run",
-        y = "F1-Score",
-        colour = "Subject"
-      ) +
-      theme(
-        legend.position = "bottom"
-      ) +
-      scale_colour_tron() +
+    my_plot <- experiment.plot.line(dataframe = rq3.dataframe[rq3.dataframe$experiment.part == part &
+                                                                rq3.dataframe$subject.name == subject,],
+                                    title = paste("F1-Score over runs", subject, paste0("(part ", part, ")")),
+                                    axis_y_column = "f1_score",
+                                    axis_y_legend = "F1-Score") +
       expand_limits(y = c(0, 1))
     experiment.write.plot(filename = paste0("f1_score_over_runs_", subject, "_part_", part, ".png"), rq = 3)
   }
 }
 
-subject <- "Materialistic"
 for (part in c(1, 2, 3)) {
-  ggplot(rq3.dataframe[rq3.dataframe$experiment.part == part &
-                         rq3.dataframe$subject.name == subject,],
-         aes(
-           x = run.number,
-           y = f1_score,
-           colour = subject.id,
-           group = subject.id
-         )) +
-    geom_line(
-      linetype = "dashed"
-    ) +
-    geom_point() +
-    labs(
-      title = paste("F1-Score over runs", subject, paste0("(part ", part, ")")),
-      x = "Run",
-      y = "F1-Score",
-      colour = "Subject"
-    ) +
-    theme(
-      legend.position = "bottom"
-    ) +
-    scale_colour_tron() +
+  my_plot <- experiment.plot.line(dataframe = rq3.dataframe[rq3.dataframe$experiment.part == part &
+                                                              rq3.dataframe$subject.name == "Materialistic",],
+                                  title = paste("F1-Score over runs", subject, paste0("(part ", part, ")")),
+                                  axis_y_column = "f1_score",
+                                  axis_y_legend = "F1-Score") +
     expand_limits(y = 0)
   experiment.write.plot(filename = paste0("f1_score_over_runs_zoom", subject, "_part_", part, ".png"), rq = 3)
 }

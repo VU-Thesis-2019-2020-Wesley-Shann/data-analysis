@@ -88,3 +88,30 @@ experiment.plot.qqplot <- function(dataframe, sample_column, sample_legend, titl
     ) +
     scale_color_tron()
 }
+
+experiment.plot.line <- function(dataframe, title, axis_y_column, axis_y_legend,
+                                 axis_x_column = "run.number",
+                                 axis_x_legend = "Run",
+                                 group_by_column = "subject.id",
+                                 group_by_legend = "Subject") {
+  ggplot(dataframe, aes_string(
+    x = axis_x_column,
+    y = axis_y_column,
+    colour = group_by_column,
+    group = group_by_column
+  )) +
+    geom_line(
+      linetype = "dashed"
+    ) +
+    geom_point() +
+    labs(
+      title = title,
+      x = axis_x_legend,
+      y = axis_y_legend,
+      colour = group_by_legend
+    ) +
+    theme(
+      legend.position = "bottom"
+    ) +
+    scale_colour_tron()
+}
