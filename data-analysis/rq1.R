@@ -526,6 +526,30 @@ experiment.write.text(data = rq1.hypothesis.cpu.result,
                       filename = "hypothesis_cpu_kruskal.txt")
 
 
+# www.sthda.com/english/wiki/kruskal-wallis-test-in-r
+# From the output of the Kruskal-Wallis test,
+# we know that there is a significant difference between groups,
+# but we don’t know which pairs of groups are different.
+# It’s possible to use the function pairwise.wilcox.test()
+# to calculate pairwise comparisons between group levels with corrections for multiple testing.
+rq1.hypothesis.cpu.wilcox <- pairwise.wilcox.test(rq1.dataframe$trepn.cpu, rq1.dataframe$subject.treatment.id)
+#	Pairwise comparisons using Wilcoxon rank sum test with continuity correction
+#
+#data:  rq1.dataframe$android.memory.mb and rq1.dataframe$subject.treatment.id
+#
+#            baseline nappagreedy
+#nappagreedy 1.8e-08  -
+#nappatfpr   2.5e-09  0.14
+#
+#P value adjustment method: holm
+# The pairwise comparison shows that,
+#   baseline and greedy are differet (p < 0.05).
+#   baseline and TFPR are differet (p < 0.05).
+
+experiment.write.text(data = rq1.hypothesis.cpu.wilcox,
+                      rq = 1,
+                      filename = "hypothesis_cpu_wilcox.tex")
+
 rq1.hypothesis.cpu.lm <- lm(trepn.cpu ~ subject.treatment.id, data = rq1.dataframe)
 summary(rq1.hypothesis.cpu.lm)
 #Call:
