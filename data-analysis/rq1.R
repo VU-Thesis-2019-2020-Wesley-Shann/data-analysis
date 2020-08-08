@@ -417,11 +417,11 @@ print("Phase 3. Hypothesis Test")
 ########################################## 3a: Battery #########################################
 
 # Battery ~ sqrt ~ normal ~ ANOVA
-rq1.hypothesis.battery.aov <- lm(trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery,])
+rq1.hypothesis.battery.lm <- lm(trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery,])
 # lm creates an object of type linear model. Its properties can be extracted with other functions.
 # battery∼treatment is a model formula. Read it as: “explain battery using treatment”.
 
-rq1.hypothesis.battery.result <-anova(rq1.hypothesis.battery.aov)
+rq1.hypothesis.battery.result <-anova(rq1.hypothesis.battery.lm)
 #Analysis of Variance Table
 #
 #Response: trepn.battery.nonzero.joule.sqrt
@@ -434,9 +434,9 @@ experiment.write.latex(dataframe = rq1.hypothesis.battery.result,
                        digits = 4,
                        filename = "hypothesis_battery_anova.tex",
                        label = "tab:hypothesis:battery:anova",
-                       caption = "Analysis of Variance for the linear model explaining the transformed (suqare root) battery consumption (J) using the prefetching treatment.")
+                       caption = "Analysis of Variance for the linear model explaining the transformed (square root) battery consumption (J) using the prefetching treatment.")
 
-summary(rq1.hypothesis.battery.aov)
+summary(rq1.hypothesis.battery.lm)
 #Residuals:
 #    Min      1Q  Median      3Q     Max
 #-9.7769 -2.4115  0.0797  2.5722 11.0381
@@ -460,14 +460,14 @@ summary(rq1.hypothesis.battery.aov)
 #   (H_0 : mu_1 = 0): 2e-16;
 #   (H_0 : mu_2 - mu_1 ): 0.505;
 #   (H_0 : mu_3 - mu_1 ): 0.908;
-experiment.write.latex(dataframe = rq1.hypothesis.battery.aov,
+experiment.write.latex(dataframe = summary(rq1.hypothesis.battery.lm),
                        rq = 1,
                        digits = 4,
                        filename = "hypothesis_battery_summary.tex",
                        label = "tab:hypothesis:battery:summary",
-                       caption = "Overview of the linear model explaining the transformed (suqare root) battery consumption (J) using the prefetching treatment.")
+                       caption = "Overview of the linear model explaining the transformed (square root) battery consumption (J) using the prefetching treatment.")
 
-rq1.hypothesis.battery.confint <- confint(rq1.hypothesis.battery.aov)
+rq1.hypothesis.battery.confint <- confint(rq1.hypothesis.battery.lm)
 #                                     2.5 %    97.5 %
 #(Intercept)                     11.7601590 12.735904
 #subject.treatment.idnappagreedy -0.4561203  0.925441
@@ -481,14 +481,32 @@ experiment.write.latex(dataframe = rq1.hypothesis.battery.confint,
                        digits = 4,
                        filename = "hypothesis_battery_confint.tex",
                        label = "tab:hypothesis:battery:confint",
-                       caption = "Confidence intervals for the linear model explaining the transformed (suqare root) battery consumption (J) using the prefetching treatment.")
+                       caption = "Confidence intervals for the linear model explaining the transformed (square root) battery consumption (J) using the prefetching treatment.")
 
 
 ############################################ 3b: CPU ###########################################
 
 # CPU ~ not normal ~ Kruskal-Wallis
-rq1.test.kruskal.cpu <- kruskal.test(trepn.cpu ~ subject.treatment.id, data = rq1.dataframe)
-summary(rq1.test.kruskal.cpu)
+rq1.hypothesis.cpu.result <- kruskal.test(trepn.cpu ~ subject.treatment.id, data = rq1.dataframe)
+#	Kruskal-Wallis rank sum test
+#
+#data:  trepn.cpu by subject.treatment.id
+#Kruskal-Wallis chi-squared = 0.78683, df = 2, p-value = 0.6747
+# kruskal.test performs the Kruskal-Wallis test and yields a p-value.
+# The p-value for testing H_0 : mu_1 = mu_2 = mu_3 = mu_4 is 0.6747: H_0 is not rejected.
+experiment.write.text(data = rq1.hypothesis.cpu.result,
+                       rq = 1,
+                       filename = "hypothesis_cpu_kruskal.txt")
+
+
+rq1.hypothesis.cpu.lm <- lm(trepn.cpu ~ subject.treatment.id, data = rq1.dataframe)
+experiment.write.latex(dataframe = summary(rq1.hypothesis.cpu.lm),
+                       rq = 1,
+                       digits = 4,
+                       filename = "hypothesis_cpu_summary.tex",
+                       label = "tab:hypothesis:cpu:summary",
+                       caption = "Overview of the linear model explaining the CPU load (%) using the prefetching treatment.")
+
 
 ########################################### 3c: Memory ##########################################
 
