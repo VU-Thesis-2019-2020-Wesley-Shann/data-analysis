@@ -34,8 +34,6 @@ rq2.dataframe <- experiment.source.network_request_execution_time()
 ################################  Phase 1a Descriptive statistics ###############################
 print("Phase 1. Data exploration")
 
-#length(unique(rq2.dataframe[rq2.dataframe$subject.name == subject,]$request.url))
-
 keep_min_max_mean <- c(2, 3, 5)
 keep_min_max_median <- c(2, 4, 5)
 kepp_min_max_mean_median <- c(2, 5)
@@ -63,3 +61,17 @@ experiment.write.latex(rq = 2,
                        filename = "summary_treatment.tex",
                        caption = "Overview of the user perceived latency per treatment.",
                        label = "tab:results:rq2:summary:treatment")
+
+rq2.summary.subject.url <- data.frame(matrix(ncol = 2, nrow = 0))
+for (subject in levels(rq2.dataframe$subject.name)) {
+  rq2.summary.subject.url <- rbind(
+    rq2.summary.subject.url,
+    c(subject, length(unique(rq2.dataframe[rq2.dataframe$subject.name == subject,]$request.url)))
+  )
+}
+colnames(rq2.summary.subject.url) <- c("Subject", "Unique URLs")
+experiment.write.latex(dataframe = rq2.summary.subject.url,
+                       rq = 2,
+                       filename = "summary_subject_url",
+                       caption = "Count of unique requested URL per subject",
+                       label = "tab:results:rq2:summary:subject:url")
