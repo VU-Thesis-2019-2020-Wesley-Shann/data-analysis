@@ -41,19 +41,19 @@ my_plot <- experiment.plot.boxplot(rq0.dataframe,
                                    "strategy.duration.ms",
                                    "Strategy duration (ms)",
                                    "Strategy duration")
-experiment.write.plot(filename = "boxplot_cpu.png", rq = 0)
+experiment.write.plot(filename = "boxplot_duration.png", rq = 0)
 
 my_plot <- experiment.plot.violin(rq0.dataframe,
                                   "strategy.duration.ms",
                                   "Strategy duration (ms)",
                                   "Strategy duration")
-experiment.write.plot(filename = "violin_cpu.png", rq = 0)
+experiment.write.plot(filename = "violin_duration.png", rq = 0)
 
 my_plot <- experiment.plot.freqpoly(rq0.dataframe,
                                     "strategy.duration.ms",
                                     "Strategy duration (ms)",
                                     "Strategy duration")
-experiment.write.plot(filename = "freqpoly_cpu.png", rq = 0)
+experiment.write.plot(filename = "freqpoly_duration.png", rq = 0)
 
 
 #################################################################################################
