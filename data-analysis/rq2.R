@@ -243,7 +243,7 @@ my_plot <- experiment.plot.qqplot(rq2.dataframe,
                                   "Request duration")
 experiment.write.plot(filename = "qqplot_request_duration.png", rq = 2)
 
-my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE), ]
+my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE),]
 
 my_plot <- experiment.plot.qqplot(my_sample,
                                   "request.duration.from_system.ms",
@@ -264,15 +264,15 @@ experiment.write.text(data = shapiro.test(my_sample$request.duration.from_system
 my_plot <- experiment.plot.qqplot(rq2.dataframe[rq2.filter.no_materialistic,],
                                   "request.duration.from_system.ms",
                                   "Request duration (ms)",
-                                    "Request duration (Without Materialistic)")
+                                  "Request duration (Without Materialistic)")
 experiment.write.plot(filename = "qqplot_request_duration_no_materialistic.png", rq = 2)
 
-my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe[rq2.filter.no_materialistic,]), 5000, replace = FALSE), ]
+my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe[rq2.filter.no_materialistic,]), 5000, replace = FALSE),]
 
 my_plot <- experiment.plot.qqplot(my_sample,
                                   "request.duration.from_system.ms",
                                   "Request duration (ms)",
-                                    "Request duration (Without Materialistic)")
+                                  "Request duration (Without Materialistic)")
 experiment.write.plot(filename = "qqplot_request_duration_sampled_no_materialistic.png", rq = 2)
 
 shapiro.test(my_sample$request.duration.from_system.ms)
@@ -285,40 +285,47 @@ experiment.write.text(data = shapiro.test(my_sample$request.duration.from_system
                       rq = 2)
 
 
+# Prefetch only
+my_plot <- experiment.plot.qqplot(rq2.dataframe[rq2.filter.with_prefetch_only,],
+                                  "request.duration.from_system.ms",
+                                  "Request duration (ms)",
+                                  "Request duration")
+experiment.write.plot(filename = "qqplot_request_duration_prefetch_only.png", rq = 2)
+
 ##################################  Phase 2a Data Transformation ####################################
 
 # Request duration ~ Natural log
 rq2.dataframe$request.duration.from_system.ms.log <- log(rq2.dataframe$request.duration.from_system.ms)
-my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE), ]
+my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE),]
 shapiro.test(my_sample$request.duration.from_system.ms.log)
 #W = 0.8662, p-value < 2.2e-16
 
 # Request duration ~ squared
 rq2.dataframe$request.duration.from_system.ms.squared <- rq2.dataframe$request.duration.from_system.ms^2
-my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE), ]
+my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE),]
 shapiro.test(my_sample$request.duration.from_system.ms.squared)
 # W = 0.9266, p-value = 1.757e-13
 
 # Request duration ~ square root
 rq2.dataframe$request.duration.from_system.ms.sqrt <- sqrt(rq2.dataframe$request.duration.from_system.ms)
-my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE), ]
+my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE),]
 shapiro.test(my_sample$request.duration.from_system.ms.sqrt)
 # W = 0.97621, p-value < 2.2e-16
 
 # Request duration ~ cube root
 rq2.dataframe$request.duration.from_system.ms.cube <- sign(rq2.dataframe$request.duration.from_system.ms) * abs(rq2.dataframe$request.duration.from_system.ms)^(1 / 3)
-my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE), ]
+my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE),]
 shapiro.test(my_sample$request.duration.from_system.ms.cube)
 #W = 0.98571, p-value < 2.2e-16
 
 # Request duration ~ inverse
 rq2.dataframe$request.duration.from_system.ms.inverse <- 1 / rq2.dataframe$request.duration.from_system.ms
-my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE), ]
+my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE),]
 shapiro.test(my_sample$request.duration.from_system.ms.inverse)
 #W = 0.32345, p-value < 2.2e-16
 
 # Request duration ~ Tukey’s Ladder of Powers transformation
-my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE), ]
+my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE),]
 my_sample_tukey <- transformTukey(my_sample$request.duration.from_system.ms, plotit = FALSE)
 #    lambda     W Shapiro.p.value
 #416  0.375 0.986       7.155e-22
@@ -336,7 +343,7 @@ Cox2 <- Cox[with(Cox, order(-Cox$Box.y)),]
 Cox2[1,]
 lambda <- Cox2[1, "Box.x"]
 rq2.dataframe$request.duration.from_system.ms.box <- (rq2.dataframe$request.duration.from_system.ms^lambda - 1) / lambda
-my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE), ]
+my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE),]
 shapiro.test(my_sample$request.duration.from_system.ms.box)
 #W = 0.98396, p-value < 2.2e-16
 
@@ -344,3 +351,160 @@ shapiro.test(my_sample$request.duration.from_system.ms.box)
 #################################### Phase 3: Hypothesis Test ###################################
 #################################################################################################
 print("Phase 3. Hypothesis Test")
+
+
+####################################### 3a: duration (all) ######################################
+
+# Request duration ~ not normal ~ Kruskal-Wallis
+rq2.hypothesis.request.duration.result <- kruskal.test(request.duration.from_system.ms ~ subject.treatment.id, data = rq2.dataframe)
+#	Kruskal-Wallis rank sum test
+#
+#data:  request.duration.from_system.ms by subject.treatment.id
+#Kruskal-Wallis chi-squared = 1002.6, df = 2, p-value < 2.2e-16
+experiment.write.text(data = rq2.hypothesis.request.duration.result,
+                      rq = 2,
+                      filename = "hypothesis_request_duration_kruskal.txt")
+
+
+rq2.hypothesis.request.duration.holm <- pairwise.wilcox.test(rq2.dataframe$request.duration.from_system.ms, rq2.dataframe$subject.treatment.id)
+#            baseline nappagreedy
+#nappagreedy <2e-16   -
+#nappatfpr   <2e-16   0.65
+#
+#P value adjustment method: holm
+
+experiment.write.text(data = rq2.hypothesis.request.duration.holm,
+                      rq = 2,
+                      filename = "hypothesis_request_duration_holm.txt")
+
+rq2.hypothesis.request.duration.bonferroni <- pairwise.wilcox.test(rq2.dataframe$request.duration.from_system.ms, rq2.dataframe$subject.treatment.id, p.adjust.method = "bonferroni")
+#            baseline nappagreedy
+#nappagreedy <2e-16   -
+#nappatfpr   <2e-16   1
+#
+#P value adjustment method: bonferroni
+
+experiment.write.text(data = rq2.hypothesis.request.duration.bonferroni,
+                      rq = 2,
+                      filename = "hypothesis_request_duration_bonferroni.txt")
+
+
+# Computes the Cliff's Delta effect size for ordinal variables with the related confidence interval using efficient algorithms.
+rq2.hypothesis.request.duration.cliff.baseline_greedy <- cliff.delta(
+  rq2.dataframe[rq2.dataframe$subject.treatment.id == "baseline", "request.duration.from_system.ms"],
+  rq2.dataframe[rq2.dataframe$subject.treatment.id == "nappagreedy", "request.duration.from_system.ms"])
+#Cliff's Delta
+#
+#delta estimate: -0.1988665 (small)
+#95 percent confidence interval:
+#     lower      upper
+#-0.2157985 -0.1818150
+
+rq2.hypothesis.request.duration.cliff.baseline_tfpr <- cliff.delta(
+  rq2.dataframe[rq2.dataframe$subject.treatment.id == "baseline", "request.duration.from_system.ms"],
+  rq2.dataframe[rq2.dataframe$subject.treatment.id == "nappatfpr", "request.duration.from_system.ms"])
+#Cliff's Delta
+#
+#delta estimate: -0.1983843 (small)
+#95 percent confidence interval:
+#     lower      upper
+#-0.2153942 -0.181254
+
+rq2.hypothesis.request.duration.cliff.greedy_tfpr <- cliff.delta(
+  rq2.dataframe[rq2.dataframe$subject.treatment.id == "nappagreedy", "request.duration.from_system.ms"],
+  rq2.dataframe[rq2.dataframe$subject.treatment.id == "nappatfpr", "request.duration.from_system.ms"])
+#Cliff's Delta
+#
+#delta estimate: -0.004197311 (negligible)
+#95 percent confidence interval:
+#      lower       upper
+#-0.02255092  0.01415913
+
+experiment.write.text(data = rq2.hypothesis.request.duration.cliff.baseline_greedy,
+                      rq = 2,
+                      filename = "hypothesis_request_duration_cliff_baseline_greedy.txt")
+
+experiment.write.text(data = rq2.hypothesis.request.duration.cliff.baseline_tfpr,
+                      rq = 2,
+                      filename = "hypothesis_request_duration_cliff_baseline_tfpr.txt")
+
+experiment.write.text(data = rq2.hypothesis.request.duration.cliff.greedy_tfpr,
+                      rq = 2,
+                      filename = "hypothesis_request_duration_cliff_greedy_tfpr.txt")
+
+####################################### 3b: duration (prefetch only) ######################################
+
+# Request duration ~ not normal ~ Kruskal-Wallis
+rq2.hypothesis.request.duration.result2 <- kruskal.test(request.duration.from_system.ms ~ subject.treatment.id, data = rq2.dataframe[rq2.filter.with_prefetch_only,])
+#	Kruskal-Wallis rank sum test
+#
+#data:  request.duration.from_system.ms by subject.treatment.id
+#Kruskal-Wallis chi-squared = 1287.5, df = 2, p-value < 2.2e-16
+experiment.write.text(data = rq2.hypothesis.request.duration.result2,
+                      rq = 2,
+                      filename = "hypothesis_request_duration_kruskal_prefetch_only.txt")
+
+
+rq2.hypothesis.request.duration.holm2 <- pairwise.wilcox.test(rq2.dataframe[rq2.filter.with_prefetch_only,]$request.duration.from_system.ms,
+                                                              rq2.dataframe[rq2.filter.with_prefetch_only,]$subject.treatment.id)
+#            baseline nappagreedy
+#nappagreedy <2e-16   -
+#nappatfpr   <2e-16   0.7
+
+experiment.write.text(data = rq2.hypothesis.request.duration.holm2,
+                      rq = 2,
+                      filename = "hypothesis_request_duration_holm_prefetch_only.txt")
+
+rq2.hypothesis.request.duration.bonferroni2 <- pairwise.wilcox.test(rq2.dataframe[rq2.filter.with_prefetch_only,]$request.duration.from_system.ms,
+                                                                    rq2.dataframe[rq2.filter.with_prefetch_only,]$subject.treatment.id, p.adjust.method = "bonferroni")
+#            baseline nappagreedy
+#nappagreedy <2e-16   -
+#nappatfpr   <2e-16   1
+#
+#P value adjustment method: bonferroni
+
+experiment.write.text(data = rq2.hypothesis.request.duration.bonferroni2,
+                      rq = 2,
+                      filename = "hypothesis_request_duration_bonferroni_prefetch_only.txt")
+
+
+# Computes the Cliff's Delta effect size for ordinal variables with the related confidence interval using efficient algorithms.
+rq2.hypothesis.request.duration.cliff.baseline_greedy2 <- cliff.delta(
+  rq2.dataframe[rq2.dataframe$subject.treatment.id == "baseline" & rq2.filter.with_prefetch_only, "request.duration.from_system.ms"],
+  rq2.dataframe[rq2.dataframe$subject.treatment.id == "nappagreedy" & rq2.filter.with_prefetch_only, "request.duration.from_system.ms"])
+#Cliff's Delta
+#
+#delta estimate: -0.3429637 (medium)
+#95 percent confidence interval:
+#     lower      upper
+#-0.3699669 -0.3153814
+
+rq2.hypothesis.request.duration.cliff.baseline_tfpr2 <- cliff.delta(
+  rq2.dataframe[rq2.dataframe$subject.treatment.id == "baseline" & rq2.filter.with_prefetch_only, "request.duration.from_system.ms"],
+  rq2.dataframe[rq2.dataframe$subject.treatment.id == "nappatfpr" & rq2.filter.with_prefetch_only, "request.duration.from_system.ms"])
+#Cliff's Delta
+#
+#delta estimate: -0.3458323 (medium)
+#95 percent confidence interval:
+#     lower      upper
+#-0.3730045 -0.3180674
+
+rq2.hypothesis.request.duration.cliff.greedy_tfpr2 <- cliff.delta(
+  rq2.dataframe[rq2.dataframe$subject.treatment.id == "nappagreedy" & rq2.filter.with_prefetch_only, "request.duration.from_system.ms"],
+  rq2.dataframe[rq2.dataframe$subject.treatment.id == "nappatfpr" & rq2.filter.with_prefetch_only, "request.duration.from_system.ms"])
+#delta estimate: -0.006435663 (negligible)
+#95 percent confidence interval:
+#      lower       upper
+#-0.03879629  0.02593845
+
+experiment.write.text(data = rq2.hypothesis.request.duration.cliff.baseline_greedy2,
+                      rq = 2,
+                      filename = "hypothesis_request_duration_cliff_baseline_greedy_prefetch_only.txt")
+
+experiment.write.text(data = rq2.hypothesis.request.duration.cliff.baseline_tfpr2,
+                      rq = 2,
+                      filename = "hypothesis_request_duration_cliff_baseline_tfpr_prefetch_only.txt")
+
+experiment.write.text(data = rq2.hypothesis.request.duration.cliff.greedy_tfpr2,
+                      rq = 2,
+                      filename = "hypothesis_request_duration_cliff_greedy_tfpr_prefetch_only.txt")
