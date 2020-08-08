@@ -428,6 +428,7 @@ rq1.hypothesis.battery.result <-anova(rq1.hypothesis.battery.aov)
 #The p-value for testing H_0: mu_1 = mu_2 = mu_3 is 0.7757: H_0 is not rejected
 experiment.write.latex(dataframe = rq1.hypothesis.battery.result,
                        rq = 1,
+                       digits = 4,
                        filename = "hypothesis_battery_anova.latex",
                        label = "tab:hypothesis:battery:anova",
                        caption = "Analysis of Variance for the linear model explaining the transformed (suqare root) battery consumption (J) using the prefetching treatment.")
