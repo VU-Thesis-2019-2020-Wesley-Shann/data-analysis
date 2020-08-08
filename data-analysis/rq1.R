@@ -422,6 +422,7 @@ print("Phase 3. Hypothesis Test")
 # Green Lab 2019-202 edition, slide 9A
 # http://www.sthda.com/english/wiki/wiki.php?title=one-way-anova-test-in-r
 # http://www.sthda.com/english/wiki/kruskal-wallis-test-in-r
+# https://stats.stackexchange.com/questions/360496/how-do-you-interpret-the-cliffs-delta-95-confidence-interval-2%E2%88%92tailed-grap
 
 # Hypothesistest
 # Metric      Test              p-value     is H0 rejected (p-value < 0.05)
