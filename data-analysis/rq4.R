@@ -166,30 +166,14 @@ experiment.write.plot(filename = "freqpoly_f1_score.png", rq = 4)
 #################################################################################################
 print("Phase 2. Normality Check and Data Transformation")
 
-# Metric          Method        p-value     is normal (p-value > 0.05)
-# -----           ------        -------     --------------------------
-# F1 Score (all)  N/A           2.2e-16     no
-# F1 Score (all)  all           2.2e-16     no
-# F1 Score (> 0)  N/A           1.158e-15   no
-# F1 Score (> 0)  squared       2.733e-14   no
+# Metric    Method        p-value     is normal (p-value > 0.05)
+# -----     ------        -------     --------------------------
+# F1 Score  N/A           4.917e-13   no
+# F1 Score  tukey         4.035e-12   no
 
 ##################################  Phase 2a Normality check ####################################
 print("Check normality")
 
-# Non zero
-my_plot <- experiment.plot.qqplot(rq4.dataframe[rq4.filter.non_zero_f1_score,],
-                                  "f1_score",
-                                  "F1 Score",
-                                  "F1 Score (Subjects with score above 0)")
-experiment.write.plot(filename = "qqplot_above_zero_f1_score.png", rq = 4)
-
-shapiro.test(rq4.dataframe[rq4.filter.non_zero_f1_score,]$f1_score)
-# W = 0.76581, p-value = 1.158e-15
-experiment.write.text(data = shapiro.test(rq4.dataframe[rq4.filter.non_zero_f1_score,]$f1_score),
-                      filename = "test_shapiro_above_zero_f1_score.txt",
-                      rq = 4)
-
-# All
 my_plot <- experiment.plot.qqplot(rq4.dataframe,
                                   "f1_score",
                                   "F1 Score",
@@ -197,7 +181,7 @@ my_plot <- experiment.plot.qqplot(rq4.dataframe,
 experiment.write.plot(filename = "qqplot_f1_score.png", rq = 4)
 
 shapiro.test(rq4.dataframe$f1_score)
-# W = 0.61996, p-value < 2.2e-16
+# W = 0.93079, p-value = 4.917e-13
 experiment.write.text(data = shapiro.test(rq4.dataframe$f1_score),
                       filename = "test_shapiro_f1_score.txt",
                       rq = 4)
@@ -206,74 +190,50 @@ experiment.write.text(data = shapiro.test(rq4.dataframe$f1_score),
 
 # F1 Score ~ Natural log
 rq4.dataframe$f1_score.log <- log(rq4.dataframe$f1_score)
-#shapiro.test(rq4.dataframe$f1_score.log)
-# not suitable for data with 0
-shapiro.test(rq4.dataframe[rq4.filter.non_zero_f1_score,]$f1_score.log)
-#W = 0.66554, p-value < 2.2e-16
+shapiro.test(rq4.dataframe$f1_score.log)
+# W = 0.84972, p-value < 2.2e-16
 
 # F1 Score ~ squared
 rq4.dataframe$f1_score.squared <- rq4.dataframe$f1_score^2
 shapiro.test(rq4.dataframe$f1_score.squared)
-#W = 0.60301, p-value < 2.2e-16
-shapiro.test(rq4.dataframe[rq4.filter.non_zero_f1_score,]$f1_score.squared)
-#W = 0.80362, p-value = 2.733e-14
+# W = 0.9266, p-value = 1.757e-13
 
 # F1 Score ~ square root
 rq4.dataframe$f1_score.sqrt <- sqrt(rq4.dataframe$f1_score)
 shapiro.test(rq4.dataframe$f1_score.sqrt)
-#W = 0.65904, p-value < 2.2e-16
-shapiro.test(rq4.dataframe[rq4.filter.non_zero_f1_score,]$f1_score.sqrt)
-#W = 0.71667, p-value < 2.2e-16
+# W = 0.90067, p-value = 6.504e-16
 
 # F1 Score ~ cube root
 rq4.dataframe$f1_score.cube <- sign(rq4.dataframe$f1_score) * abs(rq4.dataframe$f1_score)^(1 / 3)
 shapiro.test(rq4.dataframe$f1_score.cube)
-#W = 0.68893, p-value < 2.2e-16
-shapiro.test(rq4.dataframe[rq4.filter.non_zero_f1_score,]$f1_score.cube)
-#W = 0.69855, p-value < 2.2e-16
+# W = 0.88583, p-value < 2.2e-16
 
 # F1 Score ~ inverse
-#rq4.dataframe$f1_score.inverse <- 1 / rq4.dataframe$f1_score
-#shapiro.test(rq4.dataframe$f1_score.inverse)
-# not suitable for data with 0
+rq4.dataframe$f1_score.inverse <- 1 / rq4.dataframe$f1_score
+shapiro.test(rq4.dataframe$f1_score.inverse)
+# W = 0.70168, p-value < 2.2e-16
 
 # F1 Score ~ Tukey’s Ladder of Powers transformation
 rq4.dataframe$f1_score.tukey <- transformTukey(rq4.dataframe$f1_score, plotit = FALSE)
 #    lambda      W Shapiro.p.value
-#408  0.175 0.7067       1.905e-26
+#458  1.425 0.9389       4.035e-12
 #
 #if (lambda >  0){TRANS = x ^ lambda}
 #if (lambda == 0){TRANS = log(x)}
 #if (lambda <  0){TRANS = -1 * x ^ lambda}
 shapiro.test(rq4.dataframe$f1_score.tukey)
-#W = 0.70667, p-value < 2.2e-16
-my_data <- transformTukey(rq4.dataframe[rq4.filter.non_zero_f1_score,]$f1_score, plotit = FALSE)
-#    lambda      W Shapiro.p.value
-#479   1.95 0.8036       2.724e-14
-shapiro.test(my_data)
-#W = 0.80358, p-value = 2.724e-14
-
+#W = 0.93886, p-value = 4.035e-12
 
 # F1 Score ~ Box–Cox transformation
-#Box <- boxcox(rq4.dataframe$f1_score ~ 1, lambda = seq(-6, 6, 0.1))
-#Cox <- data.frame(Box$x, Box$y)
-#Cox2 <- Cox[with(Cox, order(-Cox$Box.y)),]
-#Cox2[1,]
-##   Box.x     Box.y
-#lambda <- Cox2[1, "Box.x"]
-#rq4.dataframe$f1_score.box <- (rq4.dataframe$f1_score^lambda - 1) / lambda
-#shapiro.test(rq4.dataframe$f1_score.box)
-# Fails due to data becoming negative
-Box <- boxcox(rq4.dataframe[rq4.filter.non_zero_f1_score,]$f1_score ~ 1, lambda = seq(-6, 6, 0.1))
+Box <- boxcox(rq4.dataframe$f1_score ~ 1, lambda = seq(-6, 6, 0.1))
 Cox <- data.frame(Box$x, Box$y)
 Cox2 <- Cox[with(Cox, order(-Cox$Box.y)),]
 Cox2[1,]
 #   Box.x     Box.y
-#66   0.5 -533.1367
 lambda <- Cox2[1, "Box.x"]
-my_data <- (rq4.dataframe[rq4.filter.non_zero_f1_score,]$f1_score^lambda - 1) / lambda
-shapiro.test(my_data)
-#W = 0.71667, p-value < 2.2e-16
+rq4.dataframe$f1_score.box <- (rq4.dataframe$f1_score^lambda - 1) / lambda
+shapiro.test(rq4.dataframe$f1_score.box)
+# W = 0.93079, p-value = 4.917e-13
 
 
 #################################################################################################
