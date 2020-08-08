@@ -415,10 +415,10 @@ print("Phase 3. Hypothesis Test")
 # Memory      Kruskal-Wallis
 
 # Battery ~ sqrt ~ normal ~ ANOVA
-rq1.anova.battery_aov <- lm(trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery,])
+rq1.hypothesis.battery.aov <- lm(trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery,])
 # lm creates an object of type linear model. Its properties can be extracted with other functions.
 # battery∼treatment is a model formula. Read it as: “explain battery using treatment”.
-anova(rq1.anova.battery_aov)
+rq1.hypothesis.battery.result <-anova(rq1.hypothesis.battery.aov)
 #Analysis of Variance Table
 #
 #Response: trepn.battery.nonzero.joule.sqrt
@@ -426,13 +426,13 @@ anova(rq1.anova.battery_aov)
 #subject.treatment.id   2    6.6  3.2939  0.2541 0.7757
 #Residuals            626 8113.9 12.9615
 #The p-value for testing H_0: mu_1 = mu_2 = mu_3 is 0.7757: H_0 is not rejected
-experiment.write.latex(dataframe = rq1.anova.battery_aov,
+experiment.write.latex(dataframe = rq1.hypothesis.battery.result,
                        rq = 1,
                        filename = "hypothesis_battery_anova.latex",
                        label = "tab:hypothesis:battery:anova",
                        caption = "Analysis of Variance for the linear model explaining the transformed (suqare root) battery consumption (J) using the prefetching treatment.")
 
-summary(rq1.anova.battery_aov)
+summary(rq1.hypothesis.battery.aov)
 #Residuals:
 #    Min      1Q  Median      3Q     Max
 #-9.7769 -2.4115  0.0797  2.5722 11.0381
