@@ -487,7 +487,7 @@ experiment.write.text(data = rq1.hypothesis.cpu.result,
 # but we don’t know which pairs of groups are different.
 # It’s possible to use the function pairwise.wilcox.test()
 # to calculate pairwise comparisons between group levels with corrections for multiple testing.
-rq1.hypothesis.cpu.wilcox <- pairwise.wilcox.test(rq1.dataframe$trepn.cpu, rq1.dataframe$subject.treatment.id)
+rq1.hypothesis.cpu.holm <- pairwise.wilcox.test(rq1.dataframe$trepn.cpu, rq1.dataframe$subject.treatment.id)
 #	Pairwise comparisons using Wilcoxon rank sum test with continuity correction
 #
 #data:  rq1.dataframe$android.memory.mb and rq1.dataframe$subject.treatment.id
@@ -501,48 +501,24 @@ rq1.hypothesis.cpu.wilcox <- pairwise.wilcox.test(rq1.dataframe$trepn.cpu, rq1.d
 #   baseline and greedy are differet (p < 0.05).
 #   baseline and TFPR are differet (p < 0.05).
 
-experiment.write.text(data = rq1.hypothesis.cpu.wilcox,
+experiment.write.text(data = rq1.hypothesis.cpu.holm,
                       rq = 1,
-                      filename = "hypothesis_cpu_wilcox.tex")
+                      filename = "hypothesis_cpu_holm.txt")
 
-rq1.hypothesis.cpu.lm <- lm(trepn.cpu ~ subject.treatment.id, data = rq1.dataframe)
-summary(rq1.hypothesis.cpu.lm)
-#Call:
-#lm(formula = trepn.cpu ~ subject.treatment.id, data = rq1.dataframe)
+rq1.hypothesis.cpu.bonferroni <- pairwise.wilcox.test(rq1.dataframe$trepn.cpu, rq1.dataframe$subject.treatment.id, p.adjust.method = "BH")
+#	Pairwise comparisons using Wilcoxon rank sum test with continuity correction
 #
-#Residuals:
-#    Min      1Q  Median      3Q     Max
-#-20.187  -6.169  -1.746   3.080  35.885
+#data:  rq1.dataframe$trepn.cpu and rq1.dataframe$subject.treatment.id
 #
-#Coefficients:
-#                                Estimate Std. Error t value Pr(>|t|)
-#(Intercept)                      28.8070     0.6314  45.624   <2e-16 ***
-#subject.treatment.idnappagreedy   0.7611     0.8929   0.852    0.394
-#subject.treatment.idnappatfpr     0.7378     0.8929   0.826    0.409
-#---
-#Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#            baseline nappagreedy
+#nappagreedy 0.77     -
+#nappatfpr   0.77     0.92
 #
-#Residual standard error: 9.15 on 627 degrees of freedom
-#Multiple R-squared:  0.001497,	Adjusted R-squared:  -0.001688
-#F-statistic:  0.47 on 2 and 627 DF,  p-value: 0.6252
-experiment.write.latex(dataframe = summary(rq1.hypothesis.cpu.lm),
-                       rq = 1,
-                       digits = 4,
-                       filename = "hypothesis_cpu_summary.tex",
-                       label = "tab:hypothesis:cpu:summary",
-                       caption = "Overview of the linear model explaining the CPU load (%) using the prefetching treatment.")
+#P value adjustment method: BH
 
-confint(rq1.hypothesis.cpu.lm)
-#                                     2.5 %    97.5 %
-#(Intercept)                     27.5671064 30.046946
-#subject.treatment.idnappagreedy -0.9924212  2.514602
-#subject.treatment.idnappatfpr   -1.0157008  2.491323
-experiment.write.latex(dataframe = confint(rq1.hypothesis.cpu.lm),
-                       rq = 1,
-                       digits = 4,
-                       filename = "hypothesis_cpu_confint.tex",
-                       label = "tab:hypothesis:cpu:confint",
-                       caption = "Confidence intervals for the linear model explaining the CPU load (%) using the prefetching treatment.")
+experiment.write.text(data = rq1.hypothesis.cpu.bonferroni,
+                      rq = 1,
+                      filename = "hypothesis_cpu_bonferroni.txt")
 
 
 ########################################### 3c: Memory ##########################################
