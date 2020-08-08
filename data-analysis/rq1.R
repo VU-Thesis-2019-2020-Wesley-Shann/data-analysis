@@ -421,6 +421,7 @@ print("Phase 3. Hypothesis Test")
 
 # Green Lab 2019-202 edition, slide 9A
 # http://www.sthda.com/english/wiki/wiki.php?title=one-way-anova-test-in-r
+# http://www.sthda.com/english/wiki/kruskal-wallis-test-in-r
 
 # Hypothesistest
 # Metric      Test              p-value     is H0 rejected (p-value < 0.05)
@@ -481,7 +482,6 @@ experiment.write.text(data = rq1.hypothesis.cpu.result,
                       filename = "hypothesis_cpu_kruskal.txt")
 
 
-# www.sthda.com/english/wiki/kruskal-wallis-test-in-r
 # From the output of the Kruskal-Wallis test,
 # we know that there is a significant difference between groups,
 # but we don’t know which pairs of groups are different.
