@@ -32,6 +32,17 @@ rq1.dataframe <- experiment.source.runtime()
 
 ################################  Phase 1a Descriptive statistics ###############################
 print("Phase 1. Data exploration")
+
+rq1.filter.non_zero_battery <- rq1.dataframe$trepn.battery.nonzero.joule != 0
+
+# Take the global summary
+experiment.write.latex(dataframe = t(summary(rq1.dataframe[c("run.duration.s", "trepn.cpu", "android.memory.mb")])),
+                       filename = "summary-global_duraion_cpu_memory.tex",
+                       rq = 1)
+experiment.write.latex(dataframe = t(summary(rq1.dataframe[rq1.filter.non_zero_battery, "trepn.battery.nonzero.joule"])),
+                       filename = "summary-global_battery.tex",
+                       rq = 1)
+
 # Take the duration time per subject and write to file
 print("Summarizing runtime duration")
 rq1.summary.run.duration <- experiment.subject.summary(dataframe = rq1.dataframe, property = "run.duration.s")
@@ -44,7 +55,6 @@ experiment.write.latex(rq = 1,
 
 # Take the duration time per subject and write to file
 print("Summarizing battery consumption")
-rq1.filter.non_zero_battery <- rq1.dataframe$trepn.battery.nonzero.joule != 0
 rq1.summary.trepn.battery.nonzero.joule <- experiment.subject.summary(dataframe = rq1.dataframe[rq1.filter.non_zero_battery,],
                                                                       property = "trepn.battery.nonzero.joule")
 experiment.write.latex(rq = 1,
