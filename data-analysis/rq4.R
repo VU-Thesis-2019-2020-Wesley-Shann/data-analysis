@@ -123,41 +123,16 @@ experiment.write.latex(rq = 4,
 #######################################  Phase 1b Plots ########################################
 print("Generating plots")
 
-# Filters
-rq4.filter.non_zero_f1_score <- rq4.dataframe$f1_score != 0
-rq4.filter.part1 <- rq4.dataframe$experiment.part == 1
-rq4.filter.part2 <- rq4.dataframe$experiment.part == 2
-rq4.filter.part3 <- rq4.dataframe$experiment.part == 3
-rq4.filter.antennaPod <- rq4.dataframe$subject.name == "Antenna Pod"
-rq4.filter.hillfair <- rq4.dataframe$subject.name == "Hill'Fair"
-rq4.filter.materialistic <- rq4.dataframe$subject.name == "Materialistic"
-
 # Boxplot
 my_plot <- experiment.plot.boxplot(rq4.dataframe,
                                    "f1_score",
                                    "F1 Score",
-                                   "F1 Score (All subjects)") +
+                                   "F1 Score") +
   expand_limits(y = c(0, 1))
-experiment.write.plot(filename = "boxplot_all_f1_score.png", rq = 4)
-
-my_plot <- experiment.plot.boxplot(rq4.dataframe[rq4.filter.non_zero_f1_score,],
-                                   "f1_score",
-                                   "F1 Score",
-                                   "F1 Score (Subjects with score above 0)") +
-  expand_limits(y = c(0, 1))
-experiment.write.plot(filename = "boxplot_above_zero_f1_score.png", rq = 4)
-
-for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
-  my_plot <- experiment.plot.boxplot(rq4.dataframe[rq4.dataframe$subject.name == subject,],
-                                     fill = "subject.treatment.name.long",
-                                     "f1_score",
-                                     "F1 Score",
-                                     paste(subject, "~", "F1 Score"))
-  experiment.write.plot(filename = paste0("boxplot_f1_score_", subject, ".png"), rq = 4)
-}
+experiment.write.plot(filename = "boxplot_f1_score.png", rq = 4)
 
 # F1 Score over time
-for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
+for (subject in levels(rq4.dataframe$subject.name)) {
   for (part in c(1, 2, 3)) {
     my_plot <- experiment.plot.line(dataframe = rq4.dataframe[rq4.dataframe$experiment.part == part &
                                                                 rq4.dataframe$subject.name == subject,],
@@ -169,45 +144,21 @@ for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
   }
 }
 
-for (part in c(1, 2, 3)) {
-  my_plot <- experiment.plot.line(dataframe = rq4.dataframe[rq4.dataframe$experiment.part == part &
-                                                              rq4.dataframe$subject.name == "Materialistic",],
-                                  title = paste("F1-Score over runs", subject, paste0("(part ", part, ")")),
-                                  axis_y_column = "f1_score",
-                                  axis_y_legend = "F1-Score") +
-    expand_limits(y = 0)
-  experiment.write.plot(filename = paste0("f1_score_over_runs_zoom", subject, "_part_", part, ".png"), rq = 4)
-}
-
 # Violin plot
-my_plot <- experiment.plot.violin(rq4.dataframe[rq4.filter.non_zero_f1_score,],
-                                  "f1_score",
-                                  "F1 Score",
-                                  "F1 Score (Subjects with score above 0)") +
-  expand_limits(y = c(0, 1))
-experiment.write.plot(filename = "violin_above_zero_f1_score.png", rq = 4)
-
 my_plot <- experiment.plot.violin(rq4.dataframe,
                                   "f1_score",
                                   "F1 Score",
-                                  "F1 Score (All subjects)") +
+                                  "F1 Score") +
   expand_limits(y = c(0, 1))
-experiment.write.plot(filename = "violin_all_f1_score.png", rq = 4)
+experiment.write.plot(filename = "violin_f1_score.png", rq = 4)
 
 # Frequency
-my_plot <- experiment.plot.freqpoly(rq4.dataframe[rq4.filter.non_zero_f1_score,],
-                                    "f1_score",
-                                    "F1 Score",
-                                    "F1 Score (Subjects with score above 0)") +
-  expand_limits(x = c(0, 1))
-experiment.write.plot(filename = "freqpoly_above_zero_f1_score.png", rq = 4)
-
 my_plot <- experiment.plot.freqpoly(rq4.dataframe,
                                     "f1_score",
                                     "F1 Score",
-                                    "F1 Score (All subjects)") +
+                                    "F1 Score") +
   expand_limits(x = c(0, 1))
-experiment.write.plot(filename = "freqpoly_all_f1_score.png", rq = 4)
+experiment.write.plot(filename = "freqpoly_f1_score.png", rq = 4)
 
 
 #################################################################################################
@@ -242,13 +193,13 @@ experiment.write.text(data = shapiro.test(rq4.dataframe[rq4.filter.non_zero_f1_s
 my_plot <- experiment.plot.qqplot(rq4.dataframe,
                                   "f1_score",
                                   "F1 Score",
-                                  "F1 Score (All subjects)")
-experiment.write.plot(filename = "qqplot_all_f1_score.png", rq = 4)
+                                  "F1 Score")
+experiment.write.plot(filename = "qqplot_f1_score.png", rq = 4)
 
 shapiro.test(rq4.dataframe$f1_score)
 # W = 0.61996, p-value < 2.2e-16
 experiment.write.text(data = shapiro.test(rq4.dataframe$f1_score),
-                      filename = "test_shapiro_all_f1_score.txt",
+                      filename = "test_shapiro_f1_score.txt",
                       rq = 4)
 
 ##################################  Phase 2a Data Transformation ####################################
@@ -352,7 +303,7 @@ rq4.hypothesis.f1_score_all.whitney <- wilcox.test(rq4.dataframe[rq4.filter.gree
 #alternative hypothesis: true location shift is not equal to 0
 experiment.write.text(data = rq4.hypothesis.f1_score_all.whitney,
                       rq = 4,
-                      filename = "hypothesis_all_f1_score_whitney.txt")
+                      filename = "hypothesis_f1_score_whitney.txt")
 
 cliff.delta(
   rq4.dataframe[rq4.filter.greedy, ]$f1_score,
