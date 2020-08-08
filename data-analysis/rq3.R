@@ -139,6 +139,15 @@ my_plot <- experiment.plot.boxplot(rq3.dataframe[rq3.filter.non_zero_f1_score,],
 experiment.write.plot(filename = "boxplot_f1_score.png", rq = 3)
 
 for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
+  my_plot <- experiment.plot.boxplot(rq3.dataframe[rq3.dataframe$subject.name == subject,],
+                                     "f1_score",
+                                     "F1 Score",
+                                     paste(subject, "~", "F1 Score"))
+  experiment.write.plot(filename = paste0("boxplot_f1_score_", subject, ".png"), rq = 3)
+}
+
+# F1 Score over time
+for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
   for (part in c(1, 2, 3)) {
     my_plot <- experiment.plot.line(dataframe = rq3.dataframe[rq3.dataframe$experiment.part == part &
                                                                 rq3.dataframe$subject.name == subject,],
