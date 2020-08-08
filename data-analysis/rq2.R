@@ -62,6 +62,27 @@ experiment.write.latex(rq = 2,
                        caption = "Overview of the user perceived latency per treatment.",
                        label = "tab:results:rq2:summary:treatment")
 
+
+# Per subject
+print("Descriptive statistics per subject")
+rq2.summary.subject.request_duration <- experiment.subject.summary(dataframe = rq2.dataframe, property = "request.duration.from_system.ms", digits = 2)
+rq2.summary.subject.request_duration <- rq2.summary.subject.request_duration[-kepp_min_max_mean_median,]
+rownames(rq2.summary.subject.request_duration) <- paste("Request duration (ms)", rownames(rq2.summary.subject.request_duration))
+
+experiment.write.latex(rq = 2,
+                       digits = 2,
+                       dataframe = rq2.summary.subject.request_duration,
+                       filename = "summary_subject_url_duration.tex")
+
+rq2.summary.subject.response_length <- experiment.subject.summary(dataframe = rq2.dataframe[rq2.filter.valid_response_length,], property = "response.length.from_okhttp.kb", digits = 2)
+rq2.summary.subject.response_length <- rq2.summary.subject.response_length[-kepp_min_max_mean_median,]
+rownames(rq2.summary.subject.response_length) <- paste("Response length (KB)", rownames(rq2.summary.subject.response_length))
+
+experiment.write.latex(rq = 2,
+                       digits = 2,
+                       dataframe = rq2.summary.subject.response_length,
+                       filename = "summary_subject_url_length.tex")
+
 rq2.summary.subject.url <- data.frame(matrix(ncol = 2, nrow = 0))
 for (subject in levels(rq2.dataframe$subject.name)) {
   rq2.summary.subject.url <- rbind(
