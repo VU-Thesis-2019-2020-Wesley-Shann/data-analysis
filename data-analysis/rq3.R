@@ -39,6 +39,12 @@ keep_min_max_median <- c(2, 4, 5)
 print("Descriptive statistics per treatment")
 rq3.summary.treatment.f1_score <- experiment.treatment.summary(dataframe = rq3.dataframe, property = "f1_score", digits = 2)
 rq3.summary.treatment.f1_score <- rq3.summary.treatment.f1_score[-rows_to_drop_from_summary,]
+experiment.write.latex(rq = 3,
+                       digits = 2,
+                       dataframe = rq3.summary.treatment.f1_score,
+                       filename = "summary_treatment_f1_score.tex",
+                       caption = "Overview of the F1 Score per treatment.",
+                       label = "tab:results:rq3:summary:treatment:f1_Score")
 rownames(rq3.summary.treatment.f1_score) <- paste("F1-Score", rownames(rq3.summary.treatment.f1_score))
 
 rq3.summary.treatment.precision <- experiment.treatment.summary(dataframe = rq3.dataframe, property = "precision", digits = 2)
@@ -75,6 +81,12 @@ experiment.write.latex(rq = 3,
 print("Descriptive statistics per subject")
 rq3.summary.subject.f1_score <- experiment.subject.summary(dataframe = rq3.dataframe, property = "f1_score", digits = 2)
 rq3.summary.subject.f1_score <- rq3.summary.subject.f1_score[-rows_to_drop_from_summary,]
+experiment.write.latex(rq = 3,
+                       digits = 2,
+                       dataframe = t(rq3.summary.subject.f1_score),
+                       filename = "summary_subject_f1_score.tex",
+                       caption = "Overview of the F1 Score per subject.",
+                       label = "tab:results:rq3:summary:subject:f1_score")
 rownames(rq3.summary.subject.f1_score) <- paste("F1-Score", rownames(rq3.summary.subject.f1_score))
 
 rq3.summary.subject.precision <- experiment.subject.summary(dataframe = rq3.dataframe, property = "precision", digits = 2)
