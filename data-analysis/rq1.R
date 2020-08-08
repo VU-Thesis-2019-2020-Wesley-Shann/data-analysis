@@ -421,7 +421,7 @@ rq1.hypothesis.battery.lm <- lm(trepn.battery.nonzero.joule.sqrt ~ subject.treat
 # lm creates an object of type linear model. Its properties can be extracted with other functions.
 # battery∼treatment is a model formula. Read it as: “explain battery using treatment”.
 
-rq1.hypothesis.battery.result <-anova(rq1.hypothesis.battery.lm)
+anova(rq1.hypothesis.battery.lm)
 #Analysis of Variance Table
 #
 #Response: trepn.battery.nonzero.joule.sqrt
@@ -429,7 +429,7 @@ rq1.hypothesis.battery.result <-anova(rq1.hypothesis.battery.lm)
 #subject.treatment.id   2    6.6  3.2939  0.2541 0.7757
 #Residuals            626 8113.9 12.9615
 #The p-value for testing H_0: mu_1 = mu_2 = mu_3 is 0.7757: H_0 is not rejected
-experiment.write.latex(dataframe = rq1.hypothesis.battery.result,
+experiment.write.latex(dataframe = anova(rq1.hypothesis.battery.lm),
                        rq = 1,
                        digits = 4,
                        filename = "hypothesis_battery_anova.tex",
@@ -467,7 +467,7 @@ experiment.write.latex(dataframe = summary(rq1.hypothesis.battery.lm),
                        label = "tab:hypothesis:battery:summary",
                        caption = "Overview of the linear model explaining the transformed (square root) battery consumption (J) using the prefetching treatment.")
 
-rq1.hypothesis.battery.confint <- confint(rq1.hypothesis.battery.lm)
+confint(rq1.hypothesis.battery.lm)
 #                                     2.5 %    97.5 %
 #(Intercept)                     11.7601590 12.735904
 #subject.treatment.idnappagreedy -0.4561203  0.925441
@@ -476,7 +476,7 @@ rq1.hypothesis.battery.confint <- confint(rq1.hypothesis.battery.lm)
 #   for mu_1 : [11.7601590, 12.735904];
 #   for mu_2 - mu_1 : [-0.4561203,  0.925441]
 #   for mu_3 - mu_1 : [-0.6494547,  0.730457]
-experiment.write.latex(dataframe = rq1.hypothesis.battery.confint,
+experiment.write.latex(dataframe = confint(rq1.hypothesis.battery.lm),
                        rq = 1,
                        digits = 4,
                        filename = "hypothesis_battery_confint.tex",
@@ -500,12 +500,43 @@ experiment.write.text(data = rq1.hypothesis.cpu.result,
 
 
 rq1.hypothesis.cpu.lm <- lm(trepn.cpu ~ subject.treatment.id, data = rq1.dataframe)
+summary(rq1.hypothesis.cpu.lm)
+#Call:
+#lm(formula = trepn.cpu ~ subject.treatment.id, data = rq1.dataframe)
+#
+#Residuals:
+#    Min      1Q  Median      3Q     Max
+#-20.187  -6.169  -1.746   3.080  35.885
+#
+#Coefficients:
+#                                Estimate Std. Error t value Pr(>|t|)
+#(Intercept)                      28.8070     0.6314  45.624   <2e-16 ***
+#subject.treatment.idnappagreedy   0.7611     0.8929   0.852    0.394
+#subject.treatment.idnappatfpr     0.7378     0.8929   0.826    0.409
+#---
+#Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#
+#Residual standard error: 9.15 on 627 degrees of freedom
+#Multiple R-squared:  0.001497,	Adjusted R-squared:  -0.001688
+#F-statistic:  0.47 on 2 and 627 DF,  p-value: 0.6252
 experiment.write.latex(dataframe = summary(rq1.hypothesis.cpu.lm),
                        rq = 1,
                        digits = 4,
                        filename = "hypothesis_cpu_summary.tex",
                        label = "tab:hypothesis:cpu:summary",
                        caption = "Overview of the linear model explaining the CPU load (%) using the prefetching treatment.")
+
+confint(rq1.hypothesis.cpu.lm)
+#                                     2.5 %    97.5 %
+#(Intercept)                     27.5671064 30.046946
+#subject.treatment.idnappagreedy -0.9924212  2.514602
+#subject.treatment.idnappatfpr   -1.0157008  2.491323
+experiment.write.latex(dataframe = confint(rq1.hypothesis.cpu.lm),
+                       rq = 1,
+                       digits = 4,
+                       filename = "hypothesis_cpu_confint.tex",
+                       label = "tab:hypothesis:cpu:confint",
+                       caption = "Confidence intervals for the linear model explaining the CPU load (%) using the prefetching treatment.")
 
 
 ########################################### 3c: Memory ##########################################
