@@ -505,16 +505,17 @@ experiment.write.text(data = rq1.hypothesis.cpu.holm,
                       rq = 1,
                       filename = "hypothesis_cpu_holm.txt")
 
-rq1.hypothesis.cpu.bonferroni <- pairwise.wilcox.test(rq1.dataframe$trepn.cpu, rq1.dataframe$subject.treatment.id, p.adjust.method = "BH")
+rq1.hypothesis.cpu.bonferroni <- pairwise.wilcox.test(rq1.dataframe$trepn.cpu, rq1.dataframe$subject.treatment.id, p.adjust.method = "bonferroni")
+#
 #	Pairwise comparisons using Wilcoxon rank sum test with continuity correction
 #
 #data:  rq1.dataframe$trepn.cpu and rq1.dataframe$subject.treatment.id
 #
 #            baseline nappagreedy
-#nappagreedy 0.77     -
-#nappatfpr   0.77     0.92
+#nappagreedy 1        -
+#nappatfpr   1        1
 #
-#P value adjustment method: BH
+#P value adjustment method: bonferroni
 
 experiment.write.text(data = rq1.hypothesis.cpu.bonferroni,
                       rq = 1,
@@ -539,7 +540,7 @@ experiment.write.text(data = rq1.hypothesis.memory.result,
 # but we don’t know which pairs of groups are different.
 # It’s possible to use the function pairwise.wilcox.test()
 # to calculate pairwise comparisons between group levels with corrections for multiple testing.
-rq1.hypothesis.memory.wilcox <- pairwise.wilcox.test(rq1.dataframe$android.memory.mb, rq1.dataframe$subject.treatment.id)
+rq1.hypothesis.memory.holm <- pairwise.wilcox.test(rq1.dataframe$android.memory.mb, rq1.dataframe$subject.treatment.id)
 #	Pairwise comparisons using Wilcoxon rank sum test with continuity correction
 #
 #data:  rq1.dataframe$android.memory.mb and rq1.dataframe$subject.treatment.id
@@ -553,9 +554,25 @@ rq1.hypothesis.memory.wilcox <- pairwise.wilcox.test(rq1.dataframe$android.memor
 #   baseline and greedy are differet (p < 0.05).
 #   baseline and TFPR are differet (p < 0.05).
 
-experiment.write.text(data = rq1.hypothesis.memory.wilcox,
+experiment.write.text(data = rq1.hypothesis.memory.holm,
                       rq = 1,
-                      filename = "hypothesis_memory_wilcox.tex")
+                      filename = "hypothesis_memory_holm.txt")
+
+rq1.hypothesis.memory.bonferroni <- pairwise.wilcox.test(rq1.dataframe$android.memory.mb, rq1.dataframe$subject.treatment.id, p.adjust.method = "bonferroni")
+#	Pairwise comparisons using Wilcoxon rank sum test with continuity correction
+#
+#data:  rq1.dataframe$android.memory.mb and rq1.dataframe$subject.treatment.id
+#
+#            baseline nappagreedy
+#nappagreedy 2.7e-08  -
+#nappatfpr   2.5e-09  0.42
+#
+#P value adjustment method: bonferroni
+
+experiment.write.text(data = rq1.hypothesis.memory.bonferroni,
+                      rq = 1,
+                      filename = "hypothesis_memory_bonferroni.txt")
+
 
 # --------------\
 # Pakcage effsize
@@ -574,45 +591,3 @@ cliff.delta(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
 cliffDelta(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
 #Cliff.delta
 #     -0.324
-
-
-rq1.hypothesis.memory.lm <- lm(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
-summary(rq1.hypothesis.memory.lm)
-#Call:
-#lm(formula = android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
-#
-#Residuals:
-#   Min     1Q Median     3Q    Max
-#-62.44 -42.61 -28.42  41.82 150.36
-#
-#Coefficients:
-#                                Estimate Std. Error t value Pr(>|t|)
-#(Intercept)                      202.297      4.469  45.265   <2e-16 ***
-#subject.treatment.idnappagreedy    4.936      6.320   0.781    0.435
-#subject.treatment.idnappatfpr      6.185      6.320   0.979    0.328
-#---
-#Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-#
-#Residual standard error: 64.76 on 627 degrees of freedom
-#Multiple R-squared:  0.001705,	Adjusted R-squared:  -0.001479
-#F-statistic: 0.5355 on 2 and 627 DF,  p-value: 0.5856
-experiment.write.latex(dataframe = summary(rq1.hypothesis.memory.lm),
-                       rq = 1,
-                       digits = 4,
-                       filename = "hypothesis_memory_summary.tex",
-                       label = "tab:hypothesis:memory:summary",
-                       caption = "Overview of the linear model explaining the memory consumption (MB) using the prefetching treatment.")
-
-confint(rq1.hypothesis.memory.lm)
-#                                     2.5 %    97.5 %
-#                                     2.5 %    97.5 %
-#(Intercept)                     193.520454 211.07331
-#subject.treatment.idnappagreedy  -7.475506  17.34798
-#subject.treatment.idnappatfpr    -6.226873  18.59661
-experiment.write.latex(dataframe = confint(rq1.hypothesis.memory.lm),
-                       rq = 1,
-                       digits = 4,
-                       filename = "hypothesis_memory_confint.tex",
-                       label = "tab:hypothesis:memory:confint",
-                       caption = "Confidence intervals for the linear model explaining the memory consumption (MB) using the prefetching treatment.")
-
