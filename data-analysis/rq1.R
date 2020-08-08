@@ -408,11 +408,12 @@ experiment.write.text(data = shapiro.test(rq1.dataframe$android.memory.mb.cube),
 #################################################################################################
 print("Phase 3. Hypothesis Test")
 
+# Hypothesistest
 # Metric      Test              p-value     is H0 rejected (p-value < 0.05)
 # -----       ------            -------     --------------------------
 # Battery     One way ANOVA     0.7757      no
-# CPU         Kruskal-Wallis
-# Memory      Kruskal-Wallis
+# CPU         Kruskal-Wallis    0.6747      no
+# Memory      Kruskal-Wallis    3.122e-11   yes (baseline ~ greedy; baseline ~ TFPR)
 
 ########################################## 3a: Battery #########################################
 
@@ -482,6 +483,32 @@ experiment.write.latex(dataframe = confint(rq1.hypothesis.battery.lm),
                        filename = "hypothesis_battery_confint.tex",
                        label = "tab:hypothesis:battery:confint",
                        caption = "Confidence intervals for the linear model explaining the transformed (square root) battery consumption (J) using the prefetching treatment.")
+
+
+rq1.hypothesis.battery.aov <- aov(trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery,])
+summary(rq1.hypothesis.battery.aov)
+#                      Df Sum Sq Mean Sq F value Pr(>F)
+#subject.treatment.id   2      7   3.294   0.254  0.776
+#Residuals            626   8114  12.961
+TukeyHSD(rq1.hypothesis.battery.aov)
+#  Tukey multiple comparisons of means
+#    95% family-wise confidence level
+#
+#Fit: aov(formula = trepn.battery.nonzero.joule.sqrt ~ subject.treatment.id, data = rq1.dataframe[rq1.filter.non_zero_battery, ])
+#
+#$subject.treatment.id
+#                             diff        lwr       upr     p adj
+#nappagreedy-baseline   0.23466031 -0.5917385 1.0610592 0.7826854
+#nappatfpr-baseline     0.04050116 -0.7849109 0.8659133 0.9927008
+#nappatfpr-nappagreedy -0.19415915 -1.0205580 0.6322397 0.8455113
+
+#diff: difference between means of the two groups
+#lwr, upr: the lower and the upper end point of the confidence interval at 95% (default)
+#p adj: p-value after adjustment for the multiple comparisons.
+
+experiment.write.text(data = TukeyHSD(rq1.hypothesis.battery.aov),
+                      rq = 1,
+                      filename = "hypothesis_battery_tukey.tex")
 
 
 ############################################ 3b: CPU ###########################################
@@ -572,8 +599,8 @@ rq1.hypothesis.memory.wilcox <- pairwise.wilcox.test(rq1.dataframe$android.memor
 #   baseline and TFPR are differet (p < 0.05).
 
 experiment.write.text(data = rq1.hypothesis.memory.wilcox,
-                       rq = 1,
-                       filename = "hypothesis_memory_wilcox.tex")
+                      rq = 1,
+                      filename = "hypothesis_memory_wilcox.tex")
 
 rq1.hypothesis.memory.lm <- lm(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
 summary(rq1.hypothesis.memory.lm)
