@@ -84,7 +84,7 @@ rq4.summary.subject.f1_score <- experiment.subject.summary(dataframe = rq4.dataf
 rq4.summary.subject.f1_score <- rq4.summary.subject.f1_score[-rows_to_drop_from_summary,]
 experiment.write.latex(rq = 4,
                        digits = 2,
-                       dataframe = t(rq4.summary.subject.f1_score),
+                       dataframe = rq4.summary.subject.f1_score,
                        filename = "summary_subject_f1_score.tex",
                        caption = "Overview of the F1 Score per subject.",
                        label = "tab:results:rq4:summary:subject:f1_score")
@@ -115,7 +115,7 @@ rq4.summary.subject.aggregate
 
 experiment.write.latex(rq = 4,
                        digits = 2,
-                       dataframe = t(rq4.summary.subject.aggregate),
+                       dataframe = rq4.summary.subject.aggregate,
                        filename = "summary_subject.tex",
                        caption = "Overview of the user navigation prediction accuracy per subject.",
                        label = "tab:results:rq4:summary:subject")
