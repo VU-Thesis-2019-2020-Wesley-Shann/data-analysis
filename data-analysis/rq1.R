@@ -162,6 +162,9 @@ my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                                   "Battery comsumption")
 experiment.write.plot(filename = "qqplot_battery.png", rq = 1)
 
+shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule)
+#W = 0.96404, p-value = 2.743e-11
+
 experiment.write.text(data = shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule),
                       filename = "test_shapiro_battery.txt",
                       rq = 1)
@@ -173,11 +176,15 @@ my_plot <- experiment.plot.qqplot(rq1.dataframe,
                                   "CPU load")
 experiment.write.plot(filename = "qqplot_cpu.png", rq = 1)
 
+shapiro.test(rq1.dataframe$trepn.cpu)
+#W = 0.90465, p-value < 2.2e-16
+
 experiment.write.text(data = shapiro.test(rq1.dataframe$trepn.cpu),
                       filename = "test_shapiro_cpu.txt",
                       rq = 1)
 
 # Memory
+#W = 0.68972, p-value < 2.2e-16
 my_plot <- experiment.plot.qqplot(rq1.dataframe,
                                   "android.memory.mb",
                                   "Memory consumption (MB)",
@@ -195,8 +202,11 @@ print("Transform data")
 
 # Metric      Method        p-value     is normal (p-value > 0.05)
 # -----       ------        -------     --------------------------
+# Battery     N/A           2.743e-11   no
 # Battery     sqrt          0.5963      yes
+# CPU         N/A           2.2e-16     no
 # CPU         tukey         4.159e-06   no
+# Memory      N/A           2.2e-16     no
 # Memory      cube root     4.445e-12   no
 
 # Battery ~ Natural log
