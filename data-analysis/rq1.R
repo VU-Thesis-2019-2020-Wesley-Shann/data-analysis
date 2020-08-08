@@ -495,8 +495,8 @@ rq1.hypothesis.cpu.result <- kruskal.test(trepn.cpu ~ subject.treatment.id, data
 # kruskal.test performs the Kruskal-Wallis test and yields a p-value.
 # The p-value for testing H_0 : mu_1 = mu_2 = mu_3 = mu_4 is 0.6747: H_0 is not rejected.
 experiment.write.text(data = rq1.hypothesis.cpu.result,
-                       rq = 1,
-                       filename = "hypothesis_cpu_kruskal.txt")
+                      rq = 1,
+                      filename = "hypothesis_cpu_kruskal.txt")
 
 
 rq1.hypothesis.cpu.lm <- lm(trepn.cpu ~ subject.treatment.id, data = rq1.dataframe)
@@ -548,9 +548,32 @@ rq1.hypothesis.memory.result <- kruskal.test(android.memory.mb ~ subject.treatme
 #data:  android.memory.mb by subject.treatment.id
 #Kruskal-Wallis chi-squared = 48.38, df = 2, p-value = 3.122e-11
 experiment.write.text(data = rq1.hypothesis.memory.result,
-                       rq = 1,
-                       filename = "hypothesis_memory_kruskal.txt")
+                      rq = 1,
+                      filename = "hypothesis_memory_kruskal.txt")
 
+# www.sthda.com/english/wiki/kruskal-wallis-test-in-r
+# From the output of the Kruskal-Wallis test,
+# we know that there is a significant difference between groups,
+# but we don’t know which pairs of groups are different.
+# It’s possible to use the function pairwise.wilcox.test()
+# to calculate pairwise comparisons between group levels with corrections for multiple testing.
+rq1.hypothesis.memory.wilcox <- pairwise.wilcox.test(rq1.dataframe$android.memory.mb, rq1.dataframe$subject.treatment.id)
+#	Pairwise comparisons using Wilcoxon rank sum test with continuity correction
+#
+#data:  rq1.dataframe$android.memory.mb and rq1.dataframe$subject.treatment.id
+#
+#            baseline nappagreedy
+#nappagreedy 1.8e-08  -
+#nappatfpr   2.5e-09  0.14
+#
+#P value adjustment method: holm
+# The pairwise comparison shows that,
+#   baseline and greedy are differet (p < 0.05).
+#   baseline and TFPR are differet (p < 0.05).
+
+experiment.write.text(data = rq1.hypothesis.memory.wilcox,
+                       rq = 1,
+                       filename = "hypothesis_memory_wilcox.tex")
 
 rq1.hypothesis.memory.lm <- lm(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
 summary(rq1.hypothesis.memory.lm)
