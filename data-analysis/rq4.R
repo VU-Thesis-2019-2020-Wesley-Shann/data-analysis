@@ -244,22 +244,21 @@ print("Phase 3. Hypothesis Test")
 # Hypothesistest
 # Metric          Test              p-value     is H0 rejected (p-value < 0.05)
 # -----           ------            -------     --------------------------
-# F1 Score (All)  Mann-Whitney      0.9968      no
-# F1 Score (> 0)  Mann-Whitney      0.9894      no
+# F1 Score        Mann-Whitney
 
 
 rq4.filter.greedy <- rq4.dataframe$subject.treatment.id == "nappagreedy"
 rq4.filter.tfpr <- rq4.dataframe$subject.treatment.id == "nappatfpr"
 
-####################################### 3a: F1 Score (All) ######################################
+######################################### 3a: F1 Score  ########################################
 
-# F1 Score (All) ~ not normal ~ Mann-Whitney
+# F1 Score  ~ not normal ~ Mann-Whitney
 rq4.hypothesis.f1_score_all.whitney <- wilcox.test(rq4.dataframe[rq4.filter.greedy,]$f1_score,
                                                    rq4.dataframe[rq4.filter.tfpr,]$f1_score)
 #	Wilcoxon rank sum test with continuity correction
 #
 #data:  rq4.dataframe[rq4.filter.greedy, ]$f1_score and rq4.dataframe[rq4.filter.tfpr, ]$f1_score
-#W = 22045, p-value = 0.9968
+#W = 21190, p-value = 0.4877
 #alternative hypothesis: true location shift is not equal to 0
 experiment.write.text(data = rq4.hypothesis.f1_score_all.whitney,
                       rq = 4,
@@ -270,32 +269,7 @@ cliff.delta(
   rq4.dataframe[rq4.filter.tfpr, ]$f1_score)
 #Cliff's Delta
 #
-#delta estimate: -0.0002267574 (negligible)
-#95 percent confidence interval:
-#      lower       upper
-#-0.09950464  0.09905559
-
-
-####################################### 3a: F1 Score (> 0) ######################################
-
-# F1 Score (> 0) ~ not normal ~ Mann-Whitney
-rq4.hypothesis.f1_score_above_zero.whitney <- wilcox.test(rq4.dataframe[rq4.filter.non_zero_f1_score & rq4.filter.greedy,]$f1_score,
-                                                   rq4.dataframe[rq4.filter.non_zero_f1_score & rq4.filter.tfpr,]$f1_score)
-#	Wilcoxon rank sum test with continuity correction
-#
-#data:  rq4.dataframe[rq4.filter.non_zero_f1_score & rq4.filter.greedy, ]$f1_score and rq4.dataframe[rq4.filter.non_zero_f1_score & rq4.filter.tfpr, ]$f1_score
-#W = 4045, p-value = 0.9894
-#alternative hypothesis: true location shift is not equal to 0
-experiment.write.text(data = rq4.hypothesis.f1_score_above_zero.whitney,
-                      rq = 4,
-                      filename = "hypothesis_above_zero_f1_score_whitney.txt")
-
-cliff.delta(
-  rq4.dataframe[rq4.filter.non_zero_f1_score & rq4.filter.greedy, ]$f1_score,
-  rq4.dataframe[rq4.filter.non_zero_f1_score & rq4.filter.tfpr, ]$f1_score)
-#Cliff's Delta
-#
-#delta estimate: -0.001234568 (negligible)
+#delta estimate: -0.03897959 (negligible)
 #95 percent confidence interval:
 #     lower      upper
-#-0.1640062  0.1616025
+#-0.1498989  0.0729087
