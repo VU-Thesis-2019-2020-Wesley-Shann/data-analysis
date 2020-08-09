@@ -135,7 +135,8 @@ print("Generating plots")
 my_plot <- experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                                    "trepn.battery.nonzero.joule",
                                    "Power consumption (J)",
-                                   "Power consumption")
+                                   "Power consumption") +
+  expand_limits(x = 0)
 experiment.write.plot(filename = "boxplot_battery.png", rq = 1)
 
 
@@ -178,7 +179,8 @@ experiment.write.plot(filename = "freqpoly_cpu.png", rq = 1)
 my_plot <- experiment.plot.boxplot(rq1.dataframe,
                                    "android.memory.mb",
                                    "Memory consumption (MB)",
-                                   "Memory consumption")
+                                   "Memory consumption") +
+  expand_limits(x = 0)
 experiment.write.plot(filename = "boxplot_memory.png", rq = 1)
 
 my_plot <- experiment.plot.boxplot(rq1.dataframe[rq1.dataframe$android.memory.mb < 200,],
