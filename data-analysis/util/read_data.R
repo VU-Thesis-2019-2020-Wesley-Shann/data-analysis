@@ -51,7 +51,7 @@ experiment.source.csv <- function(file) {
   dataframe$subject.treatment.name.short <-
     ifelse(dataframe$subject.treatment.id == "baseline", "B",
            ifelse(dataframe$subject.treatment.id == "nappagreedy", "G",
-                  ifelse(dataframe$subject.treatment.id == "nappatfpr", "PR",
+                  ifelse(dataframe$subject.treatment.id == "nappatfpr", "T",
                          "Unkown subject name")))
 
   dataframe$subject.id <- paste0(dataframe$subject.name, " (", dataframe$subject.treatment.name.short, ")")
