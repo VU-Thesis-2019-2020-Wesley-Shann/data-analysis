@@ -7,19 +7,21 @@ experiment.plot.boxplot <- function(dataframe, axis_y_column, axis_y_legend, tit
                                     axis_x_column = "subject.id",
                                     fill = "subject.name",
                                     axis_x_legend = "Subjects ~ Treatments") {
+  # The x/y invertion is not an error,
+  # I inverted them after the analysis because it easier to read the subjects in the Y axis
   ggplot(dataframe, aes_string(
-    x = axis_x_column,
-    y = axis_y_column,
+    y = axis_x_column,
+    x = axis_y_column,
     fill = fill
   )) +
     geom_boxplot() +
     labs(
       title = paste("Boxplot:", title),
-      x = axis_x_legend,
-      y = axis_y_legend
+      y = axis_x_legend,
+      x = axis_y_legend
     ) +
     theme(
-      axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+      #axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
       legend.position = "none"
     ) +
     scale_fill_tron()
@@ -30,8 +32,8 @@ experiment.plot.violin <- function(dataframe, axis_y_column, axis_y_legend, titl
                                    fill = "subject.treatment.name.long",
                                    axis_x_legend = "Treatments") {
   ggplot(dataframe, aes_string(
-    x = axis_x_column,
-    y = axis_y_column,
+    y = axis_x_column,
+    x = axis_y_column,
     fill = fill
   )) +
     geom_violin(
@@ -39,11 +41,11 @@ experiment.plot.violin <- function(dataframe, axis_y_column, axis_y_legend, titl
     ) +
     labs(
       title = paste("Violin plot:", title),
-      x = axis_x_legend,
-      y = axis_y_legend
+      y = axis_x_legend,
+      x = axis_y_legend
     ) +
     theme(
-      axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+      #axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
       legend.position = "none"
     ) +
     scale_fill_tron()
