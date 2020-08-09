@@ -137,14 +137,14 @@ my_plot <- experiment.plot.boxplot(rq3.dataframe,
                                    "f1_score",
                                    "F1 Score",
                                    "F1 Score (All subjects)") +
-  expand_limits(y = c(0, 1))
+  expand_limits(x = c(0, 1))
 experiment.write.plot(filename = "boxplot_all_f1_score.png", rq = 3)
 
 my_plot <- experiment.plot.boxplot(rq3.dataframe[rq3.filter.non_zero_f1_score,],
                                    "f1_score",
                                    "F1 Score",
                                    "F1 Score (Subjects with score above 0)") +
-  expand_limits(y = c(0, 1))
+  expand_limits(x = c(0, 1))
 experiment.write.plot(filename = "boxplot_above_zero_f1_score.png", rq = 3)
 
 for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
@@ -184,14 +184,14 @@ my_plot <- experiment.plot.violin(rq3.dataframe[rq3.filter.non_zero_f1_score,],
                                   "f1_score",
                                   "F1 Score",
                                   "F1 Score (Subjects with score above 0)") +
-  expand_limits(y = c(0, 1))
+  expand_limits(x = c(0, 1))
 experiment.write.plot(filename = "violin_above_zero_f1_score.png", rq = 3)
 
 my_plot <- experiment.plot.violin(rq3.dataframe,
                                   "f1_score",
                                   "F1 Score",
                                   "F1 Score (All subjects)") +
-  expand_limits(y = c(0, 1))
+  expand_limits(x = c(0, 1))
 experiment.write.plot(filename = "violin_all_f1_score.png", rq = 3)
 
 # Frequency

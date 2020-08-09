@@ -143,7 +143,7 @@ my_plot <- experiment.plot.violin(rq1.dataframe[rq1.filter.non_zero_battery,],
                                   "trepn.battery.nonzero.joule",
                                   "Power consumption (J)",
                                   "Power consumption") +
-  expand_limits(y = 0)
+  expand_limits(x = 0)
 experiment.write.plot(filename = "violin_battery.png", rq = 1)
 
 my_plot <- experiment.plot.freqpoly(rq1.dataframe[rq1.filter.non_zero_battery,],
@@ -158,14 +158,14 @@ my_plot <- experiment.plot.boxplot(rq1.dataframe,
                                    "trepn.cpu",
                                    "CPU load (%)",
                                    "CPU load") +
-  expand_limits(y = c(0, 100))
+  expand_limits(x = c(0, 100))
 experiment.write.plot(filename = "boxplot_cpu.png", rq = 1)
 
 my_plot <- experiment.plot.violin(rq1.dataframe,
                                   "trepn.cpu",
                                   "CPU load (%)",
                                   "CPU load") +
-  expand_limits(y = c(0, 100))
+  expand_limits(x = c(0, 100))
 experiment.write.plot(filename = "violin_cpu.png", rq = 1)
 
 my_plot <- experiment.plot.freqpoly(rq1.dataframe,
@@ -197,7 +197,7 @@ my_plot <- experiment.plot.violin(rq1.dataframe,
                                   "android.memory.mb",
                                   "Memory consumption (MB)",
                                   "Memory consumption") +
-  expand_limits(y = 0)
+  expand_limits(x = 0)
 experiment.write.plot(filename = "violin_memory.png", rq = 1)
 
 my_plot <- experiment.plot.freqpoly(rq1.dataframe,

@@ -212,7 +212,7 @@ my_plot <- experiment.plot.boxplot(rq4.dataframe,
                                    "f1_score",
                                    "F1 Score",
                                    "F1 Score") +
-  expand_limits(y = c(0, 1))
+  expand_limits(x = c(0, 1))
 experiment.write.plot(filename = "boxplot_f1_score.png", rq = 4)
 
 # F1 Score over time
@@ -233,7 +233,7 @@ my_plot <- experiment.plot.violin(rq4.dataframe,
                                   "f1_score",
                                   "F1 Score",
                                   "F1 Score") +
-  expand_limits(y = c(0, 1))
+  expand_limits(x = c(0, 1))
 experiment.write.plot(filename = "violin_f1_score.png", rq = 4)
 
 # Frequency
