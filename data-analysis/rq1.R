@@ -40,12 +40,21 @@ rq1.summary.treatment.duration <- rq1.summary.treatment.duration[-c(2, 3, 4, 5),
 rownames(rq1.summary.treatment.duration) <- paste("Duration (s)", rownames(rq1.summary.treatment.duration))
 
 rq1.summary.treatment.battery <- experiment.treatment.summary(dataframe = rq1.dataframe[rq1.filter.non_zero_battery,], property = "trepn.battery.nonzero.joule", digits = 2)
+experiment.write.latex(rq = 1,
+                       dataframe = t(rq1.summary.treatment.battery),
+                       filename = "summary-treatment_battery.tex",)
 rownames(rq1.summary.treatment.battery) <- paste("Battery consumtpion (J)", rownames(rq1.summary.treatment.battery))
 
 rq1.summary.treatment.cpu <- experiment.treatment.summary(dataframe = rq1.dataframe, property = "trepn.cpu", digits = 2)
+experiment.write.latex(rq = 1,
+                       dataframe = t(rq1.summary.treatment.cpu),
+                       filename = "summary-treatment_cpu.tex",)
 rownames(rq1.summary.treatment.cpu) <- paste("CPU load (%)", rownames(rq1.summary.treatment.cpu))
 
 rq1.summary.treatment.memory <- experiment.treatment.summary(dataframe = rq1.dataframe, property = "android.memory.mb", digits = 4)
+experiment.write.latex(rq = 1,
+                       dataframe = t(rq1.summary.treatment.memory),
+                       filename = "summary-treatment_mmeory.tex",)
 rownames(rq1.summary.treatment.memory) <- paste("Memory consumption (MB)", rownames(rq1.summary.treatment.memory))
 
 rq1.summary.treatment.aggregate <- rbind(
