@@ -7,6 +7,7 @@ experiment.subject.summary <- function(dataframe, property, digits = NA) {
   dataframe_summary.data <- NULL
   dataframe_summary.columns <- NULL
   for (subject_id in unique(dataframe$subject.id)) {
+    # The digit option is NOT for the precision digits and will truncate numbers
     #if (is.na(digits)) {
     #  data_summary <- summary(dataframe[dataframe$subject.id == subject_id, property])
     #} else {
