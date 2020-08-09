@@ -134,22 +134,22 @@ print("Generating plots")
 # Battery
 my_plot <- experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                                    "trepn.battery.nonzero.joule",
-                                   "Battery comsumption (J)",
-                                   "Battery comsumption")
+                                   "Power consumption (J)",
+                                   "Power consumption")
 experiment.write.plot(filename = "boxplot_battery.png", rq = 1)
 
 
 my_plot <- experiment.plot.violin(rq1.dataframe[rq1.filter.non_zero_battery,],
                                   "trepn.battery.nonzero.joule",
-                                  "Battery comsumption (J)",
-                                  "Battery comsumption") +
+                                  "Power consumption (J)",
+                                  "Power consumption") +
   expand_limits(y = 0)
 experiment.write.plot(filename = "violin_battery.png", rq = 1)
 
 my_plot <- experiment.plot.freqpoly(rq1.dataframe[rq1.filter.non_zero_battery,],
                                     "trepn.battery.nonzero.joule",
-                                    "Battery comsumption (J)",
-                                    "Battery comsumption")
+                                    "Power consumption (J)",
+                                    "Power consumption")
 experiment.write.plot(filename = "freqpoly_battery.png", rq = 1)
 
 
@@ -217,8 +217,8 @@ print("Check normality")
 # Battery
 my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                                   "trepn.battery.nonzero.joule",
-                                  "Battery comsumption (J)",
-                                  "Battery comsumption")
+                                  "Power consumption (J)",
+                                  "Power consumption")
 experiment.write.plot(filename = "qqplot_battery.png", rq = 1)
 
 shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule)
@@ -422,14 +422,14 @@ shapiro.test(rq1.dataframe$android.memory.mb.box)
 # Battery ~ sqrt
 my_plot <- experiment.plot.freqpoly(rq1.dataframe[rq1.filter.non_zero_battery,],
                                     "trepn.battery.nonzero.joule.sqrt",
-                                    "Battery comsumption (J) (square root)",
-                                    "Transformed (square root) Battery comsumption")
+                                    "Power consumption (J) (square root)",
+                                    "Transformed (square root) Power consumption")
 experiment.write.plot(filename = "freqpoly_battery_sqrt.png", rq = 1)
 
 my_plot <- experiment.plot.qqplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                                   "trepn.battery.nonzero.joule.sqrt",
-                                  "Battery comsumption (J) (square root)",
-                                  "Transformed (square root) Battery comsumption")
+                                  "Power consumption (J) (square root)",
+                                  "Transformed (square root) Power consumption")
 experiment.write.plot(filename = "qqplot_battery_sqrt.png", rq = 1)
 
 experiment.write.text(data = shapiro.test(rq1.dataframe[rq1.filter.non_zero_battery,]$trepn.battery.nonzero.joule.sqrt),
