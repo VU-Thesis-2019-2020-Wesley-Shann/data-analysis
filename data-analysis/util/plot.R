@@ -16,7 +16,7 @@ experiment.plot.boxplot <- function(dataframe, axis_y_column, axis_y_legend, tit
   )) +
     geom_boxplot() +
     labs(
-      title = paste("Boxplot:", title),
+      #title = paste("Boxplot:", title),
       y = axis_x_legend,
       x = axis_y_legend
     ) +
@@ -40,7 +40,7 @@ experiment.plot.violin <- function(dataframe, axis_y_column, axis_y_legend, titl
       draw_quantiles = c(0.25, 0.5, 0.75)
     ) +
     labs(
-      title = paste("Violin plot:", title),
+      #title = paste("Violin plot:", title),
       y = axis_x_legend,
       x = axis_y_legend
     ) +
@@ -64,7 +64,7 @@ experiment.plot.freqpoly <- function(dataframe, axis_x_column, axis_x_legend, ti
       legend.position = "bottom"
     ) +
     labs(
-      title = paste("Frequency plot:", title),
+      #title = paste("Frequency plot:", title),
       x = axis_x_legend,
       y = "Count",
       colour = "Treatments"
@@ -80,7 +80,7 @@ experiment.plot.qqplot <- function(dataframe, sample_column, sample_legend, titl
     stat_qq() +
     stat_qq_line() +
     labs(
-      title = paste("QQ-Plot:", title),
+      #title = paste("QQ-Plot:", title),
       y = paste("Sample", sample_legend, sep = " ~ "),
       x = "Normal Theoretical Quantile",
       colour = "Treatments"
@@ -107,7 +107,7 @@ experiment.plot.line <- function(dataframe, title, axis_y_column, axis_y_legend,
     ) +
     geom_point() +
     labs(
-      title = title,
+      #title = title,
       x = axis_x_legend,
       y = axis_y_legend,
       colour = group_by_legend
