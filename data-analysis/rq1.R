@@ -208,6 +208,16 @@ my_plot <- experiment.plot.freqpoly(rq1.dataframe,
                                     "Memory consumption")
 experiment.write.plot(filename = "freqpoly_memory.png", rq = 1)
 
+for (subject in levels(rq1.dataframe$subject.name)) {
+  for (part in c(1, 2, 3)) {
+    my_plot <- experiment.plot.line(dataframe = rq1.dataframe[rq1.dataframe$experiment.part == part &
+                                                                rq1.dataframe$subject.name == subject,],
+                                    axis_y_column = "android.memory.mb",
+                                    axis_y_legend = "Memory consumption (MB)")
+    experiment.write.plot(filename = paste0("memory_over_runs_", subject, "_part_", part, ".png"), rq = 1)
+  }
+}
+
 
 #################################################################################################
 #######################  Phase 2: Normality Check and Data Transformation #######################
