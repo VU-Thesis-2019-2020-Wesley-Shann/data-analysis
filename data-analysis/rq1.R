@@ -36,6 +36,9 @@ print("Phase 1. Data exploration")
 rq1.filter.non_zero_battery <- rq1.dataframe$trepn.battery.nonzero.joule != 0
 
 rq1.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq1.dataframe, property = "run.duration.s", digits = 2)
+experiment.write.latex(rq = 1,
+                       dataframe = t(rq1.summary.treatment.duration),
+                       filename = "summary-treatment_duration.tex",)
 rq1.summary.treatment.duration <- rq1.summary.treatment.duration[-c(2, 3, 4, 5),]
 rownames(rq1.summary.treatment.duration) <- paste("Duration (s)", rownames(rq1.summary.treatment.duration))
 
@@ -131,6 +134,20 @@ experiment.write.latex(rq = 1,
 
 #######################################  Phase 1b Plots ########################################
 print("Generating plots")
+# Duration
+my_plot <- experiment.plot.boxplot(rq1.dataframe,
+                                   "run.duration.s",
+                                   "Run duration (s)") +
+  expand_limits(x = 0)
+experiment.write.plot(filename = "boxplot_duration.png", rq = 1)
+
+my_plot <- experiment.plot.violin(rq1.dataframe,
+                                   "run.duration.s",
+                                   "Run duration (s)") +
+  expand_limits(x = 0)
+experiment.write.plot(filename = "violin_duration.png", rq = 1)
+
+
 # Battery
 my_plot <- experiment.plot.boxplot(rq1.dataframe[rq1.filter.non_zero_battery,],
                                    "trepn.battery.nonzero.joule",
