@@ -26,6 +26,11 @@ print("Running RQ 1 script")
 print("Reading data")
 rq2.dataframe <- experiment.source.network_request_execution_time()
 
+# Remove row containing extreme runtime duartion outlier
+rq2.dataframe <- rq2.dataframe[!(rq2.dataframe$subject.id == "NewsBlur (G)" &
+  rq2.dataframe$run.number == 9 &
+  rq2.dataframe$experiment.part == 1),]
+
 #################################################################################################
 #####################################  Phase 1: Exploration #####################################
 #################################################################################################
