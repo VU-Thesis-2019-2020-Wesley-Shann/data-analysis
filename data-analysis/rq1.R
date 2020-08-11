@@ -158,6 +158,34 @@ t(rq1.dataframe[(rq1.dataframe$subject.id == "Materialistic (G)" &
 #trepn.cpu                      "37.90251"
 #trepn.memory.kb                "2474976"
 
+t(rq1.dataframe[(rq1.dataframe$subject.id == "UOB Timetable (G)" &
+  rq1.dataframe$run.number == 2 &
+  rq1.dataframe$experiment.part == 3),])
+
+#                               582
+#android.cpu                    "15.6156"
+#android.memory.kb              "181250.4"
+#android.memory.mb              "181.2504"
+#experiment.part                "3"
+#run.duration.ms                "66687"
+#run.duration.s                 "66.687"
+#run.number                     "2"
+#subject.android.package        "com.ak.uobtimetable"
+#subject.id                     "UOB Timetable (G)"
+#subject.id.long                "nappagreedy.com.ak.uobtimetable"
+#subject.name                   "UOB Timetable"
+#subject.treatment.id           "nappagreedy"
+#subject.treatment.name.long    "Greedy"
+#subject.treatment.name.short   "G"
+#trepn.battery.delta.uw         "0"
+#trepn.battery.joule            "0"
+#trepn.battery.nonzero.delta.uw "0"
+#trepn.battery.nonzero.joule    "0"
+#trepn.battery.nonzero.raw.uw   "0"
+#trepn.battery.raw.uw           "0"
+#trepn.cpu                      "28.12324"
+#trepn.memory.kb                "2602100
+
 #################################################################################################
 #####################################  Phase 1: Exploration #####################################
 #################################################################################################
