@@ -26,10 +26,16 @@ print("Running RQ 1 script")
 print("Reading data")
 rq2.dataframe <- experiment.source.network_request_execution_time()
 
+nrow(rq2.dataframe)
+#34334
+
 # Remove row containing extreme runtime duartion outlier
 rq2.dataframe <- rq2.dataframe[!(rq2.dataframe$subject.id == "NewsBlur (G)" &
   rq2.dataframe$run.number == 9 &
   rq2.dataframe$experiment.part == 1),]
+
+nrow(rq2.dataframe)
+#34320
 
 #################################################################################################
 #####################################  Phase 1: Exploration #####################################
@@ -47,6 +53,18 @@ print("Phase 1. Data exploration")
 keep_min_max_mean <- c(2, 3, 5)
 keep_min_max_median <- c(2, 4, 5)
 kepp_min_max_mean_median <- c(2, 5)
+
+# Datapoints per subject ~ treatment
+rq2.summary.subject.datapoints <- data.frame(matrix(ncol = 2, nrow = 0))
+for (subject in levels(rq2.dataframe$subject.id)) {
+  rq2.summary.subject.datapoints <- rbind(
+    rq2.summary.subject.datapoints,
+    c(subject, nrow(rq2.dataframe[rq2.dataframe$subject.id == subject,]))
+  )
+}
+experiment.write.latex(rq = 2,
+                       dataframe = rq2.summary.subject.datapoints,
+                       filename = "summary-treatment_subject_datapoints.tex")
 
 
 # Per treatment
