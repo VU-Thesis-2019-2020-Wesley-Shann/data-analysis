@@ -60,14 +60,35 @@ for (subject in levels(rq2.dataframe$subject.id)) {
   subject_datapoints <- rq2.dataframe[rq2.dataframe$subject.id == subject,]
   rq2.summary.subject.datapoints <- rbind(
     rq2.summary.subject.datapoints,
-    c(subject, nrow(subject_datapoints), ceiling(nrow(subject_datapoints)/30))
+    c(subject,
+      nrow(subject_datapoints),
+      ceiling(nrow(subject_datapoints) / 30),
+      length(unique(subject_datapoints$request.url))
+    )
   )
 }
 # The avg for newsblur greedy is wrong as the avg is the total / 29 runs, not 30 runs
-colnames(rq2.summary.subject.datapoints) <- c("Subject", "Total datapoints", "Average datapoints per run")
+colnames(rq2.summary.subject.datapoints) <- c("Subject", "Total requests", "Average requests per run", "Total unique requests")
 experiment.write.latex(rq = 2,
                        dataframe = rq2.summary.subject.datapoints,
                        filename = "summary-treatment_subject_datapoints.tex")
+
+#rq2.summary.subject.url <- data.frame(matrix(ncol = 3, nrow = 0))
+#for (subject in levels(rq2.dataframe$subject.name)) {
+#  rq2.summary.subject.url <- rbind(
+#    rq2.summary.subject.url,
+#    c(subject,
+#      length(unique(rq2.dataframe[rq2.dataframe$subject.name == subject,]$request.url)),
+#      length(rq2.dataframe[rq2.dataframe$subject.name == subject,]$request.url)
+#    )
+#  )
+#}
+#colnames(rq2.summary.subject.url) <- c("Subject", "Unique URLs", "Total URLs")
+#experiment.write.latex(dataframe = rq2.summary.subject.url,
+#                       rq = 2,
+#                       filename = "summary_subject_url",
+#                       caption = "Count of unique requested URL per subject",
+#                       label = "tab:results:rq2:summary:subject:url")
 
 
 # Per treatment
@@ -133,23 +154,6 @@ experiment.write.latex(rq = 2,
                        filename = "summary_subject_url_length.tex")
 #rq2.summary.subject.response_length <- rq2.summary.subject.response_length[-kepp_min_max_mean_median,]
 rownames(rq2.summary.subject.response_length) <- paste("Response length (KB)", rownames(rq2.summary.subject.response_length))
-
-rq2.summary.subject.url <- data.frame(matrix(ncol = 3, nrow = 0))
-for (subject in levels(rq2.dataframe$subject.name)) {
-  rq2.summary.subject.url <- rbind(
-    rq2.summary.subject.url,
-    c(subject,
-      length(unique(rq2.dataframe[rq2.dataframe$subject.name == subject,]$request.url)),
-      length(rq2.dataframe[rq2.dataframe$subject.name == subject,]$request.url)
-    )
-  )
-}
-colnames(rq2.summary.subject.url) <- c("Subject", "Unique URLs", "Total URLs")
-experiment.write.latex(dataframe = rq2.summary.subject.url,
-                       rq = 2,
-                       filename = "summary_subject_url",
-                       caption = "Count of unique requested URL per subject",
-                       label = "tab:results:rq2:summary:subject:url")
 
 # Treatment ~ subject
 
