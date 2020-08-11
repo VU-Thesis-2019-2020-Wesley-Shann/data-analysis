@@ -44,6 +44,60 @@ my_plot <- experiment.plot.violin(rq1.dataframe,
 experiment.write.plot(filename = "violin_duration.png", rq = 1)
 
 
+# Take the duration time per subject and write to file
+print("Summarizing runtime duration")
+rq1.summary.run.duration <- experiment.subject.summary(dataframe = rq1.dataframe, property = "run.duration.s")
+rq1.summary.run.duration <- rq1.summary.run.duration[-c(2, 3, 4, 5),]
+experiment.write.latex(rq = 1,
+                       dataframe = t(rq1.summary.run.duration),
+                       filename = "summary-duration.tex",
+                       caption = "Overview of the runtime duration.",
+                       label = "tab:results:rq1:summary:duration")
+rownames(rq1.summary.run.duration) <- paste("Duration (s)", rownames(rq1.summary.run.duration))
+
+rq1.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq1.dataframe, property = "run.duration.s", digits = 2)
+experiment.write.latex(rq = 1,
+                       dataframe = t(rq1.summary.treatment.duration),
+                       filename = "summary-treatment_duration.tex",)
+rq1.summary.treatment.duration <- rq1.summary.treatment.duration[-c(2, 3, 4, 5),]
+rownames(rq1.summary.treatment.duration) <- paste("Duration (s)", rownames(rq1.summary.treatment.duration))
+t(rq1.dataframe[rq1.dataframe$run.duration.s > 300,])
+t(rq1.dataframe[rq1.dataframe$subject.id == "NewsBlur (G)" &
+                  rq1.dataframe$run.number == 9 &
+                  rq1.dataframe$experiment.part == 1,])
+
+
+# Take the duration time per subject and write to file
+print("Summarizing runtime duration")
+t(experiment.subject.summary(dataframe = rq1.dataframe, property = "run.duration.s")[-c(2, 3, 4, 5),])
+#                     Min.    Max.
+#Antenna Pod (B)   142.315 159.208
+#Antenna Pod (G)   145.256 161.463
+#Antenna Pod (T)   142.136 161.463
+#Hill'Fair (B)     151.483 164.135
+#Hill'Fair (G)     150.762 162.896
+#Hill'Fair (T)     151.346 167.752
+#Materialistic (B) 164.729 185.876
+#Materialistic (G) 167.418 219.228
+#Materialistic (T) 161.731 182.464
+#NewsBlur (B)      107.583 113.911
+#NewsBlur (G)      107.208 353.838
+#NewsBlur (T)      108.809 114.834
+#RedReader (B)     150.070 167.156
+#RedReader (G)     151.164 167.040
+#RedReader (T)     148.339 164.750
+#Travel Mate (B)   132.805 153.513
+#Travel Mate (G)   134.326 152.491
+#Travel Mate (T)   132.685 150.176
+#UOB Timetable (B)  63.768  69.922
+#UOB Timetable (G)  63.796  69.292
+
+t(experiment.treatment.summary(dataframe = rq1.dataframe, property = "run.duration.s", digits = 2)[-c(2, 3, 4, 5),])
+#           Min.    Max.
+#Baseline 63.768 185.876
+#Greedy   63.796 353.838
+#TFPR     62.161 182.464
+
 #                               209
 #android.cpu                    "8.623649"
 #android.memory.kb              "175467.6"
@@ -71,13 +125,13 @@ experiment.write.plot(filename = "violin_duration.png", rq = 1)
 # Remove row containing extreme runtime duartion outlier
 #rq1.dataframe <- experiment.source.runtime()
 rq1.dataframe <- rq1.dataframe[!(rq1.dataframe$subject.id == "NewsBlur (G)" &
-                rq1.dataframe$run.number == 9 &
-                rq1.dataframe$experiment.part == 1),]
+  rq1.dataframe$run.number == 9 &
+  rq1.dataframe$experiment.part == 1),]
 
 t(rq1.dataframe[rq1.dataframe$run.duration.s > 200,])
 t(rq1.dataframe[(rq1.dataframe$subject.id == "Materialistic (G)" &
-                rq1.dataframe$run.number == 7 &
-                rq1.dataframe$experiment.part == 1),])
+  rq1.dataframe$run.number == 7 &
+  rq1.dataframe$experiment.part == 1),])
 
 #                              17
 #android.cpu                    "11.60777"
@@ -106,29 +160,6 @@ t(rq1.dataframe[(rq1.dataframe$subject.id == "Materialistic (G)" &
 #################################################################################################
 #####################################  Phase 1: Exploration #####################################
 #################################################################################################
-
-
-# Take the duration time per subject and write to file
-print("Summarizing runtime duration")
-rq1.summary.run.duration <- experiment.subject.summary(dataframe = rq1.dataframe, property = "run.duration.s")
-rq1.summary.run.duration <- rq1.summary.run.duration[-c(2, 3, 4, 5),]
-experiment.write.latex(rq = 1,
-                       dataframe = t(rq1.summary.run.duration),
-                       filename = "summary-duration.tex",
-                       caption = "Overview of the runtime duration.",
-                       label = "tab:results:rq1:summary:duration")
-rownames(rq1.summary.run.duration) <- paste("Duration (s)", rownames(rq1.summary.run.duration))
-
-rq1.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq1.dataframe, property = "run.duration.s", digits = 2)
-experiment.write.latex(rq = 1,
-                       dataframe = t(rq1.summary.treatment.duration),
-                       filename = "summary-treatment_duration.tex",)
-rq1.summary.treatment.duration <- rq1.summary.treatment.duration[-c(2, 3, 4, 5),]
-rownames(rq1.summary.treatment.duration) <- paste("Duration (s)", rownames(rq1.summary.treatment.duration))
-t(rq1.dataframe[rq1.dataframe$run.duration.s > 300,])
-t(rq1.dataframe[rq1.dataframe$subject.id == "NewsBlur (G)" &
-                  rq1.dataframe$run.number == 9 &
-                  rq1.dataframe$experiment.part == 1,])
 
 
 ################################  Phase 1a Descriptive statistics ###############################
