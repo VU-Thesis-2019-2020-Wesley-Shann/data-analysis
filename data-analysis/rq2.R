@@ -303,6 +303,12 @@ my_plot <- experiment.plot.qqplot(my_sample,
                                   "Request duration")
 experiment.write.plot(filename = "qqplot_request_duration_sampled.png", rq = 2)
 
+ks.test(rq2.dataframe$request.duration.from_system.ms, y="pnorm")
+#	One-sample Kolmogorov-Smirnov test
+#
+#data:  rq2.dataframe$request.duration.from_system.ms
+#D = 0.97364, p-value < 2.2e-16
+#alternative hypothesis: two-sided
 shapiro.test(my_sample$request.duration.from_system.ms)
 #	Shapiro-Wilk normality test
 #
