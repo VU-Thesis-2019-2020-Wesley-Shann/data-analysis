@@ -280,7 +280,7 @@ print("Phase 2. Normality Check and Data Transformation")
 # Metric                  Method        p-value     is normal (p-value > 0.05)
 # -----                   ------        -------     --------------------------
 # Request duration        N/A           2.2e-16     no
-# Request duration        squard        1.757e-13   no
+# Request duration        squard        2.2e-16     no
 # Request duration        N/A           2.2e-16     no
 # (without Materialistic) ----------------------------------------------------
 
@@ -307,10 +307,11 @@ shapiro.test(my_sample$request.duration.from_system.ms)
 #	Shapiro-Wilk normality test
 #
 #data:  my_sample$request.duration.from_system.ms
-#W = 0.83555, p-value < 2.2e-16
+#W = 0.83658, p-value < 2.2e-16
 experiment.write.text(data = shapiro.test(my_sample$request.duration.from_system.ms),
                       filename = "test_shapiro_request_duration_sampled.txt",
                       rq = 2)
+
 
 # No materialistic
 my_plot <- experiment.plot.qqplot(rq2.dataframe[rq2.filter.no_materialistic,],
@@ -356,7 +357,7 @@ shapiro.test(my_sample$request.duration.from_system.ms.log)
 rq2.dataframe$request.duration.from_system.ms.squared <- rq2.dataframe$request.duration.from_system.ms^2
 my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE),]
 shapiro.test(my_sample$request.duration.from_system.ms.squared)
-# W = 0.9266, p-value = 1.757e-13
+# W = 0.9266, p-value = 2.2e-16
 
 # Request duration ~ square root
 rq2.dataframe$request.duration.from_system.ms.sqrt <- sqrt(rq2.dataframe$request.duration.from_system.ms)
