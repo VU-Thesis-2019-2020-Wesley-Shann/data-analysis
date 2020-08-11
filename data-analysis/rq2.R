@@ -112,6 +112,12 @@ experiment.write.latex(rq = 2,
 #rq2.summary.treatment.request_duration <- rq2.summary.treatment.request_duration[-kepp_min_max_mean_median,]
 rownames(rq2.summary.treatment.request_duration) <- paste("Request duration (ms)", rownames(rq2.summary.treatment.request_duration))
 
+# without materialistic
+rq2.summary.treatment.request_duration_without_materialistic <- experiment.treatment.summary(dataframe = rq2.dataframe[rq2.filter.no_materialistic,], property = "request.duration.from_system.ms", digits = 2)
+experiment.write.latex(rq = 2,
+                       dataframe = t(rq2.summary.treatment.request_duration_without_materialistic),
+                       filename = "summary-treatment_request_duration_without_materialistic.tex")
+
 rq2.summary.treatment.response_length <- experiment.treatment.summary(dataframe = rq2.dataframe[rq2.filter.valid_response_length,], property = "response.length.from_okhttp.kb", digits = 2)
 experiment.write.latex(rq = 2,
                        dataframe = t(rq2.summary.treatment.response_length),
