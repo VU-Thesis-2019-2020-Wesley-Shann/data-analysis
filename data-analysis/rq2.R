@@ -73,6 +73,18 @@ experiment.write.latex(rq = 2,
                        dataframe = rq2.summary.subject.datapoints,
                        filename = "summary-treatment_subject_datapoints.tex")
 
+
+subject <- "Materialistic (G)"
+#for (subject in levels(rq2.dataframe$subject.id)) {
+  for (part in levels(rq2.dataframe$experiment.part)) {
+    for (run in levels(rq2.dataframe$run.number)) {
+      datapoints <- rq2.dataframe[rq2.dataframe$subject.id == subject &
+                                    rq2.dataframe$experiment.part == part &
+                                    rq2.dataframe$run.number == run,]
+      print(paste(subject, part, run, nrow(datapoints), length(unique(datapoints$request.url))))
+    }
+  }
+#}
 #rq2.summary.subject.url <- data.frame(matrix(ncol = 3, nrow = 0))
 #for (subject in levels(rq2.dataframe$subject.name)) {
 #  rq2.summary.subject.url <- rbind(
