@@ -52,10 +52,16 @@ kepp_min_max_mean_median <- c(2, 5)
 # Per treatment
 print("Descriptive statistics per treatment")
 rq2.summary.treatment.request_duration <- experiment.treatment.summary(dataframe = rq2.dataframe, property = "request.duration.from_system.ms", digits = 2)
+experiment.write.latex(rq = 2,
+                       dataframe = t(rq2.summary.treatment.request_duration),
+                       filename = "summary-treatment_request_duration.tex")
 rq2.summary.treatment.request_duration <- rq2.summary.treatment.request_duration[-kepp_min_max_mean_median,]
 rownames(rq2.summary.treatment.request_duration) <- paste("Request duration (ms)", rownames(rq2.summary.treatment.request_duration))
 
 rq2.summary.treatment.response_length <- experiment.treatment.summary(dataframe = rq2.dataframe[rq2.filter.valid_response_length,], property = "response.length.from_okhttp.kb", digits = 2)
+experiment.write.latex(rq = 2,
+                       dataframe = t(rq2.summary.treatment.response_length),
+                       filename = "summary-treatment_request_length.tex")
 rq2.summary.treatment.response_length <- rq2.summary.treatment.response_length[-kepp_min_max_mean_median,]
 rownames(rq2.summary.treatment.response_length) <- paste("Response length (KB)", rownames(rq2.summary.treatment.response_length))
 
@@ -92,22 +98,20 @@ experiment.write.latex(dataframe = rq2.summary.treatment.url,
 # Per subject
 print("Descriptive statistics per subject")
 rq2.summary.subject.request_duration <- experiment.subject.summary(dataframe = rq2.dataframe, property = "request.duration.from_system.ms", digits = 2)
-rq2.summary.subject.request_duration <- rq2.summary.subject.request_duration[-kepp_min_max_mean_median,]
-rownames(rq2.summary.subject.request_duration) <- paste("Request duration (ms)", rownames(rq2.summary.subject.request_duration))
-
 experiment.write.latex(rq = 2,
                        digits = 2,
                        dataframe = rq2.summary.subject.request_duration,
                        filename = "summary_subject_url_duration.tex")
+rq2.summary.subject.request_duration <- rq2.summary.subject.request_duration[-kepp_min_max_mean_median,]
+rownames(rq2.summary.subject.request_duration) <- paste("Request duration (ms)", rownames(rq2.summary.subject.request_duration))
 
 rq2.summary.subject.response_length <- experiment.subject.summary(dataframe = rq2.dataframe[rq2.filter.valid_response_length,], property = "response.length.from_okhttp.kb", digits = 2)
-rq2.summary.subject.response_length <- rq2.summary.subject.response_length[-kepp_min_max_mean_median,]
-rownames(rq2.summary.subject.response_length) <- paste("Response length (KB)", rownames(rq2.summary.subject.response_length))
-
 experiment.write.latex(rq = 2,
                        digits = 2,
                        dataframe = rq2.summary.subject.response_length,
                        filename = "summary_subject_url_length.tex")
+rq2.summary.subject.response_length <- rq2.summary.subject.response_length[-kepp_min_max_mean_median,]
+rownames(rq2.summary.subject.response_length) <- paste("Response length (KB)", rownames(rq2.summary.subject.response_length))
 
 rq2.summary.subject.url <- data.frame(matrix(ncol = 3, nrow = 0))
 for (subject in levels(rq2.dataframe$subject.name)) {
