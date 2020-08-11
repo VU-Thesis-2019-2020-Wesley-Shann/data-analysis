@@ -55,13 +55,16 @@ keep_min_max_median <- c(2, 4, 5)
 kepp_min_max_mean_median <- c(2, 5)
 
 # Datapoints per subject ~ treatment
-rq2.summary.subject.datapoints <- data.frame(matrix(ncol = 2, nrow = 0))
+rq2.summary.subject.datapoints <- data.frame(matrix(ncol = 3, nrow = 0))
 for (subject in levels(rq2.dataframe$subject.id)) {
+  subject_datapoints <- rq2.dataframe[rq2.dataframe$subject.id == subject,]
   rq2.summary.subject.datapoints <- rbind(
     rq2.summary.subject.datapoints,
-    c(subject, nrow(rq2.dataframe[rq2.dataframe$subject.id == subject,]))
+    c(subject, nrow(subject_datapoints), ceiling(nrow(subject_datapoints)/30))
   )
 }
+# The avg for newsblur greedy is wrong as the avg is the total / 29 runs, not 30 runs
+colnames(rq2.summary.subject.datapoints) <- c("Subject", "Total datapoints", "Average datapoints per run")
 experiment.write.latex(rq = 2,
                        dataframe = rq2.summary.subject.datapoints,
                        filename = "summary-treatment_subject_datapoints.tex")
