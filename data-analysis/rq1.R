@@ -25,15 +25,99 @@ print("Running RQ 1 script")
 print("Reading data")
 rq1.dataframe <- experiment.source.runtime()
 
+
+# Time before removing outlier
+
+
+print("Generating plots")
+# Duration
+my_plot <- experiment.plot.boxplot(rq1.dataframe,
+                                   "run.duration.s",
+                                   "Run duration (s)") +
+  expand_limits(x = 0)
+experiment.write.plot(filename = "boxplot_duration.png", rq = 1)
+
+my_plot <- experiment.plot.violin(rq1.dataframe,
+                                  "run.duration.s",
+                                  "Run duration (s)") +
+  expand_limits(x = 0)
+experiment.write.plot(filename = "violin_duration.png", rq = 1)
+
+
+#                               209
+#android.cpu                    "8.623649"
+#android.memory.kb              "175467.6"
+#android.memory.mb              "175.4676"
+#experiment.part                "1"
+#run.duration.ms                "353838"
+#run.duration.s                 "353.838"
+#run.number                     "9"
+#subject.android.package        "com.newsblur"
+#subject.id                     "NewsBlur (G)"
+#subject.id.long                "nappagreedy.com.newsblur"
+#subject.name                   "NewsBlur"
+#subject.treatment.id           "nappagreedy"
+#subject.treatment.name.long    "Greedy"
+#subject.treatment.name.short   "G"
+#trepn.battery.delta.uw         "228740"
+#trepn.battery.joule            "80.93689"
+#trepn.battery.nonzero.delta.uw "1301490"
+#trepn.battery.nonzero.joule    "460.5165"
+#trepn.battery.nonzero.raw.uw   "1301490"
+#trepn.battery.raw.uw           "228740"
+#trepn.cpu                      "9.38075"
+#trepn.memory.kb                "2442563"
+
+# Remove row containing extreme runtime duartion outlier
+#rq1.dataframe <- experiment.source.runtime()
+rq1.dataframe <- rq1.dataframe[!(rq1.dataframe$subject.id == "NewsBlur (G)" &
+                rq1.dataframe$run.number == 9 &
+                rq1.dataframe$experiment.part == 1),]
+
+t(rq1.dataframe[rq1.dataframe$run.duration.s > 200,])
+t(rq1.dataframe[(rq1.dataframe$subject.id == "Materialistic (G)" &
+                rq1.dataframe$run.number == 7 &
+                rq1.dataframe$experiment.part == 1),])
+
+#                              17
+#android.cpu                    "11.60777"
+#android.memory.kb              "248533.4"
+#android.memory.mb              "248.5334"
+#experiment.part                "1"
+#run.duration.ms                "219228"
+#run.duration.s                 "219.228"
+#run.number                     "7"
+#subject.android.package        "io.github.hidroh.materialistic"
+#subject.id                     "Materialistic (G)"
+#subject.id.long                "nappagreedy.io.github.hidroh.materialistic"
+#subject.name                   "Materialistic"
+#subject.treatment.id           "nappagreedy"
+#subject.treatment.name.long    "Greedy"
+#subject.treatment.name.short   "G"
+#trepn.battery.delta.uw         "781090.7"
+#trepn.battery.joule            "171.237"
+#trepn.battery.nonzero.delta.uw "1443334"
+#trepn.battery.nonzero.joule    "316.4193"
+#trepn.battery.nonzero.raw.uw   "1443334"
+#trepn.battery.raw.uw           "781090.7"
+#trepn.cpu                      "37.90251"
+#trepn.memory.kb                "2474976"
+
 #################################################################################################
 #####################################  Phase 1: Exploration #####################################
 #################################################################################################
 
 
-################################  Phase 1a Descriptive statistics ###############################
-print("Phase 1. Data exploration")
-
-rq1.filter.non_zero_battery <- rq1.dataframe$trepn.battery.nonzero.joule != 0
+# Take the duration time per subject and write to file
+print("Summarizing runtime duration")
+rq1.summary.run.duration <- experiment.subject.summary(dataframe = rq1.dataframe, property = "run.duration.s")
+rq1.summary.run.duration <- rq1.summary.run.duration[-c(2, 3, 4, 5),]
+experiment.write.latex(rq = 1,
+                       dataframe = t(rq1.summary.run.duration),
+                       filename = "summary-duration.tex",
+                       caption = "Overview of the runtime duration.",
+                       label = "tab:results:rq1:summary:duration")
+rownames(rq1.summary.run.duration) <- paste("Duration (s)", rownames(rq1.summary.run.duration))
 
 rq1.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq1.dataframe, property = "run.duration.s", digits = 2)
 experiment.write.latex(rq = 1,
@@ -41,6 +125,16 @@ experiment.write.latex(rq = 1,
                        filename = "summary-treatment_duration.tex",)
 rq1.summary.treatment.duration <- rq1.summary.treatment.duration[-c(2, 3, 4, 5),]
 rownames(rq1.summary.treatment.duration) <- paste("Duration (s)", rownames(rq1.summary.treatment.duration))
+t(rq1.dataframe[rq1.dataframe$run.duration.s > 300,])
+t(rq1.dataframe[rq1.dataframe$subject.id == "NewsBlur (G)" &
+                  rq1.dataframe$run.number == 9 &
+                  rq1.dataframe$experiment.part == 1,])
+
+
+################################  Phase 1a Descriptive statistics ###############################
+print("Phase 1. Data exploration")
+
+rq1.filter.non_zero_battery <- rq1.dataframe$trepn.battery.nonzero.joule != 0
 
 rq1.summary.treatment.battery <- experiment.treatment.summary(dataframe = rq1.dataframe[rq1.filter.non_zero_battery,], property = "trepn.battery.nonzero.joule", digits = 2)
 experiment.write.latex(rq = 1,
@@ -133,19 +227,6 @@ experiment.write.latex(rq = 1,
                        label = "tab:results:rq3:summary:subject")
 
 #######################################  Phase 1b Plots ########################################
-print("Generating plots")
-# Duration
-my_plot <- experiment.plot.boxplot(rq1.dataframe,
-                                   "run.duration.s",
-                                   "Run duration (s)") +
-  expand_limits(x = 0)
-experiment.write.plot(filename = "boxplot_duration.png", rq = 1)
-
-my_plot <- experiment.plot.violin(rq1.dataframe,
-                                   "run.duration.s",
-                                   "Run duration (s)") +
-  expand_limits(x = 0)
-experiment.write.plot(filename = "violin_duration.png", rq = 1)
 
 
 # Battery
