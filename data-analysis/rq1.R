@@ -47,7 +47,7 @@ experiment.write.plot(filename = "violin_duration.png", rq = 1)
 # Take the duration time per subject and write to file
 print("Summarizing runtime duration")
 rq1.summary.run.duration <- experiment.subject.summary(dataframe = rq1.dataframe, property = "run.duration.s")
-rq1.summary.run.duration <- rq1.summary.run.duration[-c(2, 3, 4, 5),]
+rq1.summary.run.duration <- rq1.summary.run.duration[-c(2, 4, 5),]
 experiment.write.latex(rq = 1,
                        dataframe = t(rq1.summary.run.duration),
                        filename = "summary-duration.tex",
@@ -56,11 +56,12 @@ experiment.write.latex(rq = 1,
 rownames(rq1.summary.run.duration) <- paste("Duration (s)", rownames(rq1.summary.run.duration))
 
 rq1.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq1.dataframe, property = "run.duration.s", digits = 2)
+rq1.summary.treatment.duration <- rq1.summary.treatment.duration[-c(2, 4, 5),]
 experiment.write.latex(rq = 1,
                        dataframe = t(rq1.summary.treatment.duration),
                        filename = "summary-treatment_duration.tex",)
-rq1.summary.treatment.duration <- rq1.summary.treatment.duration[-c(2, 3, 4, 5),]
 rownames(rq1.summary.treatment.duration) <- paste("Duration (s)", rownames(rq1.summary.treatment.duration))
+
 t(rq1.dataframe[rq1.dataframe$run.duration.s > 300,])
 t(rq1.dataframe[rq1.dataframe$subject.id == "NewsBlur (G)" &
                   rq1.dataframe$run.number == 9 &
