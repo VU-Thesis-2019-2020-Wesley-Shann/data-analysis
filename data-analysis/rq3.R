@@ -34,41 +34,44 @@ print("Phase 1. Data exploration")
 ################################  Phase 1a Descriptive statistics ###############################
 keep_min_max_mean <- c(2, 3, 5)
 keep_min_max_median <- c(2, 4, 5)
-keep_min_max <- c(2, 5)
+keep_min_max <- c(2, 3, 4, 5)
+keep_columns <- keep_min_max_mean
 
 # Per treatment
 print("Descriptive statistics per treatment")
 rq3.summary.treatment.f1_score <- experiment.treatment.summary(dataframe = rq3.dataframe, property = "f1_score", digits = 2)
-rq3.summary.treatment.f1_score <- rq3.summary.treatment.f1_score[-keep_min_max,]
-experiment.write.latex(rq = 3,
-                       digits = 2,
-                       dataframe = rq3.summary.treatment.f1_score,
-                       filename = "summary_treatment_f1_score.tex",
-                       caption = "Overview of the F1 Score per treatment.",
-                       label = "tab:results:rq3:summary:treatment:f1_Score")
+rq3.summary.treatment.f1_score <- rq3.summary.treatment.f1_score[-keep_columns,]
 rownames(rq3.summary.treatment.f1_score) <- paste("F1-Score", rownames(rq3.summary.treatment.f1_score))
 
 rq3.summary.treatment.precision <- experiment.treatment.summary(dataframe = rq3.dataframe, property = "precision", digits = 2)
-rq3.summary.treatment.precision <- rq3.summary.treatment.precision[-keep_min_max,]
+rq3.summary.treatment.precision <- rq3.summary.treatment.precision[-keep_columns,]
 rownames(rq3.summary.treatment.precision) <- paste("Precision", rownames(rq3.summary.treatment.precision))
 
 rq3.summary.treatment.recall <- experiment.treatment.summary(dataframe = rq3.dataframe, property = "recall", digits = 2)
-rq3.summary.treatment.recall <- rq3.summary.treatment.recall[-keep_min_max,]
+rq3.summary.treatment.recall <- rq3.summary.treatment.recall[-keep_columns,]
 rownames(rq3.summary.treatment.recall) <- paste("Recall", rownames(rq3.summary.treatment.recall))
 
 rq3.summary.treatment.tp <- experiment.treatment.summary(dataframe = rq3.dataframe, property = "true_positive", digits = 2)
-rq3.summary.treatment.tp <- rq3.summary.treatment.tp[-keep_min_max,]
+rq3.summary.treatment.tp <- rq3.summary.treatment.tp[-keep_columns,]
 rownames(rq3.summary.treatment.tp) <- paste("TP", rownames(rq3.summary.treatment.tp))
 
 rq3.summary.treatment.fp <- experiment.treatment.summary(dataframe = rq3.dataframe, property = "false_positive", digits = 2)
-rq3.summary.treatment.fp <- rq3.summary.treatment.fp[-keep_min_max,]
+rq3.summary.treatment.fp <- rq3.summary.treatment.fp[-keep_columns,]
 rownames(rq3.summary.treatment.fp) <- paste("FP", rownames(rq3.summary.treatment.fp))
 
 rq3.summary.treatment.fn <- experiment.treatment.summary(dataframe = rq3.dataframe, property = "false_negative", digits = 2)
-rq3.summary.treatment.fn <- rq3.summary.treatment.fn[-keep_min_max,]
+rq3.summary.treatment.fn <- rq3.summary.treatment.fn[-keep_columns,]
 rownames(rq3.summary.treatment.fn) <- paste("FN", rownames(rq3.summary.treatment.fn))
 
-rq3.summary.treatment.aggregate <- rbind(rq3.summary.treatment.f1_score, rq3.summary.treatment.recall, rq3.summary.treatment.precision, rq3.summary.treatment.tp, rq3.summary.treatment.fp, rq3.summary.treatment.fn)
+rq3.summary.treatment.aggregate <-
+  rbind(
+    rq3.summary.treatment.f1_score,
+    rq3.summary.treatment.precision,
+    rq3.summary.treatment.recall,
+    rq3.summary.treatment.tp,
+    rq3.summary.treatment.fp,
+    rq3.summary.treatment.fn
+  )
 rq3.summary.treatment.aggregate
 
 experiment.write.latex(rq = 3,
@@ -81,44 +84,48 @@ experiment.write.latex(rq = 3,
 # Subject summary
 print("Descriptive statistics per subject")
 rq3.summary.subject.f1_score <- experiment.subject.summary(dataframe = rq3.dataframe, property = "f1_score", digits = 2)
-rq3.summary.subject.f1_score <- rq3.summary.subject.f1_score[-keep_min_max,]
-experiment.write.latex(rq = 3,
-                       digits = 2,
-                       dataframe = rq3.summary.subject.f1_score,
-                       filename = "summary_subject_f1_score.tex",
-                       caption = "Overview of the F1 Score per subject.",
-                       label = "tab:results:rq3:summary:subject:f1_score")
+rq3.summary.subject.f1_score <- rq3.summary.subject.f1_score[-keep_columns,]
 rownames(rq3.summary.subject.f1_score) <- paste("F1-Score", rownames(rq3.summary.subject.f1_score))
 
 rq3.summary.subject.precision <- experiment.subject.summary(dataframe = rq3.dataframe, property = "precision", digits = 2)
-rq3.summary.subject.precision <- rq3.summary.subject.precision[-keep_min_max,]
+rq3.summary.subject.precision <- rq3.summary.subject.precision[-keep_columns,]
 rownames(rq3.summary.subject.precision) <- paste("Precision", rownames(rq3.summary.subject.precision))
 
 rq3.summary.subject.recall <- experiment.subject.summary(dataframe = rq3.dataframe, property = "recall", digits = 2)
-rq3.summary.subject.recall <- rq3.summary.subject.recall[-keep_min_max,]
+rq3.summary.subject.recall <- rq3.summary.subject.recall[-keep_columns,]
 rownames(rq3.summary.subject.recall) <- paste("Recall", rownames(rq3.summary.subject.recall))
 
 rq3.summary.subject.tp <- experiment.subject.summary(dataframe = rq3.dataframe, property = "true_positive", digits = 2)
-rq3.summary.subject.tp <- rq3.summary.subject.tp[-keep_min_max,]
+rq3.summary.subject.tp <- rq3.summary.subject.tp[-keep_columns,]
 rownames(rq3.summary.subject.tp) <- paste("TP", rownames(rq3.summary.subject.tp))
 
 rq3.summary.subject.fp <- experiment.subject.summary(dataframe = rq3.dataframe, property = "false_positive", digits = 2)
-rq3.summary.subject.fp <- rq3.summary.subject.fp[-keep_min_max,]
+rq3.summary.subject.fp <- rq3.summary.subject.fp[-keep_columns,]
 rownames(rq3.summary.subject.fp) <- paste("FP", rownames(rq3.summary.subject.fp))
 
 rq3.summary.subject.fn <- experiment.subject.summary(dataframe = rq3.dataframe, property = "false_negative", digits = 2)
-rq3.summary.subject.fn <- rq3.summary.subject.fn[-keep_min_max,]
+rq3.summary.subject.fn <- rq3.summary.subject.fn[-keep_columns,]
 rownames(rq3.summary.subject.fn) <- paste("FN", rownames(rq3.summary.subject.fn))
 
-rq3.summary.subject.aggregate <- rbind(rq3.summary.subject.f1_score, rq3.summary.subject.recall, rq3.summary.subject.precision, rq3.summary.subject.tp, rq3.summary.subject.fp, rq3.summary.subject.fn)
-rq3.summary.subject.aggregate
+rq3.summary.subject.aggregate_counts <- rbind(rq3.summary.subject.tp, rq3.summary.subject.fp, rq3.summary.subject.fn)
+rq3.summary.subject.aggregate_counts
+
+rq3.summary.subject.aggregate_score <- rbind(rq3.summary.subject.f1_score, rq3.summary.subject.recall, rq3.summary.subject.precision)
+rq3.summary.subject.aggregate_score
 
 experiment.write.latex(rq = 3,
                        digits = 2,
-                       dataframe = rq3.summary.subject.aggregate,
+                       dataframe = t(rq3.summary.subject.aggregate_score),
+                       filename = "summary_subject_score.tex",
+                       caption = "Overview of the prefetching accuracy per subject.",
+                       label = "tab:results:rq3:summary:subject:score")
+
+experiment.write.latex(rq = 3,
+                       digits = 2,
+                       dataframe = t(rq3.summary.subject.aggregate_counts),
                        filename = "summary_subject.tex",
                        caption = "Overview of the prefetching accuracy per subject.",
-                       label = "tab:results:rq3:summary:subject")
+                       label = "tab:results:rq3:summary:subject:count")
 
 #######################################  Phase 1b Plots ########################################
 print("Generating plots")
@@ -138,7 +145,7 @@ my_plot <- experiment.plot.boxplot(rq3.dataframe,
                                    "F1 Score",
                                    "F1 Score (All subjects)") +
   expand_limits(x = c(0, 1))
-experiment.write.plot(filename = "boxplot_all_f1_score.png", rq = 3)
+experiment.write.plot(filename = "boxplot_f1_score.png", rq = 3)
 
 my_plot <- experiment.plot.boxplot(rq3.dataframe[rq3.filter.non_zero_f1_score,],
                                    "f1_score",
@@ -192,7 +199,7 @@ my_plot <- experiment.plot.violin(rq3.dataframe,
                                   "F1 Score",
                                   "F1 Score (All subjects)") +
   expand_limits(x = c(0, 1))
-experiment.write.plot(filename = "violin_all_f1_score.png", rq = 3)
+experiment.write.plot(filename = "violin_f1_score.png", rq = 3)
 
 # Frequency
 my_plot <- experiment.plot.freqpoly(rq3.dataframe[rq3.filter.non_zero_f1_score,],
@@ -207,5 +214,5 @@ my_plot <- experiment.plot.freqpoly(rq3.dataframe,
                                     "F1 Score",
                                     "F1 Score (All subjects)") +
   expand_limits(x = c(0, 1))
-experiment.write.plot(filename = "freqpoly_all_f1_score.png", rq = 3)
+experiment.write.plot(filename = "freqpoly_f1_score.png", rq = 3)
 
