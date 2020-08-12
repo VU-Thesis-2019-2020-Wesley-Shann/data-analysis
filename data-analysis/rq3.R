@@ -25,6 +25,10 @@ print("Running RQ 1 script")
 print("Reading data")
 rq3.dataframe <- experiment.source.prefetching_accuracy()
 
+rq3.dataframe <- rq3.dataframe[!(rq3.dataframe$subject.id == "NewsBlur (G)" &
+  rq3.dataframe$run.number == 9 &
+  rq3.dataframe$experiment.part == 1),]
+
 #################################################################################################
 #####################################  Phase 1: Exploration #####################################
 #################################################################################################
