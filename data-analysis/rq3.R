@@ -167,6 +167,20 @@ for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
   experiment.write.plot(filename = paste0("boxplot_f1_score_", subject, ".png"), rq = 3)
 }
 
+
+# Recall and precision
+my_plot <- experiment.plot.boxplot(rq3.dataframe[rq3.filter.non_zero_f1_score,],
+                                   "recall",
+                                   "Recall") +
+  expand_limits(x = c(0, 1))
+experiment.write.plot(filename = "boxplot_above_zero_recall.png", rq = 3)
+
+my_plot <- experiment.plot.boxplot(rq3.dataframe[rq3.filter.non_zero_f1_score,],
+                                   "precision",
+                                   "Precision") +
+  expand_limits(x = c(0, 1))
+experiment.write.plot(filename = "boxplot_above_zero_precision.png", rq = 3)
+
 # F1 Score over time
 for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
   for (part in c(1, 2, 3)) {
