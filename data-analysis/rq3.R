@@ -131,7 +131,7 @@ experiment.write.latex(rq = 3,
                        caption = "Overview of the prefetching accuracy per subject.",
                        label = "tab:results:rq3:summary:subject:count")
 
-#######################################  Phase 1b Plots ########################################
+###################################  Phase 1b F1-Score Plots ####################################
 print("Generating plots")
 
 # Filters
@@ -220,3 +220,23 @@ my_plot <- experiment.plot.freqpoly(rq3.dataframe,
   expand_limits(x = c(0, 1))
 experiment.write.plot(filename = "freqpoly_f1_score.png", rq = 3)
 
+###################################  Phase 1b Count Plots ####################################
+my_plot <- experiment.plot.boxplot(rq3.dataframe,
+                                   "true_positive",
+                                   "True Positivie (count)")
+experiment.write.plot(filename = "boxplot_tp.png", rq = 3)
+
+my_plot <- experiment.plot.boxplot(rq3.dataframe,
+                                   "false_negative",
+                                   "False Negative (count)")
+experiment.write.plot(filename = "boxplot_fn.png", rq = 3)
+
+my_plot <- experiment.plot.boxplot(rq3.dataframe[rq3.dataframe$subject.name != "Materialistic",],
+                                   "false_negative",
+                                   "False Negative (count)")
+experiment.write.plot(filename = "boxplot_fn_without_materialistic.png", rq = 3)
+
+my_plot <- experiment.plot.boxplot(rq3.dataframe,
+                                   "false_positive",
+                                   "False Positive (count)")
+experiment.write.plot(filename = "boxplot_fp.png", rq = 3)
