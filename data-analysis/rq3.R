@@ -290,3 +290,34 @@ for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
     experiment.write.plot(filename = paste0("fn_over_runs_", subject, "_part_", part, ".png"), rq = 3)
   }
 }
+
+
+###################################  Phase 1d Avgs ####################################
+
+# Global
+tp1 <- mean(rq3.dataframe$true_positive)
+fp1 <- mean(rq3.dataframe$false_positive)
+fn1 <- mean(rq3.dataframe$false_negative)
+f1_score1 <- tp1 / (tp1 + 1 / 2 * (fp1 + fn1))
+#[1] 0.02837471
+
+# TFPR
+tp2 <- mean(rq3.dataframe[rq3.dataframe$subject.treatment.id == "nappatfpr",]$true_positive)
+fp2 <- mean(rq3.dataframe[rq3.dataframe$subject.treatment.id == "nappatfpr",]$false_positive)
+fn2 <- mean(rq3.dataframe[rq3.dataframe$subject.treatment.id == "nappatfpr",]$false_negative)
+f1_score2 <- tp2 / (tp2 + 1 / 2 * (fp2 + fn2))
+#[1] 0.02847222
+
+# Greedy
+tp3 <- mean(rq3.dataframe[rq3.dataframe$subject.treatment.id == "nappagreedy",]$true_positive)
+fp3 <- mean(rq3.dataframe[rq3.dataframe$subject.treatment.id == "nappagreedy",]$false_positive)
+fn3 <- mean(rq3.dataframe[rq3.dataframe$subject.treatment.id == "nappagreedy",]$false_negative)
+f1_score3 <- tp3 / (tp3 + 1 / 2 * (fp3 + fn3))
+#[1] 0.02827692
+
+# Global where F1-Score > 0
+tp4 <- mean(rq3.dataframe[rq3.filter.non_zero_f1_score,]$true_positive)
+fp4 <- mean(rq3.dataframe[rq3.filter.non_zero_f1_score,]$false_positive)
+fn4 <- mean(rq3.dataframe[rq3.filter.non_zero_f1_score,]$false_negative)
+f1_score4 <- tp4 / (tp4 + 1 / 2 * (fp4 + fn4))
+#[1] 0.03869866
