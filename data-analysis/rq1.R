@@ -834,6 +834,13 @@ rq1.hypothesis.memory.cliff.greedy_tfpr <- cliff.delta(
 #      lower       upper
 #-0.19135289  0.02626994
 
+cliff.delta(android.memory.mb ~ subject.treatment.id, data = rq1.dataframe)
+#delta estimate: -0.3251766 (small)
+#95 percent confidence interval:
+#     lower      upper
+#-0.4318646 -0.2095145
+
+
 experiment.write.text(data = rq1.hypothesis.memory.cliff.baseline_greedy,
                       rq = 1,
                       filename = "hypothesis_memory_cliff_baseline_greedy.txt")

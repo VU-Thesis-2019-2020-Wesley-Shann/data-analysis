@@ -455,6 +455,14 @@ rq2.hypothesis.request.duration.cliff.greedy_tfpr <- cliff.delta(
 #      lower       upper
 #-0.02253259  0.01419413
 
+cliff.delta(request.duration.from_system.ms ~ subject.treatment.id, data = rq2.dataframe)
+#Cliff's Delta
+#
+#delta estimate: -0.198877 (small)
+#95 percent confidence interval:
+#     lower      upper
+#-0.2158209 -0.1818134
+
 experiment.write.text(data = rq2.hypothesis.request.duration.cliff.baseline_greedy,
                       rq = 2,
                       filename = "hypothesis_request_duration_cliff_baseline_greedy.txt")
@@ -542,6 +550,12 @@ rq2.hypothesis.request.duration.cliff.greedy_tfpr <- cliff.delta(
 #95 percent confidence interval:
 #      lower       upper
 #-0.02264651  0.01459840
+
+cliff.delta(request.duration.from_system.ms ~ subject.treatment.id, data = rq2.dataframe_no_materialistic)
+#delta estimate: 0.1810619 (small)
+#95 percent confidence interval:
+#    lower     upper
+#0.1627062 0.1992924
 
 experiment.write.text(data = rq2.hypothesis.request.duration.cliff.baseline_greedy,
                       rq = 2,
