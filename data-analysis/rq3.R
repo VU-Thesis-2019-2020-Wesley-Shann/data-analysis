@@ -240,3 +240,39 @@ my_plot <- experiment.plot.boxplot(rq3.dataframe,
                                    "false_positive",
                                    "False Positive (count)")
 experiment.write.plot(filename = "boxplot_fp.png", rq = 3)
+
+# TP over time
+for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
+  for (part in c(1, 2, 3)) {
+    my_plot <- experiment.plot.line(dataframe = rq3.dataframe[rq3.dataframe$experiment.part == part &
+                                                                rq3.dataframe$subject.name == subject,],
+                                    axis_y_column = "true_positive",
+                                    axis_y_legend = "True Positivie (count)")
+    expand_limits(y = c(0, 1))
+    experiment.write.plot(filename = paste0("tp_over_runs_", subject, "_part_", part, ".png"), rq = 3)
+  }
+}
+
+# FP over time
+for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
+  for (part in c(1, 2, 3)) {
+    my_plot <- experiment.plot.line(dataframe = rq3.dataframe[rq3.dataframe$experiment.part == part &
+                                                                rq3.dataframe$subject.name == subject,],
+                                    axis_y_column = "false_positive",
+                                    axis_y_legend = "False Positivie (count)")
+    expand_limits(y = c(0, 1))
+    experiment.write.plot(filename = paste0("fp_over_runs_", subject, "_part_", part, ".png"), rq = 3)
+  }
+}
+
+# FN over time
+for (subject in c("Antenna Pod", "Hill'Fair", "Materialistic")) {
+  for (part in c(1, 2, 3)) {
+    my_plot <- experiment.plot.line(dataframe = rq3.dataframe[rq3.dataframe$experiment.part == part &
+                                                                rq3.dataframe$subject.name == subject,],
+                                    axis_y_column = "false_negative",
+                                    axis_y_legend = "False Negative (count)")
+    expand_limits(y = c(0, 1))
+    experiment.write.plot(filename = paste0("fn_over_runs_", subject, "_part_", part, ".png"), rq = 3)
+  }
+}
