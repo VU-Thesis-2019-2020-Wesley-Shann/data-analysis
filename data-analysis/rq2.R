@@ -175,20 +175,19 @@ my_plot <- experiment.plot.freqpoly(rq2.dataframe[rq2.filter.no_materialistic,],
                                     "Request duration (Without Materialistic)")
 experiment.write.plot(filename = "freqpoly_request_duration_no_materialistic.png", rq = 2)
 
+rq2.dataframe_no_materialistic <- rq2.dataframe[rq2.filter.no_materialistic,]
 
 #################################################################################################
 #######################  Phase 2: Normality Check and Data Transformation #######################
+######################################  With Materialistic ######################################
 #################################################################################################
 
-print("Phase 2. Normality Check and Data Transformation")
+print("Phase 2. Normality Check and Data Transformation (with Materialistic)")
 
 # Metric                  Method        p-value     is normal (p-value > 0.05)
 # -----                   ------        -------     --------------------------
 # Request duration        N/A           2.2e-16     no
-# Request duration        squard        2.2e-16     no
-# Request duration        N/A           2.2e-16     no
-# (without Materialistic) ----------------------------------------------------
-
+# Request duration        all           2.2e-16     no
 
 ##################################  Phase 2a Normality check ####################################
 print("Check normality")
@@ -214,47 +213,16 @@ ks.test(rq2.dataframe$request.duration.from_system.ms, y="pnorm")
 #data:  rq2.dataframe$request.duration.from_system.ms
 #D = 0.97364, p-value < 2.2e-16
 #alternative hypothesis: two-sided
+
 shapiro.test(my_sample$request.duration.from_system.ms)
 #	Shapiro-Wilk normality test
 #
 #data:  my_sample$request.duration.from_system.ms
 #W = 0.83658, p-value < 2.2e-16
+
 experiment.write.text(data = shapiro.test(my_sample$request.duration.from_system.ms),
                       filename = "test_shapiro_request_duration_sampled.txt",
                       rq = 2)
-
-
-# No materialistic
-my_plot <- experiment.plot.qqplot(rq2.dataframe[rq2.filter.no_materialistic,],
-                                  "request.duration.from_system.ms",
-                                  "Request duration (ms)",
-                                  "Request duration (Without Materialistic)")
-experiment.write.plot(filename = "qqplot_request_duration_no_materialistic.png", rq = 2)
-
-my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe[rq2.filter.no_materialistic,]), 5000, replace = FALSE),]
-
-my_plot <- experiment.plot.qqplot(my_sample,
-                                  "request.duration.from_system.ms",
-                                  "Request duration (ms)",
-                                  "Request duration (Without Materialistic)")
-experiment.write.plot(filename = "qqplot_request_duration_sampled_no_materialistic.png", rq = 2)
-
-shapiro.test(my_sample$request.duration.from_system.ms)
-#	Shapiro-Wilk normality test
-#
-#data:  my_sample$request.duration.from_system.ms
-#W = 0.75573, p-value < 2.2e-16
-experiment.write.text(data = shapiro.test(my_sample$request.duration.from_system.ms),
-                      filename = "test_shapiro_request_duration_sampled_no_materialistic.txt",
-                      rq = 2)
-
-
-# Prefetch only
-my_plot <- experiment.plot.qqplot(rq2.dataframe[rq2.filter.with_prefetch_only,],
-                                  "request.duration.from_system.ms",
-                                  "Request duration (ms)",
-                                  "Request duration")
-experiment.write.plot(filename = "qqplot_request_duration_prefetch_only.png", rq = 2)
 
 ##################################  Phase 2a Data Transformation ####################################
 
@@ -292,7 +260,7 @@ shapiro.test(my_sample$request.duration.from_system.ms.inverse)
 my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE),]
 my_sample_tukey <- transformTukey(my_sample$request.duration.from_system.ms, plotit = FALSE)
 #    lambda     W Shapiro.p.value
-#416  0.375 0.986       7.155e-22
+#416  0.375 0.9854       2.659e-22
 #
 #if (lambda >  0){TRANS = x ^ lambda}
 #if (lambda == 0){TRANS = log(x)}
@@ -310,6 +278,111 @@ rq2.dataframe$request.duration.from_system.ms.box <- (rq2.dataframe$request.dura
 my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe), 5000, replace = FALSE),]
 shapiro.test(my_sample$request.duration.from_system.ms.box)
 #W = 0.98396, p-value < 2.2e-16
+
+#################################################################################################
+#######################  Phase 2: Normality Check and Data Transformation #######################
+####################################  Without Materialistic #####################################
+#################################################################################################
+
+print("Phase 2. Normality Check and Data Transformation (without Materialistic)")
+
+# Metric                  Method        p-value     is normal (p-value > 0.05)
+# -----                   ------        -------     --------------------------
+# Request duration        N/A           2.2e-16     no
+# Request duration        All           2.2e-16     no
+
+##################################  Phase 2a Normality check ####################################
+print("Check normality")
+
+# All
+my_plot <- experiment.plot.qqplot(rq2.dataframe_no_materialistic,
+                                  "request.duration.from_system.ms",
+                                  "Request duration (ms)",
+                                  "Request duration")
+experiment.write.plot(filename = "qqplot_request_duration_without_materialistic.png", rq = 2)
+
+my_sample <- rq2.dataframe[sample(nrow(rq2.dataframe_no_materialistic), 5000, replace = FALSE),]
+
+my_plot <- experiment.plot.qqplot(my_sample,
+                                  "request.duration.from_system.ms",
+                                  "Request duration (ms)",
+                                  "Request duration")
+experiment.write.plot(filename = "qqplot_request_duration_without_materialistic_sampled.png", rq = 2)
+
+ks.test(rq2.dataframe_no_materialistic$request.duration.from_system.ms, y="pnorm")
+#	One-sample Kolmogorov-Smirnov test
+#
+#data:  rq2.dataframe$request.duration.from_system.ms
+#D = 0.97166, p-value < 2.2e-16
+#alternative hypothesis: two-sided
+
+shapiro.test(my_sample$request.duration.from_system.ms)
+#	Shapiro-Wilk normality test
+#
+#data:  my_sample$request.duration.from_system.ms
+#W = 0.76782, p-value < 2.2e-16
+
+experiment.write.text(data = shapiro.test(my_sample$request.duration.from_system.ms),
+                      filename = "test_shapiro_request_duration_without_materialistic_sampled.txt",
+                      rq = 2)
+
+##################################  Phase 2a Data Transformation ####################################
+
+# Request duration ~ Natural log
+rq2.dataframe_no_materialistic$request.duration.from_system.ms.log <- log(rq2.dataframe_no_materialistic$request.duration.from_system.ms)
+my_sample <- rq2.dataframe_no_materialistic[sample(nrow(rq2.dataframe_no_materialistic), 5000, replace = FALSE),]
+shapiro.test(my_sample$request.duration.from_system.ms.log)
+#W = 0.76521, p-value < 2.2e-16
+
+# Request duration ~ squared
+rq2.dataframe_no_materialistic$request.duration.from_system.ms.squared <- rq2.dataframe_no_materialistic$request.duration.from_system.ms^2
+my_sample <- rq2.dataframe_no_materialistic[sample(nrow(rq2.dataframe_no_materialistic), 5000, replace = FALSE),]
+shapiro.test(my_sample$request.duration.from_system.ms.squared)
+# W = 0.50405, p-value < 2.2e-16
+
+# Request duration ~ square root
+rq2.dataframe_no_materialistic$request.duration.from_system.ms.sqrt <- sqrt(rq2.dataframe_no_materialistic$request.duration.from_system.ms)
+my_sample <- rq2.dataframe_no_materialistic[sample(nrow(rq2.dataframe_no_materialistic), 5000, replace = FALSE),]
+shapiro.test(my_sample$request.duration.from_system.ms.sqrt)
+# W = 0.96983, p-value < 2.2e-16
+
+# Request duration ~ cube root
+rq2.dataframe_no_materialistic$request.duration.from_system.ms.cube <- sign(rq2.dataframe_no_materialistic$request.duration.from_system.ms) * abs(rq2.dataframe_no_materialistic$request.duration.from_system.ms)^(1 / 3)
+my_sample <- rq2.dataframe_no_materialistic[sample(nrow(rq2.dataframe_no_materialistic), 5000, replace = FALSE),]
+shapiro.test(my_sample$request.duration.from_system.ms.cube)
+#W = 0.93996, p-value < 2.2e-16
+
+# Request duration ~ inverse
+rq2.dataframe_no_materialistic$request.duration.from_system.ms.inverse <- 1 / rq2.dataframe_no_materialistic$request.duration.from_system.ms
+my_sample <- rq2.dataframe_no_materialistic[sample(nrow(rq2.dataframe_no_materialistic), 5000, replace = FALSE),]
+shapiro.test(my_sample$request.duration.from_system.ms.inverse)
+#W = 0.39763, p-value < 2.2e-16
+
+# Request duration ~ Tukey’s Ladder of Powers transformation
+my_sample <- rq2.dataframe_no_materialistic[sample(nrow(rq2.dataframe_no_materialistic), 5000, replace = FALSE),]
+my_sample_tukey <- transformTukey(my_sample$request.duration.from_system.ms, plotit = FALSE)
+#    lambda     W Shapiro.p.value
+#424  0.575 0.9722       4.172e-30
+#
+#if (lambda >  0){TRANS = x ^ lambda}
+#if (lambda == 0){TRANS = log(x)}
+#if (lambda <  0){TRANS = -1 * x ^ lambda}
+shapiro.test(my_sample_tukey)
+#W = 0.9722, p-value < 2.2e-16
+
+# Request duration ~ Box–Cox transformation
+Box <- boxcox(rq2.dataframe_no_materialistic$request.duration.from_system.ms ~ 1, lambda = seq(-6, 6, 0.1))
+Cox <- data.frame(Box$x, Box$y)
+Cox2 <- Cox[with(Cox, order(-Cox$Box.y)),]
+Cox2[1,]
+#   Box.x     Box.y
+#65   0.4 -118324.9
+lambda <- Cox2[1, "Box.x"]
+rq2.dataframe_no_materialistic$request.duration.from_system.ms.box <- (rq2.dataframe_no_materialistic$request.duration.from_system.ms^lambda - 1) / lambda
+my_sample <- rq2.dataframe_no_materialistic[sample(nrow(rq2.dataframe_no_materialistic), 5000, replace = FALSE),]
+shapiro.test(my_sample$request.duration.from_system.ms.box)
+#W = 0.95695, p-value < 2.2e-16
+
 
 #################################################################################################
 #################################### Phase 3: Hypothesis Test ###################################
