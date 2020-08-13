@@ -248,6 +248,44 @@ my_plot <- experiment.plot.freqpoly(rq4.dataframe,
   expand_limits(x = c(0, 1))
 experiment.write.plot(filename = "navigation_freqpoly_f1_score.png", rq = 4)
 
+# Cases
+
+my_plot <- experiment.plot.boxplot(rq4.dataframe,
+                                   "count.cases",
+                                   "Count of predicition triggers") +
+  expand_limits(x = c(0, 1))
+experiment.write.plot(filename = "navigation_boxplot_count_case.png", rq = 4)
+
+my_plot <- experiment.plot.boxplot(rq4.dataframe,
+                                   "count.exception",
+                                   "Count of exceptions") +
+  expand_limits(x = c(0, 1))
+experiment.write.plot(filename = "navigation_boxplot_count_exception.png", rq = 4)
+
+my_plot <- experiment.plot.boxplot(rq4.dataframe,
+                                   "count.hits",
+                                   "Count of hits") +
+  expand_limits(x = c(0, 1))
+experiment.write.plot(filename = "navigation_boxplot_count_hits.png", rq = 4)
+
+my_plot <- experiment.plot.boxplot(rq4.dataframe,
+                                   "count.misses",
+                                   "Count of misses") +
+  expand_limits(x = c(0, 1))
+experiment.write.plot(filename = "navigation_boxplot_count_misses.png", rq = 4)
+
+my_plot <- experiment.plot.boxplot(rq4.dataframe,
+                                   "count.insufficient_score",
+                                   "Count of insufficient score") +
+  expand_limits(x = c(0, 1))
+experiment.write.plot(filename = "navigation_boxplot_count_insufficient_score.png", rq = 4)
+
+
+my_plot <- experiment.plot.boxplot(rq4.dataframe,
+                                   "count.no_sucessor",
+                                   "Count of no successors") +
+  expand_limits(x = c(0, 1))
+experiment.write.plot(filename = "navigation_boxplot_count_no_sucessor.png", rq = 4)
 
 #################################################################################################
 #######################  Phase 2: Normality Check and Data Transformation #######################
