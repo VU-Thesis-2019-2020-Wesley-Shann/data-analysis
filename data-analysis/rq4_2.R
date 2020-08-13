@@ -58,34 +58,34 @@ colnames(rq4_2.runs) <- c("Subject", "Greedy", "TFPR")
 
 ################################  Phase 1a Descriptive statistics ###############################
 
-rq0.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq4_2.dataframe, property = "strategy.duration.ms", digits = 2)
+rq4_2summary.treatment.duration <- experiment.treatment.summary(dataframe = rq4_2.dataframe, property = "strategy.duration.ms", digits = 2)
 
 experiment.write.latex(rq = "4_2",
-                       dataframe = t(rq0.summary.treatment.duration),
+                       dataframe = t(rq4_2summary.treatment.duration),
                        filename = "unpet_summary-duration.tex",
                        caption = "Overview of the strategy duration (s).",
                        label = "tab:results:rq0:summary:duration")
 
-rq0.summary.subject.duration <- experiment.subject.summary(dataframe = rq4_2.dataframe, property = "strategy.duration.ms", digits = 2)
+rq4_2summary.subject.duration <- experiment.subject.summary(dataframe = rq4_2.dataframe, property = "strategy.duration.ms", digits = 2)
 
 experiment.write.latex(rq = "4_2",
-                       dataframe = t(rq0.summary.subject.duration),
+                       dataframe = t(rq4_2summary.subject.duration),
                        filename = "unpet_summary-duration_subject.tex",
                        caption = "Overview of the strategy duration (s).",
                        label = "tab:results:rq0:summary:duration_subject")
 
-rq0.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq4_2.dataframe, property = "strategy.duration.micro_s", digits = 2)
+rq4_2summary.treatment.duration <- experiment.treatment.summary(dataframe = rq4_2.dataframe, property = "strategy.duration.micro_s", digits = 2)
 
 experiment.write.latex(rq = "4_2",
-                       dataframe = t(rq0.summary.treatment.duration),
+                       dataframe = t(rq4_2summary.treatment.duration),
                        filename = "unpet_summary-duration_us.tex",
                        caption = "Overview of the strategy duration (us).",
                        label = "tab:results:rq0:summary:duration")
 
-rq0.summary.subject.duration <- experiment.subject.summary(dataframe = rq4_2.dataframe, property = "strategy.duration.micro_s", digits = 2)
+rq4_2summary.subject.duration <- experiment.subject.summary(dataframe = rq4_2.dataframe, property = "strategy.duration.micro_s", digits = 2)
 
 experiment.write.latex(rq = "4_2",
-                       dataframe = t(rq0.summary.subject.duration),
+                       dataframe = t(rq4_2summary.subject.duration),
                        filename = "unpet_summary-duration_us_subject.tex",
                        caption = "Overview of the strategy duration (us).",
                        label = "tab:results:rq0:summary:duration_subject")
@@ -204,26 +204,26 @@ print("Phase 3. Hypothesis Test")
 # Duration        Mann-Whitney      0.0001294   yes
 
 
-rq0.filter.greedy <- rq4_2.dataframe$subject.treatment.id == "nappagreedy"
-rq0.filter.tfpr <- rq4_2.dataframe$subject.treatment.id == "nappatfpr"
+rq4_2filter.greedy <- rq4_2.dataframe$subject.treatment.id == "nappagreedy"
+rq4_2filter.tfpr <- rq4_2.dataframe$subject.treatment.id == "nappatfpr"
 
 ######################################### 3a: Duration  ########################################
 
 # Duration  ~ not normal ~ Mann-Whitney
-rq0.hypothesis.duration_all.whitney <- wilcox.test(rq4_2.dataframe[rq0.filter.greedy,]$strategy.duration.ms,
-                                                   rq4_2.dataframe[rq0.filter.tfpr,]$strategy.duration.ms)
+rq4_2hypothesis.duration_all.whitney <- wilcox.test(rq4_2.dataframe[rq4_2filter.greedy,]$strategy.duration.ms,
+                                                   rq4_2.dataframe[rq4_2filter.tfpr,]$strategy.duration.ms)
 #	Wilcoxon rank sum test with continuity correction
 #
-#data:  rq4_2.dataframe[rq0.filter.greedy, ]$strategy.duration.ms and rq4_2.dataframe[rq0.filter.tfpr, ]$strategy.duration.ms
+#data:  rq4_2.dataframe[rq4_2filter.greedy, ]$strategy.duration.ms and rq4_2.dataframe[rq4_2filter.tfpr, ]$strategy.duration.ms
 #W = 12012386, p-value = 0.0001294
 #alternative hypothesis: true location shift is not equal to 0
-experiment.write.text(data = rq0.hypothesis.duration_all.whitney,
+experiment.write.text(data = rq4_2hypothesis.duration_all.whitney,
                       rq = "4_2",
                       filename = "unpet_hypothesis_duration_whitney.txt")
 
 cliff.delta(
-  rq4_2.dataframe[rq0.filter.greedy,]$strategy.duration.ms,
-  rq4_2.dataframe[rq0.filter.tfpr,]$strategy.duration.ms)
+  rq4_2.dataframe[rq4_2filter.greedy,]$strategy.duration.ms,
+  rq4_2.dataframe[rq4_2filter.tfpr,]$strategy.duration.ms)
 #Cliff's Delta
 #
 #delta estimate: 0.0451369 (negligible)
