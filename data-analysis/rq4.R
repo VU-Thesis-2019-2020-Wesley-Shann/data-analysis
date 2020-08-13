@@ -25,6 +25,10 @@ print("Running RQ 1 script")
 print("Reading data")
 rq4.dataframe <- experiment.source.strategy_accuracy()
 
+rq4.dataframe <- rq4.dataframe[!(rq4.dataframe$subject.id == "NewsBlur (G)" &
+  rq4.dataframe$run.number == 9 &
+  rq4.dataframe$experiment.part == 1),]
+
 #################################################################################################
 #####################################  Phase 1: Exploration #####################################
 #################################################################################################
