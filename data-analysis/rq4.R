@@ -40,6 +40,7 @@ remove_min_max_mean <- c(2, 3, 5)
 rempve_min_max_median <- c(2, 4, 5)
 keep_min_max <- c(1, 6)
 rows_to_drop_from_summary <- c(2, 5)
+rows_to_drop_from_summary_count <- c(2, 3, 4, 5)
 
 # Per treatment
 print("Descriptive statistics per treatment")
@@ -84,27 +85,27 @@ experiment.write.latex(rq = 4,
                        label = "tab:results:rq4:summary:treatment")
 
 rq4.summary.treatment.count_execution <- experiment.treatment.summary(dataframe = rq4.dataframe, property = "count.execution", digits = 2)
-rq4.summary.treatment.count_execution <- rq4.summary.treatment.count_execution[keep_min_max,]
+rq4.summary.treatment.count_execution <- rq4.summary.treatment.count_execution[-rows_to_drop_from_summary_count,]
 rownames(rq4.summary.treatment.count_execution) <- paste("Execution", rownames(rq4.summary.treatment.count_execution))
 
 rq4.summary.treatment.count_exception <- experiment.treatment.summary(dataframe = rq4.dataframe, property = "count.exception", digits = 2)
-rq4.summary.treatment.count_exception <- rq4.summary.treatment.count_exception[-rows_to_drop_from_summary,]
+rq4.summary.treatment.count_exception <- rq4.summary.treatment.count_exception[-rows_to_drop_from_summary_count,]
 rownames(rq4.summary.treatment.count_exception) <- paste("Exceptions", rownames(rq4.summary.treatment.count_exception))
 
 rq4.summary.treatment.count_no_sucessor <- experiment.treatment.summary(dataframe = rq4.dataframe, property = "count.no_sucessor", digits = 2)
-rq4.summary.treatment.count_no_sucessor <- rq4.summary.treatment.count_no_sucessor[-rows_to_drop_from_summary,]
+rq4.summary.treatment.count_no_sucessor <- rq4.summary.treatment.count_no_sucessor[-rows_to_drop_from_summary_count,]
 rownames(rq4.summary.treatment.count_no_sucessor) <- paste("No sucessor", rownames(rq4.summary.treatment.count_no_sucessor))
 
 rq4.summary.treatment.count_hits <- experiment.treatment.summary(dataframe = rq4.dataframe, property = "count.hits", digits = 2)
-rq4.summary.treatment.count_hits <- rq4.summary.treatment.count_hits[-rows_to_drop_from_summary,]
+rq4.summary.treatment.count_hits <- rq4.summary.treatment.count_hits[-rows_to_drop_from_summary_count,]
 rownames(rq4.summary.treatment.count_hits) <- paste("Hits", rownames(rq4.summary.treatment.count_hits))
 
 rq4.summary.treatment.count_insufficient_score <- experiment.treatment.summary(dataframe = rq4.dataframe, property = "count.insufficient_score", digits = 2)
-rq4.summary.treatment.count_insufficient_score <- rq4.summary.treatment.count_insufficient_score[-rows_to_drop_from_summary,]
+rq4.summary.treatment.count_insufficient_score <- rq4.summary.treatment.count_insufficient_score[-rows_to_drop_from_summary_count,]
 rownames(rq4.summary.treatment.count_insufficient_score) <- paste("Insufficient score", rownames(rq4.summary.treatment.count_insufficient_score))
 
 rq4.summary.treatment.count_misses <- experiment.treatment.summary(dataframe = rq4.dataframe, property = "count.misses", digits = 2)
-rq4.summary.treatment.count_misses <- rq4.summary.treatment.count_misses[-rows_to_drop_from_summary,]
+rq4.summary.treatment.count_misses <- rq4.summary.treatment.count_misses[-rows_to_drop_from_summary_count,]
 rownames(rq4.summary.treatment.count_misses) <- paste("Misses", rownames(rq4.summary.treatment.count_misses))
 
 rq4.summary.treatment.aggregate2 <- rbind(
