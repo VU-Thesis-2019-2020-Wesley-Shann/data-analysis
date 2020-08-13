@@ -40,7 +40,8 @@ remove_min_max_mean <- c(2, 3, 5)
 rempve_min_max_median <- c(2, 4, 5)
 keep_min_max <- c(1, 6)
 rows_to_drop_from_summary <- c(2, 5)
-rows_to_drop_from_summary_count <- c(2, 3, 4, 5)
+#rows_to_drop_from_summary_count <- c(2, 3, 4, 5)
+rows_to_drop_from_summary_count <- c(1, 2, 3, 5, 6)
 
 # Per treatment
 print("Descriptive statistics per treatment")
@@ -168,27 +169,27 @@ experiment.write.latex(rq = 4,
                        label = "tab:results:rq4:summary:subject")
 
 rq4.summary.subject.count_execution <- experiment.subject.summary(dataframe = rq4.dataframe, property = "count.execution", digits = 2)
-rq4.summary.subject.count_execution <- rq4.summary.subject.count_execution[keep_min_max,]
+rq4.summary.subject.count_execution <- rq4.summary.subject.count_execution[-rows_to_drop_from_summary_count,]
 rownames(rq4.summary.subject.count_execution) <- paste("Execution", rownames(rq4.summary.subject.count_execution))
 
 rq4.summary.subject.count_exception <- experiment.subject.summary(dataframe = rq4.dataframe, property = "count.exception", digits = 2)
-rq4.summary.subject.count_exception <- rq4.summary.subject.count_exception[-rows_to_drop_from_summary,]
+rq4.summary.subject.count_exception <- rq4.summary.subject.count_exception[-rows_to_drop_from_summary_count,]
 rownames(rq4.summary.subject.count_exception) <- paste("Exceptions", rownames(rq4.summary.subject.count_exception))
 
 rq4.summary.subject.count_no_sucessor <- experiment.subject.summary(dataframe = rq4.dataframe, property = "count.no_sucessor", digits = 2)
-rq4.summary.subject.count_no_sucessor <- rq4.summary.subject.count_no_sucessor[-rows_to_drop_from_summary,]
+rq4.summary.subject.count_no_sucessor <- rq4.summary.subject.count_no_sucessor[-rows_to_drop_from_summary_count,]
 rownames(rq4.summary.subject.count_no_sucessor) <- paste("No sucessor", rownames(rq4.summary.subject.count_no_sucessor))
 
 rq4.summary.subject.count_hits <- experiment.subject.summary(dataframe = rq4.dataframe, property = "count.hits", digits = 2)
-rq4.summary.subject.count_hits <- rq4.summary.subject.count_hits[-rows_to_drop_from_summary,]
+rq4.summary.subject.count_hits <- rq4.summary.subject.count_hits[-rows_to_drop_from_summary_count,]
 rownames(rq4.summary.subject.count_hits) <- paste("Hits", rownames(rq4.summary.subject.count_hits))
 
 rq4.summary.subject.count_insufficient_score <- experiment.subject.summary(dataframe = rq4.dataframe, property = "count.insufficient_score", digits = 2)
-rq4.summary.subject.count_insufficient_score <- rq4.summary.subject.count_insufficient_score[-rows_to_drop_from_summary,]
+rq4.summary.subject.count_insufficient_score <- rq4.summary.subject.count_insufficient_score[-rows_to_drop_from_summary_count,]
 rownames(rq4.summary.subject.count_insufficient_score) <- paste("Insufficient score", rownames(rq4.summary.subject.count_insufficient_score))
 
 rq4.summary.subject.count_misses <- experiment.subject.summary(dataframe = rq4.dataframe, property = "count.misses", digits = 2)
-rq4.summary.subject.count_misses <- rq4.summary.subject.count_misses[-rows_to_drop_from_summary,]
+rq4.summary.subject.count_misses <- rq4.summary.subject.count_misses[-rows_to_drop_from_summary_count,]
 rownames(rq4.summary.subject.count_misses) <- paste("Misses", rownames(rq4.summary.subject.count_misses))
 
 rq4.summary.subject.aggregate2 <- rbind(
@@ -203,7 +204,7 @@ rq4.summary.subject.aggregate2
 
 experiment.write.latex(rq = 4,
                        digits = 2,
-                       dataframe = rq4.summary.subject.aggregate2,
+                       dataframe = t(rq4.summary.subject.aggregate2),
                        filename = "navigation_summary_subject_cases.tex",
                        caption = "Overview of the prediction results per subject.",
                        label = "tab:results:rq4:summary:subject:counts")
