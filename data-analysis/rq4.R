@@ -253,9 +253,15 @@ experiment.write.plot(filename = "navigation_freqpoly_f1_score.png", rq = 4)
 
 my_plot <- experiment.plot.boxplot(rq4.dataframe,
                                    "count.cases",
-                                   "Count of predicition triggers") +
+                                   "Count of cases") +
   expand_limits(x = c(0, 1))
 experiment.write.plot(filename = "navigation_boxplot_count_case.png", rq = 4)
+
+my_plot <- experiment.plot.boxplot(rq4.dataframe,
+                                   "count.execution",
+                                   "Count of execution") +
+  expand_limits(x = c(0, 1))
+experiment.write.plot(filename = "navigation_boxplot_count_execution.png", rq = 4)
 
 my_plot <- experiment.plot.boxplot(rq4.dataframe,
                                    "count.exception",
