@@ -215,8 +215,16 @@ rq4_2hypothesis.duration_all.whitney <- wilcox.test(rq4_2.dataframe[rq4_2filter.
 #	Wilcoxon rank sum test with continuity correction
 #
 #data:  rq4_2.dataframe[rq4_2filter.greedy, ]$strategy.duration.ms and rq4_2.dataframe[rq4_2filter.tfpr, ]$strategy.duration.ms
-#W = 12012386, p-value = 0.0001294
+#W = 11966732, p-value = 0.0001148
 #alternative hypothesis: true location shift is not equal to 0
+
+wilcox.test(strategy.duration.ms ~ subject.treatment.id, data = rq4_2.dataframe)
+#	Wilcoxon rank sum test with continuity correction
+#
+#data:  strategy.duration.ms by subject.treatment.id
+#W = 11966732, p-value = 0.0001148
+#alternative hypothesis: true location shift is not equal to 0
+
 experiment.write.text(data = rq4_2hypothesis.duration_all.whitney,
                       rq = "4_2",
                       filename = "unpet_hypothesis_duration_whitney.txt")
@@ -226,7 +234,15 @@ cliff.delta(
   rq4_2.dataframe[rq4_2filter.tfpr,]$strategy.duration.ms)
 #Cliff's Delta
 #
-#delta estimate: 0.0451369 (negligible)
+#delta estimate: 0.04553116 (negligible)
 #95 percent confidence interval:
 #     lower      upper
-#0.01836770 0.07184144
+#0.01876379 0.07223331
+
+cliff.delta(strategy.duration.ms ~ subject.treatment.id, data = rq4_2.dataframe)
+#Cliff's Delta
+#
+#delta estimate: 0.04553116 (negligible)
+#95 percent confidence interval:
+#     lower      upper
+#0.01876379 0.07223331
