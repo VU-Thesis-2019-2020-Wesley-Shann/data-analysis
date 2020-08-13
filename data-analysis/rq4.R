@@ -221,6 +221,18 @@ my_plot <- experiment.plot.boxplot(rq4.dataframe,
   expand_limits(x = c(0, 1))
 experiment.write.plot(filename = "navigation_boxplot_f1_score.png", rq = 4)
 
+my_plot <- experiment.plot.boxplot(rq4.dataframe,
+                                   "precision",
+                                   "Precision") +
+  expand_limits(x = c(0, 1))
+experiment.write.plot(filename = "navigation_boxplot_precision.png", rq = 4)
+
+my_plot <- experiment.plot.boxplot(rq4.dataframe,
+                                   "recall",
+                                   "Recall") +
+  expand_limits(x = c(0, 1))
+experiment.write.plot(filename = "navigation_boxplot_recall.png", rq = 4)
+
 # F1 Score over time
 for (subject in levels(rq4.dataframe$subject.name)) {
   for (part in c(1, 2, 3)) {
