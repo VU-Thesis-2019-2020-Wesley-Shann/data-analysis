@@ -24,6 +24,10 @@ source("util/plot.R")
 
 rq0.dataframe <- experiment.source.prefetching_strategy_execution_time()
 
+rq0.dataframe <- rq0.dataframe[!(rq0.dataframe$subject.id == "NewsBlur (G)" &
+  rq0.dataframe$run.number == 9 &
+  rq0.dataframe$experiment.part == 1),]
+
 ################################  Phase 1a Descriptive statistics ###############################
 
 rq0.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq0.dataframe, property = "strategy.duration.ms", digits = 2)
