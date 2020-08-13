@@ -121,7 +121,7 @@ rq4.summary.treatment.aggregate2
 
 experiment.write.latex(rq = 4,
                        digits = 2,
-                       dataframe = rq4.summary.treatment.aggregate2,
+                       dataframe = t(rq4.summary.treatment.aggregate2),
                        filename = "navigation_summary_treatment_cases.tex",
                        caption = "Overview of the prediction results per treatment.",
                        label = "tab:results:rq4:summary:treatment:counts")
