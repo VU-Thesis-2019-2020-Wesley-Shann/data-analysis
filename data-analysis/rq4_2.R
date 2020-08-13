@@ -62,7 +62,7 @@ rq0.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq4_2
 
 experiment.write.latex(rq = "4_2",
                        dataframe = t(rq0.summary.treatment.duration),
-                       filename = "summary-duration.tex",
+                       filename = "unpet_summary-duration.tex",
                        caption = "Overview of the strategy duration.",
                        label = "tab:results:rq0:summary:duration")
 
@@ -70,7 +70,7 @@ rq0.summary.subject.duration <- experiment.subject.summary(dataframe = rq4_2.dat
 
 experiment.write.latex(rq = "4_2",
                        dataframe = t(rq0.summary.subject.duration),
-                       filename = "summary-duration_subject.tex",
+                       filename = "unpet_summary-duration_subject.tex",
                        caption = "Overview of the strategy duration.",
                        label = "tab:results:rq0:summary:duration_subject")
 
@@ -81,19 +81,19 @@ my_plot <- experiment.plot.boxplot(rq4_2.dataframe,
                                    "strategy.duration.ms",
                                    "Strategy duration (ms)",
                                    "Strategy duration")
-experiment.write.plot(filename = "boxplot_duration.png", rq = "4_2")
+experiment.write.plot(filename = "unpet_boxplot_duration.png", rq = "4_2")
 
 my_plot <- experiment.plot.violin(rq4_2.dataframe,
                                   "strategy.duration.ms",
                                   "Strategy duration (ms)",
                                   "Strategy duration")
-experiment.write.plot(filename = "violin_duration.png", rq = "4_2")
+experiment.write.plot(filename = "unpet_violin_duration.png", rq = "4_2")
 
 my_plot <- experiment.plot.freqpoly(rq4_2.dataframe,
                                     "strategy.duration.ms",
                                     "Strategy duration (ms)",
                                     "Strategy duration")
-experiment.write.plot(filename = "freqpoly_duration.png", rq = "4_2")
+experiment.write.plot(filename = "unpet_freqpoly_duration.png", rq = "4_2")
 
 
 #################################################################################################
@@ -112,14 +112,14 @@ my_plot <- experiment.plot.qqplot(rq4_2.dataframe,
                                   "strategy.duration.ms",
                                   "Strategy duration (ms)",
                                   "Strategy duration")
-experiment.write.plot(filename = "qqplot_duration.png", rq = "4_2")
+experiment.write.plot(filename = "unpet_qqplot_duration.png", rq = "4_2")
 
 my_sample <- rq4_2.dataframe[sample(nrow(rq4_2.dataframe), 5000, replace = FALSE),]
 shapiro.test(my_sample$strategy.duration.ms)
 #W = 0.46567, p-value < 2.2e-16
 
 experiment.write.text(data = shapiro.test(my_sample$strategy.duration.ms),
-                      filename = "test_shapiro_duration_sample.txt",
+                      filename = "unpet_test_shapiro_duration_sample.txt",
                       rq = "4_2")
 
 ##################################  Phase 2a Data Transformation ####################################
@@ -203,7 +203,7 @@ rq0.hypothesis.duration_all.whitney <- wilcox.test(rq4_2.dataframe[rq0.filter.gr
 #alternative hypothesis: true location shift is not equal to 0
 experiment.write.text(data = rq0.hypothesis.duration_all.whitney,
                       rq = "4_2",
-                      filename = "hypothesis_duration_whitney.txt")
+                      filename = "unpet_hypothesis_duration_whitney.txt")
 
 cliff.delta(
   rq4_2.dataframe[rq0.filter.greedy,]$strategy.duration.ms,
