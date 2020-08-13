@@ -327,7 +327,7 @@ my_plot <- experiment.plot.qqplot(rq4.dataframe,
 experiment.write.plot(filename = "navigation_qqplot_f1_score.png", rq = 4)
 
 shapiro.test(rq4.dataframe$f1_score)
-# W = 0.93079, p-value = 4.917e-13
+# W = 0.93086, p-value = 5.218e-13
 experiment.write.text(data = shapiro.test(rq4.dataframe$f1_score),
                       filename = "navigation_test_shapiro_f1_score.txt",
                       rq = 4)
@@ -337,38 +337,38 @@ experiment.write.text(data = shapiro.test(rq4.dataframe$f1_score),
 # F1 Score ~ Natural log
 rq4.dataframe$f1_score.log <- log(rq4.dataframe$f1_score)
 shapiro.test(rq4.dataframe$f1_score.log)
-# W = 0.84972, p-value < 2.2e-16
+# W = 0.85016, p-value < 2.2e-16
 
 # F1 Score ~ squared
 rq4.dataframe$f1_score.squared <- rq4.dataframe$f1_score^2
 shapiro.test(rq4.dataframe$f1_score.squared)
-# W = 0.9266, p-value = 1.757e-13
+# W = 0.9264, p-value = 1.749e-13
 
 # F1 Score ~ square root
 rq4.dataframe$f1_score.sqrt <- sqrt(rq4.dataframe$f1_score)
 shapiro.test(rq4.dataframe$f1_score.sqrt)
-# W = 0.90067, p-value = 6.504e-16
+# W = 0.90094, p-value = 7.186e-16
 
 # F1 Score ~ cube root
 rq4.dataframe$f1_score.cube <- sign(rq4.dataframe$f1_score) * abs(rq4.dataframe$f1_score)^(1 / 3)
 shapiro.test(rq4.dataframe$f1_score.cube)
-# W = 0.88583, p-value < 2.2e-16
+# W = 0.88615, p-value < 2.2e-16
 
 # F1 Score ~ inverse
 rq4.dataframe$f1_score.inverse <- 1 / rq4.dataframe$f1_score
 shapiro.test(rq4.dataframe$f1_score.inverse)
-# W = 0.70168, p-value < 2.2e-16
+# W = 0.70231, p-value < 2.2e-16
 
 # F1 Score ~ Tukey’s Ladder of Powers transformation
 rq4.dataframe$f1_score.tukey <- transformTukey(rq4.dataframe$f1_score, plotit = FALSE)
 #    lambda      W Shapiro.p.value
-#458  1.425 0.9389       4.035e-12
+#458  1.425 0.9388       4.114e-12
 #
 #if (lambda >  0){TRANS = x ^ lambda}
 #if (lambda == 0){TRANS = log(x)}
 #if (lambda <  0){TRANS = -1 * x ^ lambda}
 shapiro.test(rq4.dataframe$f1_score.tukey)
-#W = 0.93886, p-value = 4.035e-12
+#W = 0.93878, p-value = 4.114e-12
 
 # F1 Score ~ Box–Cox transformation
 Box <- boxcox(rq4.dataframe$f1_score ~ 1, lambda = seq(-6, 6, 0.1))
@@ -376,10 +376,11 @@ Cox <- data.frame(Box$x, Box$y)
 Cox2 <- Cox[with(Cox, order(-Cox$Box.y)),]
 Cox2[1,]
 #   Box.x     Box.y
+#71     1 -973.2359
 lambda <- Cox2[1, "Box.x"]
 rq4.dataframe$f1_score.box <- (rq4.dataframe$f1_score^lambda - 1) / lambda
 shapiro.test(rq4.dataframe$f1_score.box)
-# W = 0.93079, p-value = 4.917e-13
+# W = 0.93086, p-value = 5.218e-13
 
 
 #################################################################################################
@@ -406,6 +407,14 @@ rq4.hypothesis.f1_score_all.whitney <- wilcox.test(rq4.dataframe[rq4.filter.gree
 #data:  rq4.dataframe[rq4.filter.greedy, ]$f1_score and rq4.dataframe[rq4.filter.tfpr, ]$f1_score
 #W = 21190, p-value = 0.4877
 #alternative hypothesis: true location shift is not equal to 0
+
+wilcox.test(f1_score ~ subject.treatment.id , data = rq4.dataframe)
+#	Wilcoxon rank sum test with continuity correction
+#
+#data:  f1_score by subject.treatment.id
+#W = 21088, p-value = 0.4877
+#alternative hypothesis: true location shift is not equal to 0
+
 experiment.write.text(data = rq4.hypothesis.f1_score_all.whitney,
                       rq = 4,
                       filename = "navigation_hypothesis_f1_score_whitney.txt")
