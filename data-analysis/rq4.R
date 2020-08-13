@@ -48,7 +48,7 @@ rq4.summary.treatment.f1_score <- rq4.summary.treatment.f1_score[-rows_to_drop_f
 experiment.write.latex(rq = 4,
                        digits = 2,
                        dataframe = rq4.summary.treatment.f1_score,
-                       filename = "summary_treatment_f1_score.tex",
+                       filename = "navigation_summary_treatment_f1_score.tex",
                        caption = "Overview of the F1 Score per treatment.",
                        label = "tab:results:rq4:summary:treatment:f1_Score")
 rownames(rq4.summary.treatment.f1_score) <- paste("F1-Score", rownames(rq4.summary.treatment.f1_score))
@@ -79,7 +79,7 @@ rq4.summary.treatment.aggregate
 experiment.write.latex(rq = 4,
                        digits = 2,
                        dataframe = rq4.summary.treatment.aggregate,
-                       filename = "summary_treatment.tex",
+                       filename = "navigation_summary_treatment.tex",
                        caption = "Overview of the user navigation prediction accuracy per treatment.",
                        label = "tab:results:rq4:summary:treatment")
 
@@ -120,7 +120,7 @@ rq4.summary.treatment.aggregate2
 experiment.write.latex(rq = 4,
                        digits = 2,
                        dataframe = rq4.summary.treatment.aggregate2,
-                       filename = "summary_treatment_cases.tex",
+                       filename = "navigation_summary_treatment_cases.tex",
                        caption = "Overview of the prediction results per treatment.",
                        label = "tab:results:rq4:summary:treatment:counts")
 
@@ -131,7 +131,7 @@ rq4.summary.subject.f1_score <- rq4.summary.subject.f1_score[-rows_to_drop_from_
 experiment.write.latex(rq = 4,
                        digits = 2,
                        dataframe = rq4.summary.subject.f1_score,
-                       filename = "summary_subject_f1_score.tex",
+                       filename = "navigation_summary_subject_f1_score.tex",
                        caption = "Overview of the F1 Score per subject.",
                        label = "tab:results:rq4:summary:subject:f1_score")
 rownames(rq4.summary.subject.f1_score) <- paste("F1-Score", rownames(rq4.summary.subject.f1_score))
@@ -162,7 +162,7 @@ rq4.summary.subject.aggregate
 experiment.write.latex(rq = 4,
                        digits = 2,
                        dataframe = rq4.summary.subject.aggregate,
-                       filename = "summary_subject.tex",
+                       filename = "navigation_summary_subject.tex",
                        caption = "Overview of the user navigation prediction accuracy per subject.",
                        label = "tab:results:rq4:summary:subject")
 
@@ -203,7 +203,7 @@ rq4.summary.subject.aggregate2
 experiment.write.latex(rq = 4,
                        digits = 2,
                        dataframe = rq4.summary.subject.aggregate2,
-                       filename = "summary_subject_cases.tex",
+                       filename = "navigation_summary_subject_cases.tex",
                        caption = "Overview of the prediction results per subject.",
                        label = "tab:results:rq4:summary:subject:counts")
 
@@ -217,7 +217,7 @@ my_plot <- experiment.plot.boxplot(rq4.dataframe,
                                    "F1 Score",
                                    "F1 Score") +
   expand_limits(x = c(0, 1))
-experiment.write.plot(filename = "boxplot_f1_score.png", rq = 4)
+experiment.write.plot(filename = "navigation_boxplot_f1_score.png", rq = 4)
 
 # F1 Score over time
 for (subject in levels(rq4.dataframe$subject.name)) {
@@ -228,7 +228,7 @@ for (subject in levels(rq4.dataframe$subject.name)) {
                                     axis_y_column = "f1_score",
                                     axis_y_legend = "F1-Score") +
       expand_limits(y = c(0, 1))
-    experiment.write.plot(filename = paste0("f1_score_over_runs_", subject, "_part_", part, ".png"), rq = 4)
+    experiment.write.plot(filename = paste0("fnavigation_1_score_over_runs_", subject, "_part_", part, ".png"), rq = 4)
   }
 }
 
@@ -238,7 +238,7 @@ my_plot <- experiment.plot.violin(rq4.dataframe,
                                   "F1 Score",
                                   "F1 Score") +
   expand_limits(x = c(0, 1))
-experiment.write.plot(filename = "violin_f1_score.png", rq = 4)
+experiment.write.plot(filename = "navigation_violin_f1_score.png", rq = 4)
 
 # Frequency
 my_plot <- experiment.plot.freqpoly(rq4.dataframe,
@@ -246,7 +246,7 @@ my_plot <- experiment.plot.freqpoly(rq4.dataframe,
                                     "F1 Score",
                                     "F1 Score") +
   expand_limits(x = c(0, 1))
-experiment.write.plot(filename = "freqpoly_f1_score.png", rq = 4)
+experiment.write.plot(filename = "navigation_freqpoly_f1_score.png", rq = 4)
 
 
 #################################################################################################
@@ -266,12 +266,12 @@ my_plot <- experiment.plot.qqplot(rq4.dataframe,
                                   "f1_score",
                                   "F1 Score",
                                   "F1 Score")
-experiment.write.plot(filename = "qqplot_f1_score.png", rq = 4)
+experiment.write.plot(filename = "navigation_qqplot_f1_score.png", rq = 4)
 
 shapiro.test(rq4.dataframe$f1_score)
 # W = 0.93079, p-value = 4.917e-13
 experiment.write.text(data = shapiro.test(rq4.dataframe$f1_score),
-                      filename = "test_shapiro_f1_score.txt",
+                      filename = "navigation_test_shapiro_f1_score.txt",
                       rq = 4)
 
 ##################################  Phase 2a Data Transformation ####################################
@@ -350,7 +350,7 @@ rq4.hypothesis.f1_score_all.whitney <- wilcox.test(rq4.dataframe[rq4.filter.gree
 #alternative hypothesis: true location shift is not equal to 0
 experiment.write.text(data = rq4.hypothesis.f1_score_all.whitney,
                       rq = 4,
-                      filename = "hypothesis_f1_score_whitney.txt")
+                      filename = "navigation_hypothesis_f1_score_whitney.txt")
 
 cliff.delta(
   rq4.dataframe[rq4.filter.greedy,]$f1_score,
