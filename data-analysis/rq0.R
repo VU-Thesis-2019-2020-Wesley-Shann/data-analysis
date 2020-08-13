@@ -33,7 +33,7 @@ rq0.dataframe <- rq0.dataframe[!(rq0.dataframe$subject.id == "NewsBlur (G)" &
 rq0.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq0.dataframe, property = "strategy.duration.ms", digits = 2)
 
 experiment.write.latex(rq = 0,
-                       dataframe = rq0.summary.treatment.duration,
+                       dataframe = t(rq0.summary.treatment.duration),
                        filename = "summary-duration.tex",
                        caption = "Overview of the strategy duration.",
                        label = "tab:results:rq0:summary:duration")
