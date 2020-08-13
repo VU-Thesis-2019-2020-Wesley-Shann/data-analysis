@@ -63,7 +63,7 @@ rq0.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq4_2
 experiment.write.latex(rq = "4_2",
                        dataframe = t(rq0.summary.treatment.duration),
                        filename = "unpet_summary-duration.tex",
-                       caption = "Overview of the strategy duration.",
+                       caption = "Overview of the strategy duration (s).",
                        label = "tab:results:rq0:summary:duration")
 
 rq0.summary.subject.duration <- experiment.subject.summary(dataframe = rq4_2.dataframe, property = "strategy.duration.ms", digits = 2)
@@ -71,7 +71,23 @@ rq0.summary.subject.duration <- experiment.subject.summary(dataframe = rq4_2.dat
 experiment.write.latex(rq = "4_2",
                        dataframe = t(rq0.summary.subject.duration),
                        filename = "unpet_summary-duration_subject.tex",
-                       caption = "Overview of the strategy duration.",
+                       caption = "Overview of the strategy duration (s).",
+                       label = "tab:results:rq0:summary:duration_subject")
+
+rq0.summary.treatment.duration <- experiment.treatment.summary(dataframe = rq4_2.dataframe, property = "strategy.duration.micro_s", digits = 2)
+
+experiment.write.latex(rq = "4_2",
+                       dataframe = t(rq0.summary.treatment.duration),
+                       filename = "unpet_summary-duration_us.tex",
+                       caption = "Overview of the strategy duration (us).",
+                       label = "tab:results:rq0:summary:duration")
+
+rq0.summary.subject.duration <- experiment.subject.summary(dataframe = rq4_2.dataframe, property = "strategy.duration.micro_s", digits = 2)
+
+experiment.write.latex(rq = "4_2",
+                       dataframe = t(rq0.summary.subject.duration),
+                       filename = "unpet_summary-duration_us_subject.tex",
+                       caption = "Overview of the strategy duration (us).",
                        label = "tab:results:rq0:summary:duration_subject")
 
 #######################################  Phase 1b Plots ########################################
