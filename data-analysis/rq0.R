@@ -38,6 +38,14 @@ experiment.write.latex(rq = 0,
                        caption = "Overview of the strategy duration.",
                        label = "tab:results:rq0:summary:duration")
 
+rq0.summary.subject.duration <- experiment.subject.summary(dataframe = rq0.dataframe, property = "strategy.duration.ms", digits = 2)
+
+experiment.write.latex(rq = 0,
+                       dataframe = t(rq0.summary.subject.duration),
+                       filename = "summary-duration_subject.tex",
+                       caption = "Overview of the strategy duration.",
+                       label = "tab:results:rq0:summary:duration_subject")
+
 #######################################  Phase 1b Plots ########################################
 print("Generating plots")
 
