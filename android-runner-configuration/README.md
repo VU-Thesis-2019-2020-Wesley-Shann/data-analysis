@@ -14,7 +14,8 @@ Directory structure:
 ```
 
 This directory contains configuration to 2 mobile devices: Nexus 5X and Nexus 6P.
-
 The Nexus 5X mobile device was modified in the hardware level to be compatible with the Moonson energy profiler.
-
 Due to time constraints and the instability of the profiler, these configurations were discarded but kept in the repository.
+
+Note that these scripts and configurations make frequent use of the absolute path. 
+As such, for replication, these paths must be updated accordingly.
