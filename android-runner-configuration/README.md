@@ -13,3 +13,7 @@ Directory structure:
 |---util            \\ Contains common logic to simplify the reading of the flows scripts
 ```
 
+This directory contains configuration to 2 mobile devices: Nexus 5X and Nexus 6P.
+
+The Nexus 5X mobile device was modified in the hardware level to be compatible with the Moonson energy profiler.
+Due to time constraints and the instability of the profiler, these configurations were discarded but kept in the repository.
