@@ -25,3 +25,5 @@ Each RQx script contains the folloing flow:
     * Run effect size
     
 Some scripts mkight have an additiona exploration due to unique charactistics of the data
+
+The output directory is organized per script
