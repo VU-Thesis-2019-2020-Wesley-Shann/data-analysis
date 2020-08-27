@@ -59,8 +59,8 @@ ggplot(data = experiment.mitmproxy.flows.dataframe, aes(y = app, fill = app)) +
   geom_bar() +
   geom_text(stat = 'count', aes(label = ..count..), hjust = -1) +
   labs(
-    x = "Subject",
-    y = "Count of network requests"
+    y = "Subject",
+    x = "Count of network requests"
   ) +
   theme(
     legend.position = "none"
