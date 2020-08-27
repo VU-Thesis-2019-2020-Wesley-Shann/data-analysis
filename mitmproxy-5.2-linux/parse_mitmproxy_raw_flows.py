@@ -9,7 +9,7 @@ import sys
 def get_file_name() -> str:
     file_name = ''
     for arg in sys.argv:
-        if './flows/' in arg:
+        if './flows/' in arg or './output/' in arg:
             file_name = arg + '.csv'
     return file_name
 
