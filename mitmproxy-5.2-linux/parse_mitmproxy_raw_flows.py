@@ -50,13 +50,28 @@ def reset_output_file() -> None:
             'response_timestamp_start',
             'response_timestamp_end',
             'response_duration',
+            'response_header_date',
+            'response_header_content_length',
+            'response_header_content_type',
         ]
         out.write(','.join(headers) + '\n')
 
 
 def response(flow: http.HTTPFlow) -> None:
     # print(flow.request.headers)
+    if flow.request.method != 'GET':
+        print('Not a GET request! Request method is %s' % str(flow.request.method))
+        return
+    if flow.request.host == 'connectivitycheck.gstatic.com':
+        print('Not an application request! Request host is %s' % flow.request.host)
+        return
+    print('---------------')
+    print('Request headers')
     get_header_value(flow.request.headers, '')
+    print('---------------')
+    print('Response headers')
+    get_header_value(flow.response.headers, '')
+    print('---------------')
     line = [
         # Request host
         str(flow.request.host) or get_empty_value(),
@@ -95,7 +110,7 @@ def response(flow: http.HTTPFlow) -> None:
         get_header_value(flow.request.headers, ['x-requested-with']),
 
         # Response size
-        str(len(flow.response.raw_content)) or get_empty_value(),
+        str(len(flow.response.raw_content) if flow.response.raw_content is not None else '') or get_empty_value(),
 
         # Response HTTP version
         str(flow.response.http_version) or get_empty_value(),
@@ -114,10 +129,20 @@ def response(flow: http.HTTPFlow) -> None:
 
         # Response timestamp end
         str(flow.response.timestamp_end - flow.response.timestamp_start) or get_empty_value(),
+
+        # Response header date
+        get_header_value(flow.response.headers, ['Date']),
+
+        # Response header content length
+        get_header_value(flow.response.headers, ['Content-Length']),
+
+        # Response header content type
+        get_header_value(flow.response.headers, ['Content-Type']),
     ]
     line = [l1.replace(',', ';') for l1 in line]
     with open(get_file_name(), 'a') as out:
         out.write(','.join(line) + '\n')
+    print('')
 
 
 reset_output_file()
