@@ -3,7 +3,7 @@ from mitmproxy import http
 import sys
 
 
-# Run as: mitmdump -s main.py --rfile ./flows/uob -n
+# Run as: mitmdump -s parse_mitmproxy_raw_flows.py --rfile ./flows/uob -n
 
 
 def get_file_name() -> str:
