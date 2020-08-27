@@ -74,7 +74,7 @@ def response(flow: http.HTTPFlow) -> None:
     print('Response headers')
     get_header_value(flow.response.headers, '', True)
     print('---------------')
-    line = [
+    request_data = [
         # Request host
         str(flow.request.host) or get_empty_value(),
 
@@ -110,37 +110,42 @@ def response(flow: http.HTTPFlow) -> None:
 
         # Request header x requested with
         get_header_value(flow.request.headers, ['x-requested-with']),
-
-        # Response size
-        str(len(flow.response.raw_content) if flow.response.raw_content is not None else '') or get_empty_value(),
-
-        # Response HTTP version
-        str(flow.response.http_version) or get_empty_value(),
-
-        # Response status code
-        str(flow.response.status_code) or get_empty_value(),
-
-        # Response reason
-        str(flow.response.reason) or get_empty_value(),
-
-        # Response timestamp start
-        str(flow.response.timestamp_start) or get_empty_value(),
-
-        # Response timestamp end
-        str(flow.response.timestamp_end) or get_empty_value(),
-
-        # Response timestamp end
-        str(flow.response.timestamp_end - flow.response.timestamp_start) or get_empty_value(),
-
-        # Response header date
-        get_header_value(flow.response.headers, ['Date']),
-
-        # Response header content length
-        get_header_value(flow.response.headers, ['Content-Length']),
-
-        # Response header content type
-        get_header_value(flow.response.headers, ['Content-Type']),
     ]
+    if flow.response is not None:
+        response_data = [
+            # Response size
+            str(len(flow.response.raw_content) if flow.response.raw_content is not None else '') or get_empty_value(),
+
+            # Response HTTP version
+            str(flow.response.http_version) or get_empty_value(),
+
+            # Response status code
+            str(flow.response.status_code) or get_empty_value(),
+
+            # Response reason
+            str(flow.response.reason) or get_empty_value(),
+
+            # Response timestamp start
+            str(flow.response.timestamp_start) or get_empty_value(),
+
+            # Response timestamp end
+            str(flow.response.timestamp_end) or get_empty_value(),
+
+            # Response timestamp end
+            str(flow.response.timestamp_end - flow.response.timestamp_start) or get_empty_value(),
+
+            # Response header date
+            get_header_value(flow.response.headers, ['Date']),
+
+            # Response header content length
+            get_header_value(flow.response.headers, ['Content-Length']),
+
+            # Response header content type
+            get_header_value(flow.response.headers, ['Content-Type']),
+        ]
+    else:
+        response_data = ['NA'] * 10
+    line = request_data + response_data
     line = [l1.replace(',', ';') for l1 in line]
     with open(get_file_name(), 'a') as out:
         out.write(','.join(line) + '\n')
