@@ -69,6 +69,21 @@ ggplot(data = experiment.mitmproxy.flows.dataframe, aes(y = app, fill = app)) +
   expand_limits(x = 850)
 experiment.write.plot(filename = "mitmproxy_network_requent_number.png", rq = 0)
 
+
+ggplot(data = experiment.mitmproxy.flows.dataframe, aes(y = response_header_content_type, fill = response_header_content_type)) +
+  geom_bar() +
+  geom_text(stat = 'count', aes(label = ..count..), hjust = -1) +
+  labs(
+    y = "Response content type",
+    x = "Count"
+  ) +
+  theme(
+    legend.position = "none"
+  ) +
+  scale_fill_tron() +
+  expand_limits(x = 850)
+experiment.write.plot(filename = "mitmproxy_network_response_content_type.png", rq = 0)
+
 # Doesn't look right
 experiment.plot.boxplot(experiment.mitmproxy.flows.dataframe[experiment.mitmproxy.flows.dataframe$response_duration >= 0,],
                         "response_duration",
