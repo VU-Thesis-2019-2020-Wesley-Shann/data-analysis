@@ -18,10 +18,12 @@ def get_empty_value() -> str:
     return 'NA'
 
 
-def get_header_value(headers, keys) -> str:
-    print(headers)
+def get_header_value(headers, keys, verbose=False) -> str:
+    if verbose:
+        print(headers)
     for k, v in headers.items():
-        print(k, v)
+        if verbose:
+            print(k, v)
         if k in keys:
             return v
     return get_empty_value()
@@ -67,10 +69,10 @@ def response(flow: http.HTTPFlow) -> None:
         return
     print('---------------')
     print('Request headers')
-    get_header_value(flow.request.headers, '')
+    get_header_value(flow.request.headers, '', True)
     print('---------------')
     print('Response headers')
-    get_header_value(flow.response.headers, '')
+    get_header_value(flow.response.headers, '', True)
     print('---------------')
     line = [
         # Request host
